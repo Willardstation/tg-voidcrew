@@ -388,9 +388,9 @@
 	design_ids = list(
 	"sleeper",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)
-	discount_experiments = (
-		/datum/experiment/dissection/xenomorph = 3500, // To be changed if and when we decide what to do with research and experisci
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+	discount_experiments = list(
+		/datum/experiment/dissection/xenomorph = 3000, // To be changed if and when we decide what to do with research and experisci
 	)
 
 /datum/techweb_node/bio_process
