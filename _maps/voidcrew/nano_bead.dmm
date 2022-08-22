@@ -100,9 +100,8 @@
 /area/station/maintenance/aft)
 "hU" = (
 /obj/effect/turf_decal/tile/blue/anticorner,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
+/obj/machinery/firealarm/directional/north{
+	dir = 1
 	},
 /obj/structure/table/reinforced,
 /obj/machinery/fax{
@@ -438,9 +437,7 @@
 "AC" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/structure/cable,
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/station/engineering)
 "AR" = (
@@ -595,9 +592,8 @@
 /obj/item/pickaxe,
 /obj/item/storage/bag/ore,
 /obj/item/mining_scanner,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -24
+/obj/machinery/firealarm/directional/west{
+	dir = 4
 	},
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
@@ -765,9 +761,8 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -24
+/obj/machinery/firealarm/directional/west{
+	dir = 4
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 8
@@ -845,9 +840,8 @@
 /area/station/cargo/miningoffice)
 "VO" = (
 /obj/machinery/airalarm/directional/east,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
+/obj/machinery/firealarm/directional/north{
+	dir = 1
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 8
@@ -926,9 +920,8 @@
 /turf/open/floor/iron,
 /area/station/commons/dorms)
 "Yx" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
+/obj/machinery/firealarm/directional/north{
+	dir = 1
 	},
 /obj/effect/turf_decal/tile/red,
 /obj/machinery/recharger,
