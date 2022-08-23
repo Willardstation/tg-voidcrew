@@ -30,11 +30,6 @@
 	name = "coldroom"
 	},
 /area/station/science)
-"az" = (
-/obj/machinery/disposal/bin,
-/obj/structure/disposalpipe/trunk,
-/turf/open/floor/mineral/titanium/tiled/white,
-/area/station/science)
 "aB" = (
 /turf/open/floor/plating,
 /area/station/hallway/primary/aft)
@@ -602,6 +597,7 @@
 "kC" = (
 /obj/item/kirbyplants/random,
 /obj/item/toy/figure/rd,
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/service/cafeteria)
 "kK" = (
@@ -659,9 +655,9 @@
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/commons/toilet)
 "lu" = (
-/obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/mineral/titanium/tiled/purple,
 /area/station/science)
 "lx" = (
@@ -1212,7 +1208,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/firealarm/directional/south,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/station/hallway/primary/aft)
 "wq" = (
@@ -1515,7 +1511,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/high,
-/obj/machinery/firealarm/directional/south,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/station/science)
 "By" = (
@@ -1636,9 +1632,9 @@
 /obj/machinery/door/window/brigdoor/right/directional/east{
 	dir = 8
 	},
-/obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/mineral/titanium/tiled/purple,
 /area/station/science)
 "Dt" = (
@@ -1765,7 +1761,6 @@
 "ET" = (
 /obj/structure/table,
 /obj/item/food/soup/electron,
-/obj/machinery/firealarm/directional/south,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/service/cafeteria)
 "Fk" = (
@@ -1992,7 +1987,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/firealarm/directional/south,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/mineral/titanium/tiled,
 /area/station/commons/toilet)
 "Iq" = (
@@ -2368,9 +2363,9 @@
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/station/hallway/primary/aft)
 "ON" = (
-/obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/station/science)
 "OS" = (
@@ -2402,7 +2397,9 @@
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "Pw" = (
-/obj/machinery/camera/autoname/directional/west,
+/obj/machinery/atmospherics/components/unary/passive_vent/layer2{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/station/external)
 "PA" = (
@@ -3247,7 +3244,7 @@ yr
 Dg
 vt
 nR
-az
+ON
 JO
 cV
 fH

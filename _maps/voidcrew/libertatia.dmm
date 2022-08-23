@@ -330,7 +330,7 @@
 /turf/open/floor/pod/light,
 /area/station/cargo/miningoffice)
 "oQ" = (
-/obj/machinery/atmospherics/components/unary/outlet_injector/on/layer2{
+/obj/machinery/atmospherics/components/unary/passive_vent/layer2{
 	dir = 8
 	},
 /turf/open/floor/engine/hull,
@@ -1052,6 +1052,7 @@
 "Mp" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/atmospherics/components/binary/pump/on/layer4,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/port)
 "MC" = (
@@ -1106,6 +1107,7 @@
 "Ol" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/machinery/atmospherics/components/binary/pump/on/layer4,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "Oo" = (

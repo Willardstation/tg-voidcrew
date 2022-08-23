@@ -496,7 +496,6 @@
 /area/station/service/janitor)
 "fq" = (
 /obj/effect/landmark/start/shaft_miner,
-/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "fx" = (
@@ -2025,7 +2024,6 @@
 /area/station/science/research)
 "ut" = (
 /obj/structure/cable,
-/obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/iron,
 /area/station/cargo/office)
@@ -2073,10 +2071,10 @@
 /area/station/hallway/primary/port)
 "uY" = (
 /obj/effect/decal/cleanable/oil/streak,
-/obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "uZ" = (

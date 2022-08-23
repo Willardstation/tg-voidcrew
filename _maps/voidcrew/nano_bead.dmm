@@ -108,6 +108,7 @@
 	name = "Box Ship Fax Machine";
 	fax_name = "Box Fax"
 	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/station/command/bridge)
 "jl" = (
@@ -220,9 +221,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "nr" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -396,9 +394,9 @@
 	name = "Blast Door Control";
 	pixel_x = 24
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/suit_storage_unit/security,
 /obj/effect/turf_decal/bot_red,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
 "xm" = (
@@ -472,7 +470,7 @@
 /obj/effect/turf_decal/stripes{
 	dir = 10
 	},
-/obj/machinery/atmospherics/components/unary/outlet_injector/on/layer2{
+/obj/machinery/atmospherics/components/unary/passive_vent/layer2{
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -688,6 +686,12 @@
 "Ob" = (
 /turf/closed/wall/mineral/titanium,
 /area/station/maintenance/aft)
+"Od" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/station/cargo/miningoffice)
 "Oo" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/station/engineering)
@@ -849,6 +853,9 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
 /turf/open/floor/iron,
 /area/station/security/brig)
 "VQ" = (
@@ -858,6 +865,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "Wz" = (
@@ -899,7 +907,7 @@
 /turf/closed/wall/mineral/titanium,
 /area/station/security/brig)
 "XD" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "XG" = (
@@ -1198,7 +1206,7 @@ Oo
 HK
 Gl
 ec
-nS
+Od
 nS
 Dj
 mV

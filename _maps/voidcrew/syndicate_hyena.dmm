@@ -94,6 +94,7 @@
 	},
 /obj/structure/grille,
 /obj/structure/window/reinforced/plasma/plastitanium,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/station/commons/storage/primary)
 "cV" = (
@@ -443,9 +444,7 @@
 "jG" = (
 /obj/machinery/light,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/firealarm/directional/north{
-	dir = 1
-	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/white,
 /area/station/hallway/primary/central)
 "jH" = (
@@ -507,9 +506,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/obj/machinery/firealarm/directional/north{
-	dir = 1
-	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "lg" = (
@@ -1283,7 +1280,7 @@
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "DE" = (
-/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+/obj/machinery/atmospherics/components/unary/passive_vent/layer2{
 	dir = 4
 	},
 /turf/open/floor/engine/hull,

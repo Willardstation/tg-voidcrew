@@ -1270,7 +1270,7 @@
 /turf/closed/wall,
 /area/station/maintenance/port)
 "Gt" = (
-/obj/machinery/atmospherics/components/unary/outlet_injector/on/layer2{
+/obj/machinery/atmospherics/components/unary/passive_vent/layer2{
 	dir = 1
 	},
 /turf/open/floor/plating,
