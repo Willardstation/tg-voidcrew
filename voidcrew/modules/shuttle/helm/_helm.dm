@@ -103,6 +103,13 @@
 	. = ..()
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
+		if (current_ship)
+			user.client.register_map_obj(current_ship.cam_screen)
+			for (var/plane in current_ship.cam_plane_masters)
+				user.client.register_map_obj(plane)
+			user.client.register_map_obj(current_ship.cam_background)
+			current_ship.update_screen()
+
 		ui = new(user, src, "HelmComputer")
 		ui.set_autoupdate(FALSE)
 		ui.open()
@@ -127,6 +134,13 @@
 			current_ship.try_move(x = -1)
 		if ("northwest")
 			current_ship.try_move(x = -1, y = 1)
+
+/obj/machinery/computer/helm/ui_static_data(mob/user)
+	var/list/data = list()
+
+	data["overmap_map"] = current_ship.map_name
+
+	return data
 
 /*
 
