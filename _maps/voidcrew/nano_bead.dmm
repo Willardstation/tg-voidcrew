@@ -727,19 +727,14 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
 /turf/closed/wall/mineral/titanium,
 /area/station/engineering)
-"RO" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/airalarm/directional/east,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
 "RS" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/station/cargo/miningoffice)
 "RV" = (
 /obj/effect/turf_decal/tile/red,
-/obj/machinery/stasis,
+/obj/machinery/stasis{
+	dir = 1
+	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "Sx" = (
@@ -928,12 +923,10 @@
 /turf/open/floor/iron,
 /area/station/commons/dorms)
 "Yx" = (
-/obj/machinery/firealarm/directional/north{
-	dir = 1
-	},
 /obj/effect/turf_decal/tile/red,
 /obj/machinery/recharger,
 /obj/structure/table/reinforced,
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "YA" = (
@@ -956,6 +949,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "ZQ" = (
@@ -1229,7 +1223,7 @@ wU
 wy
 gz
 sO
-RO
+HS
 HS
 QH
 MJ

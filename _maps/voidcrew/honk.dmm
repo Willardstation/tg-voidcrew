@@ -318,9 +318,6 @@
 /obj/item/toy/crayon/spraycan/lubecan,
 /turf/open/floor/mineral/bananium,
 /area/station/commons)
-"Hi" = (
-/turf/open/floor/plating,
-/area/station/commons)
 "Hr" = (
 /obj/machinery/biogenerator,
 /obj/item/reagent_containers/cup/beaker,
@@ -428,11 +425,11 @@
 /area/station/engineering/supermatter)
 "LW" = (
 /obj/structure/window/reinforced/plasma,
-/obj/structure/disposaloutlet{
-	dir = 1
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 2
+	},
+/obj/machinery/disposal/delivery_chute{
+	dir = 1
 	},
 /turf/open/floor/mineral/bananium,
 /area/station/commons)
@@ -498,11 +495,11 @@
 /turf/open/floor/mineral/bananium,
 /area/station/commons)
 "PU" = (
-/obj/structure/disposaloutlet,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
 /obj/structure/cable,
+/obj/machinery/disposal/delivery_chute,
 /turf/open/floor/light,
 /area/station/engineering/supermatter)
 "Qc" = (
@@ -1289,7 +1286,7 @@ Xn
 Xn
 Xn
 NI
-Hi
+YY
 YY
 "}
 (20,1,1) = {"
