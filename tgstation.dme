@@ -4700,6 +4700,7 @@
 #include "voidcrew\_HELPERS\ships.dm"
 #include "voidcrew\_strings\star_names.dm"
 #include "voidcrew\edits\jobs.dm"
+#include "voidcrew\edits\sleeper.dm"
 #include "voidcrew\edits\techwebs.dm"
 #include "voidcrew\edits\mobs\new_player.dm"
 #include "voidcrew\mapping\_mapping.dm"
