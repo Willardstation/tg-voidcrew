@@ -13,7 +13,7 @@
 			continue
 		shuttle_choices["[active_ships.name]" - "([active_ships.source_template.short_name])"] = active_ships
 
-	var/used_name = appearance_from_prefs.read_preference(/datum/preference/name/real_name)
+	var/used_name = client.prefs.read_preference(/datum/preference/name/real_name)
 	var/obj/structure/overmap/ship/selected_ship = shuttle_choices[tgui_input_list(src, "Select ship to spawn on.", "Welcome, [used_name].", shuttle_choices)]
 	if(!selected_ship)
 		return
