@@ -11,7 +11,7 @@
 	for(var/datum/mind/team_minds as anything in members)
 		if(owner_ship.shuttle.z != team_minds.current.z) // different z, they don't matter anymore
 			continue
-		if(isnull(team_minds.current.client))
+		if(!team_minds.current.client)
 			continue
 		if(team_minds.current.stat <= HARD_CRIT)
 			return TRUE
