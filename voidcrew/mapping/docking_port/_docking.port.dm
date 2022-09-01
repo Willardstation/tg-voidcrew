@@ -61,4 +61,4 @@
 	message_admins("\[SHUTTLE]: [current_ship?.name] has been turned into a ruin!")
 	log_admin("\[SHUTTLE]: [current_ship?.name] has been turned into a ruin!")
 
-	qdel(src, force=TRUE)
+	qdel(src, force = TRUE)
