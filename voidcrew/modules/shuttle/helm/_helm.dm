@@ -5,6 +5,7 @@
 #define JUMP_STATE_FINALIZED 4
 #define JUMP_CHARGE_DELAY (20 SECONDS)
 #define JUMP_CHARGEUP_TIME (3 MINUTES)
+#define SHIP_VIEW_RANGE 4
 
 /obj/machinery/computer/helm
 	name = "helm control console"
@@ -29,13 +30,111 @@
 	///holding jump timer ID
 	var/jump_timer
 
+	// Stuff needed to render the map
+	var/map_name
+	var/atom/movable/screen/map_view/cam_screen
+	var/list/cam_plane_masters
+	var/atom/movable/screen/background/cam_background
+
 /obj/machinery/computer/helm/Initialize(mapload, obj/item/circuitboard/C)
 	. = ..()
-	return INITIALIZE_HINT_LATELOAD
+
+	map_name = "overmap_[REF(src)]_map"
+	cam_screen = new
+	cam_screen.name = "screen"
+	cam_screen.assigned_map = map_name
+	cam_screen.del_on_map_removal = FALSE
+	cam_screen.screen_loc = "[map_name]:1,1"
+	cam_plane_masters = list()
+	for(var/plane in subtypesof(/atom/movable/screen/plane_master) - /atom/movable/screen/plane_master/blackness)
+		var/atom/movable/screen/plane_master/instance = new plane()
+		if(instance.blend_mode_override)
+			instance.blend_mode = instance.blend_mode_override
+		instance.assigned_map = map_name
+		instance.del_on_map_removal = FALSE
+		instance.screen_loc = "[map_name]:CENTER"
+		cam_plane_masters += instance
+	cam_background = new
+	cam_background.assigned_map = map_name
+	cam_background.del_on_map_removal = FALSE
+
+
+/obj/machinery/computer/helm/Destroy()
+	QDEL_NULL(cam_screen)
+	QDEL_LIST(cam_plane_masters)
+	QDEL_NULL(cam_background)
+	return ..()
+
+/obj/machinery/computer/helm/proc/update_screen()
+	if (!current_ship)
+		return
+
+	var/list/visible_turfs = list()
+
+	var/list/visible_things = view(SHIP_VIEW_RANGE, current_ship)
+
+	for(var/turf/visible_turf in visible_things)
+		visible_turfs += visible_turf
+
+	var/list/bbox = get_bbox_of_atoms(visible_turfs)
+	var/size_x = bbox[3] - bbox[1] + 1
+	var/size_y = bbox[4] - bbox[2] + 1
+
+	cam_screen.vis_contents = visible_turfs
+	cam_background.icon_state = "clear"
+	cam_background.fill_rect(1, 1, size_x, size_y)
+
+/obj/machinery/computer/helm/ui_interact(mob/user, datum/tgui/ui)
+	. = ..()
+	ui = SStgui.try_update_ui(user, src, ui)
+
+	update_screen()
+
+	if(!ui)
+		if (current_ship)
+			user.client.register_map_obj(cam_screen)
+			for (var/plane in cam_plane_masters)
+				user.client.register_map_obj(plane)
+			user.client.register_map_obj(cam_background)
+
+		ui = new(user, src, "HelmComputer", name)
+		ui.open()
+
+/obj/machinery/computer/helm/ui_act(action, list/params)
+	. = ..()
+
+	switch(action)
+		if ("north")
+			current_ship.try_move(y = 1)
+		if ("northeast")
+			current_ship.try_move(x = 1, y = 1)
+		if ("east")
+			current_ship.try_move(x = 1)
+		if ("southeast")
+			current_ship.try_move(x = 1, y = -1)
+		if ("south")
+			current_ship.try_move(y = -1)
+		if ("southwest")
+			current_ship.try_move(x = -1, y = -1)
+		if ("west")
+			current_ship.try_move(x = -1)
+		if ("northwest")
+			current_ship.try_move(x = -1, y = 1)
+
+	update_screen()
+
+/obj/machinery/computer/helm/ui_static_data(mob/user)
+	var/list/data = list()
+
+	data["mapRef"] = map_name
+
+	return data
+
+/*
 
 /obj/machinery/computer/helm/LateInitialize()
 	. = ..()
-/* //voidcrew todo: ship functionality
+ //voidcrew todo: ship functionality
 	reload_ship()
 
 /obj/machinery/computer/helm/proc/calibrate_jump(inline = FALSE)
@@ -99,48 +198,7 @@
 		return TRUE
 */
 
-/obj/machinery/computer/helm/ui_interact(mob/user, datum/tgui/ui)
-	. = ..()
-	ui = SStgui.try_update_ui(user, src, ui)
-	if(!ui)
-		if (current_ship)
-			user.client.register_map_obj(current_ship.cam_screen)
-			for (var/plane in current_ship.cam_plane_masters)
-				user.client.register_map_obj(plane)
-			user.client.register_map_obj(current_ship.cam_background)
-			current_ship.update_screen()
 
-		ui = new(user, src, "HelmComputer")
-		ui.set_autoupdate(FALSE)
-		ui.open()
-
-/obj/machinery/computer/helm/ui_act(action, list/params)
-	. = ..()
-
-	switch(action)
-		if ("north")
-			current_ship.try_move(y = 1)
-		if ("northeast")
-			current_ship.try_move(x = 1, y = 1)
-		if ("east")
-			current_ship.try_move(x = 1)
-		if ("southeast")
-			current_ship.try_move(x = 1, y = -1)
-		if ("south")
-			current_ship.try_move(y = -1)
-		if ("southwest")
-			current_ship.try_move(x = -1, y = -1)
-		if ("west")
-			current_ship.try_move(x = -1)
-		if ("northwest")
-			current_ship.try_move(x = -1, y = 1)
-
-/obj/machinery/computer/helm/ui_static_data(mob/user)
-	var/list/data = list()
-
-	data["overmap_map"] = current_ship.map_name
-
-	return data
 
 /*
 
@@ -283,3 +341,4 @@
 #undef JUMP_STATE_FINALIZED
 #undef JUMP_CHARGE_DELAY
 #undef JUMP_CHARGEUP_TIME
+#undef SHIP_VIEW_RANGE

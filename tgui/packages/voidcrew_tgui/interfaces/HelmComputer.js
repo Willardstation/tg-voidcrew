@@ -6,10 +6,10 @@ export const HelmComputer = (props, context) => {
   const { act, data } = useBackend(context);
   const { mapRef } = data;
   return (
-    <Window width={300} height={400} theme="retro">
+    <Window width={500} height={630} theme="retro">
       <Window.Content>
         <Section>
-         <Stack vertical align="center">
+         <Stack vertical align="left">
             <Stack.Item>
               <Button
                 icon="arrow-left"
@@ -27,7 +27,7 @@ export const HelmComputer = (props, context) => {
                 />
             </Stack.Item>
          </Stack>
-          <Stack vertical align="center">
+          <Stack vertical align="left">
             <Stack.Item>
               <Button
                 icon="arrow-left"
@@ -42,7 +42,7 @@ export const HelmComputer = (props, context) => {
                 />
             </Stack.Item>
           </Stack>
-          <Stack vertical align="center">
+          <Stack vertical align="left">
             <Stack.Item>
               <Button
                 icon="arrow-down"
@@ -61,13 +61,14 @@ export const HelmComputer = (props, context) => {
             </Stack.Item>
           </Stack>
         </Section>
-        <Section>
+        <Section fill>
           <ByondUi
-          className="CameraConsole__map"
-          params={{
-            id: mapRef,
-            type: 'map',
-          }}
+            className="overmap__map"
+            height={40}
+            params={{
+              id: mapRef,
+              type: 'map',
+            }}
           />
         </Section>
       </Window.Content>
