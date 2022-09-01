@@ -43,8 +43,7 @@
 	if(!underlying_area)
 		underlying_area = new underlying_area_type(null)
 
-	for(var/i in 1 to old_turfs.len)
-		var/turf/oldT = old_turfs[i]
+	for(var/turf/oldT in old_turfs)
 		if(!oldT || !istype(oldT.loc, area_type))
 			continue
 		var/obj/machinery/cryopod/pod = locate() in oldT.contents
