@@ -4,7 +4,7 @@ import { Window } from '../../tgui/layouts';
 
 export const HelmComputer = (props, context) => {
   const { act, data } = useBackend(context);
-  const { mapRef } = data;
+  const { mapRef, thrust } = data;
   return (
     <Window width={500} height={630} theme="retro">
       <Window.Content>
@@ -35,6 +35,7 @@ export const HelmComputer = (props, context) => {
                 />
               <Button
                 icon="circle"
+                onClick={() => act('reset')}
                 />
               <Button
                 icon="arrow-right"
@@ -60,6 +61,7 @@ export const HelmComputer = (props, context) => {
                 />
             </Stack.Item>
           </Stack>
+
         </Section>
         <Section fill>
           <ByondUi
