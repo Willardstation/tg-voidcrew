@@ -13,6 +13,12 @@
  * - Give research points
  * - Are all unlocked from the start
  *
+ * RESEARCH STUFF
+ *
+ * Add designs for Prolathes
+ * Add designs for Circuit imprinters
+ * Add designs for R&D servers
+ * Add designs for R&D consoles
  *
  */
 
