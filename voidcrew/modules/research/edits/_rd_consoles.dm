@@ -59,6 +59,6 @@
 		var/obj/docking_port/mobile/port = connected_ship_ref?.resolve()
 		if(port)
 			if(!(user.mind in port.current_ship.ship_team.members))
-				say("Downloading banned for non-crew!")
+				say("ERROR- DOWNLOADING NOT ALLOWED FOR NON-CREW!")
 				return
 	return ..()
