@@ -26,8 +26,13 @@
 	occupant_typecache = GLOB.typecache_living
 
 /obj/machinery/nanite_chamber/Destroy()
-	linked_techweb = null
-	. = ..()
+	unsync_research_servers()
+	return ..()
+
+/obj/machinery/nanite_chamber/unsync_research_servers()
+	if(linked_techweb)
+		linked_techweb.connected_machines -= src
+		linked_techweb = null
 
 /obj/machinery/nanite_chamber/RefreshParts()
 	. = ..()
@@ -196,9 +201,10 @@
 /obj/machinery/nanite_chamber/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/multitool))
 		var/obj/item/multitool/multi = I
-		if(istype(multi.buffer, /obj/machinery/ship_research_server))
-			var/obj/machinery/ship_research_server/server = multi.buffer
+		if(istype(multi.buffer, /obj/machinery/rnd/server/ship))
+			var/obj/machinery/rnd/server/ship/server = multi.buffer
 			linked_techweb = server.source_code_hdd.stored_research
+			linked_techweb.connected_machines += src
 			say("Linked to Server!")
 			return
 

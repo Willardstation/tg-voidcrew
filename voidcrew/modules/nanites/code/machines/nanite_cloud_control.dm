@@ -15,10 +15,15 @@
 	var/datum/techweb/linked_techweb
 
 /obj/machinery/computer/nanite_cloud_controller/Destroy()
-	QDEL_LIST(cloud_backups) //rip backups
-	linked_techweb = null
 	eject()
+	QDEL_LIST(cloud_backups) //rip backups
+	unsync_research_servers()
 	return ..()
+
+/obj/machinery/computer/nanite_cloud_controller/unsync_research_servers()
+	if(linked_techweb)
+		linked_techweb.connected_machines -= src
+		linked_techweb = null
 
 /obj/machinery/computer/nanite_cloud_controller/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/disk/nanite_program))
@@ -32,9 +37,10 @@
 			return
 	if(istype(I, /obj/item/multitool))
 		var/obj/item/multitool/multi = I
-		if(istype(multi.buffer, /obj/machinery/ship_research_server))
-			var/obj/machinery/ship_research_server/server = multi.buffer
+		if(istype(multi.buffer, /obj/machinery/rnd/server/ship))
+			var/obj/machinery/rnd/server/ship/server = multi.buffer
 			linked_techweb = server.source_code_hdd.stored_research
+			linked_techweb.connected_machines += src
 			say("Linked to Server!")
 		return
 	return ..()

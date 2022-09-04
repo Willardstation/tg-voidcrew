@@ -8,9 +8,18 @@
 	stored_research = null
 
 /obj/machinery/computer/rdconsole/Destroy()
+	. = ..()
 	if(connected_ship_ref)
 		connected_ship_ref = null
-	return ..()
+	if(stored_research)
+		stored_research.connected_machines -= src
+		stored_research = null
+
+/obj/machinery/computer/rdconsole/unsync_research_servers()
+	if(stored_research)
+		stored_research.consoles_accessing[src] = FALSE
+		stored_research.connected_machines -= src
+		stored_research = null
 
 /obj/machinery/computer/rdconsole/connect_to_shuttle(mapload, obj/docking_port/mobile/port, obj/docking_port/stationary/dock)
 	. = ..()
@@ -21,13 +30,15 @@
 /obj/machinery/computer/rdconsole/attackby(obj/item/attacking_item, mob/user, params)
 	if(istype(attacking_item, /obj/item/multitool))
 		var/obj/item/multitool/multi = attacking_item
-		if(istype(multi.buffer, /obj/machinery/ship_research_server))
-			var/obj/machinery/ship_research_server/server = multi.buffer
+		if(istype(multi.buffer, /obj/machinery/rnd/server/ship))
+			var/obj/machinery/rnd/server/ship/server = multi.buffer
 			stored_research = server.source_code_hdd.stored_research
 			say("Linked to Server!")
+			stored_research.connected_machines += src
 			return
 		if(stored_research)
 			say("Disconnected from Server.")
+			stored_research.connected_machines -= src
 			stored_research.consoles_accessing -= src
 			stored_research = null
 			return

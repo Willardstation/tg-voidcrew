@@ -4,13 +4,14 @@
 
 	var/datum/techweb/stored_research
 
+	var/list/connected_research_machines = list()
+
 /obj/item/computer_hardware/hard_drive/cluster/hdd_theft/ship_disk/Initialize(mapload)
 	. = ..()
 	name += " [num2hex(rand(1,65535), -1)]"
 	stored_research = new()
-	SSresearch.servers |= src
 
 /obj/item/computer_hardware/hard_drive/cluster/hdd_theft/ship_disk/Destroy()
 	. = ..()
-	stored_research = null
+	QDEL_NULL(stored_research)
 
