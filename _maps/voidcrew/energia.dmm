@@ -353,8 +353,7 @@
 "sX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/yellow/visible,
 /obj/structure/cable,
-/obj/structure/grille,
-/obj/effect/spawner/structure/window/reinforced/plasma,
+/obj/structure/plasticflaps,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter)
 "tc" = (
