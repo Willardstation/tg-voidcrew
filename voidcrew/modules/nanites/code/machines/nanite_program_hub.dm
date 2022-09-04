@@ -35,15 +35,15 @@
 			if(disk)
 				eject(user)
 			disk = N
+		return
 	if(istype(I, /obj/item/multitool))
 		var/obj/item/multitool/multi = I
-		if(istype(multi.buffer, /obj/machinery/rnd/server))
-			var/obj/machinery/rnd/server/serv = multi.buffer
-			linked_techweb = serv.stored_research
-			visible_message("Linked to Server!")
+		if(istype(multi.buffer, /obj/machinery/ship_research_server))
+			var/obj/machinery/ship_research_server/server = multi.buffer
+			linked_techweb = server.source_code_hdd.stored_research
+			say("Linked to Server!")
 		return
-	else
-		..()
+	return ..()
 
 /obj/machinery/nanite_program_hub/proc/eject(mob/living/user)
 	if(!disk)
