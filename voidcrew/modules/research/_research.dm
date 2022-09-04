@@ -5,13 +5,10 @@
  *
  * Experiment handlers
  *
- * RESEARCH POINT GENERATION
- *
  * Add dissections
  * Add survey machines
  * Experiments:
  * - Give research points
- * - Are all unlocked from the start
  *
  * RESEARCH STUFF
  *
