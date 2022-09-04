@@ -1,27 +1,4 @@
 /**
- * TODO
- *
- * TECHWEB STUFF
- *
- * Experiment handlers
- *
- * Add dissections
- * Add survey machines
- * Experiments:
- * - Give research points
- *
- * RESEARCH STUFF
- *
- * Add designs for Prolathes
- * Add designs for Circuit imprinters
- * Add designs for R&D servers
- * Add designs for R&D consoles
- *
- * context menus
- *
- */
-
-/**
  * Allow RND machines to be connected via multitool
  * But only if we're connected to science's node by default
  * Check is for stuff like Autolathes.
