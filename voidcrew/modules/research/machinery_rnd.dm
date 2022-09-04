@@ -21,16 +21,6 @@
  *
  */
 
-/datum/techweb
-	///List of everything connected to this techweb via Multitool, used for R&D server deconstruction.
-	var/list/connected_machines = list()
-
-/datum/techweb/New()
-	. = ..()
-	for (var/datum/experiment/experiment_path as anything in subtypesof(/datum/experiment))
-		if (initial(experiment_path.voidcrew_available))
-			available_experiments += new experiment_path()
-
 /**
  * Allow RND machines to be connected via multitool
  * But only if we're connected to science's node by default
@@ -62,10 +52,3 @@
 			return
 
 	return ..()
-
-
-/**
- * Cancel all experiments being added, we'll do it ourselves.
- */
-/datum/techweb/add_experiments(list/experiment_list)
-	return
