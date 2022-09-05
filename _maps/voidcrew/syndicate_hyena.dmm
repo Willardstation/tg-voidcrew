@@ -264,15 +264,6 @@
 /obj/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
 /area/station/cargo/office)
-"fR" = (
-/obj/structure/grille,
-/obj/machinery/door/poddoor/shutters{
-	id = "wreckerwindows";
-	name = "Blast Shutters"
-	},
-/obj/structure/window/reinforced/plasma/plastitanium,
-/turf/open/floor/plating,
-/area/station/command/bridge)
 "fT" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/bot,
@@ -605,12 +596,11 @@
 /turf/open/floor/iron/dark,
 /area/station/commons)
 "oz" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor/shutters{
 	id = "wreckerwindows";
 	name = "Blast Shutters"
 	},
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "oO" = (
@@ -2780,7 +2770,7 @@ mL
 mL
 "}
 (26,1,1) = {"
-fR
+oz
 cf
 Ma
 ch
