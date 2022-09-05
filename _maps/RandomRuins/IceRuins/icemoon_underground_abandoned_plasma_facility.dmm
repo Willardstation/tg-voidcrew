@@ -3,12 +3,12 @@
 /obj/structure/window/reinforced/spawner/north,
 /obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/east,
-/obj/structure/grille,
+,
 /turf/open/floor/plating/icemoon,
 /area/ruin/plasma_facility/operations)
 "af" = (
 /obj/structure/window/reinforced/spawner/north,
-/obj/structure/grille,
+,
 /obj/item/shard,
 /turf/open/floor/plating/icemoon,
 /area/ruin/plasma_facility/operations)
@@ -539,7 +539,7 @@
 /turf/open/floor/wood/large,
 /area/ruin/plasma_facility/commons)
 "hN" = (
-/obj/structure/grille,
+,
 /obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/east,
 /turf/open/floor/plating/icemoon,
@@ -558,7 +558,7 @@
 /area/icemoon/underground/explored)
 "hV" = (
 /obj/structure/window/reinforced/spawner/west,
-/obj/structure/grille,
+,
 /obj/item/shard,
 /turf/open/floor/plating/icemoon,
 /area/ruin/plasma_facility/commons)
@@ -706,7 +706,7 @@
 /area/icemoon/underground/explored)
 "jT" = (
 /obj/structure/window/reinforced/spawner,
-/obj/structure/grille,
+,
 /turf/open/floor/plating/icemoon,
 /area/ruin/plasma_facility/operations)
 "kh" = (
@@ -1130,7 +1130,7 @@
 "qv" = (
 /obj/structure/window/reinforced/spawner/west,
 /obj/structure/window/reinforced/spawner/east,
-/obj/structure/grille,
+,
 /turf/open/floor/plating/icemoon,
 /area/ruin/plasma_facility/commons)
 "qw" = (
@@ -1322,7 +1322,7 @@
 /area/ruin/plasma_facility/commons)
 "tC" = (
 /obj/structure/window/reinforced/spawner/east,
-/obj/structure/grille,
+,
 /obj/item/shard,
 /turf/open/floor/plating/icemoon,
 /area/ruin/plasma_facility/operations)
@@ -2038,7 +2038,7 @@
 /turf/open/lava/plasma/ice_moon,
 /area/ruin/plasma_facility/operations)
 "Ij" = (
-/obj/structure/grille,
+,
 /obj/structure/window/reinforced/spawner/east,
 /obj/structure/window/reinforced/spawner,
 /obj/item/shard,
@@ -2897,7 +2897,7 @@
 /area/ruin/plasma_facility/commons)
 "Wd" = (
 /obj/structure/window/reinforced/spawner/east,
-/obj/structure/grille,
+,
 /turf/open/floor/plating/icemoon,
 /area/ruin/plasma_facility/commons)
 "Wu" = (

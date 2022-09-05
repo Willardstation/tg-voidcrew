@@ -193,12 +193,12 @@
 /turf/open/floor/engine/hull/reinforced,
 /area/station/security/brig)
 "kK" = (
-/obj/structure/grille,
+,
 /obj/machinery/door/poddoor/shutters{
 	id = "pirateshutters";
 	name = "Blast Shutters"
 	},
-/obj/structure/window/reinforced/plasma/plastitanium,
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
 /area/station/security/brig)
 "mg" = (
@@ -316,12 +316,12 @@
 /turf/open/floor/mineral/plastitanium,
 /area/station/security/brig)
 "nW" = (
-/obj/structure/grille,
+,
 /obj/machinery/door/poddoor/shutters{
 	id = "pirateshutters";
 	name = "Blast Shutters"
 	},
-/obj/structure/window/reinforced/plasma/plastitanium,
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/station/security/brig)
@@ -607,12 +607,12 @@
 /turf/open/floor/pod/light,
 /area/station/commons/lounge)
 "za" = (
-/obj/structure/grille,
+,
 /obj/machinery/door/poddoor/shutters{
 	id = "pirateshutters";
 	name = "Blast Shutters"
 	},
-/obj/structure/window/reinforced/plasma/plastitanium,
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
 /area/station/commons/lounge)
 "zi" = (
@@ -1436,12 +1436,12 @@
 /turf/open/floor/pod/light,
 /area/station/cargo/miningoffice)
 "XB" = (
-/obj/structure/grille,
+,
 /obj/machinery/door/poddoor/shutters{
 	id = "pirateshutters";
 	name = "Blast Shutters"
 	},
-/obj/structure/window/reinforced/plasma/plastitanium,
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "XJ" = (

@@ -31,7 +31,7 @@
 "G" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/structure/girder,
-/obj/structure/grille,
+,
 /obj/modular_map_connector,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/lesser)

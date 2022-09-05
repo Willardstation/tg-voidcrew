@@ -3012,7 +3012,7 @@
 /area/ruin/space/has_grav/hotel/guestroom/room_2)
 "FM" = (
 /obj/structure/lattice,
-/obj/structure/grille,
+,
 /turf/template_noop,
 /area/template_noop)
 "FT" = (

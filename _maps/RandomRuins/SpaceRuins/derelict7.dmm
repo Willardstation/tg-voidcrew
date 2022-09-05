@@ -349,7 +349,7 @@
 /area/ruin/space/has_grav)
 "IR" = (
 /obj/effect/decal/cleanable/glass,
-/obj/structure/grille,
+,
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav)
 "Jy" = (
@@ -498,7 +498,7 @@
 /area/ruin/space/has_grav)
 "Vn" = (
 /obj/effect/decal/cleanable/glass,
-/obj/structure/grille,
+,
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav)

@@ -1013,7 +1013,7 @@
 /turf/open/floor/plating,
 /area/awaymission/caves/bmp_asteroid)
 "fJ" = (
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/awaymission/caves/bmp_asteroid)
 "fK" = (
@@ -1583,7 +1583,7 @@
 	},
 /area/awaymission/caves/bmp_asteroid)
 "Aj" = (
-/obj/structure/grille,
+,
 /turf/open/misc/asteroid/basalt{
 	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
 	},
@@ -1919,7 +1919,7 @@
 	},
 /area/awaymission/caves/bmp_asteroid/level_four)
 "Ry" = (
-/obj/structure/grille,
+,
 /obj/structure/barricade/wooden,
 /turf/open/misc/asteroid/basalt{
 	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"

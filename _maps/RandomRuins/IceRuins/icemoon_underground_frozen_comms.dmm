@@ -278,7 +278,7 @@
 /area/ruin/powered/shuttle)
 "GQ" = (
 /obj/structure/window/reinforced/spawner,
-/obj/structure/grille,
+,
 /obj/item/shard,
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/icemoon,
@@ -397,7 +397,7 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "Ux" = (
-/obj/structure/grille,
+,
 /obj/item/shard,
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/icemoon,
@@ -427,7 +427,7 @@
 "Zd" = (
 /obj/structure/window/reinforced/spawner/east,
 /obj/structure/window/reinforced/spawner/west,
-/obj/structure/grille,
+,
 /turf/open/floor/plating/icemoon,
 /area/ruin/powered/shuttle)
 

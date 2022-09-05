@@ -12634,8 +12634,8 @@
 /turf/open/floor/plating,
 /area/centcom/central_command_areas/evacuation/ship)
 "KP" = (
-/obj/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+,
 /turf/open/floor/plating,
 /area/centcom/central_command_areas/evacuation/ship)
 "KQ" = (
@@ -14629,7 +14629,7 @@
 /obj/structure/flora/bush/ferny/style_random,
 /obj/structure/flora/bush/flowers_pp/style_random,
 /obj/structure/flora/bush/pale/style_random,
-/obj/structure/window/reinforced/fulltile,
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/holding)
 "QM" = (

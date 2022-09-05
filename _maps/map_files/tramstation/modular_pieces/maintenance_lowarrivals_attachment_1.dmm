@@ -32,7 +32,7 @@
 /area/station/maintenance/port/fore)
 "X" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "Y" = (

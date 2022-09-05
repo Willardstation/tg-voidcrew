@@ -7,7 +7,7 @@
 /turf/template_noop,
 /area/template_noop)
 "ac" = (
-/obj/structure/grille,
+,
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/turretedoutpost)
 "ad" = (

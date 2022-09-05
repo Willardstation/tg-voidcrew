@@ -985,7 +985,7 @@
 /area/awaymission/undergroundoutpost45/central)
 "cF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
-/obj/structure/grille,
+,
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
@@ -1146,7 +1146,7 @@
 /turf/closed/wall/rust,
 /area/awaymission/undergroundoutpost45/central)
 "cW" = (
-/obj/structure/grille,
+,
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
 	},
@@ -1159,7 +1159,7 @@
 /area/awaymission/undergroundoutpost45/central)
 "cY" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
-/obj/structure/grille,
+,
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
 	},

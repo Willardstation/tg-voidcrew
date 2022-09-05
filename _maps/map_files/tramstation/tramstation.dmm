@@ -6163,7 +6163,7 @@
 /area/station/engineering/gravity_generator)
 "cjx" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/grille,
+,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/starboard/lesser)
 "cjy" = (
@@ -13037,7 +13037,7 @@
 /turf/open/floor/grass,
 /area/station/science/genetics)
 "eza" = (
-/obj/structure/grille,
+,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/department/security)
@@ -15038,7 +15038,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/service)
 "fjQ" = (
-/obj/structure/grille,
+,
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmos)
 "fjR" = (
@@ -16150,7 +16150,7 @@
 /area/station/service/bar/backroom)
 "fEB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/grille,
+,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/starboard/central)
 "fEG" = (
@@ -19074,7 +19074,7 @@
 /turf/open/floor/iron,
 /area/station/security/processing)
 "gGx" = (
-/obj/structure/grille,
+,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/central)
@@ -25345,7 +25345,7 @@
 /turf/open/misc/asteroid/snow/coldroom,
 /area/station/service/kitchen/coldroom)
 "iRz" = (
-/obj/structure/grille,
+,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/starboard/lesser)
@@ -34787,7 +34787,7 @@
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
 "lYV" = (
-/obj/structure/grille,
+,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
@@ -36197,7 +36197,7 @@
 /area/station/hallway/secondary/entry)
 "mwd" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/grille,
+,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/port/central)
 "mwe" = (
@@ -44001,7 +44001,7 @@
 /area/station/maintenance/department/medical)
 "piG" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/grille,
+,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/department/security)
 "piH" = (
@@ -44460,7 +44460,7 @@
 /area/station/hallway/primary/tram/center)
 "ppM" = (
 /obj/structure/window/reinforced/tinted/fulltile,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/science/breakroom)
 "pqb" = (
@@ -50803,7 +50803,7 @@
 /area/station/security/checkpoint/medical)
 "rxw" = (
 /obj/structure/girder,
-/obj/structure/grille,
+,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "rxB" = (
@@ -52348,7 +52348,7 @@
 /turf/open/floor/iron/dark,
 /area/station/command/teleporter)
 "rUQ" = (
-/obj/structure/window/reinforced/fulltile,
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/grass,
 /area/station/hallway/secondary/exit/departure_lounge)
 "rUR" = (
@@ -54554,7 +54554,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "sOP" = (
-/obj/structure/grille,
+,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/starboard/central)
@@ -57735,7 +57735,7 @@
 /area/station/engineering/atmos)
 "tTp" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/central)
 "tTu" = (
@@ -63655,7 +63655,7 @@
 /area/station/command/heads_quarters/qm)
 "vXG" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/lesser)
 "vXL" = (

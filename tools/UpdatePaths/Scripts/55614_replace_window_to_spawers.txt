@@ -1,0 +1,6 @@
+#comment This replaces the windows with windows spawners and remove grills sorry ships who use grills other then for windows
+
+/obj/structure/grille : 
+/obj/structure/window/reinforced/fulltile : /obj/effect/spawner/structure/window/reinforced
+/obj/structure/window/reinforced/shuttle : /obj/effect/spawner/structure/window/reinforced/shuttle
+/obj/structure/window/reinforced/plasma/plastitanium : /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium

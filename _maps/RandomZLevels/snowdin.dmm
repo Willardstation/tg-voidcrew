@@ -2209,7 +2209,7 @@
 /turf/open/floor/iron/white,
 /area/awaymission/snowdin/post)
 "gu" = (
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/post)
 "gv" = (
@@ -5950,7 +5950,7 @@
 /area/awaymission/snowdin/post/secpost)
 "qq" = (
 /obj/structure/window/reinforced/fulltile/ice,
-/obj/structure/grille,
+,
 /obj/structure/barricade/wooden/crude/snow,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/post/secpost)
@@ -6341,7 +6341,7 @@
 /area/awaymission/snowdin/post/cavern2)
 "rG" = (
 /obj/structure/window/reinforced/fulltile/ice,
-/obj/structure/grille,
+,
 /obj/structure/barricade/wooden/crude/snow,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/post)
@@ -7692,7 +7692,7 @@
 /area/awaymission/snowdin/cave)
 "yf" = (
 /obj/structure/window/reinforced/fulltile/ice,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/cave)
 "yg" = (
@@ -7771,7 +7771,7 @@
 /area/awaymission/snowdin/cave)
 "yt" = (
 /obj/structure/window/reinforced/fulltile/ice,
-/obj/structure/grille,
+,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible{
 	dir = 8
 	},
@@ -8240,7 +8240,7 @@
 /area/awaymission/snowdin/outside)
 "Ah" = (
 /obj/structure/window/reinforced/fulltile/ice,
-/obj/structure/grille,
+,
 /obj/item/clothing/suit/hooded/wintercoat,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/post/minipost)
@@ -8445,7 +8445,7 @@
 /area/awaymission/snowdin/cave/cavern)
 "AX" = (
 /obj/structure/window/reinforced/fulltile/ice,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/post/minipost)
 "AY" = (
@@ -9075,8 +9075,8 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/snowdin/cave)
 "DH" = (
-/obj/structure/window/reinforced/plasma/plastitanium,
-/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/cave)
 "DI" = (
@@ -9089,7 +9089,7 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/awaymission/snowdin/cave)
 "DK" = (
-/obj/structure/grille,
+,
 /obj/item/shard,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/cave)
@@ -9724,12 +9724,12 @@
 /area/awaymission/snowdin/post/mining_main)
 "GS" = (
 /obj/structure/window/reinforced/fulltile/ice,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/outside)
 "GT" = (
 /obj/structure/window/reinforced/fulltile/ice,
-/obj/structure/grille,
+,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /turf/open/floor/plating,
 /area/awaymission/snowdin/outside)

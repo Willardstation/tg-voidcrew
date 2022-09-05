@@ -1,9 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "ab" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#008000"
-	},
+,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "wizardship_bridge"
 	},
@@ -576,10 +574,8 @@
 /turf/open/floor/bronze,
 /area/station/cargo/miningoffice)
 "bZ" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#008000"
-	},
+,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/structure/curtain/cloth/fancy,
 /turf/open/floor/plating,
 /area/station/science)
@@ -920,10 +916,8 @@
 /turf/open/floor/wood,
 /area/station/hallway/primary/central)
 "qN" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#008000"
-	},
+,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/structure/curtain/cloth/fancy,
 /obj/docking_port/mobile{
 	dir = 4;
@@ -1291,10 +1285,8 @@
 /turf/open/floor/wood,
 /area/station/service/cafeteria)
 "Kz" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#008000"
-	},
+,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/structure/curtain/cloth/fancy,
 /turf/open/floor/plating,
 /area/station/hallway/primary/aft)
@@ -1419,10 +1411,8 @@
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
 "PT" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#008000"
-	},
+,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/structure/curtain/cloth/fancy,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
@@ -1437,10 +1427,8 @@
 /turf/open/floor/plating,
 /area/station/external)
 "RD" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile{
-	color = "#008000"
-	},
+,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/structure/curtain/cloth/fancy,
 /turf/open/floor/plating,
 /area/station/service/cafeteria)
