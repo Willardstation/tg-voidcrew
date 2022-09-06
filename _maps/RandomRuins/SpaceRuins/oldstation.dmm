@@ -445,7 +445,7 @@
 /turf/closed/wall,
 /area/ruin/space/ancientstation/delta/hall)
 "bF" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/medbay)
 "bH" = (
@@ -2231,7 +2231,7 @@
 /turf/closed/wall,
 /area/ruin/space/ancientstation/charlie/kitchen)
 "gJ" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ancientstation/beta/hall)
 "gL" = (

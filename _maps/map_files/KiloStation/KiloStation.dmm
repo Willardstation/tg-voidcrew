@@ -319,7 +319,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "acT" = (
@@ -431,7 +431,7 @@
 /area/station/hallway/primary/aft)
 "aeo" = (
 /obj/structure/lattice,
-,
+/obj/structure/grille,
 /turf/open/space/basic,
 /area/space/nearstation)
 "aeq" = (
@@ -1975,7 +1975,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/greater)
 "aAU" = (
-,
+/obj/structure/grille,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
@@ -4898,7 +4898,7 @@
 "byb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/girder,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/department/cargo)
 "bys" = (
@@ -4964,7 +4964,7 @@
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/aft)
 "bzb" = (
-,
+/obj/structure/grille,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -7209,7 +7209,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "ciK" = (
@@ -7372,7 +7372,7 @@
 /turf/closed/wall,
 /area/space/nearstation)
 "ckf" = (
-,
+/obj/structure/grille,
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -7624,7 +7624,7 @@
 	},
 /area/station/service/chapel)
 "cnf" = (
-,
+/obj/structure/grille,
 /turf/open/misc/asteroid/airless,
 /area/space/nearstation)
 "cnn" = (
@@ -7709,7 +7709,7 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "cow" = (
-,
+/obj/structure/grille,
 /turf/closed/wall/r_wall,
 /area/space/nearstation)
 "cox" = (
@@ -8536,7 +8536,7 @@
 /area/station/command/bridge)
 "cCe" = (
 /obj/structure/sign/warning/fire,
-,
+/obj/structure/grille,
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmos)
 "cCJ" = (
@@ -10261,7 +10261,7 @@
 /area/station/commons/storage/primary)
 "deI" = (
 /obj/effect/turf_decal/bot,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "deZ" = (
@@ -10607,7 +10607,7 @@
 /turf/open/floor/iron/dark,
 /area/station/cargo/storage)
 "dja" = (
-,
+/obj/structure/grille,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
@@ -20482,7 +20482,7 @@
 /area/station/security/interrogation)
 "fRS" = (
 /obj/effect/decal/cleanable/dirt,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
 "fSt" = (
@@ -22405,7 +22405,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "gva" = (
-,
+/obj/structure/grille,
 /turf/closed/wall/r_wall/rust,
 /area/station/engineering/atmos)
 "gvu" = (
@@ -23447,7 +23447,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/gravity_generator)
 "gJz" = (
-,
+/obj/structure/grille,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
@@ -25706,7 +25706,7 @@
 /area/station/engineering/atmos/storage/gas)
 "hpg" = (
 /obj/effect/decal/cleanable/dirt,
-,
+/obj/structure/grille,
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/port/lesser)
@@ -32394,7 +32394,7 @@
 /area/station/maintenance/starboard/fore)
 "jcs" = (
 /obj/effect/decal/cleanable/dirt,
-,
+/obj/structure/grille,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -62796,7 +62796,7 @@
 /turf/closed/wall/r_wall,
 /area/station/maintenance/starboard)
 "rTi" = (
-,
+/obj/structure/grille,
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmos)
 "rTk" = (
@@ -65698,7 +65698,7 @@
 /area/station/security/lockers)
 "sLl" = (
 /obj/structure/girder,
-,
+/obj/structure/grille,
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
@@ -69200,7 +69200,7 @@
 /area/station/tcommsat/computer)
 "tHs" = (
 /obj/structure/sign/warning/fire,
-,
+/obj/structure/grille,
 /turf/closed/wall/r_wall/rust,
 /area/station/engineering/atmos)
 "tHv" = (
@@ -70465,7 +70465,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/disposal/incinerator)
 "ubC" = (
-,
+/obj/structure/grille,
 /obj/structure/barricade/wooden,
 /obj/machinery/door/airlock/maintenance,
 /obj/effect/mapping_helpers/airlock/abandoned,
@@ -77015,7 +77015,7 @@
 /area/station/medical/pharmacy)
 "vQF" = (
 /obj/structure/lattice,
-,
+/obj/structure/grille,
 /turf/open/misc/asteroid/airless,
 /area/space/nearstation)
 "vQY" = (
@@ -80443,7 +80443,7 @@
 	dir = 8
 	},
 /obj/structure/sign/warning/electric_shock/directional/south,
-,
+/obj/structure/grille,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,

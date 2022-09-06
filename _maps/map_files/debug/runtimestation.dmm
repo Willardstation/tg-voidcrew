@@ -14,7 +14,7 @@
 /area/station/maintenance/department/bridge)
 "ae" = (
 /obj/structure/lattice,
-,
+/obj/structure/grille,
 /turf/open/space,
 /area/space/nearstation)
 "af" = (

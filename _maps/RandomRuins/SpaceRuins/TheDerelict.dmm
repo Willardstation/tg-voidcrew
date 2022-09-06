@@ -2816,7 +2816,7 @@
 /turf/open/floor/plating/airless,
 /area/ruin/space/ks13/science/genetics)
 "yz" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ks13/ai/corridor)
 "yA" = (
@@ -3239,7 +3239,7 @@
 /turf/open/floor/iron,
 /area/ruin/space/ks13/command/bridge)
 "AK" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ks13/engineering/aft_solars_control)
 "AM" = (
@@ -3381,7 +3381,7 @@
 /turf/open/floor/plating/airless,
 /area/ruin/space/ks13/security/court_hall)
 "Bw" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "Bx" = (
@@ -3687,7 +3687,7 @@
 /turf/open/floor/iron/airless,
 /area/ruin/space/ks13/service/hydro)
 "Dh" = (
-,
+/obj/structure/grille,
 /obj/item/shard,
 /obj/item/shard{
 	icon_state = "medium"
@@ -4016,7 +4016,7 @@
 /turf/open/floor/iron,
 /area/ruin/space/ks13/command/bridge_hall)
 "EK" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/ruin/space/ks13/engineering/singulo)
 "EL" = (
@@ -4897,7 +4897,7 @@
 	name = "Captain's Quarters";
 	req_access = list("captain")
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ruin/space/ks13/command/bridge)
 "JD" = (

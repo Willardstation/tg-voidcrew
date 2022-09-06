@@ -74,7 +74,7 @@
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ratvar)
 "u" = (
-,
+/obj/structure/grille,
 /turf/open/floor/bronze/filled/lavaland,
 /area/ruin/unpowered/ratvar)
 "v" = (
@@ -112,7 +112,7 @@
 /turf/open/floor/bronze/filled/lavaland,
 /area/ruin/unpowered/ratvar)
 "D" = (
-,
+/obj/structure/grille,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/ratvar)
 "E" = (

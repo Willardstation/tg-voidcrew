@@ -51,7 +51,11 @@
 /turf/open/floor/circuit/green/off,
 /area/centcom/ctf)
 "ev" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/window/reinforced/fulltile{
+	max_integrity = 5000;
+	name = "hardened window";
+	atom_integrity = 5000
+	},
 /turf/open/floor/plating,
 /area/centcom/ctf)
 "eW" = (

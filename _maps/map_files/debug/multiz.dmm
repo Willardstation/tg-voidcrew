@@ -947,7 +947,7 @@
 /area/station/engineering/storage)
 "hw" = (
 /obj/structure/lattice,
-,
+/obj/structure/grille,
 /turf/open/openspace/airless,
 /area/space/nearstation)
 "hT" = (
@@ -1131,7 +1131,7 @@
 /turf/open/floor/plating/elevatorshaft,
 /area/station/commons/storage/primary)
 "nW" = (
-,
+/obj/structure/grille,
 /turf/open/openspace/airless,
 /area/space/nearstation)
 "od" = (
@@ -1601,7 +1601,7 @@
 /area/station/construction)
 "Kc" = (
 /obj/structure/lattice,
-,
+/obj/structure/grille,
 /turf/open/space/basic,
 /area/space/nearstation)
 "Kd" = (

@@ -1345,7 +1345,7 @@
 /turf/open/floor/wood/freezing,
 /area/awaymission/cabin/lumbermill)
 "eH" = (
-,
+/obj/structure/grille,
 /obj/structure/window/reinforced/fulltile/ice{
 	name = "frozen window"
 	},
@@ -1819,8 +1819,11 @@
 	},
 /area/awaymission/cabin/caves/mountain)
 "fT" = (
-,
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/grille,
+/obj/structure/window/reinforced/fulltile{
+	desc = "Enjoy the view.";
+	name = "window"
+	},
 /turf/open/floor/plating,
 /area/awaymission/cabin/caves/mountain)
 "fU" = (

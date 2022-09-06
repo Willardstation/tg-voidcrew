@@ -2207,7 +2207,7 @@
 	},
 /area/awaymission/moonoutpost19/research)
 "gb" = (
-,
+/obj/structure/grille,
 /obj/machinery/door/poddoor/preopen{
 	desc = "A heavy duty blast door that opens mechanically. This one has been applied with an acid-proof coating.";
 	id = "Awaylab";
@@ -3747,7 +3747,7 @@
 	},
 /area/awaymission/moonoutpost19/arrivals)
 "jB" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating{
 	heat_capacity = 1e+006;
 	initial_gas_mix = "co2=48.7;n2=13.2;o2=32.4;TEMP=251"
@@ -5261,7 +5261,7 @@
 	},
 /area/awaymission/moonoutpost19/arrivals)
 "nt" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating{
 	heat_capacity = 1e+006
 	},

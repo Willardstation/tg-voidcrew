@@ -1458,7 +1458,7 @@
 	},
 /area/mine/eva)
 "axu" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "axy" = (
@@ -4284,7 +4284,7 @@
 /turf/open/floor/iron/dark/textured_edge,
 /area/station/security/prison)
 "bqe" = (
-,
+/obj/structure/grille,
 /obj/effect/mapping_helpers/burnt_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
@@ -7140,7 +7140,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/starboard/aft)
 "cek" = (
-,
+/obj/structure/grille,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "cex" = (
@@ -8055,7 +8055,7 @@
 /turf/open/floor/plating,
 /area/station/engineering/supermatter)
 "ctl" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/aisat/maint)
 "ctB" = (
@@ -9010,7 +9010,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "cHf" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/window/reinforced/fulltile,
 /obj/structure/transit_tube,
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -16199,7 +16199,7 @@
 /turf/open/floor/iron,
 /area/station/commons/locker)
 "eQz" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
 "eQA" = (
@@ -22267,7 +22267,7 @@
 /turf/open/floor/iron,
 /area/station/commons/dorms)
 "gJM" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/port/greater)
 "gKd" = (
@@ -26303,7 +26303,7 @@
 /area/station/commons/fitness)
 "iaz" = (
 /obj/structure/girder,
-,
+/obj/structure/grille,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/greater)
@@ -27366,7 +27366,7 @@
 /turf/open/floor/iron/grimy,
 /area/station/security/detectives_office)
 "iry" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
 "irz" = (
@@ -34079,7 +34079,7 @@
 /turf/closed/wall,
 /area/station/commons/storage/mining)
 "ktf" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/aft/greater)
 "ktl" = (
@@ -34279,7 +34279,7 @@
 /turf/open/floor/iron,
 /area/mine/laborcamp/security)
 "kwX" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/central)
 "kxe" = (
@@ -35397,7 +35397,7 @@
 "kNA" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/girder,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/central)
 "kNC" = (
@@ -39970,7 +39970,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "mnC" = (
-,
+/obj/structure/grille,
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
@@ -44657,7 +44657,7 @@
 /turf/open/floor/iron/white,
 /area/station/maintenance/port/fore)
 "nJd" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/morgue)
 "nJm" = (
@@ -47418,7 +47418,7 @@
 /area/station/medical/treatment_center)
 "oyC" = (
 /obj/structure/girder,
-,
+/obj/structure/grille,
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/wood,
 /area/station/maintenance/aft/lesser)
@@ -51021,7 +51021,7 @@
 /area/icemoon/underground/explored)
 "pGM" = (
 /obj/structure/girder,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
 "pGQ" = (
@@ -53541,7 +53541,7 @@
 /turf/open/floor/wood,
 /area/station/service/library)
 "qwF" = (
-,
+/obj/structure/grille,
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmos)
 "qwJ" = (
@@ -58620,7 +58620,7 @@
 	},
 /area/station/security/prison)
 "sbD" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "sbK" = (
@@ -62168,7 +62168,7 @@
 	},
 /area/station/science/lab)
 "tis" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/window/reinforced/fulltile,
 /obj/structure/transit_tube/horizontal,
 /turf/open/floor/plating,
 /area/station/ai_monitored/turret_protected/aisat_interior)
@@ -62440,7 +62440,7 @@
 /turf/open/floor/plating,
 /area/station/science/ordnance)
 "tml" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
 "tmw" = (
@@ -63511,7 +63511,7 @@
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "tCr" = (
-,
+/obj/structure/grille,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/surface/outdoors/nospawn)
 "tCs" = (
@@ -66838,7 +66838,7 @@
 /turf/open/floor/iron,
 /area/station/security/prison/workout)
 "uDl" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/department/chapel)
 "uDq" = (
@@ -68503,7 +68503,7 @@
 /turf/open/floor/iron,
 /area/station/commons/fitness)
 "vgf" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/science/xenobiology)
 "vgu" = (
@@ -72845,7 +72845,7 @@
 /turf/closed/wall/r_wall,
 /area/station/engineering/supermatter)
 "wuC" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/upper)
 "wuH" = (

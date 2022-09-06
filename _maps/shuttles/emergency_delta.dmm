@@ -31,8 +31,8 @@
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "ag" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-,
+/obj/structure/window/reinforced/shuttle,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "ah" = (
@@ -293,7 +293,7 @@
 /obj/structure/flora/bush/lavendergrass/style_random,
 /obj/structure/flora/bush/flowers_br/style_random,
 /obj/structure/flora/bush/leavy/style_random,
-/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/structure/window/reinforced/shuttle,
 /turf/open/floor/grass,
 /area/shuttle/escape)
 "ay" = (
@@ -355,7 +355,7 @@
 /obj/structure/flora/bush/lavendergrass/style_random,
 /obj/structure/flora/bush/flowers_yw/style_random,
 /obj/structure/flora/bush/generic/style_random,
-/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/structure/window/reinforced/shuttle,
 /turf/open/floor/grass,
 /area/shuttle/escape)
 "aJ" = (
@@ -465,7 +465,7 @@
 /obj/structure/flora/bush/lavendergrass/style_random,
 /obj/structure/flora/bush/flowers_pp/style_random,
 /obj/structure/flora/bush/sunny/style_random,
-/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/structure/window/reinforced/shuttle,
 /turf/open/floor/grass,
 /area/shuttle/escape)
 "aY" = (
@@ -514,7 +514,7 @@
 /obj/structure/flora/bush/lavendergrass/style_random,
 /obj/structure/flora/bush/flowers_yw/style_random,
 /obj/structure/flora/bush/ferny/style_random,
-/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/structure/window/reinforced/shuttle,
 /turf/open/floor/grass,
 /area/shuttle/escape)
 "bf" = (

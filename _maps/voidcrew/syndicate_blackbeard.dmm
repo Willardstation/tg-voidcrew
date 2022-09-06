@@ -25,8 +25,8 @@
 /turf/open/floor/mineral/plastitanium,
 /area/station/engineering)
 "aS" = (
-,
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/structure/grille,
+/obj/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor{
 	id = "blackbeardblastdoor1"
 	},
@@ -201,8 +201,8 @@
 /turf/open/floor/catwalk_floor,
 /area/station/cargo)
 "jm" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
-,
+/obj/structure/window/reinforced/plasma/plastitanium,
+/obj/structure/grille,
 /obj/machinery/door/poddoor{
 	id = "bbwindowblastdoors1"
 	},
@@ -230,8 +230,8 @@
 /obj/machinery/door/poddoor{
 	id = "bbwindowblastdoors1"
 	},
-,
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/structure/grille,
+/obj/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
 /area/station/hallway/primary/central)
 "kB" = (
@@ -426,8 +426,8 @@
 /turf/open/floor/catwalk_floor,
 /area/station/hallway/primary/central)
 "vP" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
-,
+/obj/structure/window/reinforced/plasma/plastitanium,
+/obj/structure/grille,
 /obj/machinery/door/poddoor{
 	id = "bbwindowblastdoors1"
 	},
@@ -980,11 +980,11 @@
 /turf/open/floor/catwalk_floor,
 /area/station/hallway/primary/central)
 "Yt" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor{
 	id = "bbwindowblastdoors1"
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/hallway/primary/central)
 "Zz" = (

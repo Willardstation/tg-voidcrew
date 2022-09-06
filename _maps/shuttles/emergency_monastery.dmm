@@ -571,7 +571,7 @@
 /area/shuttle/escape)
 "iw" = (
 /obj/structure/lattice,
-,
+/obj/structure/grille,
 /turf/open/space,
 /area/shuttle/escape)
 "iB" = (
@@ -2648,6 +2648,10 @@
 /obj/structure/table/wood,
 /obj/item/nullrod,
 /turf/open/floor/carpet/black,
+/area/shuttle/escape)
+"Kg" = (
+/obj/structure/window/reinforced/fulltile,
+/turf/open/floor/plating,
 /area/shuttle/escape)
 "Kl" = (
 /obj/machinery/chem_master/condimaster,
@@ -5006,9 +5010,9 @@ jc
 jc
 jc
 gO
-zE
+Kg
 GB
-zE
+Kg
 Ho
 Ho
 Ho
@@ -5088,9 +5092,9 @@ jc
 jc
 Pe
 jc
-zE
+Kg
 mK
-zE
+Kg
 Ho
 Ho
 Ho
@@ -5170,9 +5174,9 @@ jc
 jc
 jc
 jc
-zE
+Kg
 iW
-zE
+Kg
 Ho
 Ho
 Ho
@@ -5252,9 +5256,9 @@ jc
 Dt
 jc
 Pe
-zE
+Kg
 GB
-zE
+Kg
 Ho
 Ho
 Ho
@@ -5587,13 +5591,13 @@ yc
 ZM
 oc
 nr
-zE
-zE
+Kg
+Kg
 nr
 Tf
 nr
-zE
-zE
+Kg
+Kg
 nr
 oc
 ZM
@@ -5668,7 +5672,7 @@ nr
 yc
 vX
 oc
-zE
+Kg
 zB
 it
 Dc
@@ -5676,7 +5680,7 @@ DY
 EU
 Gk
 HL
-zE
+Kg
 oc
 hY
 yc
@@ -5750,7 +5754,7 @@ KH
 yc
 rj
 oc
-zE
+Kg
 it
 Bp
 Wl
@@ -5758,7 +5762,7 @@ Vi
 Vi
 Xm
 it
-zE
+Kg
 oc
 vb
 OH
@@ -5914,7 +5918,7 @@ jx
 iS
 BX
 oc
-zE
+Kg
 Jv
 Bp
 Xm
@@ -5922,7 +5926,7 @@ Eb
 Vi
 Vi
 HS
-zE
+Kg
 oc
 ZM
 yc
@@ -5935,9 +5939,9 @@ Ho
 nr
 nr
 PB
-zE
+Kg
 DS
-zE
+Kg
 PB
 nr
 ob
@@ -5996,7 +6000,7 @@ Hc
 vJ
 Hc
 oc
-zE
+Kg
 CN
 YD
 Zj
@@ -6004,7 +6008,7 @@ En
 Wl
 FK
 it
-zE
+Kg
 oc
 ZM
 yc
@@ -6017,9 +6021,9 @@ yc
 yc
 Ho
 JG
-zE
+Kg
 Zf
-zE
+Kg
 JG
 nr
 RG
@@ -6099,9 +6103,9 @@ Zl
 yc
 yc
 nr
-zE
+Kg
 qx
-zE
+Kg
 nr
 nr
 IL
@@ -6160,7 +6164,7 @@ KH
 yc
 rj
 oc
-zE
+Kg
 YD
 Vi
 Vi
@@ -6168,7 +6172,7 @@ Vi
 GN
 YD
 IR
-zE
+Kg
 oc
 vb
 PU
@@ -6242,7 +6246,7 @@ nr
 yc
 qC
 oc
-zE
+Kg
 bK
 EL
 RZ
@@ -6250,7 +6254,7 @@ Vi
 Ff
 zX
 ET
-zE
+Kg
 oc
 hY
 Qg
@@ -6325,13 +6329,13 @@ yc
 BX
 oc
 nr
-zE
-zE
+Kg
+Kg
 nr
 gp
 nr
-zE
-zE
+Kg
+Kg
 nr
 oc
 ZM
@@ -6345,9 +6349,9 @@ tT
 yc
 yc
 nr
-zE
+Kg
 DS
-zE
+Kg
 nr
 nr
 xt
@@ -6427,9 +6431,9 @@ yo
 yc
 Ho
 JG
-zE
+Kg
 Zf
-zE
+Kg
 JG
 nr
 uc
@@ -6509,9 +6513,9 @@ CJ
 yc
 nr
 PB
-zE
+Kg
 qx
-zE
+Kg
 PB
 nr
 Lu

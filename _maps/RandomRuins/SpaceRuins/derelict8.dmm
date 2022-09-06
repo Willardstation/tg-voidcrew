@@ -191,7 +191,7 @@
 /area/template_noop)
 "DQ" = (
 /obj/effect/decal/cleanable/glass,
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav)
 "Fk" = (

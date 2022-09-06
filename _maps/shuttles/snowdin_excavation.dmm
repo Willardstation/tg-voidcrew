@@ -14,7 +14,7 @@
 /area/shuttle/snowdin/elevator1)
 "b" = (
 /obj/structure/window/reinforced/fulltile/ice,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/shuttle/snowdin/elevator1)
 "c" = (

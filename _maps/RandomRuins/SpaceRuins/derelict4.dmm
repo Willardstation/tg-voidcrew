@@ -56,7 +56,7 @@
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav)
 "o" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav)
 "p" = (

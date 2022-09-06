@@ -296,7 +296,7 @@
 /turf/open/floor/plating/airless,
 /area/template_noop)
 "bT" = (
-,
+/obj/structure/grille,
 /obj/item/shard{
 	icon_state = "medium"
 	},

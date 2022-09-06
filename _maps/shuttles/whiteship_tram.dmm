@@ -446,7 +446,7 @@
 /area/shuttle/abandoned/cargo)
 "bu" = (
 /obj/item/shard,
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/shuttle/abandoned/cargo)
 "bv" = (

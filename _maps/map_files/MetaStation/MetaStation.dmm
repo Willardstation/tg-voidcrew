@@ -11744,7 +11744,7 @@
 /turf/open/floor/iron/dark,
 /area/station/command/bridge)
 "eoU" = (
-,
+/obj/structure/grille,
 /turf/closed/wall/r_wall,
 /area/station/engineering/atmos)
 "eoZ" = (
@@ -33035,7 +33035,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-,
+/obj/structure/grille,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
@@ -41656,7 +41656,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "oPZ" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
 "oQc" = (

@@ -3,12 +3,12 @@
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/shuttle/syndicate/bridge)
 "ab" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor/shutters{
 	id = "syndieshutters";
 	name = "Blast Shutters"
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/shuttle/syndicate/bridge)
 "ac" = (

@@ -937,7 +937,7 @@
 /turf/open/floor/plating,
 /area/awaymission/research/interior/maint)
 "ee" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/awaymission/research/interior/maint)
 "eg" = (

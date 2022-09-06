@@ -530,7 +530,7 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/abandoned/bar)
 "bi" = (
-,
+/obj/structure/grille,
 /obj/item/stack/rods,
 /obj/item/shard,
 /turf/open/floor/plating/airless,
@@ -1624,7 +1624,7 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/abandoned/cargo)
 "dy" = (
-,
+/obj/structure/grille,
 /obj/item/stack/sheet/mineral/titanium,
 /turf/open/floor/plating/airless,
 /area/shuttle/abandoned/cargo)

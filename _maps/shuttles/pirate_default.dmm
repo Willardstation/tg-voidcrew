@@ -845,7 +845,7 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/pirate)
 "et" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating/airless,
 /area/shuttle/pirate)
 "eu" = (

@@ -60,7 +60,12 @@
 /turf/open/floor/carpet/blue,
 /area/centcom/ctf)
 "ef" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/window/reinforced/fulltile{
+	color = "#008000";
+	max_integrity = 5000;
+	name = "hardened window";
+	atom_integrity = 5000
+	},
 /turf/open/floor/plating,
 /area/centcom/ctf)
 "eg" = (

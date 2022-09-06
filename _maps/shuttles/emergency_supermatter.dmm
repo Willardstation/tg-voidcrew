@@ -242,18 +242,18 @@
 /turf/open/floor/plating/airless,
 /area/shuttle/escape)
 "bf" = (
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "bg" = (
-,
+/obj/structure/grille,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
 /turf/open/floor/plating,
 /area/shuttle/escape)
 "bh" = (
-,
+/obj/structure/grille,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
