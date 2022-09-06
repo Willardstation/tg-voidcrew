@@ -204,7 +204,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "mR" = (
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "mV" = (
