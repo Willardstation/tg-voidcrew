@@ -16,7 +16,7 @@
 /area/station/commons)
 "dr" = (
 /obj/effect/spawner/structure/window/reinforced/indestructible,
-/obj/structure/grille,
+,
 /obj/docking_port/mobile{
 	dir = 2
 	},
@@ -24,7 +24,7 @@
 /area/station/command/bridge)
 "dW" = (
 /obj/effect/spawner/structure/window/reinforced/indestructible,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "fx" = (
@@ -35,7 +35,7 @@
 /turf/open/floor/mineral/bananium,
 /area/station/commons)
 "fL" = (
-/obj/structure/grille,
+,
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/command/bridge)
@@ -92,7 +92,7 @@
 /turf/open/floor/wood,
 /area/station/command/bridge)
 "mU" = (
-/obj/structure/grille,
+,
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/mineral/bananium,
 /area/station/commons)
@@ -459,8 +459,8 @@
 /turf/open/floor/mineral/bananium,
 /area/station/commons)
 "NI" = (
-/obj/structure/window/reinforced/fulltile,
-/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced,
+,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/yellow,
 /turf/open/floor/plating,
 /area/station/commons)
@@ -762,7 +762,7 @@
 /turf/open/floor/mineral/bananium,
 /area/station/commons)
 "Zr" = (
-/obj/structure/grille,
+,
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
 /turf/open/floor/mineral/bananium,

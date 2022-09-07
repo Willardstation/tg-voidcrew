@@ -32,8 +32,8 @@
 /turf/open/floor/mineral/titanium,
 /area/station/commons/dorms)
 "dh" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
+,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "dm" = (
@@ -74,8 +74,8 @@
 /turf/open/floor/mineral/titanium,
 /area/station/hallway/primary/central)
 "dS" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
+,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/station/commons/dorms)
 "eO" = (
@@ -137,8 +137,8 @@
 /turf/open/floor/plating,
 /area/station/security/brig)
 "hx" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
+,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/station/security/brig)
 "hJ" = (
@@ -851,8 +851,8 @@
 /turf/open/floor/mineral/titanium,
 /area/station/ai_monitored/security/armory)
 "Zy" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
+,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "ZX" = (

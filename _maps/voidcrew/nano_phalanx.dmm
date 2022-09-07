@@ -1123,8 +1123,8 @@
 /turf/open/floor/mineral/titanium/tiled/blue,
 /area/station/medical/surgery)
 "pg" = (
-/obj/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+,
 /turf/open/floor/mineral/titanium/tiled/blue,
 /area/station/medical/surgery)
 "pl" = (
@@ -1416,8 +1416,8 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/fore)
 "tn" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
+,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "phbridgeblastdoors"
 	},
@@ -1744,8 +1744,8 @@
 /turf/open/floor/iron,
 /area/station/service/cafeteria)
 "yk" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
+,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "phpublicblastdoors"
 	},
@@ -2466,8 +2466,8 @@
 /turf/open/floor/mineral/titanium/tiled/purple,
 /area/station/science/research)
 "JL" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
+,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/station/service/cafeteria)
 "JM" = (
@@ -2716,8 +2716,8 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "MU" = (
-/obj/structure/window/reinforced/fulltile,
-/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced,
+,
 /turf/open/floor/plating,
 /area/station/commons/dorms)
 "MZ" = (
@@ -2756,8 +2756,8 @@
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
 "NC" = (
-/obj/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+,
 /turf/open/floor/mineral/titanium/tiled/purple,
 /area/station/science/research)
 "NE" = (

@@ -682,7 +682,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "ospreysci"
 	},
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/science/research)
 "hw" = (
@@ -752,7 +752,7 @@
 /area/station/maintenance/port)
 "ip" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/cargo/office)
 "iq" = (
@@ -1422,7 +1422,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/medical/medbay/lobby)
 "ob" = (
@@ -1587,7 +1587,7 @@
 /area/station/hallway/primary/central)
 "pJ" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/commons/dorms)
 "pO" = (
@@ -1910,7 +1910,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "ospreybridge"
 	},
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "te" = (
@@ -2128,7 +2128,7 @@
 /area/station/hallway/primary/aft)
 "vp" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "vz" = (
@@ -2457,7 +2457,7 @@
 /area/station/hallway/primary/starboard)
 "zQ" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/service/cafeteria)
 "zW" = (
@@ -2791,7 +2791,7 @@
 /area/station/cargo/miningoffice)
 "Ds" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/hallway/primary/aft)
 "Dw" = (
@@ -2857,7 +2857,7 @@
 /area/station/medical/medbay/lobby)
 "Ed" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/medical/medbay/lobby)
 "Ei" = (
@@ -3134,7 +3134,7 @@
 /area/station/engineering/main)
 "Hp" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "Hq" = (
@@ -3409,7 +3409,7 @@
 /area/station/cargo/office)
 "JU" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/cargo/warehouse)
 "JV" = (
@@ -3482,7 +3482,7 @@
 /area/station/cargo/warehouse)
 "KO" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/science/robotics/lab)
 "KV" = (
@@ -3701,7 +3701,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "ospreycargo"
 	},
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/cargo/office)
 "NU" = (
@@ -4607,7 +4607,7 @@
 /area/station/maintenance/port)
 "YS" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/structure/grille,
+,
 /turf/open/floor/plating,
 /area/station/science/research)
 "Za" = (
