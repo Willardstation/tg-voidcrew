@@ -29,3 +29,11 @@
 			return
 
 	return ..()
+
+/**
+ * Tied to Production
+ */
+/obj/machinery/rnd/production/update_designs()
+	if(!stored_research)
+		return
+	return ..()
