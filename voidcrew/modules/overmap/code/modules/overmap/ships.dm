@@ -27,6 +27,9 @@
 	var/list/cam_plane_masters
 	var/atom/movable/screen/background/cam_background
 
+	///The docking port of the linked shuttle
+	var/obj/docking_port/mobile/shuttle
+
 /obj/structure/overmap/ship/Initialize(mapload)
 	. = ..()
 
