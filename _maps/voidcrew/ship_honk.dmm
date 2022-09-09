@@ -460,8 +460,7 @@
 /turf/open/floor/mineral/bananium,
 /area/station/commons)
 "NI" = (
-/obj/structure/window/reinforced/fulltile,
-/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/yellow,
 /turf/open/floor/plating,
 /area/station/commons)
