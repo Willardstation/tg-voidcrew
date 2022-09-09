@@ -2,8 +2,8 @@
 	name = "Pill-class Torture Device"
 	suffix = "pill"
 	short_name = "Pill-class"
-	width = 3
-	height = 1
+	height = 5
+	width = 5
 
 	job_slots = list(
 		list(

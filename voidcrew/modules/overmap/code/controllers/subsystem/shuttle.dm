@@ -4,7 +4,7 @@
 	UNTIL(!shuttle_loading)
 	var/datum/map_template/shuttle/voidcrew/pill/new_pill = new
 	shuttle_loading = TRUE
-	if (!load_template(new_pill)) // NOVA TODO: this fails to load the ship
+	if (!load_template(new_pill))
 		stack_trace("Failed to load ship!")
 		shuttle_loading = FALSE
 		return
@@ -14,4 +14,4 @@
 	// spawn a new overmap ship on the overmap
 	var/obj/structure/overmap/ship/ship_to_spawn = new(SSovermap.get_unused_overmap_square(tries = INFINITY))
 	// link it to the loading dock
-	ship_to_spawn.shuttle = null // set this to equal the loading dock pls
+	ship_to_spawn.shuttle = preview_shuttle // set this to equal the loading dock pls
