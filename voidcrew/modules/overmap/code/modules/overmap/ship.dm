@@ -52,10 +52,16 @@
 	 */
 	var/y_thrust = 0
 	var/x_thrust = 0
-	// Stuff needed to render the map
+	/**
+	 * Stuff needed to render the map
+	 */
+	/// Name of the map
 	var/map_name
+	/// Actual screen of the map
 	var/atom/movable/screen/map_view/cam_screen
-	var/list/cam_plane_masters
+	/// List of plane masters used by the screen
+	var/list/cam_plane_masters = list()
+	/// Backgroudn of the screen
 	var/atom/movable/screen/background/cam_background
 
 /obj/structure/overmap/ship/Initialize(mapload)
@@ -71,7 +77,6 @@
 	cam_screen.assigned_map = map_name
 	cam_screen.del_on_map_removal = FALSE
 	cam_screen.screen_loc = "[map_name]:1,1"
-	cam_plane_masters = list()
 	for(var/plane in subtypesof(/atom/movable/screen/plane_master) - /atom/movable/screen/plane_master/blackness)
 		var/atom/movable/screen/plane_master/instance = new plane()
 		if(instance.blend_mode_override)

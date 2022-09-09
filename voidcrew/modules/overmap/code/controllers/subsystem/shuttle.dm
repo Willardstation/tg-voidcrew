@@ -1,17 +1,15 @@
-/datum/controller/subsystem/shuttle/proc/create_ship()
+/datum/controller/subsystem/shuttle/proc/create_ship(datum/map_template/shuttle/voidcrew/ship_template_to_spawn)
 	// load a ship map
 
 	UNTIL(!shuttle_loading)
-	var/datum/map_template/shuttle/voidcrew/pill/new_pill = new
+	ship_template_to_spawn = new
 	shuttle_loading = TRUE
-	if (!load_template(new_pill))
+	if (!load_template(ship_template_to_spawn))
 		stack_trace("Failed to load ship!")
 		shuttle_loading = FALSE
 		return
 	shuttle_loading = FALSE
 
-	// get the loading dock
-	// spawn a new overmap ship on the overmap
 	var/obj/structure/overmap/ship/ship_to_spawn = new(SSovermap.get_unused_overmap_square(tries = INFINITY))
-	// link it to the loading dock
-	ship_to_spawn.shuttle = preview_shuttle // set this to equal the loading dock pls
+	ship_to_spawn.shuttle = preview_shuttle // preview shuttle is set in `load_template()`
+	return preview_shuttle
