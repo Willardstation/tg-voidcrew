@@ -535,7 +535,7 @@
 /turf/open/floor/plating/airless,
 /area/station/external)
 "bj" = (
-,
+/obj/structure/grille,
 /obj/item/stack/rods,
 /obj/item/shard,
 /turf/open/floor/plating/airless,

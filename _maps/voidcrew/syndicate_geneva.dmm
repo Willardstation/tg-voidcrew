@@ -60,7 +60,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "spitfireshutters"
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/service/hydroponics)
 "ca" = (
@@ -401,12 +401,12 @@
 /area/station/engineering/main)
 "lm" = (
 /obj/effect/spawner/structure/window,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/medical/surgery)
 "lr" = (
 /obj/effect/spawner/structure/window,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/service/hydroponics)
 "lV" = (
@@ -448,7 +448,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "spitfireshutters"
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "nc" = (
@@ -461,7 +461,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "spitfireshutters"
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/command/heads_quarters/cmo)
 "nf" = (
@@ -1024,7 +1024,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "spitfireshutters"
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/maintenance/port)
 "Au" = (
@@ -1049,7 +1049,7 @@
 /turf/open/floor/circuit,
 /area/station/engineering/main)
 "AW" = (
-,
+/obj/structure/grille,
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
 /area/station/medical/surgery)
@@ -1112,12 +1112,12 @@
 /turf/open/floor/iron/dark,
 /area/station/cargo/miningoffice)
 "Cu" = (
-,
+/obj/structure/grille,
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
 /area/station/engineering/main)
 "Cz" = (
-,
+/obj/structure/grille,
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
 /area/station/maintenance/port)
@@ -1138,7 +1138,7 @@
 	id = "spitfireshutters"
 	},
 /obj/effect/spawner/structure/window/reinforced,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/service/hydroponics)
 "Da" = (
@@ -1340,7 +1340,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "spitfireshutters"
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/medical/surgery)
 "HS" = (
@@ -1378,7 +1378,7 @@
 /area/station/command/bridge)
 "ME" = (
 /obj/effect/spawner/structure/window,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/commons/dorms)
 "QH" = (
@@ -1386,7 +1386,7 @@
 /area/station/cargo/miningoffice)
 "Sc" = (
 /obj/effect/spawner/structure/window/reinforced,
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "SE" = (
@@ -1401,7 +1401,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "spitfireshutters"
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/commons/dorms)
 "Ux" = (
@@ -1409,7 +1409,7 @@
 /obj/machinery/door/poddoor/preopen{
 	id = "spitfireshutters"
 	},
-,
+/obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "Vn" = (

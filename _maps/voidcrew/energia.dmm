@@ -204,7 +204,7 @@
 /turf/open/floor/wood,
 /area/station/commons/dorms)
 "mE" = (
-,
+/obj/structure/grille,
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter)
@@ -334,7 +334,7 @@
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
 "rF" = (
-,
+/obj/structure/grille,
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/command/bridge)
@@ -993,7 +993,7 @@
 /area/station/maintenance/aft)
 "WP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden,
-,
+/obj/structure/grille,
 /obj/effect/spawner/structure/window/reinforced/plasma,
 /turf/open/floor/plating,
 /area/station/engineering/supermatter)
