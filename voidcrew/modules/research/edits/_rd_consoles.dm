@@ -56,7 +56,7 @@
 /obj/machinery/computer/rdconsole/ui_act(action, list/params)
 	if (action == "loadTech")
 		var/mob/living/user = usr
-		var/obj/docking_port/mobile/port = connected_ship_ref?.resolve()
+		var/obj/docking_port/mobile/voidcrew/port = connected_ship_ref?.resolve()
 		if(port)
 			if(!(user.mind in port.current_ship.ship_team.members))
 				say("ERROR- DOWNLOADING NOT ALLOWED FOR NON-CREW!")
