@@ -262,14 +262,6 @@
 /obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
 /area/station/cargo/office)
-"fR" = (
-/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
-/obj/machinery/door/poddoor/shutters{
-	id = "wreckerwindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/command/bridge)
 "fT" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/bot,
@@ -596,6 +588,14 @@
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/commons)
+"oz" = (
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/machinery/door/poddoor/shutters{
+	id = "wreckerwindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/station/command/bridge)
 "oO" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/station/maintenance/fore)
@@ -1492,8 +1492,7 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/station/maintenance/port)
 "JP" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/plasma/plastitanium,
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
 /area/station/commons/storage/primary)
 "JS" = (
@@ -1861,8 +1860,7 @@
 /turf/open/floor/carpet/red,
 /area/station/commons/dorms)
 "Sg" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/plasma/plastitanium,
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /obj/machinery/door/poddoor/shutters{
 	id = "wreckerwindows";
 	name = "Blast Shutters"
@@ -1939,11 +1937,10 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "TR" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/plasma/plastitanium,
 /obj/structure/curtain/cloth/fancy{
 	name = "blood-red curtains"
 	},
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
 /turf/open/floor/plating,
 /area/station/command/bridge)
 "TT" = (
@@ -2740,13 +2737,13 @@ mL
 mL
 "}
 (25,1,1) = {"
-fR
+oz
 Wv
 kM
 pH
 ch
 JB
-fR
+oz
 nn
 nn
 nn
@@ -2760,13 +2757,13 @@ mL
 mL
 "}
 (26,1,1) = {"
-fR
+oz
 cf
 Ma
 ch
 Nl
 pI
-fR
+oz
 nn
 nn
 nn
@@ -2802,9 +2799,9 @@ mL
 (28,1,1) = {"
 nn
 fV
-fR
-fR
-fR
+oz
+oz
+oz
 fV
 nn
 nn
