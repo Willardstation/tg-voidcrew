@@ -117,7 +117,7 @@
 /area/station/maintenance/starboard)
 "fd" = (
 /obj/structure/fans/tiny,
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	launch_status = 0;
 	port_direction = 2
 	},

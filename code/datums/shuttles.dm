@@ -104,7 +104,7 @@
 	name = "Base Shuttle Template (Emergency)"
 
 /datum/map_template/shuttle/cargo
-	port_id = "cargo"
+	port_id = "cargothree"
 	name = "Base Shuttle Template (Cargo)"
 	who_can_purchase = null
 

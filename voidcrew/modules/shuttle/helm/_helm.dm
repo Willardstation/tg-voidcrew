@@ -145,7 +145,7 @@
  * This proc manually rechecks that the helm computer is connected to a proper ship
  */
 /obj/machinery/computer/helm/proc/reload_ship()
-	var/obj/docking_port/mobile/port = SSshuttle.get_containing_shuttle(src)
+	var/obj/docking_port/mobile/voidcrew/port = SSshuttle.get_containing_shuttle(src)
 	if(port?.current_ship)
 		current_ship = port.current_ship
 		return TRUE
@@ -154,8 +154,6 @@
 
 
 /*
-
-
 /obj/machinery/computer/helm/ui_interact(mob/user, datum/tgui/ui)
 	if(current_ship.is_player_in_crew(user) || !isliving(user) || isAdminGhostAI(user))
 		if(jump_state != JUMP_STATE_OFF)

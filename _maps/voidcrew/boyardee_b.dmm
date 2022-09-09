@@ -250,7 +250,7 @@
 /area/station/medical)
 "jh" = (
 /obj/machinery/door/airlock/external,
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	can_move_docking_ports = 1;
 	dir = 4;
 	dwidth = 5;

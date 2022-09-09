@@ -6,7 +6,7 @@
 /turf/closed/wall/mineral/titanium,
 /area/station/cargo)
 "ae" = (
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	callTime = 250;
 	dir = 2;
 	launch_status = 0;

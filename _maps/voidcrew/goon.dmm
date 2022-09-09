@@ -482,7 +482,7 @@
 /area/template_noop)
 "Jc" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	can_move_docking_ports = 1;
 	dir = 8;
 	launch_status = 0

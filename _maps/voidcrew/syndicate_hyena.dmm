@@ -1380,7 +1380,7 @@
 "Gm" = (
 /obj/machinery/atmospherics/pipe/layer_manifold,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	can_move_docking_ports = 1;
 	dir = 2;
 	dwidth = 12;

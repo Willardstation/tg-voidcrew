@@ -232,7 +232,7 @@
 /obj/machinery/door/poddoor{
 	id = "phcargooneblastdoor"
 	},
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	dir = 2;
 	name = "NT Super Battlecrusier";
 	port_direction = 8;

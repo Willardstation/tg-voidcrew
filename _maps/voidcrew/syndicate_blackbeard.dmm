@@ -681,7 +681,7 @@
 "Id" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	dir = 2;
 	name = "Syndicate Heavy Boarder";
 	port_direction = 8;

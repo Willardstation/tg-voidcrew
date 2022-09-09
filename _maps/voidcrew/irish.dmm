@@ -372,7 +372,7 @@
 	id = "irishdoors";
 	name = "Cargo Bay Blast Door"
 	},
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	can_move_docking_ports = 1;
 	dir = 2;
 	launch_status = 0;

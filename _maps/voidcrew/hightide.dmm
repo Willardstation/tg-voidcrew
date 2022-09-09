@@ -364,7 +364,7 @@
 /area/station/maintenance/starboard)
 "oY" = (
 /obj/machinery/door/airlock/maintenance_hatch,
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	dir = 8;
 	launch_status = 0;
 	port_direction = 4

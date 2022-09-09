@@ -17,7 +17,7 @@
 "dr" = (
 /obj/effect/spawner/structure/window/reinforced/indestructible,
 /obj/structure/grille,
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	dir = 2
 	},
 /obj/structure/cable,

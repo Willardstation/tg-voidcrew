@@ -925,7 +925,7 @@
 	color = "#008000"
 	},
 /obj/structure/curtain/cloth/fancy,
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	dir = 4;
 	launch_status = 0;
 	port_direction = 8

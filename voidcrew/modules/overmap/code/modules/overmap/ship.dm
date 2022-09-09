@@ -13,7 +13,7 @@
 	 * Template
 	 */
 	///The docking port of the linked shuttle
-	var/obj/docking_port/mobile/shuttle
+	var/obj/docking_port/mobile/voidcrew/shuttle
 	///The map template the shuttle was spawned from, if it was indeed created from a template. CAN BE NULL (ex. custom-built ships).
 	var/datum/map_template/shuttle/voidcrew/source_template
 
@@ -218,7 +218,7 @@
 			deletion_timer = addtimer(CALLBACK(src, .proc/destroy_ship), SHIP_DELETE, (TIMER_STOPPABLE|TIMER_UNIQUE))
 		if(OVERMAP_SHIP_IDLE, OVERMAP_SHIP_DOCKING)
 			message_admins("\[SHUTTLE]: [display_name] has been queued for ruin conversion in [SHIP_RUIN / 600] minutes! [ADMIN_COORDJMP(shuttle.loc)]")
-			deletion_timer = addtimer(CALLBACK(shuttle, /obj/docking_port/mobile/.proc/mothball), SHIP_RUIN, (TIMER_STOPPABLE|TIMER_UNIQUE))
+			deletion_timer = addtimer(CALLBACK(shuttle, /obj/docking_port/mobile/voidcrew/.proc/mothball), SHIP_RUIN, (TIMER_STOPPABLE|TIMER_UNIQUE))
 
 /obj/structure/overmap/ship/proc/end_deletion_timer()
 	deltimer(deletion_timer)
