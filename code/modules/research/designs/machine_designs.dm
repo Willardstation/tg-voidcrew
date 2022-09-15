@@ -319,14 +319,14 @@
 	desc = "Allows for the construction of circuit boards used to build a new Cloning Machine console."
 	id = "clonecontrol"
 	build_path = /obj/item/circuitboard/computer/cloning
-	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 	category = list("Medical Machinery")
 
 /datum/design/board/clonepod
 	name = "Machine Design (Clone Pod)"
 	desc = "Allows for the construction of circuit boards used to build a Cloning Pod."
 	id = "clonepod"
-	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 	build_path = /obj/item/circuitboard/machine/clonepod
 	category = list("Medical Machinery")
 
