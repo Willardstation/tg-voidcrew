@@ -69,6 +69,7 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 	///For temporary name/ui/ue/blood_type modifications
 	var/list/previous = list()
 	var/mob/living/holder
+	var/delete_species = TRUE //Set to FALSE when a body is scanned by a cloner to fix #38875
 	///List of which mutations this carbon has and its assigned block
 	var/mutation_index[DNA_MUTATION_BLOCKS]
 	///List of the default genes from this mutation to allow DNA Scanner highlighting
@@ -89,7 +90,8 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 			cholder.dna = null
 	holder = null
 
-	QDEL_NULL(species)
+	if(delete_species)
+		QDEL_NULL(species)
 
 	mutations.Cut() //This only references mutations, just dereference.
 	temporary_mutations.Cut() //^

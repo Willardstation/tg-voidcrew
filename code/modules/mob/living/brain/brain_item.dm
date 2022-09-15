@@ -8,7 +8,7 @@
 	layer = ABOVE_MOB_LAYER
 	plane = GAME_PLANE_UPPER
 	zone = BODY_ZONE_HEAD
-	slot = ORGAN_SLOT_BRAIN
+	slot = ORGAN_SLOT_BRAIN			brainmob.status_traits[TRAIT_BADDNA] = L.status_traits[TRAIT_BADDNA]
 	organ_flags = ORGAN_VITAL
 	attack_verb_continuous = list("attacks", "slaps", "whacks")
 	attack_verb_simple = list("attack", "slap", "whack")

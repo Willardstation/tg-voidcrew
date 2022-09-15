@@ -1165,6 +1165,8 @@
 	prereq_ids = list("biotech")
 	design_ids = list(
 		"dna_disk",
+		"clonecontrol",
+		"clonepod",
 		"dnascanner",
 		"scan_console",
 	)

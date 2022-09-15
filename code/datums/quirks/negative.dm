@@ -224,6 +224,12 @@
 	quirk_holder.clear_mood_event("family_heirloom_missing")
 	quirk_holder.clear_mood_event("family_heirloom")
 
+/datum/quirk/family_heirloom/clone_data()
+	return heirloom
+
+/datum/quirk/family_heirloom/on_clone(data)
+	heirloom = data
+
 /datum/quirk/frail
 	name = "Frail"
 	desc = "You have skin of paper and bones of glass! You suffer wounds much more easily than most."
