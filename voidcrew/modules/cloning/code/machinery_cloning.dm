@@ -14,7 +14,7 @@
 	density = TRUE
 	icon = 'icons/obj/machines/cloning.dmi'
 	icon_state = "pod_0"
-	req_access = list(ACCESS_CLONING) //FOR PREMATURE UNLOCKING.
+	req_access = list(ACCESS_MEDICAL) //FOR PREMATURE UNLOCKING.
 	verb_say = "states"
 	circuit = /obj/item/circuitboard/machine/clonepod
 
@@ -56,7 +56,7 @@
 	var/mob/living/mob_occupant = occupant
 	go_out()
 	if(mob_occupant)
-		log_cloning("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to Destroy().")
+		log_game("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to Destroy().")
 	QDEL_NULL(radio)
 	QDEL_NULL(countdown)
 	if(connected)
@@ -173,16 +173,6 @@
 				return NONE
 			if(G.suiciding) // The ghost came from a body that is suiciding.
 				return NONE
-		if(clonemind.damnation_type) //Can't clone the damned.
-			INVOKE_ASYNC(src, .proc/horrifyingsound)
-			mess = TRUE
-			icon_state = "pod_g"
-			update_icon()
-			return NONE
-		current_insurance = insurance
-	attempting = TRUE //One at a time!!
-	countdown.start()
-
 	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src)
 
 	if(!clonename)	//to prevent null names
@@ -192,11 +182,6 @@
 	H.hardset_dna(ui, mutation_index, H.real_name, blood_type, mrace, features)
 
 	if(!HAS_TRAIT(H, TRAIT_RADIMMUNE))//dont apply mutations if the species is Mutation proof.
-		if(efficiency > 2)
-			var/list/unclean_mutations = (GLOB.not_good_mutations|GLOB.bad_mutations)
-			H.dna.remove_mutation_group(unclean_mutations)
-		if(efficiency > 5 && prob(20))
-			H.easy_randmut(POSITIVE)
 		if(efficiency < 3 && prob(50))
 			var/mob/M = H.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
 			if(ismob(M))
@@ -253,7 +238,7 @@
 	if(!is_operational()) //Autoeject if power is lost
 		if(mob_occupant)
 			go_out()
-			log_cloning("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to power loss.")
+			log_game("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to power loss.")
 
 			connected_message("Clone Ejected: Loss of power.")
 
@@ -261,13 +246,13 @@
 		if(SSeconomy.full_ancap)
 			if(!current_insurance)
 				go_out()
-				log_cloning("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to invalid bank account.")
+				log_game("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to invalid bank account.")
 				connected_message("Clone Ejected: No bank account.")
 				if(internal_radio)
 					SPEAK("The cloning of [mob_occupant.real_name] has been terminated due to no bank account to draw payment from.")
 			else if(!current_insurance.adjust_money(-fair_market_price))
 				go_out()
-				log_cloning("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to insufficient funds.")
+				log_game("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to insufficient funds.")
 				connected_message("Clone Ejected: Out of Money.")
 				if(internal_radio)
 					SPEAK("The cloning of [mob_occupant.real_name] has been ended prematurely due to being unable to pay.")
@@ -281,7 +266,7 @@
 				SPEAK("The cloning of [mob_occupant.real_name] has been \
 					aborted due to unrecoverable tissue failure.")
 			go_out()
-			log_cloning("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] after suiciding.")
+			log_game("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] after suiciding.")
 
 		else if(mob_occupant && mob_occupant.cloneloss > (100 - heal_level))
 			mob_occupant.Unconscious(80)
@@ -324,7 +309,7 @@
 					BP.attach_limb(mob_occupant)
 
 			go_out()
-			log_cloning("[key_name(mob_occupant)] completed cloning cycle in [src] at [AREACOORD(src)].")
+			log_game("[key_name(mob_occupant)] completed cloning cycle in [src] at [AREACOORD(src)].")
 
 	else if (!mob_occupant || mob_occupant.loc != src)
 		occupant = null
@@ -375,7 +360,7 @@
 			SPEAK("An emergency ejection of [clonemind.name] has occurred. Survival not guaranteed.")
 			to_chat(user, "<span class='notice'>You force an emergency ejection. </span>")
 			go_out()
-			log_cloning("[key_name(user)] manually ejected [key_name(mob_occupant)] from [src] at [AREACOORD(src)].")
+			log_game("[key_name(user)] manually ejected [key_name(mob_occupant)] from [src] at [AREACOORD(src)].")
 			log_combat(user, mob_occupant, "ejected", W, "from [src]")
 	else
 		return ..()
@@ -386,7 +371,7 @@
 	to_chat(user, "<span class='warning'>You corrupt the genetic compiler.</span>")
 	malfunction()
 	add_fingerprint(user)
-	log_cloning("[key_name(user)] emagged [src] at [AREACOORD(src)], causing it to malfunction.")
+	log_game("[key_name(user)] emagged [src] at [AREACOORD(src)], causing it to malfunction.")
 	if(user)
 		log_combat(user, src, "emagged", null, occupant ? "[occupant] inside, killing them via malfunction." : null)
 
@@ -460,7 +445,7 @@
 		to_chat(mob_occupant, "<span class='warning'><b>Agony blazes across your consciousness as your body is torn apart.</b><br><i>Is this what dying is like? Yes it is.</i></span>")
 		playsound(src, 'sound/machines/warning-buzzer.ogg', 50)
 		SEND_SOUND(mob_occupant, sound('sound/hallucinations/veryfar_noise.ogg',0,1,50))
-		log_cloning("[key_name(mob_occupant)] destroyed within [src] at [AREACOORD(src)] due to malfunction.")
+		log_game("[key_name(mob_occupant)] destroyed within [src] at [AREACOORD(src)] due to malfunction.")
 		QDEL_IN(mob_occupant, 40)
 
 /obj/machinery/clonepod/relaymove(mob/user)
@@ -478,14 +463,14 @@
 			connected_message(Gibberish("EMP-caused Accidental Ejection"))
 			SPEAK(Gibberish("Exposure to electromagnetic fields has caused the ejection of [mob_occupant.real_name] prematurely."))
 			go_out()
-			log_cloning("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to EMP pulse.")
+			log_game("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to EMP pulse.")
 
 /obj/machinery/clonepod/ex_act(severity, target)
 	..()
 	if(!QDELETED(src) && occupant)
 		var/mob/living/mob_occupant = occupant
 		go_out()
-		log_cloning("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to explosion.")
+		log_game("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to explosion.")
 
 /obj/machinery/clonepod/handle_atom_del(atom/A)
 	if(A == occupant)
@@ -503,7 +488,7 @@
 	if(occupant)
 		var/mob/living/mob_occupant = occupant
 		go_out()
-		log_cloning("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to deconstruction.")
+		log_game("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to deconstruction.")
 	..()
 
 /obj/machinery/clonepod/proc/maim_clone(mob/living/carbon/human/H)
@@ -538,34 +523,6 @@
 		unattached_flesh += organ
 
 	flesh_number = unattached_flesh.len
-
-/*
- *	Manual -- A big ol' manual.
- */
-
-/obj/item/paper/guides/jobs/medical/cloning
-	name = "paper - 'H-87 Cloning Apparatus Manual"
-	info = {"<h4>Getting Started</h4>
-	Congratulations, your station has purchased the H-87 industrial cloning device!<br>
-	Using the H-87 is almost as simple as brain surgery! Simply insert the target humanoid into the scanning chamber and select the scan option to create a new profile!<br>
-	<b>That's all there is to it!</b><br>
-	<i>Notice, cloning system cannot scan inorganic life or small primates.  Scan may fail if subject has suffered extreme brain damage.</i><br>
-	<p>Clone profiles may be viewed through the profiles menu. Scanning implants a complementary HEALTH MONITOR IMPLANT into the subject, which may be viewed from each profile.
-	Profile Deletion has been restricted to \[Station Head\] level access.</p>
-	<h4>Cloning from a profile</h4>
-	Cloning is as simple as pressing the CLONE option at the bottom of the desired profile.<br>
-	Per your company's EMPLOYEE PRIVACY RIGHTS agreement, the H-87 has been blocked from cloning crewmembers while they are still alive.<br>
-	<br>
-	<p>The provided CLONEPOD SYSTEM will produce the desired clone.  Standard clone maturation times (With SPEEDCLONE technology) are roughly 90 seconds.
-	The cloning pod may be unlocked early with any \[Medical Researcher\] ID after initial maturation is complete.</p><br>
-	<i>Please note that resulting clones may have a small DEVELOPMENTAL DEFECT as a result of genetic drift.</i><br>
-	<h4>Profile Management</h4>
-	<p>The H-87 (as well as your station's standard genetics machine) can accept STANDARD DATA DISKETTES.
-	These diskettes are used to transfer genetic information between machines and profiles.
-	A load/save dialog will become available in each profile if a disk is inserted.</p><br>
-	<i>A good diskette is a great way to counter aforementioned genetic drift!</i><br>
-	<br>
-	<font size=1>This technology produced under license from Thinktronic Systems, LTD.</font>"}
 
 #undef CLONE_INITIAL_DAMAGE
 #undef SPEAK

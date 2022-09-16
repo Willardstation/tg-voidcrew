@@ -13,7 +13,7 @@
 //Machinery
 
 /obj/item/circuitboard/machine/clonepod
-	name = "Clone Pod (Machine Board)"
+	name = "Clone Pod"
 	icon_state = "medical"
 	build_path = /obj/machinery/clonepod
 	req_components = list(
@@ -23,7 +23,7 @@
 		/obj/item/stack/sheet/glass = 1)
 
 /obj/item/circuitboard/machine/clonepod/experimental
-	name = "Experimental Clone Pod (Machine Board)"
+	name = "Experimental Clone Pod"
 	icon_state = "medical"
 	build_path = /obj/machinery/clonepod/experimental
 
@@ -35,7 +35,7 @@
 	id = "clonecontrol"
 	build_path = /obj/item/circuitboard/computer/cloning
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
-	category = list("Medical Machinery")
+	category = RND_CATEGORY_MEDICAL_MACHINERY
 
 /datum/design/board/clonepod
 	name = "Machine Design (Clone Pod)"
@@ -43,4 +43,4 @@
 	id = "clonepod"
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 	build_path = /obj/item/circuitboard/machine/clonepod
-	category = list("Medical Machinery")
+	category = RND_CATEGORY_MEDICAL_MACHINERY

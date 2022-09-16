@@ -84,7 +84,7 @@
 		var/result = grow_clone_from_record(pod, R)
 		if(result & CLONING_SUCCESS)
 			temp = "[R.fields["name"]] => <font class='good'>Cloning cycle in progress...</font>"
-			log_cloning("Cloning of [key_name(R.fields["mindref"])] automatically started via autoprocess - [src] at [AREACOORD(src)]. Pod: [pod] at [AREACOORD(pod)].")
+			log_game("Cloning of [key_name(R.fields["mindref"])] automatically started via autoprocess - [src] at [AREACOORD(src)]. Pod: [pod] at [AREACOORD(pod)].")
 		if(result & CLONING_DELETE_RECORD)
 			records -= R
 
@@ -400,7 +400,7 @@
 
 
 		else if (menu == 4)
-			log_cloning("[key_name(usr)] deleted [key_name(active_record.fields["mindref"])]'s cloning records from [src] at [AREACOORD(src)].")
+			log_game("[key_name(usr)] deleted [key_name(active_record.fields["mindref"])]'s cloning records from [src] at [AREACOORD(src)].")
 			temp = "[active_record.fields["name"]] => Record deleted."
 			records.Remove(active_record)
 			active_record = null
@@ -433,7 +433,7 @@
 				if(include_se)
 					overwrite_field_if_available(active_record, diskette, "SE")
 
-				log_cloning("[key_name(usr)] uploaded [key_name(active_record.fields["mindref"])]'s cloning records to [src] at [AREACOORD(src)] via [diskette].")
+				log_game("[key_name(usr)] uploaded [key_name(active_record.fields["mindref"])]'s cloning records to [src] at [AREACOORD(src)] via [diskette].")
 				temp = "Load successful."
 				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
 
@@ -449,7 +449,7 @@
 					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 					return
 
-				log_cloning("[key_name(usr)] added [key_name(active_record.fields["mindref"])]'s cloning records to [diskette] via [src] at [AREACOORD(src)].")
+				log_game("[key_name(usr)] added [key_name(active_record.fields["mindref"])]'s cloning records to [diskette] via [src] at [AREACOORD(src)].")
 				diskette.fields = active_record.fields.Copy()
 				diskette.name = "data disk - '[diskette.fields["name"]]'"
 				temp = "Save successful."
@@ -492,9 +492,9 @@
 					menu = 1
 					success = TRUE
 					if(!empty)
-						log_cloning("[key_name(usr)] initiated cloning of [key_name(C.fields["mindref"])] via [src] at [AREACOORD(src)]. Pod: [pod] at [AREACOORD(pod)].")
+						log_game("[key_name(usr)] initiated cloning of [key_name(C.fields["mindref"])] via [src] at [AREACOORD(src)]. Pod: [pod] at [AREACOORD(pod)].")
 					else
-						log_cloning("[key_name(usr)] initiated EMPTY cloning of [key_name(C.fields["mindref"])] via [src] at [AREACOORD(src)]. Pod: [pod] at [AREACOORD(pod)].")
+						log_game("[key_name(usr)] initiated EMPTY cloning of [key_name(C.fields["mindref"])] via [src] at [AREACOORD(src)]. Pod: [pod] at [AREACOORD(pod)].")
 				if(result &	CLONING_DELETE_RECORD)
 					if(active_record == C)
 						active_record = null
@@ -623,5 +623,5 @@
 	else
 		scantemp = "Subject successfully scanned."
 	records += R
-	log_cloning("[M ? key_name(M) : "Autoprocess"] added the [body_only ? "body-only " : ""]record of [key_name(mob_occupant)] to [src] at [AREACOORD(src)].")
+	log_game("[M ? key_name(M) : "Autoprocess"] added the [body_only ? "body-only " : ""]record of [key_name(mob_occupant)] to [src] at [AREACOORD(src)].")
 	playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50)
