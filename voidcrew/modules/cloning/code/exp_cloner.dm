@@ -64,7 +64,7 @@
 		to_chat(H.get_ghost(TRUE), "<span class='notice'>Your body is beginning to regenerate in a cloning pod. You will become conscious when it is complete.</span>")
 
 	if(H)
-		H.faction |= factions
+		H.faction = factions.Copy()
 
 		H.set_cloned_appearance()
 
