@@ -4783,6 +4783,7 @@
 #include "voidcrew\modules\cloning\code\exp_cloner.dm"
 #include "voidcrew\modules\cloning\code\logging.dm"
 #include "voidcrew\modules\cloning\code\machinery_cloning.dm"
+#include "voidcrew\modules\cloning\code\misc.dm"
 #include "voidcrew\modules\cryo\console.dm"
 #include "voidcrew\modules\cryo\machine.dm"
 #include "voidcrew\modules\nanites\code\circuits.dm"
