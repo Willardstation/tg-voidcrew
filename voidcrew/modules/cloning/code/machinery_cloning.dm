@@ -64,7 +64,7 @@
 	QDEL_LIST(unattached_flesh)
 	. = ..()
 
-/obj/machinery/clonepod/RefreshParts()
+/obj/machinery/clonepod/RefreshCloner()
 	speed_coeff = 0
 	efficiency = 0
 	for(var/obj/item/stock_parts/scanning_module/S in component_parts)
@@ -260,7 +260,7 @@
 				var/datum/bank_account/D = SSeconomy.get_dep_account(payment_department)
 				if(D)
 					D.adjust_money(fair_market_price)
-		if(mob_occupant && (mob_occupant.stat == DEAD) || (mob_occupant.suiciding) || mob_occupant.hellbound)  //Autoeject corpses and suiciding dudes.
+		if(mob_occupant && (mob_occupant.stat == DEAD) || (mob_occupant.suiciding) //Autoeject corpses and suiciding dudes.
 			connected_message("Clone Rejected: Deceased.")
 			if(internal_radio)
 				SPEAK("The cloning of [mob_occupant.real_name] has been \
