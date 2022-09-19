@@ -52,7 +52,7 @@
 /turf/closed/wall/mineral/titanium,
 /area/station/engineering/storage)
 "bB" = (
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	callTime = 250;
 	can_move_docking_ports = 1;
 	dir = 2;

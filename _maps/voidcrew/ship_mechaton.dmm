@@ -782,7 +782,7 @@
 	id = "factoryblasts";
 	name = "Cargo Bay Blast Door"
 	},
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	dir = 2;
 	launch_status = 0;
 	name = "Mechaton-class Shuttle";

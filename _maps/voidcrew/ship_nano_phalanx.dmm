@@ -19,11 +19,10 @@
 	},
 /area/station/cargo/warehouse)
 "ap" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "phpublicblastdoors"
 	},
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/station/service/chapel)
 "av" = (
@@ -232,7 +231,7 @@
 /obj/machinery/door/poddoor{
 	id = "phcargooneblastdoor"
 	},
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	dir = 2;
 	name = "NT Super Battlecrusier";
 	port_direction = 8;
@@ -445,14 +444,13 @@
 /turf/open/floor/mineral/titanium/tiled/purple,
 /area/station/science/research)
 "fa" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/fulltile,
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/service/chapel)
 "fb" = (
 /obj/machinery/fax{
-	name = "Phalanx Fax Machine";
-	fax_name = "Phalanx Fax"
+	fax_name = "Phalanx Fax";
+	name = "Phalanx Fax Machine"
 	},
 /obj/structure/table/wood,
 /obj/machinery/light/small{
@@ -929,8 +927,7 @@
 /turf/open/floor/plating,
 /area/station/service/chapel)
 "lM" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/station/service/chapel)
 "lY" = (
@@ -2719,8 +2716,7 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "MU" = (
-/obj/structure/window/reinforced/fulltile,
-/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/station/commons/dorms)
 "MZ" = (

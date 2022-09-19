@@ -440,7 +440,7 @@
 /area/station/commons/dorms)
 "mX" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/docking_port/mobile{
+/obj/docking_port/mobile/voidcrew{
 	can_move_docking_ports = 1;
 	dir = 2;
 	launch_status = 0
