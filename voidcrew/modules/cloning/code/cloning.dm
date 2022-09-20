@@ -14,7 +14,7 @@
 	density = TRUE
 	icon = 'modular_skyrat/modules/cloning/icons/obj/machines/cloning_pod.dmi'
 	icon_state = "pod_0"
-	req_access = list(ACCESS_CLONING) //FOR PREMATURE UNLOCKING.
+	req_access = list(ACCESS_MEDICAL) //FOR PREMATURE UNLOCKING.
 	verb_say = "states"
 	circuit = /obj/item/circuitboard/machine/clonepod
 
@@ -172,11 +172,6 @@
 				return NONE
 			if(G.suiciding) // The ghost came from a body that is suiciding.
 				return NONE
-		if(clonemind.damnation_type) //Can't clone the damned.
-			INVOKE_ASYNC(src, .proc/horrifyingsound)
-			mess = TRUE
-			update_icon()
-			return NONE
 		current_insurance = insurance
 	attempting = TRUE //One at a time!!
 	countdown.start()
@@ -189,17 +184,6 @@
 
 	H.hardset_dna(ui, mutation_index, H.dna.default_mutation_genes, H.real_name, blood_type, mrace, features, H.dna.mutations, FALSE)
 	H.set_species(mrace, TRUE, null, features.Copy(), mutantparts.Copy(), markings.Copy())
-
-	if(!HAS_TRAIT(H, TRAIT_RADIMMUNE))//dont apply mutations if the species is Mutation proof.
-		if(efficiency > 2)
-			var/list/unclean_mutations = (GLOB.not_good_mutations|GLOB.bad_mutations)
-			H.dna.remove_mutation_group(unclean_mutations)
-		if(efficiency > 5 && prob(20))
-			H.easy_randmut(POSITIVE)
-		if(efficiency < 3 && prob(50))
-			var/mob/M = H.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
-			if(ismob(M))
-				H = M
 
 	H.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
 	occupant = H
@@ -219,7 +203,6 @@
 
 		if(grab_ghost_when == CLONER_FRESH_CLONE)
 			H.grab_ghost()
-			to_chat(H, "<span class='userdanger'>[CONFIG_GET(string/blackoutpolicy)]</span>")
 			to_chat(H, "<span class='notice'><b>Consciousness slowly creeps over you as your body regenerates.</b><br><i>So this is what cloning feels like?</i></span>")
 
 		if(grab_ghost_when == CLONER_MATURE_CLONE)
