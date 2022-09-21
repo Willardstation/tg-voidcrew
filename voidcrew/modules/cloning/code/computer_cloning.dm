@@ -295,11 +295,7 @@
 					if(diskette.fields["SE"])
 						L += "Structural Enzymes"
 					dat += english_list(L, "Empty", " + ", " + ")
-					var/can_load = FALSE
-					var/obj/item/card/id/worn_id = user.get_idcard(TRUE)
-					if(worn_id)
-						if(check_access(worn_id))
-							can_load = TRUE
+					var/can_load = TRUE
 					if(can_load)
 						dat += "<br /><a href='byond://?src=[REF(src)];disk=load'>Load From Disk</a>"
 					else
