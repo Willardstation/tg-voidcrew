@@ -12,7 +12,7 @@
 	name = "cloning pod"
 	desc = "An electronically-lockable pod for growing organic tissue."
 	density = TRUE
-	icon = 'modular_skyrat/modules/cloning/icons/obj/machines/cloning_pod.dmi'
+	icon = 'voidcrew/modules/cloning/icons/cloning_pod.dmi'
 	icon_state = "pod_0"
 	req_access = list(ACCESS_MEDICAL) //FOR PREMATURE UNLOCKING.
 	verb_say = "states"
@@ -538,8 +538,8 @@
 /obj/machinery/clonepod/update_overlays()
 	. = ..()
 	if(mess)
-		var/mutable_appearance/gib1 = mutable_appearance('modular_skyrat/modules/cloning/icons/obj/machines/cryo_mobs.dmi', "gibup")
-		var/mutable_appearance/gib2 = mutable_appearance('modular_skyrat/modules/cloning/icons/obj/machines/cryo_mobs.dmi', "gibdown")
+		var/mutable_appearance/gib1 = mutable_appearance('voidcrew/modules/cloning/icons/cryo_mobs.dmi', "gibup")
+		var/mutable_appearance/gib2 = mutable_appearance('voidcrew/modules/cloning/icons/cryo_mobs.dmi', "gibdown")
 		gib1.pixel_y = 27 + round(sin(world.time) * 3)
 		gib1.pixel_x = round(sin(world.time * 3))
 		gib2.pixel_y = 27 + round(cos(world.time) * 3)
@@ -554,7 +554,7 @@
 			occupant_overlay = mutable_appearance(occupant.icon, occupant.icon_state)
 			occupant_overlay.copy_overlays(occupant)
 		else
-			occupant_overlay = mutable_appearance('modular_skyrat/modules/cloning/icons/obj/machines/cryo_mobs.dmi', "clone_meat")
+			occupant_overlay = mutable_appearance('voidcrew/modules/cloning/icons/cryo_mobs.dmi', "clone_meat")
 			var/matrix/tform = matrix()
 			tform.Scale(completion)
 			tform.Turn(cos(world.time * 2) * 3)
