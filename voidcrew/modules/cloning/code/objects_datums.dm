@@ -13,6 +13,13 @@
 		var/completion = round(C.get_completion())
 		return completion
 
+/obj/machinery/CheckParts(list/parts_list)
+	..()
+	RefreshCloner()
+
+/obj/machinery/proc/RefreshCloner() //Got Confused added this
+	return
+
 //datums
 
 /datum/brain_trauma
