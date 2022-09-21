@@ -63,7 +63,7 @@
 				. = pod
 
 /proc/grow_clone_from_record(obj/machinery/clonepod/pod, datum/data/record/R, empty)
-	return pod.growclone(R.fields["name"], R.fields["UI"], R.fields["SE"], R.fields["mindref"], R.fields["last_death"], R.fields["blood_type"], R.fields["mrace"], R.fields["features"], R.fields["mutant_bodyparts"], R.fields["body_markings"], R.fields["factions"], R.fields["quirks"], R.fields["bank_account"], R.fields["traumas"], empty)
+	return pod.growclone(R.fields["name"], R.fields["UI"], R.fields["SE"], R.fields["mindref"], R.fields["last_death"], R.fields["blood_type"], R.fields["mrace"], R.fields["features"], R.fields["body_markings"], R.fields["factions"], R.fields["quirks"], R.fields["bank_account"], R.fields["traumas"], empty)
 
 /obj/machinery/computer/cloning/process()
 	if(!(scanner && LAZYLEN(pods) && autoprocess))
@@ -541,10 +541,6 @@
 		scantemp = "<font class='bad'>Mental interface failure.</font>"
 		playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 		return
-	if(HAS_TRAIT(mob_occupant, TRAIT_DNC) || HAS_TRAIT(mob_occupant, TRAIT_DNR) || mob_occupant.mob_biotypes & MOB_ROBOTIC)
-		scantemp = "<font class='bad'>Subject [HAS_TRAIT(mob_occupant, TRAIT_DNC) ? "is a DNC, and cannot be cloned. If possible, try other methods of revival." : HAS_TRAIT(mob_occupant, TRAIT_DNR) ? "is a DNR, and cannot be revived in any way." : "could not be revived due to biological reasons."]</font>"
-		playsound(src, 'sound/machines/terminal_alert.ogg', 50, FALSE)
-		return
 	if(!body_only && SSeconomy.full_ancap)
 		if(!has_bank_account)
 			scantemp = "<font class='average'>Subject is either missing an ID card with a bank account on it, or does not have an account to begin with. Please ensure the ID card is on the body before attempting to scan.</font>"
@@ -563,12 +559,11 @@
 	R.fields["name"] = mob_occupant.real_name
 	R.fields["id"] = copytext_char(md5(mob_occupant.real_name), 2, 6)
 	R.fields["UE"] = dna.unique_enzymes
-	R.fields["UI"] = dna.uni_identity
+	R.fields["UI"] = dna.unique_identity
 	R.fields["SE"] = dna.mutation_index
 	R.fields["blood_type"] = dna.blood_type
 	R.fields["features"] = dna.features
-	R.fields["mutant_bodyparts"] = dna.mutant_bodyparts
-	R.fields["body_markings"] = dna.body_markings
+	R.fields["body_markings"] = dna.features
 	R.fields["factions"] = mob_occupant.faction
 	R.fields["quirks"] = list()
 	for(var/V in mob_occupant.quirks)
@@ -589,7 +584,7 @@
 	var/datum/data/record/old_record = find_record("mindref", REF(mob_occupant.mind), records)
 	if(body_only)
 		old_record = find_record("UE", dna.unique_enzymes, records) //Body-only records cannot be identified by mind, so we use the DNA
-		if(old_record && ((old_record.fields["UI"] != dna.uni_identity) || (!old_record.fields["body_only"]))) //Never overwrite a mind-and-body record if it exists
+		if(old_record && ((old_record.fields["UI"] != dna.unique_identity) || (!old_record.fields["body_only"]))) //Never overwrite a mind-and-body record if it exists
 			old_record = null
 	if(old_record)
 		records -= old_record
