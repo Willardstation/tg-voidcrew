@@ -15,7 +15,7 @@
 	name = "cloning pod"
 	desc = "An electronically-lockable pod for growing organic tissue."
 	density = TRUE
-	icon = 'voidcrew/icons/obj/machines/cloning.dmi'
+	icon = 'voidcrew/modules/cloning/icons/cloning.dmi'
 	icon_state = "pod_0"
 	req_access = list(ACCESS_MEDICAL) //FOR PREMATURE UNLOCKING.
 	verb_say = "states"
@@ -188,7 +188,7 @@
 	if(!beaker)
 		connected_message("Cannot start cloning: No beaker found.")
 		return NONE
-	if(!beaker.reagents.has_reagent(/datum/reagent/medicine/synthflesh, fleshamnt))
+	if(!beaker.reagents.has_reagent(/datum/reagent/medicine/c2/synthflesh, fleshamnt))
 		connected_message("Cannot start cloning: Not enough synthflesh.")
 		return NONE
 	if(panel_open)
@@ -283,7 +283,7 @@
 		return
 
 	if(mob_occupant && (mob_occupant.loc == src))
-		if(!beaker.reagents.has_reagent(/datum/reagent/medicine/synthflesh, fleshamnt))
+		if(!beaker.reagents.has_reagent(/datum/reagent/medicine/c2/synthflesh, fleshamnt))
 			go_out()
 			log_combat("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to insufficient material.")
 			connected_message("Clone Ejected: Not enough material.")
@@ -319,8 +319,8 @@
 			var/dmg_mult = CONFIG_GET(number/damage_multiplier)
 			//Slowly get that clone healed and finished.
 			mob_occupant.adjustCloneLoss(-((speed_coeff / 2) * dmg_mult))
-			if(beaker.reagents.has_reagent(/datum/reagent/medicine/synthflesh, fleshamnt))
-				beaker.reagents.remove_reagent(/datum/reagent/medicine/synthflesh, fleshamnt)
+			if(beaker.reagents.has_reagent(/datum/reagent/medicine/c2/synthflesh, fleshamnt))
+				beaker.reagents.remove_reagent(/datum/reagent/medicine/c2/synthflesh, fleshamnt)
 			else if(beaker.reagents.has_reagent(/datum/reagent/blood, fleshamnt*3))
 				beaker.reagents.remove_reagent(/datum/reagent/blood, fleshamnt*3)
 			var/progress = CLONE_INITIAL_DAMAGE - mob_occupant.getCloneLoss()
@@ -596,7 +596,7 @@
 /obj/machinery/clonepod/mapped/Initialize()
 	. = ..()
 	beaker = new /obj/item/reagent_containers/cup/beaker/large(src)
-	beaker.reagents.add_reagent(/datum/reagent/medicine/synthflesh, 100)
+	beaker.reagents.add_reagent(/datum/reagent/medicine/c2/synthflesh, 100)
 
 #undef CLONE_INITIAL_DAMAGE
 #undef SPEAK

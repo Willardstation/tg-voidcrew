@@ -5,7 +5,7 @@
 /obj/machinery/clonepod/experimental
 	name = "experimental cloning pod"
 	desc = "An ancient cloning pod. It seems to be an early prototype of the experimental cloners used in Nanotrasen Stations."
-	icon = 'icons/obj/machines/cloning.dmi'
+	icon = 'voidcrew/modules/cloning/icons/cloning.dmi'
 	icon_state = "pod_0"
 	req_access = null
 	circuit = /obj/item/circuitboard/machine/clonepod/experimental
@@ -37,16 +37,6 @@
 
 	cloned_human.hardset_dna(ui, mutation_index, cloned_human.real_name, blood_type, mrace, features)
 
-	if(efficiency > 2)
-		var/list/unclean_mutations = (GLOB.not_good_mutations|GLOB.bad_mutations)
-		cloned_human.dna.remove_mutation_group(unclean_mutations)
-	if(efficiency > 5 && prob(20))
-		cloned_human.easy_randmut(POSITIVE)
-	if(efficiency < 3 && prob(50))
-		var/mob/cloned_mob = cloned_human.easy_randmut(NEGATIVE + MINOR_NEGATIVE)
-		if(ismob(cloned_mob))
-			cloned_human = cloned_mob
-
 	cloned_human.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
 	occupant = cloned_human
 
@@ -65,7 +55,7 @@
 	ADD_TRAIT(cloned_human, TRAIT_NOCRITDAMAGE, CLONING_POD_TRAIT)
 	cloned_human.Unconscious(80)
 
-	var/list/candidates = pollCandidatesForMob("Do you want to play as [clonename]'s defective clone?", null, null, null, 100, cloned_human, POLL_IGNORE_DEFECTIVECLONE)
+	var/list/candidates = poll_candidates_for_mob("Do you want to play as [clonename]'s defective clone?", null, null, null, 100, cloned_human, POLL_IGNORE_IMAGINARYFRIEND)
 	if(LAZYLEN(candidates))
 		var/mob/dead/observer/selected_observer = pick(candidates)
 		cloned_human.key = selected_observer.key
@@ -317,6 +307,6 @@
 		temp = "<font class='bad'>Cloning cycle already in progress.</font>"
 		playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 	else
-		pod.growclone(mob_occupant.real_name, dna.uni_identity, dna.mutation_index, null, null, dna.blood_type, clone_species, dna.features, mob_occupant.faction)
+		pod.growclone(mob_occupant.real_name, dna.unique_identity, dna.mutation_index, null, null, dna.blood_type, clone_species, dna.features, mob_occupant.faction)
 		temp = "[mob_occupant.real_name] => <font class='good'>Cloning data sent to pod.</font>"
 		playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)

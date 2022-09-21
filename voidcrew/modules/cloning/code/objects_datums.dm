@@ -49,6 +49,8 @@
 /datum/quirk/proc/clone_data() //return additional data that should be remembered by cloning
 /datum/quirk/proc/on_clone(data) //create the quirk from clone data
 
+/datum/config_entry/flag/revival_cloning
+
 //techweb
 /datum/techweb_node/cloning
 	id = "cloning"
@@ -69,3 +71,7 @@
 
 /datum/gas_mixture/immutable/cloner/heat_capacity()
 	return (MOLES_O2STANDARD + MOLES_N2STANDARD)*20 //specific heat of nitrogen is 20
+
+///Get the id card on this mob
+/mob/proc/get_idcard(hand_first)
+	return
