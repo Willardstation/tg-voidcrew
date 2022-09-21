@@ -20,6 +20,9 @@
 /obj/machinery/proc/RefreshCloner() //Got Confused added this
 	return
 
+/obj/machinery/proc/is_operational()
+	return !(machine_stat & (NOPOWER|BROKEN|MAINT))
+
 //datums
 
 /datum/brain_trauma

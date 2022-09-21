@@ -1,15 +1,30 @@
-//Experimental cloner; clones a body regardless of the owner's status, letting a ghost control it instead
+/*
+ * Experimental cloner
+ * clones a body regardless of the owner's status, letting a ghost control it instead
+ */
 /obj/machinery/clonepod/experimental
 	name = "experimental cloning pod"
 	desc = "An ancient cloning pod. It seems to be an early prototype of the experimental cloners used in Nanotrasen Stations."
-	icon = 'voidcrew/modules/cloning/icons/cloning.dmi'
+	icon = 'icons/obj/machines/cloning.dmi'
 	icon_state = "pod_0"
 	req_access = null
 	circuit = /obj/item/circuitboard/machine/clonepod/experimental
 	internal_radio = FALSE
 
 //Start growing a human clone in the pod!
-/obj/machinery/clonepod/experimental/growclone(clonename, ui, mutation_index, mindref, last_death, blood_type, datum/species/mrace, list/features, list/mutantparts, list/markings, factions, list/quirks, datum/bank_account/insurance, list/traumas, empty)
+/obj/machinery/clonepod/experimental/growclone(
+	clonename,
+	ui,
+	mutation_index,
+	mindref,
+	last_death,
+	blood_type,
+	datum/species/mrace,
+	list/features,
+	factions,
+	list/quirks,
+	datum/bank_account/insurance,
+)
 	if(panel_open)
 		return NONE
 	if(mess || attempting)
@@ -18,48 +33,58 @@
 	attempting = TRUE //One at a time!!
 	countdown.start()
 
-	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src)
-	H.hardset_dna(ui, mutation_index, H.dna.default_mutation_genes, H.real_name, blood_type, mrace, features, H.dna.mutations, FALSE)
-	H.set_species(mrace, TRUE, null, features, mutantparts, markings)
+	var/mob/living/carbon/human/cloned_human = new /mob/living/carbon/human(src)
 
-	H.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
-	occupant = H
+	cloned_human.hardset_dna(ui, mutation_index, cloned_human.real_name, blood_type, mrace, features)
+
+	if(efficiency > 2)
+		var/list/unclean_mutations = (GLOB.not_good_mutations|GLOB.bad_mutations)
+		cloned_human.dna.remove_mutation_group(unclean_mutations)
+	if(efficiency > 5 && prob(20))
+		cloned_human.easy_randmut(POSITIVE)
+	if(efficiency < 3 && prob(50))
+		var/mob/cloned_mob = cloned_human.easy_randmut(NEGATIVE + MINOR_NEGATIVE)
+		if(ismob(cloned_mob))
+			cloned_human = cloned_mob
+
+	cloned_human.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
+	occupant = cloned_human
 
 	if(!clonename)	//to prevent null names
 		clonename = "clone ([rand(1,999)])"
-	H.real_name = clonename
+	cloned_human.real_name = clonename
 
+	icon_state = "pod_1"
 	//Get the clone body ready
-	maim_clone(H)
-	ADD_TRAIT(H, TRAIT_STABLEHEART, CLONING_POD_TRAIT)
-	ADD_TRAIT(H, TRAIT_STABLELIVER, CLONING_POD_TRAIT)
-	ADD_TRAIT(H, TRAIT_EMOTEMUTE, CLONING_POD_TRAIT)
-	ADD_TRAIT(H, TRAIT_MUTE, CLONING_POD_TRAIT)
-	ADD_TRAIT(H, TRAIT_NOBREATH, CLONING_POD_TRAIT)
-	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, CLONING_POD_TRAIT)
-	H.Unconscious(80)
+	maim_clone(cloned_human)
+	ADD_TRAIT(cloned_human, TRAIT_STABLEHEART, CLONING_POD_TRAIT)
+	ADD_TRAIT(cloned_human, TRAIT_STABLELIVER, CLONING_POD_TRAIT)
+	ADD_TRAIT(cloned_human, TRAIT_EMOTEMUTE, CLONING_POD_TRAIT)
+	ADD_TRAIT(cloned_human, TRAIT_MUTE, CLONING_POD_TRAIT)
+	ADD_TRAIT(cloned_human, TRAIT_NOBREATH, CLONING_POD_TRAIT)
+	ADD_TRAIT(cloned_human, TRAIT_NOCRITDAMAGE, CLONING_POD_TRAIT)
+	cloned_human.Unconscious(80)
 
-	var/list/candidates = poll_candidates_for_mob("Do you want to play as [clonename]'s defective clone?", null, null, null, 100, H, POLL_IGNORE_IMAGINARYFRIEND)
+	var/list/candidates = pollCandidatesForMob("Do you want to play as [clonename]'s defective clone?", null, null, null, 100, cloned_human, POLL_IGNORE_DEFECTIVECLONE)
 	if(LAZYLEN(candidates))
-		var/mob/dead/observer/C = pick(candidates)
-		H.key = C.key
+		var/mob/dead/observer/selected_observer = pick(candidates)
+		cloned_human.key = selected_observer.key
 
 	if(grab_ghost_when == CLONER_FRESH_CLONE)
-		H.grab_ghost()
-		to_chat(H, "<span class='notice'><b>Consciousness slowly creeps over you as your body regenerates.</b><br><i>So this is what cloning feels like?</i></span>")
+		cloned_human.grab_ghost()
+		to_chat(cloned_human, "<span class='notice'><b>Consciousness slowly creeps over you as your body regenerates.</b><br><i>So this is what cloning feels like?</i></span>")
 
 	if(grab_ghost_when == CLONER_MATURE_CLONE)
-		H.ghostize(TRUE)	//Only does anything if they were still in their old body and not already a ghost
-		to_chat(H.get_ghost(TRUE), "<span class='notice'>Your body is beginning to regenerate in a cloning pod. You will become conscious when it is complete.</span>")
+		cloned_human.ghostize(TRUE)	//Only does anything if they were still in their old body and not already a ghost
+		to_chat(cloned_human.get_ghost(TRUE), "<span class='notice'>Your body is beginning to regenerate in a cloning pod. You will become conscious when it is complete.</span>")
 
-	if(H)
-		H.faction |= factions
+	if(cloned_human)
+		cloned_human.faction |= factions
 
-		H.set_cloned_appearance()
+		cloned_human.set_cloned_appearance()
 
-		H.set_suicide(FALSE)
+		cloned_human.set_suicide(FALSE)
 	attempting = FALSE
-	update_icon()
 	return CLONING_DELETE_RECORD | CLONING_SUCCESS //so that we don't spam clones with autoprocess unless we leave a body in the scanner
 
 
@@ -90,11 +115,13 @@
 	return ..()
 
 /obj/machinery/computer/prototype_cloning/proc/GetAvailablePod(mind = null)
-	if(pods)
-		for(var/P in pods)
-			var/obj/machinery/clonepod/experimental/pod = P
-			if(pod.is_operational && !(pod.occupant || pod.mess))
-				return pod
+	if(!pods)
+		return
+	var/available_pods = list()
+	for(var/obj/machinery/clonepod/experimental/pod as anything in pods)
+		if(pod.is_operational() && !(pod.occupant || pod.mess))
+			available_pods |= pod
+	return pick(available_pods)
 
 /obj/machinery/computer/prototype_cloning/proc/updatemodules(findfirstcloner)
 	scanner = findscanner()
@@ -109,7 +136,7 @@
 		// Try to find a scanner in that direction
 		scannerf = locate(/obj/machinery/dna_scannernew, get_step(src, direction))
 		// If found and operational, return the scanner
-		if (!isnull(scannerf) && scannerf.is_operational)
+		if (!isnull(scannerf) && scannerf.is_operational())
 			return scannerf
 
 	// If no scanner was found, it will return null
@@ -119,7 +146,7 @@
 	var/obj/machinery/clonepod/experimental/podf = null
 	for(var/direction in GLOB.cardinals)
 		podf = locate(/obj/machinery/clonepod/experimental, get_step(src, direction))
-		if (!isnull(podf) && podf.is_operational)
+		if (!isnull(podf) && podf.is_operational())
 			AttachCloner(podf)
 
 /obj/machinery/computer/prototype_cloning/proc/AttachCloner(obj/machinery/clonepod/experimental/pod)
@@ -131,31 +158,30 @@
 	pod.connected = null
 	LAZYREMOVE(pods, pod)
 
-/obj/machinery/computer/prototype_cloning/attackby(obj/item/W, mob/user, params)
-	if(W.tool_behaviour == TOOL_MULTITOOL)
-		if(!multitool_check_buffer(user, W))
-			return
-		var/obj/item/multitool/P = W
-
-		if(istype(P.buffer, /obj/machinery/clonepod/experimental))
-			if(get_area(P.buffer) != get_area(src))
-				to_chat(user, "<font color = #666633>-% Cannot link machines across power zones. Buffer cleared %-</font color>")
-				P.buffer = null
-				return
-			to_chat(user, "<font color = #666633>-% Successfully linked [P.buffer] with [src] %-</font color>")
-			var/obj/machinery/clonepod/experimental/pod = P.buffer
-			if(pod.connected)
-				pod.connected.DetachCloner(pod)
-			AttachCloner(pod)
-		else
-			P.buffer = src
-			to_chat(user, "<font color = #666633>-% Successfully stored [REF(P.buffer)] [P.buffer.name] in buffer %-</font color>")
+/obj/machinery/computer/prototype_cloning/multitool_act(mob/living/user, obj/item/tool)
+	. = ..()
+	if(!multitool_check_buffer(user, tool))
 		return
+	var/obj/item/multitool/synced_multitool = tool
+
+	if(istype(synced_multitool.buffer, /obj/machinery/clonepod/experimental))
+		if(get_area(synced_multitool.buffer) != get_area(src))
+			to_chat(user, "<font color = #666633>-% Cannot link machines across power zones. Buffer cleared %-</font color>")
+			synced_multitool.buffer = null
+			return
+		to_chat(user, "<font color = #666633>-% Successfully linked [synced_multitool.buffer] with [src] %-</font color>")
+		var/obj/machinery/clonepod/experimental/pod = synced_multitool.buffer
+		if(pod.connected)
+			pod.connected.DetachCloner(pod)
+		AttachCloner(pod)
 	else
-		return ..()
+		synced_multitool.buffer = src
+		to_chat(user, "<font color = #666633>-% Successfully stored [REF(synced_multitool.buffer)] [synced_multitool.buffer.name] in buffer %-</font color>")
+	return TRUE
 
 /obj/machinery/computer/prototype_cloning/attack_hand(mob/user)
-	if(..())
+	. = ..()
+	if(.)
 		return
 	interact(user)
 
@@ -163,7 +189,8 @@
 	user.set_machine(src)
 	add_fingerprint(user)
 
-	if(..())
+	. = ..()
+	if(.)
 		return
 
 	updatemodules(TRUE)
@@ -206,17 +233,17 @@
 
 	var/datum/browser/popup = new(user, "cloning", "Prototype Cloning System Control")
 	popup.set_content(dat)
-	//popup.set_title_image(user.browse_rsc_icon(src.icon, src.icon_state))
 	popup.open()
 
 /obj/machinery/computer/prototype_cloning/Topic(href, href_list)
-	if(..())
+	. = ..()
+	if(.)
 		return
 
 	if(loading)
 		return
 
-	else if ((href_list["clone"]) && !isnull(scanner) && scanner.is_operational)
+	else if ((href_list["clone"]) && !isnull(scanner) && scanner.is_operational())
 		scantemp = ""
 
 		loading = TRUE
@@ -227,7 +254,7 @@
 		addtimer(CALLBACK(src, .proc/do_clone), 2 SECONDS)
 
 		//No locking an open scanner.
-	else if ((href_list["lock"]) && !isnull(scanner) && scanner.is_operational)
+	else if ((href_list["lock"]) && !isnull(scanner) && scanner.is_operational())
 		if ((!scanner.locked) && (scanner.occupant))
 			scanner.locked = TRUE
 			playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
@@ -241,7 +268,6 @@
 
 	add_fingerprint(usr)
 	updateUsrDialog()
-	return
 
 /obj/machinery/computer/prototype_cloning/proc/do_clone()
 	clone_occupant(scanner.occupant)
@@ -291,6 +317,6 @@
 		temp = "<font class='bad'>Cloning cycle already in progress.</font>"
 		playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, FALSE)
 	else
-		pod.growclone(mob_occupant.real_name, dna.unique_identity, dna.mutation_index, null, null, dna.blood_type, clone_species, dna.features, dna.features, mob_occupant.faction)
+		pod.growclone(mob_occupant.real_name, dna.uni_identity, dna.mutation_index, null, null, dna.blood_type, clone_species, dna.features, mob_occupant.faction)
 		temp = "[mob_occupant.real_name] => <font class='good'>Cloning data sent to pod.</font>"
 		playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, FALSE)
