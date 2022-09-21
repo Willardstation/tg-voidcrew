@@ -245,23 +245,6 @@
 					[!body_only ? "<a href='byond://?src=[REF(src)];clone=[active_record.fields["id"]]'>Clone</a>" : "" ]\
 				 	<a href='byond://?src=[REF(src)];clone=[active_record.fields["id"]];empty=TRUE'>Empty Clone</a><br>"
 
-				var/obj/item/implant/health/H = locate(active_record.fields["imp"])
-
-				if ((H) && (istype(H)))
-					dat += "<b>Health Implant Data:</b><br />[H.sensehealth()]<br><br />"
-				else
-					dat += "<font class='bad'>Unable to locate Health Implant.</font><br /><br />"
-
-				dat += "<b>Unique Identifier:</b><br /><span class='highlight'>[active_record.fields["UI"]]</span><br>"
-				dat += "<b>Structural Enzymes:</b><br /><span class='highlight'>"
-				for(var/key in active_record.fields["SE"])
-					if(key != RACEMUT)
-						var/val = active_record.fields["SE"][key]
-						var/alias = GLOB.all_mutations[key].alias
-						dat +="[alias]: [val]<br />"
-
-				dat += "</span><br />"
-
 				if(diskette && diskette.fields)
 					dat += "<div class='block'>"
 					dat += "<h4>Inserted Disk</h4>"
@@ -572,7 +555,6 @@
 		// We store the instance rather than the path, because some
 		// species (abductors, slimepeople) store state in their
 		// species datums
-		dna.delete_species = FALSE
 		R.fields["mrace"] = dna.species
 	else
 		var/datum/species/rando_race = pick(GLOB.roundstart_races)
@@ -589,7 +571,7 @@
 	R.fields["body_markings"] = dna.body_markings
 	R.fields["factions"] = mob_occupant.faction
 	R.fields["quirks"] = list()
-	for(var/V in mob_occupant.roundstart_quirks)
+	for(var/V in mob_occupant.quirks)
 		var/datum/quirk/T = V
 		R.fields["quirks"][T.type] = T.clone_data()
 
@@ -603,17 +585,6 @@
 	R.fields["mindref"] = "[REF(mob_occupant.mind)]"
 	R.fields["last_death"] = mob_occupant.stat == DEAD && mob_occupant.mind ? mob_occupant.mind.last_death : -1
 	R.fields["body_only"] = body_only
-
-	if(!body_only)
-	    //Add an implant if needed
-		var/obj/item/implant/health/imp
-		for(var/obj/item/implant/health/HI in mob_occupant.implants)
-			imp = HI
-			break
-		if(!imp)
-			imp = new /obj/item/implant/health(mob_occupant)
-			imp.implant(mob_occupant)
-		R.fields["imp"] = "[REF(imp)]"
 
 	var/datum/data/record/old_record = find_record("mindref", REF(mob_occupant.mind), records)
 	if(body_only)
