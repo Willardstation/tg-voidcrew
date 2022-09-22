@@ -291,7 +291,12 @@
 					dat += "<font class='bad'>Unable to Scan Health.</font><br /><br />"
 
 				dat += "<b>Unique Identifier:</b><br /><span class='highlight'>[active_record.fields["UI"]]</span><br>"
-				dat += "<b>Structural Enzymes:</b><br /><span class='highlight'>[active_record.fields["SE"]]</span><br>"
+				dat += "<b>Structural Enzymes:</b><br /><span class='highlight'>"
+				var/val = active_record.fields["SE"]
+				var/alias = GLOB.all_mutations
+				dat +="[alias]: [val]<br />"
+
+				dat += "</span><br />"
 
 				if(diskette && diskette.fields)
 					dat += "<div class='block'>"

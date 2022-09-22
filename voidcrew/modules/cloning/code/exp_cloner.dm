@@ -37,6 +37,16 @@
 
 	cloned_human.hardset_dna(ui, mutation_index, cloned_human.real_name, blood_type, mrace, features)
 
+	if(efficiency > 2)
+		var/list/unclean_mutations = (GLOB.not_good_mutations|GLOB.bad_mutations)
+		cloned_human.dna.remove_mutation_group(unclean_mutations)
+	if(efficiency > 5 && prob(20))
+		cloned_human.easy_random_mutate(POSITIVE)
+	if(efficiency < 3 && prob(50))
+		var/mob/cloned_mob = cloned_human.easy_random_mutate(NEGATIVE + MINOR_NEGATIVE)
+		if(ismob(cloned_mob))
+			cloned_human = cloned_mob
+
 	cloned_human.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
 	occupant = cloned_human
 
