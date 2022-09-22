@@ -283,6 +283,16 @@
 					[!body_only ? "<a href='byond://?src=[REF(src)];clone=[active_record.fields["id"]]'>Clone</a>" : "" ]\
 				 	<a href='byond://?src=[REF(src)];clone=[active_record.fields["id"]];empty=TRUE'>Empty Clone</a><br>"
 
+				var/obj/item/scanner_wand/H = locate(active_record.fields["imp"])
+
+				if ((H) && (istype(H)))
+					dat += "<b>Health Scan Data:</b><br />[H.attack(scanner.occupant)]<br><br />"
+				else
+					dat += "<font class='bad'>Unable to Scan Health.</font><br /><br />"
+
+				dat += "<b>Unique Identifier:</b><br /><span class='highlight'>[active_record.fields["UI"]]</span><br>"
+				dat += "<b>Structural Enzymes:</b><br /><span class='highlight'>[active_record.fields["SE"]]</span><br>"
+
 				if(diskette && diskette.fields)
 					dat += "<div class='block'>"
 					dat += "<h4>Inserted Disk</h4>"
