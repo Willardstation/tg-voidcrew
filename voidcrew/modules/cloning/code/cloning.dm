@@ -78,7 +78,8 @@
 	QDEL_LIST(unattached_flesh)
 	. = ..()
 
-/obj/machinery/clonepod/RefreshCloner()
+/obj/machinery/clonepod/RefreshParts()
+	. = ..()
 	speed_coeff = 0
 	efficiency = 0
 	fleshamnt = 1
@@ -161,7 +162,7 @@
 	var/mob/living/mob_occupant = occupant
 	if(mess)
 		. += "It's filled with blood and viscera. You swear you can see it moving..."
-	if(is_operational() && istype(mob_occupant))
+	if(on_set_is_operational() && istype(mob_occupant))
 		if(mob_occupant.stat != DEAD)
 			. += "Current clone cycle is [round(get_completion())]% complete."
 
@@ -274,7 +275,7 @@
 /obj/machinery/clonepod/process()
 	var/mob/living/mob_occupant = occupant
 
-	if(!is_operational()) //Autoeject if power is lost
+	if(!on_set_is_operational()) //Autoeject if power is lost
 		if(mob_occupant)
 			go_out()
 			log_combat("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to power loss.")
