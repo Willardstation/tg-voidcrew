@@ -13,6 +13,16 @@
 		var/completion = round(attacked_clone_pod.get_completion())
 		return completion
 
+/obj/machinery/CheckParts(list/parts_list)
+	..()
+	RefreshCloner()
+
+/obj/machinery/proc/RefreshCloner() //Got Confused added this
+	return
+
+/obj/machinery/proc/is_operational()
+	return !(machine_stat & (NOPOWER|BROKEN|MAINT))
+
 //datums
 
 /datum/brain_trauma
