@@ -13,9 +13,6 @@
 		var/completion = round(attacked_clone_pod.get_completion())
 		return completion
 
-/obj/machinery/proc/is_operational()
-	return !(machine_stat & (NOPOWER|BROKEN|MAINT))
-
 //datums
 
 /datum/brain_trauma
