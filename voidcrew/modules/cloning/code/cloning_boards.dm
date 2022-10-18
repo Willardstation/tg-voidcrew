@@ -35,7 +35,7 @@
 	id = "clonecontrol"
 	build_path = /obj/item/circuitboard/computer/cloning
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
-	category = RND_CATEGORY_MEDICAL_DESIGNS
+	category = RND_CATEGORY_MACHINE
 
 /datum/design/board/clonepod
 	name = "Machine Design (Clone Pod)"
@@ -43,4 +43,4 @@
 	id = "clonepod"
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 	build_path = /obj/item/circuitboard/machine/clonepod
-	category = RND_CATEGORY_MEDICAL_DESIGNS
+	category = RND_CATEGORY_MACHINE

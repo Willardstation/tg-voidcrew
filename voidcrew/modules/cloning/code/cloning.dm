@@ -134,7 +134,7 @@
 
 /obj/machinery/chem_dispenser/AltClick(mob/living/user)
 	..()
-	if(istype(user) && user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+	if(!user.canUseTopic(src, be_close = TRUE, no_dexterity = FALSE, no_tk = TRUE))
 		replace_beaker(user)
 
 /obj/machinery/clonepod/attack_ai(mob/user)
@@ -227,7 +227,6 @@
 
 	cloned_human.hardset_dna(ui, mutation_index, null, cloned_human.real_name, blood_type, mrace, features)
 
-	cloned_human.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
 	occupant = cloned_human
 
 	icon_state = "pod_1"
@@ -339,7 +338,7 @@
 					O.Insert(mob_occupant)
 				else if(isbodypart(I))
 					var/obj/item/bodypart/BP = I
-					BP.attach_limb(mob_occupant)
+					BP.try_attach_limb(mob_occupant)
 
 			use_power(7500) //This might need tweaking.
 
@@ -357,7 +356,7 @@
 					O.Insert(mob_occupant)
 				else if(isbodypart(i))
 					var/obj/item/bodypart/BP = i
-					BP.attach_limb(mob_occupant)
+					BP.try_attach_limb(mob_occupant)
 
 			go_out()
 			log_combat("[key_name(mob_occupant)] completed cloning cycle in [src] at [AREACOORD(src)].")

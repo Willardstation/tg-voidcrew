@@ -47,7 +47,6 @@
 		if(ismob(cloned_mob))
 			cloned_human = cloned_mob
 
-	cloned_human.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
 	occupant = cloned_human
 
 	if(!clonename)	//to prevent null names
