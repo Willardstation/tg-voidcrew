@@ -150,11 +150,6 @@
 		if(efficiency > 5)
 			. += "<span class='notice'>Pod has been upgraded to support autoprocessing and apply beneficial mutations.</span>"
 
-//The return of data disks?? Just for transferring between genetics machine/cloning machine.
-//TO-DO: Make the genetics machine accept them.
-/obj/item/disk/data
-	var/list/fields = list()
-
 //Clonepod
 
 /obj/machinery/clonepod/examine(mob/user)

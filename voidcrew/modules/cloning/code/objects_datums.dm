@@ -13,6 +13,11 @@
 		var/completion = round(attacked_clone_pod.get_completion())
 		return completion
 
+//The return of data disks?? Just for transferring between genetics machine/cloning machine.
+//TO-DO: Make the genetics machine accept them.
+/obj/item/disk/data
+	var/list/fields = list()
+
 //datums
 
 /datum/brain_trauma
@@ -35,9 +40,6 @@
 /datum/mood_event/cloned_corpse
 	description = "<span class='boldwarning'>I recently saw my own corpse...</span>\n"
 	mood_change = -6
-
-/datum/quirk/proc/clone_data() //return additional data that should be remembered by cloning
-/datum/quirk/proc/on_clone(data) //create the quirk from clone data
 
 /datum/config_entry/flag/revival_cloning
 
