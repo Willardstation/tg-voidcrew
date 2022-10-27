@@ -1,9 +1,9 @@
 // Add your pacmen circuitboards here and list the req_componets and build path
 
-/obj/item/circuitboard/machine/pacman/mutitest
-	name = "TESTMAN-type Generator"
+/obj/item/circuitboard/machine/pacman/voidman
+	name = "VOIDMAN-type Generator"
 	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
-	build_path = /obj/machinery/power/port_gen/pacman/mutitest
+	build_path = /obj/machinery/power/port_gen/pacman/voidman
 	req_components = list(
 		/obj/item/stack/cable_coil = 5,
 		/obj/item/stack/sheet/iron = 5

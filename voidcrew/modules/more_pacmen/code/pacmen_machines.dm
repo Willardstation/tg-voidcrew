@@ -1,0 +1,11 @@
+// Add your pacmen here name, circuit path, icon, power_gen, max_sheets, sheet path and time_per_sheet
+
+/obj/machinery/power/port_gen/pacman/voidman
+	name = "\improper V.O.I.D.M.A.N.-type portable generator"
+	circuit = /obj/item/circuitboard/machine/pacman/voidman
+	icon_state = "portgen1_0"
+	base_icon = "portgen1"
+	power_gen = 5000
+	max_sheets = 50
+	sheet_path = /obj/item/stack/sheet/mineral/plasma
+	time_per_sheet = 60
