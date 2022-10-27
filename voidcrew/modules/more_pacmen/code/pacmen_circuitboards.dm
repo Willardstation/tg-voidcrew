@@ -9,3 +9,13 @@
 		/obj/item/stack/sheet/iron = 5
 	)
 	needs_anchored = FALSE
+
+/obj/item/circuitboard/machine/pacman/brainman
+	name = "BRAINMAN-type Generator"
+	greyscale_colors = CIRCUIT_COLOR_ENGINEERING
+	build_path = /obj/machinery/power/port_gen/pacman/brainman
+	req_components = list(
+		/obj/item/stack/cable_coil = 5,
+		/obj/item/stack/sheet/iron = 5
+	)
+	needs_anchored = FALSE
