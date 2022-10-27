@@ -9,6 +9,7 @@
 	name = "Cloning"
 	greyscale_colors = CIRCUIT_COLOR_MEDICAL
 	build_path = /obj/machinery/computer/cloning
+	var/list/records = list()
 
 //Machinery
 
