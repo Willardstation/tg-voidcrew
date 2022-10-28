@@ -121,11 +121,11 @@
 /obj/item/disk/data
 	name = "cloning data disk"
 	icon_state = "datadisk0" //Gosh I hope syndies don't mistake them for the nuke disk.
-	var/list/genetic_makeup_buffer = list()
-	var/list/fields = list()
-	var/list/mutations = list()
-	var/max_mutations = 6
-	var/read_only = FALSE //Well,it's still a floppy disk
+	var/list/genetic_makeup_buffer1 = list()
+	var/list/fields0 = list()
+	var/list/mutations0 = list()
+	var/max_mutations0 = 6
+	var/read_only0 = FALSE //Well,it's still a floppy disk
 
 //Disk stuff.
 /obj/item/disk/data/Initialize(mapload)
@@ -134,22 +134,22 @@
 	add_overlay("datadisk_gene")
 
 /obj/item/disk/data/attack_self(mob/user)
-	read_only = !read_only
-	to_chat(user, "<span class='notice'>You flip the write-protect tab to [read_only ? "protected" : "unprotected"].</span>")
+	read_only0 = !read_only0
+	to_chat(user, "<span class='notice'>You flip the write-protect tab to [read_only0 ? "protected" : "unprotected"].</span>")
 
 /obj/item/disk/data/examine(mob/user)
 	. = ..()
-	. += "The write-protect tab is set to [read_only ? "protected" : "unprotected"]."
+	. += "The write-protect tab is set to [read_only0 ? "protected" : "unprotected"]."
 
 /obj/item/disk/data/debug
 	name = "Debug genetic data disk"
 	desc = "A disk that contains all existing genetic mutations."
-	max_mutations = 100
+	max_mutations0 = 100
 
 /obj/item/disk/data/debug/Initialize(mapload)
 	. = ..()
 	for(var/datum/mutation/human/HM as() in GLOB.all_mutations)
-		mutations += new HM
+		mutations0 += new HM
 
 //Clonepod
 

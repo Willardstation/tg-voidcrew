@@ -66,3 +66,7 @@
 
 /datum/quirk/proc/clone_data() //return additional data that should be remembered by cloning
 /datum/quirk/proc/on_clone(data) //create the quirk from clone data
+
+//Called when something resists while this atom is its loc
+/atom/movable/proc/container_resist(mob/living/user)
+	return
