@@ -4905,6 +4905,7 @@
 #include "voidcrew\modules\research\machinery_rnd.dm"
 #include "voidcrew\modules\research\research_notes.dm"
 #include "voidcrew\modules\research\server.dm"
+#include "voidcrew\modules\research\survey_scanner.dm"
 #include "voidcrew\modules\research\edits\_experiments.dm"
 #include "voidcrew\modules\research\edits\_rd_consoles.dm"
 #include "voidcrew\modules\research\edits\_techweb.dm"
