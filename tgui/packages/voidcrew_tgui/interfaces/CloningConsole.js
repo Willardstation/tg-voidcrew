@@ -14,8 +14,6 @@ export const CloningConsole = (props, context) => {
   const { act, data } = useBackend(context);
   const {
     useRecords,
-    hasAutoprocess,
-    autoprocess,
     temp,
     scanTemp,
     scannerLocked,
