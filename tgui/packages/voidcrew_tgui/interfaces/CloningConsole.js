@@ -1,13 +1,6 @@
 import { Fragment } from 'inferno';
 import { useBackend } from '../../tgui/backend';
-import {
-  Box,
-  Button,
-  Collapsible,
-  NoticeBox,
-  ProgressBar,
-  Section,
-} from '../../tgui/components';
+import { Box, Button, Collapsible, NoticeBox, ProgressBar, Section } from '../../tgui/components';
 import { Window } from '../../tgui/layouts';
 
 export const CloningConsole = (_props, context) => {
@@ -93,15 +86,15 @@ export const CloningConsole = (_props, context) => {
                             (record['body_only']
                               ? ' (Body Only)'
                               : record['last_death'] < 0
-                              ? ' (Presaved)'
-                              : '')
+                                ? ' (Presaved)'
+                                : '')
                           }
                           color={
                             record['body_only']
                               ? 'yellow'
                               : record['last_death'] < 0
-                              ? 'green'
-                              : 'blue'
+                                ? 'green'
+                                : 'blue'
                           }>
                           <div
                             key={record['name']}
@@ -224,9 +217,9 @@ export const CloningConsole = (_props, context) => {
                     title={
                       diskData['name']
                         ? diskData['name'] +
-                          (diskData['body_only']
-                            ? ' (Body Only)'
-                            : diskData['last_death'] < 0
+                        (diskData['body_only']
+                          ? ' (Body Only)'
+                          : diskData['last_death'] < 0
                             ? ' (Presaved)'
                             : '')
                         : 'Empty Disk'
@@ -236,8 +229,8 @@ export const CloningConsole = (_props, context) => {
                         ? diskData['body_only']
                           ? 'yellow'
                           : diskData['last_death'] < 0
-                          ? 'green'
-                          : 'blue'
+                            ? 'green'
+                            : 'blue'
                         : 'grey'
                     }>
                     {diskData['id'] ? (
