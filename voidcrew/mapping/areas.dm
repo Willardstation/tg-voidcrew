@@ -5,7 +5,7 @@
  */
 /area/station
 	/// The mobile port attached to this area
-	var/obj/docking_port/mobile/station_ship
+	var/obj/docking_port/mobile/voidcrew/station_ship
 
 /area/station/Initialize(mapload)
 	. = ..()
@@ -87,5 +87,5 @@
 
 /area/station/external
 	name = "External"
-	area_flags = UNIQUE_AREA | NO_ALERTS | AREA_USES_STARLIGHT
+	area_flags = UNIQUE_AREA | AREA_USES_STARLIGHT
 	icon_state = "space_near"
