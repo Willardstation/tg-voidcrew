@@ -4,16 +4,15 @@
 
 /obj/machinery/computer/rdconsole/Initialize(mapload)
 	. = ..()
-	stored_research.consoles_accessing[src] = FALSE
+	stored_research.consoles_accessing -= src
 	stored_research = null
 
 /obj/machinery/computer/rdconsole/Destroy()
-	. = ..()
 	if(connected_ship_ref)
 		connected_ship_ref = null
 	if(stored_research)
 		stored_research.connected_machines -= src
-		stored_research = null
+	return ..()
 
 /obj/machinery/computer/rdconsole/unsync_research_servers()
 	if(stored_research)
@@ -49,9 +48,7 @@
 		playsound(src,'sound/machines/copier.ogg', 50, TRUE)
 		qdel(research_notes)
 		return
-
 	return ..()
-
 
 /obj/machinery/computer/rdconsole/ui_act(action, list/params)
 	if (action == "loadTech")

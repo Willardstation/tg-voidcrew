@@ -12,14 +12,11 @@
 /obj/machinery/rnd/server/ship/Destroy()
 	UnregisterSignal(src, COMSIG_ATOM_ATTACK_HAND_SECONDARY)
 	if(source_code_hdd)
+		for(var/atom/everything_connected as anything in source_code_hdd.stored_research.connected_machines)
+			everything_connected.unsync_research_servers()
 		source_code_hdd.forceMove(loc)
 		source_code_hdd = null
 	return ..()
-
-/obj/machinery/rnd/server/ship/on_deconstruction()
-	. = ..()
-	for(var/atom/everything_connected as anything in source_code_hdd.stored_research.connected_machines)
-		everything_connected.unsync_research_servers()
 
 /obj/machinery/rnd/server/ship/attacked_by(obj/item/attacking_item, mob/living/user)
 	if(istype(attacking_item, /obj/item/computer_hardware/hard_drive/cluster/hdd_theft/ship_disk))
