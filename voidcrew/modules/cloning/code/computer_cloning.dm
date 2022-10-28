@@ -650,6 +650,6 @@
 	desc = "Used to operate an experimental cloner."
 	icon_screen = "dna"
 	icon_keyboard = "med_key"
-	circuit = /obj/item/circuitboard/computer/cloning/prototype_cloning
+	circuit = /obj/item/circuitboard/computer/prototype_cloning
 	clonepod_type = /obj/machinery/clonepod/experimental
 	experimental = TRUE
