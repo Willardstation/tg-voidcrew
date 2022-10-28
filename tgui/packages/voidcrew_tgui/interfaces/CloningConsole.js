@@ -1,3 +1,4 @@
+import { Fragment } from 'inferno';
 import { useBackend } from '../../tgui/backend';
 import {
   Box,
@@ -8,9 +9,8 @@ import {
   Section,
 } from '../../tgui/components';
 import { Window } from '../../tgui/layouts';
-import { Fragment } from 'inferno';
 
-export const CloningConsole = (props, context) => {
+export const CloningConsole = (_props, context) => {
   const { act, data } = useBackend(context);
   const {
     useRecords,
