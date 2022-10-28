@@ -7,7 +7,7 @@ import {
   ProgressBar,
   Section,
 } from '../../tgui/components';
-import { Window } from '../../layouts';
+import { Window } from '../../tgui/layouts';
 import { Fragment } from 'inferno';
 
 export const CloningConsole = (props, context) => {
