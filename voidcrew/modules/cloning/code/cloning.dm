@@ -45,12 +45,9 @@
 	var/experimental_pod = FALSE //experimental cloner will have true. TRUE allows you to clone a weird brain after scanning it.
 
 /obj/machinery/clonepod/Initialize(mapload)
-	create_reagents(100, OPENCONTAINER)
-
 	. = ..()
-
+	create_reagents(100, OPENCONTAINER)
 	countdown = new(src)
-
 	if(internal_radio)
 		radio = new(src)
 		radio.keyslot = new radio_key
