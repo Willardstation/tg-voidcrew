@@ -69,7 +69,7 @@
 	if(connected)
 		connected.DetachCloner(src)
 	QDEL_LIST(unattached_flesh)
-	. = ..()
+	return ..()
 
 /obj/machinery/clonepod/RefreshParts()
 	. = ..()
