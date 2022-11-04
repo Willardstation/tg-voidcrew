@@ -19,6 +19,9 @@
 	verb_say = "states"
 	circuit = /obj/item/circuitboard/machine/clonepod
 
+	var/datum/bank_account/current_insurance
+	fair_market_price = 5 // He nodded, because he knew I was right. Then he swiped his credit card to pay me for arresting him.
+	payment_department = ACCOUNT_MED
 	var/heal_level //The clone is released once its health reaches this level.
 	var/obj/machinery/computer/cloning/connected //So we remember the connected clone machine.
 	var/mess = FALSE //Need to clean out it if it's full of exploded clone.
@@ -40,9 +43,6 @@
 
 	var/list/unattached_flesh
 	var/flesh_number = 0
-	var/datum/bank_account/current_insurance
-	fair_market_price = 5 // He nodded, because he knew I was right. Then he swiped his credit card to pay me for arresting him.
-	payment_department = ACCOUNT_MED
 	var/experimental_pod = FALSE //experimental cloner will have true. TRUE allows you to clone a weird brain after scanning it.
 
 /obj/machinery/clonepod/Initialize(mapload)
@@ -96,7 +96,7 @@
 	user.examinate(src)
 
 /obj/machinery/clonepod/AltClick(mob/user)
-	if (alert(user, "Are you sure you want to empty the cloning pod?", "Empty Reagent Storage:", "Yes", "No") != "Yes")
+	if (tgui_alert(user, "Are you sure you want to empty the cloning pod?", "Empty Reagent Storage:", "Yes", "No") != "Yes")
 		return
 	to_chat(user, "<span class='notice'>You empty \the [src]'s release valve onto the floor.</span>")
 	src.reagents.clear_reagents()
@@ -113,41 +113,6 @@
 		. += "<span class='notice'>The reagent display reads: [round(reagents.total_volume, 1)] / [reagents.maximum_volume] cm<sup>3</sup></span>"
 		if(efficiency > 5)
 			. += "<span class='notice'>Pod has been upgraded to support autoprocessing and apply beneficial mutations.</span>"
-
-//The return of data disks?? Just for transferring between genetics machine/cloning machine.
-//TO-DO: Make the genetics machine accept them.
-/obj/item/disk/data
-	name = "cloning data disk"
-	icon_state = "datadisk0" //Gosh I hope syndies don't mistake them for the nuke disk.
-	var/list/genetic_makeup_buffer1 = list()
-	var/list/fields0 = list()
-	var/list/mutations0 = list()
-	var/max_mutations0 = 6
-	var/read_only0 = FALSE //Well,it's still a floppy disk
-
-//Disk stuff.
-/obj/item/disk/data/Initialize(mapload)
-	. = ..()
-	icon_state = "datadisk[rand(0,6)]"
-	add_overlay("datadisk_gene")
-
-/obj/item/disk/data/attack_self(mob/user)
-	read_only0 = !read_only0
-	to_chat(user, "<span class='notice'>You flip the write-protect tab to [read_only0 ? "protected" : "unprotected"].</span>")
-
-/obj/item/disk/data/examine(mob/user)
-	. = ..()
-	. += "The write-protect tab is set to [read_only0 ? "protected" : "unprotected"]."
-
-/obj/item/disk/data/debug
-	name = "Debug genetic data disk"
-	desc = "A disk that contains all existing genetic mutations."
-	max_mutations0 = 100
-
-/obj/item/disk/data/debug/Initialize(mapload)
-	. = ..()
-	for(var/datum/mutation/human/HM as() in GLOB.all_mutations)
-		mutations0 += new HM
 
 //Clonepod
 
