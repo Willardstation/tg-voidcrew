@@ -271,8 +271,7 @@
 			var/datum/quirk/Q = new V(H)
 			Q.on_clone(quirks[V])
 
-		for(var/t in traumas)
-			var/datum/brain_trauma/BT = t
+		for(var/datum/brain_trauma/BT as anything in traumas)
 			var/datum/brain_trauma/cloned_trauma = BT.on_clone()
 			if(cloned_trauma)
 				H.gain_trauma(cloned_trauma, BT.resilience)
