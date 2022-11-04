@@ -172,10 +172,10 @@
 	return GM
 
 /obj/machinery/clonepod/proc/get_completion()
-	. = FALSE
 	var/mob/living/mob_occupant = occupant
-	if(mob_occupant)
-		. = (100 * ((mob_occupant.health + 100) / (heal_level + 100)))
+	if(!mob_occupant)
+		return FALSE
+	return (100 * ((mob_occupant.health + 100) / (heal_level + 100)))
 
 /obj/machinery/clonepod/attack_ai(mob/user)
 	return examine(user)
