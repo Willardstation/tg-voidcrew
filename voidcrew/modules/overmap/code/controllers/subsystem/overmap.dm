@@ -18,6 +18,8 @@ SUBSYSTEM_DEF(overmap)
 	flags = SS_NO_FIRE
 	runlevels = RUNLEVEL_SETUP | RUNLEVEL_GAME
 
+	/// Centre of the overmap
+	var/turf/overmap_centre
 	/// Map of tiles at each radius around the sun
 	var/list/list/radius_tiles = list()
 	/// List of all events
@@ -40,17 +42,27 @@ SUBSYSTEM_DEF(overmap)
 	overmap_area.setup("Overmap")
 
 	// locates the area we want the overmap to be
-	var/list/overmap_turfs = block(locate(OVERMAP_LEFT_SIDE_COORD, OVERMAP_SOUTH_SIDE_COORD, OVERMAP_Z_LEVEL), locate(OVERMAP_RIGHT_SIDE_COORD, OVERMAP_NORTH_SIDE_COORD, OVERMAP_Z_LEVEL))
+	var/turf/top_left = locate(OVERMAP_LEFT_SIDE_COORD, OVERMAP_NORTH_SIDE_COORD, OVERMAP_Z_LEVEL)
+	var/turf/bottom_right = locate(OVERMAP_RIGHT_SIDE_COORD, OVERMAP_SOUTH_SIDE_COORD, OVERMAP_Z_LEVEL)
+	var/list/overmap_turfs = block(top_left, bottom_right)
 	for (var/turf/overmap_turf as anything in overmap_turfs)
 		if (overmap_turf.x == OVERMAP_LEFT_SIDE_COORD || overmap_turf.x == OVERMAP_RIGHT_SIDE_COORD || overmap_turf.y == OVERMAP_NORTH_SIDE_COORD || overmap_turf.y == OVERMAP_SOUTH_SIDE_COORD)
 			overmap_turf.ChangeTurf(/turf/closed/overmap_edge)
 		else
 			overmap_turf.ChangeTurf(/turf/open/overmap)
 		overmap_area.contents += overmap_turf
+		overmap_area.contained_turfs += overmap_turf
 	overmap_area.reg_in_areas_in_z()
+	// not actually the centre but close enough
+	overmap_centre = get_turf(locate((OVERMAP_LEFT_SIDE_COORD + ((OVERMAP_SIZE - 1) / 2)) - 1, (OVERMAP_SOUTH_SIDE_COORD + ((OVERMAP_SIZE - 1) / 2)) - 1, OVERMAP_Z_LEVEL))
 
 /datum/controller/subsystem/overmap/proc/setup_sun()
-	var/turf/open/overmap/centre_tile = locate((OVERMAP_LEFT_SIDE_COORD + ((OVERMAP_SIZE - 1) / 2)) - 1, (OVERMAP_SOUTH_SIDE_COORD + ((OVERMAP_SIZE - 1) / 2)) - 1, OVERMAP_Z_LEVEL) // not ACTUALLY centre because the star spawns from bottom left turf, but close enough
+	var/turf/open/overmap/centre_tile = overmap_centre
+	if(!istype(centre_tile))
+		can_fire = FALSE
+		message_admins("Overmap failed to generate the map, this is a critical error.")
+		CRASH("Overmap did not generate correctly!")
+
 	var/obj/structure/overmap/star/big/star_to_spawn = pick(/obj/structure/overmap/star/big, /obj/structure/overmap/star/big/binary)
 	star_to_spawn = new
 
@@ -58,14 +70,24 @@ SUBSYSTEM_DEF(overmap)
 	new /obj/effect/landmark/observer_start(centre_tile)
 
 	var/list/unsorted_turfs = get_area_turfs(/area/overmap, target_z = OVERMAP_Z_LEVEL)
-	for (var/i in 1 to (OVERMAP_SIZE - 2) / 2)
-		radius_tiles += list(list())
-		for (var/turf/turf in unsorted_turfs)
-			var/dist = round(sqrt((turf.x - (centre_tile.x + 1)) ** 2 + (turf.y - (centre_tile.y + 1)) ** 2))
-			if (dist != i)
-				continue
-			radius_tiles[i] += turf
-			unsorted_turfs -= turf
+	var/max_ring = 0
+	for (var/turf/turf in unsorted_turfs)
+		// the overmap is a square, so we can just use the x and y values to determine the actual ring
+		// 2 2 2 2 2
+		// 2 1 1 1 2
+		// 2 1 X 1 2
+		// 2 1 1 1 2
+		// 2 2 2 2 2
+		var/ring_x = turf.x - overmap_centre.x
+		var/ring_y = turf.y - overmap_centre.y
+		var/ring = max(abs(ring_x), abs(ring_y))
+		if (ring == 0)
+			continue
+		if (ring > max_ring)
+			for (var/i in 1 to ring - max_ring)
+				radius_tiles += list(list())
+			max_ring = ring
+		LAZYADDASSOC(radius_tiles, ring, turf)
 
 /datum/controller/subsystem/overmap/proc/get_unused_overmap_square(thing_not_to_have = /obj/structure/overmap, tries = MAX_OVERMAP_PLACEMENT_ATTEMPTS, force = FALSE)
 	var/turf/turf_to_return
@@ -145,3 +167,11 @@ SUBSYSTEM_DEF(overmap)
 		planet_to_spawn.icon_state = planet_info.icon_state
 		planet_to_spawn.color = planet_info.color
 		qdel(planet_info)
+
+// TODO - MULTI-Z VLEVELS
+/datum/controller/subsystem/overmap/proc/calculate_turf_above(turf/T)
+	return
+
+// TODO - MULTI-Z VLEVELS
+/datum/controller/subsystem/overmap/proc/calculate_turf_below(turf/T)
+	return
