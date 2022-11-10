@@ -8,6 +8,9 @@
 	///List of spawn points on the ship.
 	var/list/obj/machinery/cryopod/spawn_points = list()
 
+	/// TODO - SHIPS NEED THEIR OWN AREA SUBTYPE!
+	area_type = /area
+
 /**
  * ##get_all_humans
  *
