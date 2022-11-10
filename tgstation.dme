@@ -4866,6 +4866,7 @@
 #include "voidcrew\mapping\shuttles\syndicate\geneva.dm"
 #include "voidcrew\mapping\shuttles\syndicate\hyena.dm"
 #include "voidcrew\mapping\spawners\nanites.dm"
+#include "voidcrew\modules\antagonist\_locate_weakpoint.dm"
 #include "voidcrew\modules\cryo\console.dm"
 #include "voidcrew\modules\cryo\machine.dm"
 #include "voidcrew\modules\nanites\code\circuits.dm"

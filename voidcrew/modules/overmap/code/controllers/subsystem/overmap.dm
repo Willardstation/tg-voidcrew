@@ -170,6 +170,19 @@ SUBSYSTEM_DEF(overmap)
 		planet_to_spawn.color = planet_info.color
 		qdel(planet_info)
 
+/datum/controller/subsystem/overmap/proc/get_containing_ship(area/source)
+	if(!source)
+		return
+
+	if(!isarea(source))
+		source = get_area(source)
+
+	for(var/obj/structure/overmap/ship/ship as anything in simulated_ships)
+		var/obj/docking_port/mobile/ship_shuttle = ship.shuttle
+		for(var/area/shuttle_area as anything in ship_shuttle?.shuttle_areas)
+			if(shuttle_area == source)
+				return ship
+
 // TODO - MULTI-Z VLEVELS
 /datum/controller/subsystem/overmap/proc/calculate_turf_above(turf/T)
 	return
