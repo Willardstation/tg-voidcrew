@@ -179,6 +179,7 @@ SUBSYSTEM_DEF(overmap)
 		qdel(planet_info)
 
 /datum/controller/subsystem/overmap/proc/get_containing_ship(area/source)
+	RETURN_TYPE(/obj/structure/overmap/ship)
 	if(!source)
 		return
 

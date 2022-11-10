@@ -88,11 +88,13 @@
 	cam_background = new
 	cam_background.assigned_map = map_name
 	cam_background.del_on_map_removal = FALSE
+	SSovermap.simulated_ships += src
 
 /obj/structure/overmap/ship/Destroy()
 	QDEL_NULL(cam_screen)
 	QDEL_NULL(cam_plane_masters)
 	QDEL_NULL(cam_background)
+	SSovermap.simulated_ships -= src
 	return ..()
 
 /// Updates the screen for the helm console
