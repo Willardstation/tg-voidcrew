@@ -50,6 +50,8 @@ SUBSYSTEM_DEF(overmap)
 			overmap_turf.ChangeTurf(/turf/closed/overmap_edge)
 		else
 			overmap_turf.ChangeTurf(/turf/open/overmap)
+		var/area/old_area = get_area(overmap_turf)
+		old_area.turfs_to_uncontain += overmap_turf
 		overmap_area.contents += overmap_turf
 		overmap_area.contained_turfs += overmap_turf
 	overmap_area.reg_in_areas_in_z()
