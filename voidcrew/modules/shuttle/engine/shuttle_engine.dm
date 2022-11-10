@@ -1,8 +1,9 @@
 /**
   * ## Engine Thrusters
   * The workhorse of any movable ship, these engines (usually) take in some kind fuel and produce thrust to move ships.
+  * Voidcrew subtype is to add unique icons, and being able to enable/disable it at will.
   */
-/obj/machinery/power/shuttle_engine
+/obj/machinery/power/shuttle_engine/ship
 	name = "shuttle thruster"
 	desc = "A thruster for shuttles."
 	icon = 'voidcrew/modules/shuttle/icons/shuttle.dmi'
@@ -28,7 +29,7 @@
   * Uses up a specified percentage of the fuel cost, and returns the amount of thrust if successful.
   * * percentage - The percentage of total thrust that should be used
   */
-/obj/machinery/power/shuttle_engine/proc/burn_engine(percentage = 100)
+/obj/machinery/power/shuttle_engine/ship/proc/burn_engine(percentage = 100)
 	SHOULD_CALL_PARENT(TRUE)
 	update_appearance(UPDATE_ICON)
 	return FALSE
@@ -36,27 +37,27 @@
 /**
   * Returns how much "Fuel" is left. (For use with engine displays.)
   */
-/obj/machinery/power/shuttle_engine/proc/return_fuel()
+/obj/machinery/power/shuttle_engine/ship/proc/return_fuel()
 	return
 
 /**
   * Returns how much "Fuel" can be held. (For use with engine displays.)
   */
-/obj/machinery/power/shuttle_engine/proc/return_fuel_cap()
+/obj/machinery/power/shuttle_engine/ship/proc/return_fuel_cap()
 	return
 
 /**
   * Updates the engine state.
   * All functions should return if the parent function returns false.
   */
-/obj/machinery/power/shuttle_engine/proc/update_engine()
+/obj/machinery/power/shuttle_engine/ship/proc/update_engine()
 	thruster_active = !panel_open
 	return thruster_active
 
 /**
   * Updates the engine's icon and engine state.
   */
-/obj/machinery/power/shuttle_engine/update_icon_state()
+/obj/machinery/power/shuttle_engine/ship/update_icon_state()
 	. = ..()
 	update_engine() //Calls this so it sets the accurate icon
 	if(panel_open)
@@ -66,11 +67,11 @@
 	else
 		icon_state = icon_state_off
 
-/obj/machinery/power/shuttle_engine/Initialize()
+/obj/machinery/power/shuttle_engine/ship/Initialize()
 	. = ..()
 	update_appearance(UPDATE_ICON)
 
-/obj/machinery/power/shuttle_engine/attack_hand(mob/living/user, list/modifiers)
+/obj/machinery/power/shuttle_engine/ship/attack_hand(mob/living/user, list/modifiers)
 	. = ..()
 	if(!do_after(user, MIN_TOOL_SOUND_DELAY, target=src))
 		return ..()
@@ -78,14 +79,14 @@
 	to_chat(user, span_notice("You [enabled ? "enable" : "disable"] \the [src]."))
 	update_appearance(UPDATE_ICON)
 
-/obj/machinery/power/shuttle_engine/screwdriver_act(mob/living/user, obj/item/tool)
+/obj/machinery/power/shuttle_engine/ship/screwdriver_act(mob/living/user, obj/item/tool)
 	. = ..()
 	if(default_deconstruction_screwdriver(user, icon_state_open, icon_state_closed, tool))
 		return TRUE
 	update_appearance(UPDATE_ICON)
 	return FALSE
 
-/obj/machinery/power/shuttle_engine/crowbar_act(mob/living/user, obj/item/tool)
+/obj/machinery/power/shuttle_engine/ship/crowbar_act(mob/living/user, obj/item/tool)
 	. = ..()
 	if(!panel_open)
 		user.balloon_alert(user, "open panel first!")
