@@ -49,10 +49,21 @@
 				syn_ship_list[initial(shuttles.name)] = shuttles
 
 /datum/controller/subsystem/mapping/get_station_center()
-	return SSovermap.overmap_centre
+	return SSovermap.overmap_centre || locate(OVERMAP_LEFT_SIDE_COORD, OVERMAP_NORTH_SIDE_COORD, OVERMAP_Z_LEVEL)
 
 /datum/controller/subsystem/mapping/get_turf_above(turf/T)
 	return SSovermap.calculate_turf_above(T)
 
 /datum/controller/subsystem/mapping/get_turf_below(turf/T)
 	return SSovermap.calculate_turf_below(T)
+
+/get_safe_random_station_turf(list/areas_to_pick_from)
+	if(!areas_to_pick_from)
+		areas_to_pick_from = list()
+		for(var/obj/structure/overmap/ship/ship as anything in SSovermap.simulated_ships)
+			areas_to_pick_from += ship.get_areas()
+	return ..(areas_to_pick_from)
+
+/get_random_station_turf()
+	// the chance that this just fucking yeets you into hyper-space is too high
+	return get_safe_random_station_turf()
