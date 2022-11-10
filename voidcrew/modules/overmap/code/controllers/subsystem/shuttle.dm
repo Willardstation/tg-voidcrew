@@ -2,14 +2,16 @@
 	RETURN_TYPE(/obj/structure/overmap/ship)
 
 	UNTIL(!shuttle_loading)
+	var/obj/structure/overmap/ship/ship_to_spawn = new(SSovermap.get_unused_overmap_square(tries = INFINITY))
 	ship_template_to_spawn = new ship_template_to_spawn
 	shuttle_loading = TRUE
-	if (!load_template(ship_template_to_spawn))
+	var/load_resp = action_load(ship_template_to_spawn)
+	if (!load_resp)
 		stack_trace("Failed to load ship!")
 		shuttle_loading = FALSE
+		qdel(ship_to_spawn)
 		return
 	shuttle_loading = FALSE
+	ship_to_spawn.shuttle = load_resp
 
-	var/obj/structure/overmap/ship/ship_to_spawn = new(SSovermap.get_unused_overmap_square(tries = INFINITY))
-	ship_to_spawn.shuttle = preview_shuttle // preview shuttle is set in `load_template()`
-	return ship_to_spawn
+	return load_resp
