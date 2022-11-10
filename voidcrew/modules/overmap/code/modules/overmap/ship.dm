@@ -95,6 +95,8 @@
 	QDEL_NULL(cam_plane_masters)
 	QDEL_NULL(cam_background)
 	SSovermap.simulated_ships -= src
+	shuttle?.intoTheSunset()
+	shuttle = null
 	return ..()
 
 /// Updates the screen for the helm console
