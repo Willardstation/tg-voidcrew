@@ -28,11 +28,19 @@ SUBSYSTEM_DEF(overmap)
 	///List of all simulated ships
 	var/list/simulated_ships = list()
 
+	#ifdef UNIT_TESTS
+	var/datum/map_template/shuttle/voidcrew/initial_ship_template
+	#else
+	var/datum/map_template/shuttle/voidcrew/initial_ship_template = /datum/map_template/shuttle/voidcrew/phalanx
+	#endif
+	var/obj/structure/overmap/ship/initial_ship
+
 /datum/controller/subsystem/overmap/Initialize(start_timeofday)
 	create_map()
 	setup_sun()
 	setup_dangers()
 	setup_planets()
+	spawn_initial_ship()
 
 	return ..()
 
@@ -190,3 +198,31 @@ SUBSYSTEM_DEF(overmap)
 // TODO - MULTI-Z VLEVELS
 /datum/controller/subsystem/overmap/proc/calculate_turf_below(turf/T)
 	return
+
+/datum/controller/subsystem/overmap/proc/spawn_initial_ship()
+	if(!initial_ship_template)
+		var/list/remaining_templates = subtypesof(/datum/map_template/shuttle/voidcrew)
+		while(!initial_ship_template && LAZYLEN(remaining_templates))
+			var/datum/map_template/shuttle/voidcrew/random_template = pick_n_take(remaining_templates)
+			if(initial(length(random_template.job_slots)) < OVERMAP_INITIAL_SHIP_JOB_SLOT_MINIMUM)
+				continue
+			if(initial(random_template.abstract) == random_template)
+				continue
+			if(initial(random_template.cost) > OVERMAP_INITIAL_SHIP_COST_MAXIMUM)
+				continue
+			initial_ship_template = random_template
+
+	if(!initial_ship_template)
+		CRASH("Failed to find a valid initial ship template to spawn.")
+
+	initial_ship = SSshuttle.create_ship(initial_ship_template)
+	if(!initial_ship)
+		CRASH("Failed to spawn initial ship.")
+
+	RegisterSignal(initial_ship, list(COMSIG_PARENT_QDELETING), .proc/handle_initial_ship_deletion)
+
+/datum/controller/subsystem/overmap/proc/handle_initial_ship_deletion(datum/source)
+	SIGNAL_HANDLER
+
+	initial_ship = null
+	message_admins("Overmap Starter Ship was deleted. You may want to investigate or spawn a new one!")
