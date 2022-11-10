@@ -67,3 +67,15 @@
 /get_random_station_turf()
 	// the chance that this just fucking yeets you into hyper-space is too high
 	return get_safe_random_station_turf()
+
+/find_safe_turf(zlevel, list/zlevels, extended_safety_checks = FALSE, dense_atoms = FALSE)
+	if(zlevel == 1)
+		stack_trace("Attempting to get a safe turf on the overmap, this really shouldn't happen.")
+	if(!zlevels)
+		if(zlevel)
+			zlevels = list(zlevel)
+		else
+			zlevels = list()
+			for(var/obj/structure/overmap/ship/ship as anything in SSovermap.simulated_ships)
+				zlevels |= ship.shuttle.z
+	return ..(zlevel, zlevels, extended_safety_checks, dense_atoms)
