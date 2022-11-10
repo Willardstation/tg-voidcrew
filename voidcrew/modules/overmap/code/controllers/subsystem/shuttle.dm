@@ -16,4 +16,4 @@
 	ship_to_spawn.name = ship_to_spawn.shuttle.name
 	ship_to_spawn.shuttle.register()
 
-	return load_resp
+	return ship_to_spawn
