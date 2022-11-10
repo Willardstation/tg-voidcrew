@@ -24,12 +24,12 @@
 			return LateChoices()
 
 		to_chat(usr, span_danger("Your [initial(template.name)] is being prepared. Please be patient!"))
-		var/obj/docking_port/mobile/voidcrew/target = SSshuttle.create_ship(template)
+		var/obj/structure/overmap/ship/target = SSshuttle.create_ship(template)
 		if(!istype(target))
 			to_chat(usr, span_danger("There was an error loading the ship. Please contact admins!"))
 			return
 		SSblackbox.record_feedback("tally", "ship_purchased", 1, initial(template.name)) //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-		if(!AttemptLateSpawn(target.current_ship.job_slots[1], target.current_ship)) //Try to spawn as the first listed job in the job slots (usually captain)
+		if(!AttemptLateSpawn(target.job_slots[1], target)) //Try to spawn as the first listed job in the job slots (usually captain)
 			to_chat(usr, span_danger("Ship spawned, but you were unable to be spawned. You can likely try to spawn in the ship through joining normally, but if not, please contact an admin."))
 		return
 
