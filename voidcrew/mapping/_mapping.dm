@@ -61,7 +61,7 @@
 	if(!areas_to_pick_from)
 		areas_to_pick_from = list()
 		for(var/obj/structure/overmap/ship/ship as anything in SSovermap.simulated_ships)
-			areas_to_pick_from += ship.get_areas()
+			areas_to_pick_from += ship.shuttle.shuttle_areas
 	return ..(areas_to_pick_from)
 
 /get_random_station_turf()
