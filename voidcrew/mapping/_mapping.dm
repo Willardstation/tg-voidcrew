@@ -34,6 +34,9 @@
 /datum/controller/subsystem/mapping/generate_station_area_list()
 	return
 
+/datum/controller/subsystem/mapping/setup_ruins()
+	return
+
 /datum/controller/subsystem/mapping/proc/load_ship_templates()
 	SHOULD_CALL_PARENT(TRUE)
 	if(ship_purchase_list.len) //don't build repeatedly

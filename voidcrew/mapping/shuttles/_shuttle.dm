@@ -13,6 +13,9 @@
 	///List of job slots
 	var/list/job_slots = list()
 
+	/// Ensures we dont try to spawn an abstract subtype
+	var/abstract = /datum/map_template/shuttle/voidcrew
+
 /datum/map_template/shuttle/voidcrew/New()
 	. = ..()
 	name = "[faction_prefix] [name]"
