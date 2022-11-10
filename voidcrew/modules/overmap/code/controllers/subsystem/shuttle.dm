@@ -13,5 +13,7 @@
 		return
 	shuttle_loading = FALSE
 	ship_to_spawn.shuttle = load_resp
+	ship_to_spawn.name = ship_to_spawn.shuttle.name
+	ship_to_spawn.shuttle.register()
 
 	return load_resp
