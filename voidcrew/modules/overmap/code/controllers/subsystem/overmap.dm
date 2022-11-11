@@ -31,7 +31,7 @@ SUBSYSTEM_DEF(overmap)
 	#ifdef UNIT_TESTS
 	var/datum/map_template/shuttle/voidcrew/initial_ship_template
 	#else
-	var/datum/map_template/shuttle/voidcrew/initial_ship_template = /datum/map_template/shuttle/voidcrew/phalanx
+	var/datum/map_template/shuttle/voidcrew/initial_ship_template = /datum/map_template/shuttle/voidcrew/box
 	#endif
 	var/obj/structure/overmap/ship/initial_ship
 

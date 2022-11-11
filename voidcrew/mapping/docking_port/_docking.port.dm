@@ -1,15 +1,9 @@
 /obj/docking_port/mobile/voidcrew
-	width = 12
-	dwidth = 5
-	height = 7
-
+	launch_status = UNLAUNCHED
 	///The linked overmap object, if there is one
 	var/obj/structure/overmap/ship/current_ship //voidcrew todo: ship functionality, this is never linked!!
 	///List of spawn points on the ship.
 	var/list/obj/machinery/cryopod/spawn_points = list()
-
-	/// TODO - SHIPS NEED THEIR OWN AREA SUBTYPE!
-	area_type = /area
 
 /**
  * ##get_all_humans

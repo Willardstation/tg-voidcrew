@@ -26,3 +26,34 @@
 			slots = 3,
 		),
 	)
+
+/obj/docking_port/mobile/voidcrew/box
+	name = "Box-Class Hospital Ship"
+	area_type = /area/shuttle/voidcrew/box
+	callTime = 25 SECONDS
+	dir = 2
+	port_direction = 8
+	preferred_direction = 4
+	width = 30
+	height = 17
+	dwidth = 7
+
+/area/shuttle/voidcrew/box/engine
+	name = "Engine"
+	icon_state = "engie"
+
+/area/shuttle/voidcrew/box/medbay
+	name = "Medbay"
+	icon_state = "medbay"
+
+/area/shuttle/voidcrew/box/bridge
+	name = "Bridge"
+	icon_state = "bridge"
+
+/area/shuttle/voidcrew/box/crew_quarters
+	name = "Crew Quarters"
+	icon_state = "commons"
+
+/area/shuttle/voidcrew/box/cargo
+	name = "Cargo"
+	icon_state = "quart"

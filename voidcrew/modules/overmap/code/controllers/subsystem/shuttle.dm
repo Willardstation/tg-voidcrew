@@ -4,35 +4,18 @@
 	UNTIL(!shuttle_loading)
 	var/obj/structure/overmap/ship/ship_to_spawn = new(SSovermap.get_unused_overmap_square(tries = INFINITY))
 	ship_template_to_spawn = new ship_template_to_spawn
+
 	shuttle_loading = TRUE
-	var/load_resp = load_template(ship_template_to_spawn)
-	if (!load_resp)
-		stack_trace("Failed to load ship!")
-		shuttle_loading = FALSE
-		qdel(ship_to_spawn)
-		return
-
+	var/obj/docking_port/mobile/loaded = action_load(ship_template_to_spawn)
 	shuttle_loading = FALSE
-	ship_to_spawn.shuttle = preview_shuttle
-	ship_to_spawn.name = preview_shuttle.name
-	preview_shuttle.register(TRUE)
-	preview_shuttle.postregister(TRUE)
 
-	var/transit_dock = SSshuttle.generate_transit_dock(preview_shuttle)
-	if(!transit_dock)
-		stack_trace("Failed to generate a transit dock for [ship_to_spawn]")
+	if(!loaded)
 		qdel(ship_to_spawn)
-		preview_shuttle = null
 		return
 
-	var/transit_resp = preview_shuttle.initiate_docking(transit_dock)
-	if(transit_resp != DOCKING_SUCCESS)
-		stack_trace("Failed to initiate docking for [ship_to_spawn]")
-		qdel(ship_to_spawn)
-		preview_shuttle = null
-		return
-
-	preview_shuttle = null
+	ship_to_spawn.name = loaded.name
+	ship_to_spawn.source_template = ship_template_to_spawn
+	ship_to_spawn.shuttle = loaded
 	return ship_to_spawn
 
 /client/add_admin_verbs()
