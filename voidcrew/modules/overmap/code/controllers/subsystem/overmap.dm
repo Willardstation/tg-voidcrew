@@ -186,6 +186,11 @@ SUBSYSTEM_DEF(overmap)
 /datum/controller/subsystem/overmap/proc/calculate_turf_below(turf/T)
 	return
 
+/**
+ * At the start of the game, we want to make sure there is a ship on the overmap for people to join.
+ * If there is no default template, we iterate through subtypes and run various checks to see if its a valid ship.
+ * When we find a valid template we use it to spawn a ship.
+ */
 /datum/controller/subsystem/overmap/proc/spawn_initial_ship()
 	if(!initial_ship_template)
 		var/list/remaining_templates = subtypesof(/datum/map_template/shuttle/voidcrew)

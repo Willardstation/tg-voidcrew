@@ -32,18 +32,28 @@
 		.proc/spawn_specific_ship,
 	))
 
+#define RESPAWN_FORCE "Force Respawn"
 /client/proc/respawn_ship()
 	set name = "Respawn Initial Ship"
 	set category = "Overmap"
-	SSovermap.initial_ship?.shuttle?.intoTheSunset()
+	if(SSovermap.initial_ship)
+		var/resp = tgui_alert(usr, "Initial ship already exists. This can delete players and their progress", "Shits Fucked", list(RESPAWN_FORCE, "Cancel"))
+		if(resp != RESPAWN_FORCE)
+			return
+		qdel(SSovermap.initial_ship)
 	SSovermap.spawn_initial_ship()
+#undef RESPAWN_FORCE
 
 /client/proc/spawn_specific_ship()
 	set name = "Spawn Specific Ship"
 	set category = "Overmap"
-	var/ship_to_spawn = input("Which ship do you want to spawn?", "Spawn Specific Ship") as null|anything in subtypesof(/datum/map_template/shuttle/voidcrew)
+	var/list/choices = list()
+	for(var/ship in subtypesof(/datum/map_template/shuttle/voidcrew))
+		var/datum/map_template/shuttle/voidcrew/V = ship
+		choices[initial(V.name)] = V
+	var/ship_to_spawn = tgui_input_list(usr, "Which ship do you want to spawn?", "Spawn Specific Ship", choices)
 	if(!ship_to_spawn)
 		return
 
-	var/obj/structure/overmap/ship/spawned = SSshuttle.create_ship(ship_to_spawn)
+	var/obj/structure/overmap/ship/spawned = SSshuttle.create_ship(choices[ship_to_spawn])
 	mob.admin_teleport(spawned.shuttle)
