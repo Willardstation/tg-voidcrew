@@ -20,4 +20,3 @@
 
 // minimum job slots for an initial ship
 #define OVERMAP_INITIAL_SHIP_JOB_SLOT_MINIMUM 5
-#define OVERMAP_INITIAL_SHIP_COST_MAXIMUM 200

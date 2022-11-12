@@ -200,8 +200,6 @@ SUBSYSTEM_DEF(overmap)
 				continue
 			if(initial(random_template.abstract) == random_template)
 				continue
-			if(initial(random_template.cost) > OVERMAP_INITIAL_SHIP_COST_MAXIMUM)
-				continue
 			initial_ship_template = random_template
 
 	if(!initial_ship_template)
