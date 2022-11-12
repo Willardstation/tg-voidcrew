@@ -5,7 +5,11 @@
 	if(!istype(tot))
 		return FALSE
 
-	var/obj/structure/overmap/ship/ship = SSovermap.get_containing_ship(tot)
+	var/obj/docking_port/mobile/voidcrew/ship_port = SSshuttle.getShuttle(tot)
+	if(!istype(ship_port))
+		return FALSE
+
+	var/obj/structure/overmap/ship/ship = ship_port.current_ship
 	if(!istype(ship))
 		return FALSE
 
