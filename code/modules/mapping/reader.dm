@@ -446,8 +446,6 @@ GLOBAL_LIST_EMPTY(map_model_default)
 	// Note, this would actually drop area vvs in the tile, but like, why tho
 	if(!crds)
 		return
-	for(var/client/c as anything in GLOB.admins)
-		c.mob.abstract_move(crds)
 	var/index
 	var/list/members = model[1]
 	var/list/members_attributes = model[2]
