@@ -37,7 +37,7 @@
 	///Manifest list of people on the ship
 	var/list/manifest = list()
 	///Assoc list of remaining open job slots (job = remaining slots)
-	var/list/job_slots = list()
+	var/list/job_slots
 
 	/**
 	 * Faction stuff
@@ -89,6 +89,12 @@
 	cam_background.assigned_map = map_name
 	cam_background.del_on_map_removal = FALSE
 	SSovermap.simulated_ships += src
+
+/obj/structure/overmap/ship/proc/assign_source_template(datum/map_template/shuttle/voidcrew/template)
+	if(source_template)
+		CRASH("ship [type] already has a source template but [template.type] was trying to assign itself as the source template")
+	source_template = template
+	job_slots = template.assemble_job_slots()
 
 /obj/structure/overmap/ship/Destroy()
 	QDEL_NULL(cam_screen)
@@ -164,7 +170,6 @@
 
 /**
   * Bastardized version of GLOB.manifest.manifest_inject, but used per ship
-  *
   */
 /obj/structure/overmap/ship/proc/manifest_inject(mob/living/carbon/human/H, datum/job/human_job)
 	set waitfor = FALSE
@@ -177,8 +182,6 @@
 	RegisterSignal(crewmate, COMSIG_LIVING_DEATH, .proc/on_member_death)
 	//Adds a faction hud to a newplayer documentation in _HELPERS/game.dm
 //	add_faction_hud(FACTION_HUD_GENERAL, faction_prefix, crewmate)
-
-
 
 /**
  * ##destroy_ship

@@ -14,7 +14,7 @@
 		return
 
 	ship_to_spawn.name = loaded.name
-	ship_to_spawn.source_template = ship_template_to_spawn
+	ship_to_spawn.assign_source_template(ship_template_to_spawn)
 	ship_to_spawn.shuttle = loaded
 	return ship_to_spawn
 

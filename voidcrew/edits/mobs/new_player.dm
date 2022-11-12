@@ -76,17 +76,16 @@
 /**
  * Latejoining
  */
-/mob/dead/new_player/AttemptLateSpawn(rank, obj/structure/overmap/ship/joined_ship)
+/mob/dead/new_player/AttemptLateSpawn(datum/job/job, obj/structure/overmap/ship/joined_ship)
 	if(isnull(joined_ship) || isnull(joined_ship.shuttle))
 		stack_trace("Tried to spawn ([ckey]) into a null ship! Please report this on Github.")
 		return FALSE
-	var/datum/job/job = SSjob.GetJob(rank)
-	var/error = IsJobUnavailable(rank, joined_ship)
-	if(error != JOB_AVAILABLE)
-		alert(src, get_job_unavailable_error_message(error, job))
-		return FALSE
 	if(SSlag_switch.measures[DISABLE_NON_OBSJOBS])
 		alert(src, "An administrator has disabled late join spawning.")
+		return FALSE
+
+	if(!joined_ship.job_slots[job])
+		to_chat(usr, "<span class='danger'>There are no more [job.title] positions available on this ship!</span>")
 		return FALSE
 
 	//Removes a job slot
@@ -120,11 +119,6 @@
 	if(humanc) //These procs all expect humans
 		joined_ship.manifest_inject(humanc, job)
 		GLOB.data_core.manifest_inject(humanc)
-		if(SSshuttle.arrivals)
-			SSshuttle.arrivals.QueueAnnounce(humanc, rank)
-		else
-			announce_arrival(humanc, rank)
-		AddEmploymentContract(humanc)
 
 		humanc.increment_scar_slot()
 		humanc.load_persistent_scars()
@@ -140,7 +134,7 @@
 	log_manifest(character.mind.key,character.mind,character,latejoin = TRUE)
 	log_shuttle("[character.mind.key] / [character.mind.name] has joined [joined_ship.name] as [job.title]")
 
-	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_CREWMEMBER_JOINED, character, rank)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_CREWMEMBER_JOINED, character, job.title)
 
 /**
  * Job availability
