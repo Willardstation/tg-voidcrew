@@ -73,7 +73,7 @@
 
 /find_safe_turf(zlevel, list/zlevels, extended_safety_checks = FALSE, dense_atoms = FALSE)
 	if(zlevel == 1)
-		stack_trace("Attempting to get a safe turf on the overmap, this really shouldn't happen.")
+		CRASH("Attempting to get a safe turf on the overmap, this really shouldn't happen.")
 	if(!zlevels)
 		if(zlevel)
 			zlevels = list(zlevel)
