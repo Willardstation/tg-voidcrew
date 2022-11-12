@@ -29,9 +29,9 @@ SUBSYSTEM_DEF(overmap)
 	var/list/simulated_ships = list()
 
 	#ifdef UNIT_TESTS
-	var/datum/map_template/shuttle/voidcrew/initial_ship_template
-	#else
 	var/datum/map_template/shuttle/voidcrew/initial_ship_template = /datum/map_template/shuttle/voidcrew/box
+	#else
+	var/datum/map_template/shuttle/voidcrew/initial_ship_template = /datum/map_template/shuttle/voidcrew/box // TODO, remove this being set to something when shuttles generate their bounds correctly
 	#endif
 	var/obj/structure/overmap/ship/initial_ship
 
