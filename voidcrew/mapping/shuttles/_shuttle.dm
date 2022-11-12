@@ -10,7 +10,7 @@
 	///Cost of the ship
 	var/cost = 1
 
-	///List of job slots
+	///List of job slots. Ensure the 'captain' is always the first entry
 	var/list/job_slots = list()
 
 	/// Ensures we dont try to spawn an abstract subtype
@@ -30,8 +30,9 @@
 		var/datum/job/job_slot = new /datum/job
 		job_slot.title = job_name
 		job_slot.officer = is_officer
-		job_slot.outfit = text2path(job_outfit)
+		job_slot.outfit = ispath(job_outfit) ? job_outfit :  text2path(job_outfit)
 		if(faction_prefix != NEUTRAL_SHIP)
 			job_slot.faction = faction_prefix
 		job_slot.job_flags = JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_ASSIGN_QUIRKS
+		job_slot.supervisors = "\the [job_slots[1]["name"]]"
 		.[job_slot] = initial_slots
