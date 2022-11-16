@@ -34,9 +34,6 @@
 	dir = 2
 	port_direction = 8
 	preferred_direction = 4
-	width = 30
-	height = 17
-	dwidth = 7
 
 /area/shuttle/voidcrew/box/engine
 	name = "Engine"
