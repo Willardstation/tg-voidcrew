@@ -2,7 +2,7 @@
 	name = "Mechaton-class Robotics Production Facility"
 	suffix = "mechaton"
 	short_name = "Mechaton-Class"
-	parts_needed = 2
+	part_cost = 2
 
 	job_slots = list(
 		list(

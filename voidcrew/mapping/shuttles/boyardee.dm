@@ -2,7 +2,7 @@
 	name = "Boyardee-Class Type Entertainement Vessel"
 	suffix = "boyardee"
 	short_name = "Boyardee-class"
-	parts_needed = 1
+	part_cost = 1
 
 	job_slots = list(
 		list(

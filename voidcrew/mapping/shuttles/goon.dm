@@ -2,7 +2,7 @@
 	name = "Goon-class Repurposed Emergency Shuttle"
 	suffix = "goon"
 	short_name = "Goon-class"
-	parts_needed = 2
+	part_cost = 2
 
 	job_slots = list(
 		list(

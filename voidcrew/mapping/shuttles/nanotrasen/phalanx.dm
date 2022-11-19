@@ -3,7 +3,7 @@
 	suffix = "nano_phalanx"
 	short_name = "Phalanx-Class"
 	faction_prefix = NANOTRASEN_SHIP
-	parts_needed = 3
+	part_cost = 3
 
 	job_slots = list(
 		list(

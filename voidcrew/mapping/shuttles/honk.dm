@@ -2,7 +2,7 @@
 	name = "Honk-class Boe Nah Nah"
 	suffix = "honk"
 	short_name = "Honk-Class"
-	parts_needed = 1
+	part_cost = 1
 
 	job_slots = list(
 		list(

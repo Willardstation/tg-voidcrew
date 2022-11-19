@@ -2,7 +2,7 @@
 	name = "Midway-class Atmospherics Mining Vessel"
 	suffix = "midway"
 	short_name = "Midway-Class"
-	parts_needed = 3
+	part_cost = 3
 
 	job_slots = list(
 		list(

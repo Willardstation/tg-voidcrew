@@ -3,7 +3,7 @@
 	suffix = "syndicate_geneva"
 	short_name = "Geneva-class"
 	faction_prefix = SYNDICATE_SHIP
-	parts_needed = 3
+	part_cost = 3
 
 	job_slots = list(
 		list(

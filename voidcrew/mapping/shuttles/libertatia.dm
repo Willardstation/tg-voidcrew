@@ -2,7 +2,7 @@
 	name = "Libertatia-class Hauler"
 	suffix = "libertatia"
 	short_name = "Libertatia-Class"
-	parts_needed = 2
+	part_cost = 2
 
 	job_slots = list(
 		list(

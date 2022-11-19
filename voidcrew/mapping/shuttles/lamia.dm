@@ -2,7 +2,7 @@
 	name = "Lamia-class Magery Ship"
 	suffix = "lamia"
 	short_name = "Lamia-Class"
-	parts_needed = 4
+	part_cost = 4
 
 	job_slots = list(
 		list(

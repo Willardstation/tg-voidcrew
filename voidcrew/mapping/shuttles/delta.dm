@@ -2,7 +2,7 @@
 	name = "Delta-class Frigate"
 	suffix = "delta"
 	short_name = "Delta-class"
-	parts_needed = 3
+	part_cost = 3
 
 	job_slots = list(
 		list(

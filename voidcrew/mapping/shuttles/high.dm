@@ -2,7 +2,7 @@
 	name = "High-class Corporate Luxury Ship"
 	suffix = "high"
 	short_name = "High-class"
-	parts_needed = 1
+	part_cost = 1
 
 	job_slots = list(
 		list(

@@ -2,7 +2,7 @@
 	name = "Box-class Hospital Ship"
 	suffix = "box"
 	short_name = "Box-class"
-	parts_needed = 1
+	part_cost = 1
 
 	job_slots = list(
 		list(
