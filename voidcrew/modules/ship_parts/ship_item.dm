@@ -7,10 +7,6 @@
 	///The faction this ship can purchase
 	var/faction = NEUTRAL_SHIP
 
-/obj/item/ship_parts/Initialize(mapload)
-	. = ..()
-	name = "[faction] [initial(name)]"
-
 /obj/item/ship_parts/attack_self(mob/user)
 	. = ..()
 	user.client.prefs.ships_owned[type]++
@@ -19,13 +15,16 @@
 	qdel(src)
 
 /obj/item/ship_parts/neutral
+	name = "neutral ship parts"
 	color = COLOR_BEIGE
 	faction = NEUTRAL_SHIP
 
 /obj/item/ship_parts/nanotrasen
+	name = "nanotrasen ship parts"
 	color = COLOR_BLUE_LIGHT
 	faction = NANOTRASEN_SHIP
 
 /obj/item/ship_parts/syndicate
+	name = "syndicate ship parts"
 	color = COLOR_RED_LIGHT
 	faction = SYNDICATE_SHIP

@@ -8,17 +8,8 @@
 	)
 
 /datum/preferences/proc/save_ships()
-	if(!path)
-		return FALSE
-	if(!fexists(path))
-		return FALSE
-
-	var/savefile/S = new /savefile(path)
-	if(!S)
-		return FALSE
-	S.cd = "/"
-
-	WRITE_FILE(S["ships_owned"], ships_owned)
+	savefile.set_entry("ships_owned", ships_owned)
+	return TRUE
 
 /datum/controller/subsystem/ticker/display_report(popcount)
 	. = ..()
