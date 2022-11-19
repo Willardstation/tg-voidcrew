@@ -2,6 +2,7 @@
 	name = "Bogatyr-class Explorator"
 	suffix = "bogatyr"
 	short_name = "Bogatyr-class"
+	parts_needed = 2
 
 	job_slots = list(
 		list(

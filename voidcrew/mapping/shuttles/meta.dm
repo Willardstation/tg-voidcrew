@@ -2,6 +2,7 @@
 	name = "Meta-class Freighter"
 	suffix = "meta"
 	short_name = "Meta-Class"
+	parts_needed = 3
 
 	job_slots = list(
 		list(

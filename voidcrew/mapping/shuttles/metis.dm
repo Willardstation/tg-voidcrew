@@ -2,6 +2,7 @@
 	name = "Metis-class Experimental Extrasolar Pathfinder"
 	suffix = "metis"
 	short_name = "Metis-Class"
+	parts_needed = 2
 
 	job_slots = list(
 		list(

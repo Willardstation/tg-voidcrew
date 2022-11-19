@@ -2,6 +2,7 @@
 	name = "Osprey-class Exploration Ship"
 	suffix = "osprey"
 	short_name = "Osprey-Class"
+	parts_needed = 3
 
 	job_slots = list(
 		list(

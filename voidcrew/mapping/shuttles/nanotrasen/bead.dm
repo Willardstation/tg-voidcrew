@@ -3,6 +3,7 @@
 	suffix = "nano_bead"
 	short_name = "Bead-Class"
 	faction_prefix = NANOTRASEN_SHIP
+	parts_needed = 1
 
 	job_slots = list(
 		list(

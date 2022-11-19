@@ -2,6 +2,7 @@
 	name = "Luxembourg-class Delivery Vessel"
 	suffix = "luxembourg"
 	short_name = "Luxembourg-Class"
+	parts_needed = 3
 
 	job_slots = list(
 		list(

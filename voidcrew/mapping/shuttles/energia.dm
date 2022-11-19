@@ -2,6 +2,7 @@
 	name = "Energia-class Experimental Vessel"
 	suffix = "energia"
 	short_name = "Energia-class"
+	parts_needed = 2
 
 	job_slots = list(
 		list(
