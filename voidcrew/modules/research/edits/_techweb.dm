@@ -5,6 +5,8 @@
 /datum/techweb/New()
 	. = ..()
 	for(var/datum/experiment/experiment_path as anything in subtypesof(/datum/experiment))
+		if(istype(experiment_path, /datum/experiment/scanning/random/material))
+			continue
 		available_experiments += new experiment_path()
 
 /**
