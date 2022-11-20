@@ -17,6 +17,7 @@
 			everything_connected.unsync_research_servers()
 		source_code_hdd.forceMove(loc)
 		source_code_hdd = null
+	stored_research = null
 	return ..()
 
 /obj/machinery/rnd/server/ship/attacked_by(obj/item/attacking_item, mob/living/user)
@@ -28,6 +29,7 @@
 			balloon_alert(user, "won't fit!")
 			return
 		source_code_hdd = attacking_item
+		stored_research = source_code_hdd.stored_research
 		balloon_alert(user, "disk uploaded!")
 		return
 	return ..()
@@ -82,14 +84,17 @@
 	name = "R&D server source code"
 	desc = "The source code on this drive stores all the research from a ship, insert it into an R&D console to make use of it."
 
+	///The techweb we create on initialize and store everything to.
 	var/datum/techweb/stored_research
-
+	///All machines connected to us and our techweb, to disconnect on destruction
 	var/list/connected_research_machines = list()
 
 /obj/item/computer_disk/ship_disk/Initialize(mapload)
 	. = ..()
 	name += " [num2hex(rand(1,65535), -1)]"
 	stored_research = new()
+	stored_research.id = "[name]"
+	stored_research.organization = "Server Disk"
 
 /obj/item/computer_disk/ship_disk/Destroy()
 	. = ..()
