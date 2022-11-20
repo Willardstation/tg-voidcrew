@@ -32,13 +32,13 @@
 		linked_techweb = null
 
 /obj/machinery/nanite_program_hub/multitool_act(mob/living/user, obj/item/multitool/tool)
-	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb))
+	if(linked_techweb && !QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb))
 		linked_techweb.connected_machines -= src //disconnect old one
 
 		linked_techweb = tool.buffer
 		linked_techweb.connected_machines += src //connect new one
 		say("Linked to Server!")
-	return TRUE
+		return TRUE
 
 /obj/machinery/nanite_program_hub/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/disk/nanite_program))

@@ -8,9 +8,10 @@
 		linked_techweb = null
 
 /mob/living/simple_animal/bot/medbot/multitool_act(mob/living/user, obj/item/multitool/tool)
-	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
+	if(linked_techweb && !QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
 		linked_techweb.connected_machines -= src
 	. = ..()
 	if(.)
 		linked_techweb.connected_machines += src //connect new one
 		say("Linked to Server!")
+		return TRUE

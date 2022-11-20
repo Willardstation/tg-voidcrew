@@ -8,9 +8,10 @@
 		stored_research = null
 
 /obj/machinery/computer/scan_consolenew/multitool_act(mob/living/user, obj/item/multitool/tool)
-	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
+	if(stored_research && !QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
 		stored_research.connected_machines -= src
 	. = ..()
 	if(.)
 		stored_research.connected_machines += src //connect new one
 		say("Linked to Server!")
+		return TRUE

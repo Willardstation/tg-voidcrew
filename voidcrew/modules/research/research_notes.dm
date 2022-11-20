@@ -11,8 +11,10 @@
 
 /obj/item/research_notes/Initialize(mapload, value, origin_type)
 	. = ..()
-	src.value = value
-	src.origin_type = origin_type
+	if(value)
+		src.value = value
+	if(origin_type)
+		src.origin_type = origin_type
 	change_vol()
 
 /obj/item/research_notes/examine(mob/user)

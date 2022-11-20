@@ -32,7 +32,7 @@
 		linked_techweb = tool.buffer
 		linked_techweb.connected_machines += src //connect new one
 		say("Linked to Server!")
-	return TRUE
+		return TRUE
 
 /obj/machinery/computer/nanite_cloud_controller/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/disk/nanite_program))

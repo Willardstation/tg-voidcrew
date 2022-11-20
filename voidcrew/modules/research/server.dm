@@ -36,7 +36,7 @@
 	if(!source_code_hdd)
 		balloon_alert(user, "no disk!")
 		return
-	multi.buffer = src
+	multi.buffer = source_code_hdd.stored_research
 	to_chat(user, span_notice("Stored [src]'s techweb information in [multi]."))
 	return TRUE
 

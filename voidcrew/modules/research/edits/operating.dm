@@ -15,7 +15,7 @@
 		linked_techweb = null
 
 /obj/machinery/computer/operating/multitool_act(mob/living/user, obj/item/multitool/tool)
-	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
+	if(linked_techweb && !QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
 		linked_techweb.connected_machines -= src
 		experiment_handler.unlink_techweb()
 	. = ..()
@@ -23,3 +23,4 @@
 		linked_techweb.connected_machines += src //connect new one
 		experiment_handler.link_techweb(linked_techweb)
 		say("Linked to Server!")
+		return TRUE
