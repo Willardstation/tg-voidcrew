@@ -5,11 +5,6 @@
 	icon_keyboard = "med_key"
 	circuit = /obj/item/circuitboard/computer/operating
 
-/obj/machinery/computer/operating/Initialize(mapload)
-	. = ..()
-	QDEL_NULL(experiment_handler)
-	return INITIALIZE_HINT_LATELOAD
-
 /obj/machinery/computer/operating/Destroy()
 	unsync_research_servers()
 	return ..()
@@ -22,7 +17,9 @@
 /obj/machinery/computer/operating/multitool_act(mob/living/user, obj/item/multitool/tool)
 	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
 		linked_techweb.connected_machines -= src
+		experiment_handler.unlink_techweb()
 	. = ..()
 	if(.)
 		linked_techweb.connected_machines += src //connect new one
+		experiment_handler.link_techweb(linked_techweb)
 		say("Linked to Server!")

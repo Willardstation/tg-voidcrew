@@ -4,9 +4,8 @@
 
 /datum/techweb/New()
 	. = ..()
-	for (var/datum/experiment/experiment_path as anything in subtypesof(/datum/experiment))
-		if (initial(experiment_path.voidcrew_available))
-			available_experiments += new experiment_path()
+	for(var/datum/experiment/experiment_path as anything in subtypesof(/datum/experiment))
+		available_experiments += new experiment_path()
 
 /**
  * Cancel all experiments being added, we'll do it ourselves.
