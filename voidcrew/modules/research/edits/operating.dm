@@ -7,13 +7,11 @@
 
 /obj/machinery/computer/operating/Initialize(mapload)
 	. = ..()
-	linked_techweb = null
 	QDEL_NULL(experiment_handler)
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/computer/operating/Destroy()
-	if(linked_techweb)
-		linked_techweb.connected_machines -= src
+	unsync_research_servers()
 	return ..()
 
 /obj/machinery/computer/operating/unsync_research_servers()
@@ -21,14 +19,10 @@
 		linked_techweb.connected_machines -= src
 		linked_techweb = null
 
-/obj/machinery/computer/operating/attackby(obj/item/attacking_item, mob/user, params)
-	if(istype(attacking_item, /obj/item/multitool))
-		var/obj/item/multitool/multi = attacking_item
-		if(istype(multi.buffer, /obj/machinery/rnd/server/ship))
-			var/obj/machinery/rnd/server/ship/server = multi.buffer
-			linked_techweb = server.source_code_hdd.stored_research
-			linked_techweb.connected_machines += src
-			say("Linked to Server!")
-			return
-
-	return ..()
+/obj/machinery/computer/operating/multitool_act(mob/living/user, obj/item/multitool/tool)
+	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
+		linked_techweb.connected_machines -= src
+	. = ..()
+	if(.)
+		linked_techweb.connected_machines += src //connect new one
+		say("Linked to Server!")

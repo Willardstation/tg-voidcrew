@@ -4842,6 +4842,7 @@
 #include "voidcrew\_HELPERS\data_huds.dm"
 #include "voidcrew\_HELPERS\ships.dm"
 #include "voidcrew\_strings\star_names.dm"
+#include "voidcrew\edits\config.dm"
 #include "voidcrew\edits\jobs.dm"
 #include "voidcrew\edits\keybindings.dm"
 #include "voidcrew\edits\ordnance.dm"

@@ -25,6 +25,15 @@
 		linked_techweb.connected_machines -= src
 		linked_techweb = null
 
+/obj/machinery/computer/nanite_cloud_controller/multitool_act(mob/living/user, obj/item/multitool/tool)
+	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb))
+		linked_techweb.connected_machines -= src //disconnect old one
+
+		linked_techweb = tool.buffer
+		linked_techweb.connected_machines += src //connect new one
+		say("Linked to Server!")
+	return TRUE
+
 /obj/machinery/computer/nanite_cloud_controller/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/disk/nanite_program))
 		var/obj/item/disk/nanite_program/N = I
@@ -35,14 +44,6 @@
 				eject(user)
 			disk = N
 			return
-	if(istype(I, /obj/item/multitool))
-		var/obj/item/multitool/multi = I
-		if(istype(multi.buffer, /obj/machinery/rnd/server/ship))
-			var/obj/machinery/rnd/server/ship/server = multi.buffer
-			linked_techweb = server.source_code_hdd.stored_research
-			linked_techweb.connected_machines += src
-			say("Linked to Server!")
-		return
 	return ..()
 
 /obj/machinery/computer/nanite_cloud_controller/AltClick(mob/user)

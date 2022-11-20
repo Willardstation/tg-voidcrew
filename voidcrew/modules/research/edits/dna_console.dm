@@ -1,10 +1,5 @@
-/obj/machinery/computer/scan_consolenew/Initialize(mapload)
-	. = ..()
-	stored_research = null
-
 /obj/machinery/computer/scan_consolenew/Destroy()
-	if(stored_research)
-		stored_research.connected_machines -= src
+	unsync_research_servers()
 	return ..()
 
 /obj/machinery/computer/scan_consolenew/unsync_research_servers()
@@ -12,14 +7,10 @@
 		stored_research.connected_machines -= src
 		stored_research = null
 
-/obj/machinery/computer/scan_consolenew/attackby(obj/item/attacking_item, mob/user, params)
-	if(istype(attacking_item, /obj/item/multitool))
-		var/obj/item/multitool/multi = attacking_item
-		if(istype(multi.buffer, /obj/machinery/rnd/server/ship))
-			var/obj/machinery/rnd/server/ship/server = multi.buffer
-			stored_research = server.source_code_hdd.stored_research
-			say("Linked to Server!")
-			stored_research.connected_machines += src
-			return
-
-	return ..()
+/obj/machinery/computer/scan_consolenew/multitool_act(mob/living/user, obj/item/multitool/tool)
+	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
+		linked_techweb.connected_machines -= src
+	. = ..()
+	if(.)
+		linked_techweb.connected_machines += src //connect new one
+		say("Linked to Server!")

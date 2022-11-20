@@ -3,11 +3,12 @@
 /obj/machinery/rnd/server/ship
 	desc = "A computer system that hosts a source R&D server drive, allowing research to be loaded and saved onto a disk, and shared within a vessel."
 	///Installed source code files that hosts our research.
-	var/obj/item/computer_hardware/hard_drive/cluster/hdd_theft/ship_disk/source_code_hdd
+	var/obj/item/computer_disk/ship_disk/source_code_hdd
 
 /obj/machinery/rnd/server/ship/Initialize(mapload)
 	. = ..()
-	RegisterSignal(src, COMSIG_ATOM_ATTACK_HAND_SECONDARY, .proc/on_attack_hand_secondary)
+	QDEL_NULL(stored_research)
+	RegisterSignal(src, COMSIG_ATOM_ATTACK_HAND_SECONDARY, PROC_REF(on_attack_hand_secondary))
 
 /obj/machinery/rnd/server/ship/Destroy()
 	UnregisterSignal(src, COMSIG_ATOM_ATTACK_HAND_SECONDARY)
@@ -19,7 +20,7 @@
 	return ..()
 
 /obj/machinery/rnd/server/ship/attacked_by(obj/item/attacking_item, mob/living/user)
-	if(istype(attacking_item, /obj/item/computer_hardware/hard_drive/cluster/hdd_theft/ship_disk))
+	if(istype(attacking_item, /obj/item/computer_disk/ship_disk))
 		if(source_code_hdd)
 			balloon_alert(user, "disk already installed!")
 			return
@@ -29,16 +30,15 @@
 		source_code_hdd = attacking_item
 		balloon_alert(user, "disk uploaded!")
 		return
-
-	if(istype(attacking_item, /obj/item/multitool))
-		if(!source_code_hdd)
-			balloon_alert(user, "no disk!")
-			return
-		var/obj/item/multitool/multi = attacking_item
-		multi.buffer = src
-		to_chat(user, span_notice("[src] stored in [attacking_item]."))
-		return TRUE
 	return ..()
+
+/obj/machinery/rnd/server/ship/multitool_act(mob/living/user, obj/item/multitool/multi)
+	if(!source_code_hdd)
+		balloon_alert(user, "no disk!")
+		return
+	multi.buffer = src
+	to_chat(user, span_notice("Stored [src]'s techweb information in [multi]."))
+	return TRUE
 
 /atom/proc/unsync_research_servers()
 	return
@@ -58,7 +58,7 @@
 	if(istype(living_user) && !living_user.combat_mode)
 		return COMPONENT_SECONDARY_CANCEL_ATTACK_CHAIN
 
-	INVOKE_ASYNC(src, .proc/steal_research, user)
+	INVOKE_ASYNC(src, PROC_REF(steal_research), user)
 	return COMPONENT_SECONDARY_CANCEL_ATTACK_CHAIN
 
 /obj/machinery/rnd/server/ship/proc/steal_research(mob/thief)
@@ -78,7 +78,7 @@
  * Hard drive
  * What actually stores all the techweb data.
  */
-/obj/item/computer_hardware/hard_drive/cluster/hdd_theft/ship_disk
+/obj/item/computer_disk/ship_disk
 	name = "R&D server source code"
 	desc = "The source code on this drive stores all the research from a ship, insert it into an R&D console to make use of it."
 
@@ -86,11 +86,11 @@
 
 	var/list/connected_research_machines = list()
 
-/obj/item/computer_hardware/hard_drive/cluster/hdd_theft/ship_disk/Initialize(mapload)
+/obj/item/computer_disk/ship_disk/Initialize(mapload)
 	. = ..()
 	name += " [num2hex(rand(1,65535), -1)]"
 	stored_research = new()
 
-/obj/item/computer_hardware/hard_drive/cluster/hdd_theft/ship_disk/Destroy()
+/obj/item/computer_disk/ship_disk/Destroy()
 	. = ..()
 	QDEL_NULL(stored_research)

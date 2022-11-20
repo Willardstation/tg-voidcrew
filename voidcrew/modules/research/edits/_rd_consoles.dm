@@ -2,16 +2,10 @@
 	///The mobile ship we are connected to.
 	var/datum/weakref/connected_ship_ref
 
-/obj/machinery/computer/rdconsole/Initialize(mapload)
-	. = ..()
-	stored_research.consoles_accessing -= src
-	stored_research = null
-
 /obj/machinery/computer/rdconsole/Destroy()
 	if(connected_ship_ref)
 		connected_ship_ref = null
-	if(stored_research)
-		stored_research.connected_machines -= src
+	unsync_research_servers()
 	return ..()
 
 /obj/machinery/computer/rdconsole/unsync_research_servers()
@@ -26,22 +20,17 @@
 		return FALSE
 	connected_ship_ref = WEAKREF(port)
 
-/obj/machinery/computer/rdconsole/attackby(obj/item/attacking_item, mob/user, params)
-	if(istype(attacking_item, /obj/item/multitool))
-		var/obj/item/multitool/multi = attacking_item
-		if(istype(multi.buffer, /obj/machinery/rnd/server/ship))
-			var/obj/machinery/rnd/server/ship/server = multi.buffer
-			stored_research = server.source_code_hdd.stored_research
-			say("Linked to Server!")
-			stored_research.connected_machines += src
-			return
-		if(stored_research)
-			say("Disconnected from Server.")
-			stored_research.connected_machines -= src
-			stored_research.consoles_accessing -= src
-			stored_research = null
-			return
+/obj/machinery/computer/rdconsole/multitool_act(mob/living/user, obj/item/multitool/tool)
+	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
+		linked_techweb.connected_machines -= src
+		linked_techweb.consoles_accessing -= src
+	. = ..()
+	if(.)
+		linked_techweb.connected_machines += src //connect new one
+		linked_techweb.consoles_accessing += src
+		say("Linked to Server!")
 
+/obj/machinery/computer/rdconsole/attackby(obj/item/attacking_item, mob/user, params)
 	if(istype(attacking_item, /obj/item/research_notes) && stored_research)
 		var/obj/item/research_notes/research_notes = attacking_item
 		stored_research.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = research_notes.value))
