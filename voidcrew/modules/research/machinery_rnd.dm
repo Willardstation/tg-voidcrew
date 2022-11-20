@@ -14,10 +14,10 @@
 
 /obj/machinery/rnd/multitool_act(mob/living/user, obj/item/multitool/tool)
 	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
-		linked_techweb.connected_machines -= src
+		stored_research.connected_machines -= src
 	. = ..()
 	if(.)
-		linked_techweb.connected_machines += src //connect new one
+		stored_research.connected_machines += src //connect new one
 		say("Linked to Server!")
 
 /**

@@ -22,12 +22,12 @@
 
 /obj/machinery/computer/rdconsole/multitool_act(mob/living/user, obj/item/multitool/tool)
 	if(!QDELETED(tool.buffer) && istype(tool.buffer, /datum/techweb)) //disconnect old one
-		linked_techweb.connected_machines -= src
-		linked_techweb.consoles_accessing -= src
+		stored_research.connected_machines -= src
+		stored_research.consoles_accessing -= src
 	. = ..()
 	if(.)
-		linked_techweb.connected_machines += src //connect new one
-		linked_techweb.consoles_accessing += src
+		stored_research.connected_machines += src //connect new one
+		stored_research.consoles_accessing += src
 		say("Linked to Server!")
 
 /obj/machinery/computer/rdconsole/attackby(obj/item/attacking_item, mob/user, params)
