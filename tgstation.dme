@@ -4885,6 +4885,8 @@
 #include "voidcrew\mapping\spawners\nanites.dm"
 #include "voidcrew\modules\cryo\console.dm"
 #include "voidcrew\modules\cryo\machine.dm"
+#include "voidcrew\modules\more_pacmen\code\pacmen_circuitboards.dm"
+#include "voidcrew\modules\more_pacmen\code\pacmen_machines.dm"
 #include "voidcrew\modules\nanites\code\circuits.dm"
 #include "voidcrew\modules\nanites\code\designs.dm"
 #include "voidcrew\modules\nanites\code\machines.dm"
