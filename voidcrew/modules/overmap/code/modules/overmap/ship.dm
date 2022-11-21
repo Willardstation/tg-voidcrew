@@ -190,6 +190,16 @@
 //	update_docked_bools() //voidcrew todo: ship functionality
 	qdel(src)
 
+/obj/structure/overmap/ship/proc/ship_announce(message, title, must_be_same_z_level=FALSE, sound=null)
+	var/list/announce_targets = list()
+	for(var/datum/mind/shipmate as anything in ship_team.members)
+		var/mob/crewmate = shipmate.current
+		if(!crewmate)
+			continue
+		if(must_be_same_z_level && crewmate.z != z)
+			continue
+		announce_targets += crewmate
+	priority_announce(message, title, sound || 'sound/ai/default/attention.ogg', null, "[name] Announcement", announce_targets)
 
 /**
  * Mob death/revive

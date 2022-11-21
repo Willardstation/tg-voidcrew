@@ -38,7 +38,7 @@
 	current_ship.update_screen()
 
 	if(!ui)
-		user.client.register_map_obj(current_ship.cam_screen)
+		current_ship.cam_screen.display_to(user)
 		user.client.register_map_obj(current_ship.cam_background)
 
 		ui = new(user, src, "HelmComputer", name)
@@ -46,7 +46,7 @@
 
 /obj/machinery/computer/helm/ui_close(mob/user)
 	. = ..()
-	user.client?.clear_map(current_ship.cam_screen.assigned_map)
+	current_ship.cam_screen.hide_from(user)
 
 /obj/machinery/computer/helm/ui_act(action, list/params)
 	. = ..()
@@ -85,11 +85,8 @@
 
 	return data
 
-/*
-
 /obj/machinery/computer/helm/LateInitialize()
 	. = ..()
- //voidcrew todo: ship functionality
 	reload_ship()
 
 /obj/machinery/computer/helm/proc/calibrate_jump(inline = FALSE)
@@ -107,14 +104,12 @@
 		return // This exists to prefent Href exploits to call process_jump more than once by a client
 	message_admins("[ADMIN_LOOKUPFLW(usr)] has initiated a bluespace jump in [ADMIN_VERBOSEJMP(src)]")
 	jump_timer = addtimer(CALLBACK(src, PROC_REF(jump_sequence), TRUE), JUMP_CHARGEUP_TIME, TIMER_STOPPABLE)
-	priority_announce("Bluespace jump calibration initialized. Calibration completion in [JUMP_CHARGEUP_TIME/600] minutes.", sender_override="[current_ship.name] Bluespace Pylon", zlevel=virtual_z())
+	current_ship?.ship_announce("Bluespace jump calibration initialized. Calibration completion in [JUMP_CHARGEUP_TIME/600] minutes.")
 	calibrating = TRUE
 	return TRUE
 
 /obj/machinery/computer/helm/proc/cancel_jump()
-	priority_announce("Bluespace Pylon spooling down. Jump calibration aborted.", \
-		sender_override = "[current_ship.name] Bluespace Pylon", \
-		zlevel=virtual_z())
+	current_ship?.ship_announce("Pylon Disengaged. Jump cancelled.", "Bluespace Pylon")
 	calibrating = FALSE
 	deltimer(jump_timer)
 
@@ -125,22 +120,24 @@
 			SStgui.close_uis(src)
 		if(JUMP_STATE_CHARGING)
 			jump_state = JUMP_STATE_IONIZING
-			priority_announce("Bluespace Jump Calibration completed. Ionizing Bluespace Pylon.", sender_override="[current_ship.name] Bluespace Pylon", zlevel=virtual_z())
+			current_ship?.ship_announce("Bluespace Jump Calibration completed. Ionizing Bluespace Pylon.")
 		if(JUMP_STATE_IONIZING)
 			jump_state = JUMP_STATE_FIRING
-			priority_announce("Bluespace Ionization finalized; preparing to fire Bluespace Pylon.", sender_override="[current_ship.name] Bluespace Pylon", zlevel=virtual_z())
+			current_ship?.ship_announce("Bluespace Ionization finalized; preparing to fire Bluespace Pylon.")
 		if(JUMP_STATE_FIRING)
 			jump_state = JUMP_STATE_FINALIZED
-			priority_announce("Bluespace Pylon launched.", sender_override="[current_ship.name] Bluespace Pylon", sound='sound/magic/lightning_chargeup.ogg', zlevel=virtual_z())
+			current_ship?.ship_announce("Bluespace Pylon launched.", sound='sound/magic/lightning_chargeup.ogg')
 			addtimer(CALLBACK(src, PROC_REF(do_jump)), 10 SECONDS)
 			return
 	addtimer(CALLBACK(src, PROC_REF(jump_sequence), TRUE), JUMP_CHARGE_DELAY)
 
 /obj/machinery/computer/helm/proc/do_jump()
-	priority_announce("Bluespace Jump Initiated.", sender_override="[current_ship.name] Bluespace Pylon", sound='sound/magic/lightningbolt.ogg', zlevel=virtual_z())
+	current_ship?.ship_announce("Bluespace Jump Initiated.")
 	current_ship.shuttle.intoTheSunset()
 
-/obj/machinery/computer/helm/connect_to_shuttle(mapload, obj/docking_port/mobile/port, obj/docking_port/stationary/dock)
+/obj/machinery/computer/helm/connect_to_shuttle(mapload, obj/docking_port/mobile/voidcrew/port, obj/docking_port/stationary/dock)
+	if(!istype(port))
+		return
 	current_ship = port.current_ship
 
 /**
@@ -151,50 +148,8 @@
 	if(port?.current_ship)
 		current_ship = port.current_ship
 		return TRUE
-*/
-
-
 
 /*
-/obj/machinery/computer/helm/ui_interact(mob/user, datum/tgui/ui)
-	if(current_ship.is_player_in_crew(user) || !isliving(user) || isAdminGhostAI(user))
-		if(jump_state != JUMP_STATE_OFF)
-			say("Bluespace Jump in progress. Controls suspended.")
-			return
-		// Update UI
-		if(!current_ship && !reload_ship())
-			return
-		ui = SStgui.try_update_ui(user, src, ui)
-		if(!ui)
-			var/user_ref = REF(user)
-			var/is_living = isliving(user)
-			// Ghosts shouldn't count towards concurrent users, which produces
-			// an audible terminal_on click.
-			if(is_living)
-				concurrent_users += user_ref
-			// Turn on the console
-			if(length(concurrent_users) == 1 && is_living)
-				playsound(src, 'sound/machines/terminal_on.ogg', 25, FALSE)
-				use_power(active_power_usage)
-			// Register map objects
-			if(current_ship)
-				user.client.register_map_obj(current_ship.cam_screen)
-				user.client.register_map_obj(current_ship.cam_plane_master)
-				user.client.register_map_obj(current_ship.cam_background)
-				current_ship.update_screen()
-
-			// Open UI
-			ui = new(user, src, "HelmConsole", name)
-			ui.open()
-	else
-		say("ERROR: Unrecognized bio-signature detected")
-		return
-
-*/
-
-
-/*
-
 /obj/machinery/computer/helm/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
 	. = ..()
 	if(.)

@@ -1,9 +1,15 @@
 /obj/docking_port/mobile/voidcrew
 	launch_status = UNLAUNCHED
 	///The linked overmap object, if there is one
-	var/obj/structure/overmap/ship/current_ship //voidcrew todo: ship functionality, this is never linked!!
+	var/obj/structure/overmap/ship/current_ship
 	///List of spawn points on the ship.
 	var/list/obj/machinery/cryopod/spawn_points = list()
+
+/obj/docking_port/mobile/voidcrew/Destroy(force)
+	current_ship.shuttle = null
+	current_ship = null
+	spawn_points.Cut()
+	return ..()
 
 /**
  * ##get_all_humans

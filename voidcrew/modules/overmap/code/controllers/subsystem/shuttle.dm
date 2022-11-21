@@ -7,7 +7,7 @@
 
 	shuttle_loading = TRUE
 	SSair.can_fire = FALSE // fuck you
-	var/obj/docking_port/mobile/loaded = action_load(ship_template_to_spawn)
+	var/obj/docking_port/mobile/voidcrew/loaded = action_load(ship_template_to_spawn)
 	SSair.can_fire = TRUE
 	shuttle_loading = FALSE
 
@@ -15,6 +15,7 @@
 		qdel(ship_to_spawn)
 		return
 
+	loaded.current_ship = ship_to_spawn
 	ship_to_spawn.name = loaded.name
 	ship_to_spawn.assign_source_template(ship_template_to_spawn)
 	ship_to_spawn.shuttle = loaded
