@@ -330,12 +330,15 @@ Turf and target are separate in case you want to teleport some distance from a t
 
 	return turf_list
 
+/* VOIDCREW EDIT - START
 ///Returns a random turf on the station
 /proc/get_random_station_turf()
 	var/list/turfs = get_area_turfs(pick(GLOB.the_station_areas))
 	if (length(turfs))
 		return pick(turfs)
+** VOIDCREW EDIT - END */
 
+/* VOIDCREW EDIT - START
 ///Returns a random turf on the station, excludes dense turfs (like walls) and areas that have valid_territory set to FALSE
 /proc/get_safe_random_station_turf(list/areas_to_pick_from = GLOB.the_station_areas)
 	for (var/i in 1 to 5)
@@ -357,6 +360,7 @@ Turf and target are separate in case you want to teleport some distance from a t
 				turf_list.Cut(I, I + 1)
 		if (target)
 			return target
+** VOIDCREW EDIT - END */
 
 /**
  * Checks whether the target turf is in a valid state to accept a directional window
