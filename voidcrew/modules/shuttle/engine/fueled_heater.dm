@@ -32,9 +32,6 @@
 	/// Whether this heater will filter out incompatible gases from the internal tank
 	var/filter_enabled = TRUE
 
-/obj/machinery/atmospherics/fueled_engine_heater/New(loc, process = TRUE, setdir, init_dir = ALL_CARDINALS)
-	return ..()
-
 /obj/machinery/atmospherics/fueled_engine_heater/Initialize()
 	air_contents = new(internal_volume)
 	. = ..()
@@ -49,11 +46,9 @@
 	if(connected_engine)
 		return
 
-	// we can only connect to heaters directly behind us, who are also facing us
-	var/opposite_dir = turn(dir, 180)
-	var/turf/candidate_turf = get_step(src, opposite_dir)
+	var/turf/candidate_turf = get_step(src, dir)
 	var/obj/machinery/power/shuttle_engine/ship/fueled/candidate_engine = locate() in candidate_turf
-	if(!candidate_engine || candidate_engine.dir != opposite_dir)
+	if(!candidate_engine || candidate_engine.dir != turn(dir, 180))
 		return
 	on_engine_link(candidate_engine)
 
@@ -88,9 +83,7 @@
 	return ..()
 
 /obj/machinery/atmospherics/fueled_engine_heater/is_connectable(obj/machinery/atmospherics/target, given_layer)
-	if(get_dir(src, target) != dir)
-		return FALSE
-	if(!istype(target, /obj/machinery/atmospherics/pipe))
+	if(get_dir(src, target) != turn(dir, 180))
 		return FALSE
 	return ..()
 
@@ -114,6 +107,7 @@
 		return
 
 	var/datum/gas_mixture/filtered = air_contents.remove_ratio(filter_rate)
+	filtered.assert_gas(connected_engine.fuel_type)
 	var/datum/gas_mixture/compatible = filtered.remove_specific(connected_engine.fuel_type, INFINITY)
 	dump_into.merge(filtered)
 	air_contents.merge(compatible)

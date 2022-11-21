@@ -22,11 +22,9 @@
 	if(connected_heater)
 		return
 
-	// we can only connect to heaters directly behind us, who are also facing us
-	var/opposite_dir = turn(dir, 180)
-	var/turf/candidate_turf = get_step(src, opposite_dir)
+	var/turf/candidate_turf = get_step(src, dir)
 	var/obj/machinery/atmospherics/fueled_engine_heater/candidate_heater = locate() in candidate_turf
-	if(!candidate_heater || candidate_heater.dir != opposite_dir)
+	if(!candidate_heater || candidate_heater.dir != turn(dir, 180))
 		return
 	on_heater_link(candidate_heater)
 
@@ -72,6 +70,7 @@
 
 ///Returns how much fuel we have left
 /obj/machinery/power/shuttle_engine/ship/fueled/return_fuel()
+	connected_heater.air_contents.assert_gas(fuel_type)
 	return connected_heater?.air_contents.gases[fuel_type][MOLES] || 0
 
 ///Returns how much fuel we can hold
@@ -83,6 +82,7 @@
 	if(!connected_heater?.air_contents)
 		return 0
 
+	connected_heater.air_contents.assert_gas(fuel_type)
 	var/avail_moles = connected_heater.air_contents.gases[fuel_type][MOLES]
 	. = min(amount, avail_moles)
 	connected_heater.air_contents.remove_specific(fuel_type, .)
