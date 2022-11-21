@@ -1222,7 +1222,7 @@
 /turf/open/floor/carpet/blue,
 /area/shuttle/voidcrew/box/crew_quarters)
 "tw" = (
-/obj/machinery/power/shuttle/engine/electric{
+/obj/machinery/power/shuttle_engine/electric{
 	dir = 4
 	},
 /obj/structure/cable,
@@ -1236,7 +1236,7 @@
 /turf/open/floor/iron/white,
 /area/shuttle/voidcrew/box/medbay)
 "vk" = (
-/obj/machinery/power/shuttle/engine/fueled/plasma{
+/obj/machinery/power/shuttle_engine/fueled/plasma{
 	dir = 4
 	},
 /turf/open/floor/plating/airless,
