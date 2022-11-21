@@ -31,7 +31,8 @@
 	 * Player stuff
 	 */
 	///Shipwide bank account
-	var/datum/bank_account/ship/ship_account
+	// var/datum/bank_account/ship/ship_account
+
 	///Short memo of the ship shown to new joins
 	var/memo = ""
 	///Manifest list of people on the ship
@@ -97,12 +98,17 @@
 	job_slots = template.assemble_job_slots()
 
 /obj/structure/overmap/ship/Destroy()
+	source_template = null
+	shuttle?.intoTheSunset()
+	shuttle = null
+	SSovermap.simulated_ships -= src
+	// QDEL_NULL(ship_account)
+	manifest?.Cut()
+	job_slots?.Cut()
+	QDEL_NULL(ship_team)
 	QDEL_NULL(cam_screen)
 	QDEL_LIST(cam_plane_masters)
 	QDEL_NULL(cam_background)
-	SSovermap.simulated_ships -= src
-	shuttle?.intoTheSunset()
-	shuttle = null
 	return ..()
 
 /// Updates the screen for the helm console
