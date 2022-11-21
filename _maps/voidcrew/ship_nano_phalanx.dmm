@@ -19,11 +19,10 @@
 	},
 /area/station/cargo/warehouse)
 "ap" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
 	id = "phpublicblastdoors"
 	},
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/station/service/chapel)
 "av" = (
@@ -450,8 +449,8 @@
 /area/station/service/chapel)
 "fb" = (
 /obj/machinery/fax{
-	name = "Phalanx Fax Machine";
-	fax_name = "Phalanx Fax"
+	fax_name = "Phalanx Fax";
+	name = "Phalanx Fax Machine"
 	},
 /obj/structure/table/wood,
 /obj/machinery/light/small{
@@ -537,7 +536,7 @@
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "gB" = (
-/obj/machinery/power/shuttle/engine/electric{
+/obj/machinery/power/shuttle_engine/electric{
 	dir = 4
 	},
 /obj/structure/cable,
@@ -926,8 +925,7 @@
 /turf/open/floor/plating,
 /area/station/service/chapel)
 "lM" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/shuttle,
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
 /area/station/service/chapel)
 "lY" = (
@@ -1708,7 +1706,7 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "xB" = (
-/obj/machinery/power/shuttle/engine/fueled/plasma{
+/obj/machinery/power/shuttle_engine/fueled/plasma{
 	dir = 4
 	},
 /turf/open/floor/plating,

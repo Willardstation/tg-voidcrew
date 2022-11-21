@@ -21,7 +21,7 @@ SUBSYSTEM_DEF(overmap)
 	/// Centre of the overmap
 	var/turf/overmap_centre
 	/// Map of tiles at each radius around the sun
-	var/list/list/radius_tiles = list()
+	var/list/turf/radius_tiles = list()
 	/// List of all events
 	var/list/events = list()
 
