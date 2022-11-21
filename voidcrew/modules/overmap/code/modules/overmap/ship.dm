@@ -56,13 +56,10 @@
 	/**
 	 * Stuff needed to render the map
 	 */
+
 	/// Name of the map
 	var/map_name
-	/// Actual screen of the map
 	var/atom/movable/screen/map_view/cam_screen
-	/// List of plane masters used by the screen
-	var/list/cam_plane_masters = list()
-	/// Backgroudn of the screen
 	var/atom/movable/screen/background/cam_background
 
 /obj/structure/overmap/ship/Initialize(mapload)
@@ -73,22 +70,15 @@
 	display_name = "[faction_prefix] [name]"
 
 	map_name = "overmap_[REF(src)]_map"
+
 	cam_screen = new
-	cam_screen.name = "screen"
-	cam_screen.assigned_map = map_name
 	cam_screen.del_on_map_removal = FALSE
-	cam_screen.screen_loc = "[map_name]:1,1"
-	for(var/plane in subtypesof(/atom/movable/screen/plane_master) - /atom/movable/screen/plane_master/blackness)
-		var/atom/movable/screen/plane_master/instance = new plane()
-		if(instance.blend_mode_override)
-			instance.blend_mode = instance.blend_mode_override
-		instance.assigned_map = map_name
-		instance.del_on_map_removal = FALSE
-		instance.screen_loc = "[map_name]:CENTER"
-		cam_plane_masters += instance
+	cam_screen.generate_view(map_name)
+
 	cam_background = new
-	cam_background.assigned_map = map_name
 	cam_background.del_on_map_removal = FALSE
+	cam_background.assigned_map = map_name
+
 	SSovermap.simulated_ships += src
 
 /obj/structure/overmap/ship/proc/assign_source_template(datum/map_template/shuttle/voidcrew/template)
@@ -107,14 +97,12 @@
 	job_slots?.Cut()
 	QDEL_NULL(ship_team)
 	QDEL_NULL(cam_screen)
-	QDEL_LIST(cam_plane_masters)
 	QDEL_NULL(cam_background)
 	return ..()
 
 /// Updates the screen for the helm console
 /obj/structure/overmap/ship/proc/update_screen()
 	var/list/visible_turfs = list()
-
 	var/list/visible_things = view(SHIP_VIEW_RANGE, src)
 
 	for(var/turf/visible_turf in visible_things)
@@ -125,7 +113,6 @@
 	var/size_y = bbox[4] - bbox[2] + 1
 
 	cam_screen.vis_contents = visible_turfs
-	cam_background.icon_state = "clear"
 	cam_background.fill_rect(1, 1, size_x, size_y)
 
 /// Resets the ships thrust back to zero

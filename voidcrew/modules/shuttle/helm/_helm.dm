@@ -39,12 +39,14 @@
 
 	if(!ui)
 		user.client.register_map_obj(current_ship.cam_screen)
-		for (var/plane in current_ship.cam_plane_masters)
-			user.client.register_map_obj(plane)
 		user.client.register_map_obj(current_ship.cam_background)
 
 		ui = new(user, src, "HelmComputer", name)
 		ui.open()
+
+/obj/machinery/computer/helm/ui_close(mob/user)
+	. = ..()
+	user.client?.clear_map(current_ship.cam_screen.assigned_map)
 
 /obj/machinery/computer/helm/ui_act(action, list/params)
 	. = ..()
