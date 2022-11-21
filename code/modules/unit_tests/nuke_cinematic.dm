@@ -3,6 +3,8 @@
 #define PLAYING_INCORRECT_NUKE_ANIMATION 1
 #define NOT_PLAYING_ANIMATION 0
 
+/** VOIDCREW REMOVAL
+
 /**
  * Unit tests that a nuke going off plays a cinematic,
  * and that it actually kills people.
@@ -62,6 +64,8 @@
 
 	else if(istype(playing, /datum/cinematic/nuke))
 		cinematic_playing = PLAYING_INCORRECT_NUKE_ANIMATION
+
+** END VOIDCREW REMOVAL **/
 
 #undef PLAYING_CORRECT_ANIMATION
 #undef PLAYING_INCORRECT_NUKE_ANIMATION
