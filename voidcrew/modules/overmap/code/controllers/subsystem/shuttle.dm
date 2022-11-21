@@ -6,7 +6,9 @@
 	ship_template_to_spawn = new ship_template_to_spawn
 
 	shuttle_loading = TRUE
+	SSair.can_fire = FALSE // fuck you
 	var/obj/docking_port/mobile/loaded = action_load(ship_template_to_spawn)
+	SSair.can_fire = TRUE
 	shuttle_loading = FALSE
 
 	if(!loaded)
@@ -47,13 +49,15 @@
 /client/proc/spawn_specific_ship()
 	set name = "Spawn Specific Ship"
 	set category = "Overmap"
-	var/list/choices = list()
-	for(var/ship in subtypesof(/datum/map_template/shuttle/voidcrew))
-		var/datum/map_template/shuttle/voidcrew/V = ship
-		choices[initial(V.name)] = V
+	var/static/list/choices
+	if(!choices)
+		choices = list()
+		for(var/ship in subtypesof(/datum/map_template/shuttle/voidcrew))
+			var/datum/map_template/shuttle/voidcrew/V = ship
+			choices[initial(V.name)] = V
 	var/ship_to_spawn = tgui_input_list(usr, "Which ship do you want to spawn?", "Spawn Specific Ship", choices)
 	if(!ship_to_spawn)
 		return
 
 	var/obj/structure/overmap/ship/spawned = SSshuttle.create_ship(choices[ship_to_spawn])
-	mob.admin_teleport(spawned.shuttle)
+	mob.client?.admin_follow(spawned.shuttle)
