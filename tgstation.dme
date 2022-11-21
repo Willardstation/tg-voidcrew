@@ -4954,6 +4954,7 @@
 #include "voidcrew\modules\shuttle\design.dm"
 #include "voidcrew\modules\shuttle\engine\electric.dm"
 #include "voidcrew\modules\shuttle\engine\fuel.dm"
+#include "voidcrew\modules\shuttle\engine\fueled_heater.dm"
 #include "voidcrew\modules\shuttle\engine\liquid.dm"
 #include "voidcrew\modules\shuttle\engine\shuttle_engine.dm"
 #include "voidcrew\modules\shuttle\engine\void.dm"
