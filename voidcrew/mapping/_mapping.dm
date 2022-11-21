@@ -133,5 +133,3 @@
 			turfs.Cut(turf_idx, turf_idx + 1)
 			if(is_safe_turf(target_turf, extended_safety_checks, dense_atoms))
 				return target_turf
-
-		CHECK_TICK

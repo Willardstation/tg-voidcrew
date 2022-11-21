@@ -4843,6 +4843,7 @@
 #include "voidcrew\_HELPERS\ships.dm"
 #include "voidcrew\_strings\star_names.dm"
 #include "voidcrew\edits\config.dm"
+#include "voidcrew\edits\create_and_destroy.dm"
 #include "voidcrew\edits\jobs.dm"
 #include "voidcrew\edits\keybindings.dm"
 #include "voidcrew\edits\sleeper.dm"
