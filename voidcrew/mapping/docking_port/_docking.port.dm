@@ -1,7 +1,15 @@
+/**
+ * The main docking port that all voidcrew ships should be using.
+ */
 /obj/docking_port/mobile/voidcrew
 	launch_status = UNLAUNCHED
+
+	/// Makes sure we dont run linking logic more than once
+	VAR_PRIVATE/cached_z_level
+
 	///The linked overmap object, if there is one
 	var/obj/structure/overmap/ship/current_ship
+
 	///List of spawn points on the ship.
 	var/list/obj/machinery/cryopod/spawn_points = list()
 
@@ -9,7 +17,36 @@
 	current_ship.shuttle = null
 	current_ship = null
 	spawn_points.Cut()
+	unlink_from_z_level()
 	return ..()
+
+/obj/docking_port/mobile/voidcrew/zMove(dir, turf/target, z_move_flags)
+	..()
+	// we don't need to do this in initialize because all ship loading starts in the template area and is then moved to transit
+	link_to_z_level()
+
+/// Links to the Z level to ensure that if there are more than one ships on a z level when one leaves it doesnt clear the z trait
+/obj/docking_port/mobile/voidcrew/proc/link_to_z_level()
+	if(cached_z_level == z)
+		return
+	unlink_from_z_level()
+	RegisterSignal(SSdcs, COMSIG_GLOB_Z_SHIP_PROBE, PROC_REF(respond_to_z_port_probe))
+	cached_z_level = z
+	GLOB.station_levels_cache[z] = TRUE
+
+/// Unlinks from the z level
+/obj/docking_port/mobile/voidcrew/proc/unlink_from_z_level()
+	if(cached_z_level == z)
+		return
+	UnregisterSignal(SSdcs, COMSIG_GLOB_Z_SHIP_PROBE)
+	if(SEND_GLOBAL_SIGNAL(COMSIG_GLOB_Z_SHIP_PROBE))
+		return
+	GLOB.station_levels_cache[z] = FALSE
+
+/// Signal Handler for checking if anyone else is linked to a z level
+/obj/docking_port/mobile/voidcrew/proc/respond_to_z_port_probe(datum/source, z_level)
+	SIGNAL_HANDLER
+	return (z_level == cached_z_level)
 
 /**
  * ##get_all_humans
