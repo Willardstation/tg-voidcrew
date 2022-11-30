@@ -34,8 +34,11 @@
 /datum/controller/subsystem/mapping/generate_station_area_list()
 	return
 
+/// Only thing we want to do here is setup planetary atmos as needed
 /datum/controller/subsystem/mapping/setup_ruins()
-	return
+	var/datum/gas_mixture/immutable/planetary/lavaland_air = new
+	lavaland_air.parse_string_immutable(LAVALAND_DEFAULT_ATMOS)
+	SSair.planetary[LAVALAND_DEFAULT_ATMOS] = lavaland_air
 
 /datum/controller/subsystem/mapping/proc/load_ship_templates()
 	SHOULD_CALL_PARENT(TRUE)
