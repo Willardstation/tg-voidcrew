@@ -19,6 +19,10 @@
 	ship_to_spawn.name = loaded.name
 	ship_to_spawn.assign_source_template(ship_template_to_spawn)
 	ship_to_spawn.shuttle = loaded
+
+	// all ships are assigned a blobstart landmark for stuff such as the NAD
+	new /obj/effect/landmark/blobstart(get_safe_random_station_turf(loaded.shuttle_areas))
+
 	return ship_to_spawn
 
 /client/add_admin_verbs()
