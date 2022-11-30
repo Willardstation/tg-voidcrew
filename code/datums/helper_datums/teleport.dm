@@ -108,7 +108,6 @@
 		effect.attach(location)
 		effect.start()
 
-/* VOIDCREW EDIT - START
 // Safe location finder
 /proc/find_safe_turf(zlevel, list/zlevels, extended_safety_checks = FALSE, dense_atoms = FALSE)
 	if(!zlevels)
@@ -126,7 +125,6 @@
 
 		if(is_safe_turf(random_location, extended_safety_checks, dense_atoms, cycle < 300))//if the area is mostly NOTELEPORT (centcom) we gotta give up on this fantasy at some point.
 			return random_location
-** VOIDCREW EDIT - END */
 
 /// Checks if a given turf is a "safe" location
 /proc/is_safe_turf(turf/random_location, extended_safety_checks = FALSE, dense_atoms = FALSE, no_teleport = FALSE)
