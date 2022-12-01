@@ -59,7 +59,9 @@
 
 	/// Name of the map
 	var/map_name
+	/// The actual map screen
 	var/atom/movable/screen/map_view/cam_screen
+	/// The background of the map, usually doesn't do anything, but this is here so ships can customize the background ig?
 	var/atom/movable/screen/background/cam_background
 
 /obj/structure/overmap/ship/Initialize(mapload)
