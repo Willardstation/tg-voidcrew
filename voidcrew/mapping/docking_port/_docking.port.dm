@@ -23,7 +23,6 @@
 	return ..()
 
 /obj/docking_port/mobile/voidcrew/connect_to_shuttle(mapload, obj/docking_port/mobile/port, obj/docking_port/stationary/dock)
-	unlink_from_z_level()
 	link_to_z_level()
 	return ..()
 
