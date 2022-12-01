@@ -25,5 +25,5 @@
 	var/area/scan_area2 = scan_areas[2]
 	replace_in_name("%AREA1%", initial(scan_area1.name))
 	replace_in_name("%AREA2%", initial(scan_area2.name))
-	RegisterSignal(SSdcs, COMSIG_GLOB_TRAITOR_OBJECTIVE_COMPLETED, .proc/on_global_obj_completed)
+	RegisterSignal(SSdcs, COMSIG_GLOB_TRAITOR_OBJECTIVE_COMPLETED, PROC_REF(on_global_obj_completed))
 	return TRUE

@@ -207,7 +207,7 @@ SUBSYSTEM_DEF(overmap)
 	if(!initial_ship)
 		CRASH("Failed to spawn initial ship.")
 
-	RegisterSignal(initial_ship, list(COMSIG_PARENT_QDELETING), .proc/handle_initial_ship_deletion)
+	RegisterSignal(initial_ship, list(COMSIG_PARENT_QDELETING), PROF_REF(handle_initial_ship_deletion))
 
 /datum/controller/subsystem/overmap/proc/handle_initial_ship_deletion(datum/source)
 	SIGNAL_HANDLER

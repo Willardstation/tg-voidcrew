@@ -8,7 +8,7 @@
 	if(shuttle_port)
 		UnregisterSignal(shuttle_port, COMSIG_PARENT_QDELETING)
 	shuttle_port = port
-	RegisterSignal(shuttle_port, COMSIG_PARENT_QDELETING, .proc/on_shuttle_port_qdel)
+	RegisterSignal(shuttle_port, COMSIG_PARENT_QDELETING, PROC_REF(on_shuttle_port_qdel))
 
 /area/shuttle/voidcrew/proc/on_shuttle_port_qdel()
 	SIGNAL_HANDLER

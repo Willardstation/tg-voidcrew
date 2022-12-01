@@ -28,15 +28,15 @@
 /client/add_admin_verbs()
 	. = ..()
 	add_verb(src, list(
-		.proc/respawn_ship,
-		.proc/spawn_specific_ship,
+		PROC_REF(respawn_ship),
+		PROC_REF(spawn_specific_ship),
 	))
 
 /client/remove_admin_verbs()
 	. = ..()
 	remove_verb(src, list(
-		.proc/respawn_ship,
-		.proc/spawn_specific_ship,
+		PROC_REF(respawn_ship),
+		PROC_REF(spawn_specific_ship),
 	))
 
 #define RESPAWN_FORCE "Force Respawn"
