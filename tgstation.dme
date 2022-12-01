@@ -4879,6 +4879,7 @@
 #include "voidcrew\edits\config.dm"
 #include "voidcrew\edits\jobs.dm"
 #include "voidcrew\edits\keybindings.dm"
+#include "voidcrew\edits\map_config.dm"
 #include "voidcrew\edits\sleeper.dm"
 #include "voidcrew\edits\techwebs.dm"
 #include "voidcrew\edits\mobs\new_player.dm"
