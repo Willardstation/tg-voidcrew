@@ -31,7 +31,7 @@ SUBSYSTEM_DEF(overmap)
 	#ifdef UNIT_TESTS
 	var/datum/map_template/shuttle/voidcrew/initial_ship_template = /datum/map_template/shuttle/voidcrew/box
 	#else
-	var/datum/map_template/shuttle/voidcrew/initial_ship_template = /datum/map_template/shuttle/voidcrew/box // TODO, remove this being set to something when shuttles generate their bounds correctly
+	var/datum/map_template/shuttle/voidcrew/initial_ship_template
 	#endif
 	var/obj/structure/overmap/ship/initial_ship
 
