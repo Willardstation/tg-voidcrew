@@ -106,6 +106,9 @@
 		dump_into.merge(air_contents.remove_ratio(purge_ratio))
 		return
 
+	if(!connected_engine.fuel_type)
+		return
+
 	var/datum/gas_mixture/filtered = air_contents.remove_ratio(filter_rate)
 	filtered.assert_gas(connected_engine.fuel_type)
 	var/datum/gas_mixture/compatible = filtered.remove_specific(connected_engine.fuel_type, INFINITY)

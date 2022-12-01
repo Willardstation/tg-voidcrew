@@ -48,12 +48,6 @@
 	connected_heater.connected_engine = null
 	connected_heater = null
 
-/obj/machinery/power/shuttle_engine/ship/fueled/Initialize()
-	if(!fuel_type)
-		qdel(src)
-		CRASH("Fueled engine [type] did not set fuel_type!")
-	. = ..()
-
 /obj/machinery/power/shuttle_engine/ship/fueled/LateInitialize()
 	. = ..()
 	try_link_heater()
@@ -70,8 +64,10 @@
 
 ///Returns how much fuel we have left
 /obj/machinery/power/shuttle_engine/ship/fueled/return_fuel()
-	connected_heater.air_contents.assert_gas(fuel_type)
-	return connected_heater?.air_contents.gases[fuel_type][MOLES] || 0
+	if(fuel_type)
+		connected_heater.air_contents.assert_gas(fuel_type)
+		return connected_heater?.air_contents.gases[fuel_type][MOLES] || 0
+	else return connected_heater?.air_contents.total_moles() || 0
 
 ///Returns how much fuel we can hold
 /obj/machinery/power/shuttle_engine/ship/fueled/return_fuel_cap()
@@ -82,10 +78,15 @@
 	if(!connected_heater?.air_contents)
 		return 0
 
-	connected_heater.air_contents.assert_gas(fuel_type)
-	var/avail_moles = connected_heater.air_contents.gases[fuel_type][MOLES]
-	. = min(amount, avail_moles)
-	connected_heater.air_contents.remove_specific(fuel_type, .)
+	if(fuel_type)
+		connected_heater.air_contents.assert_gas(fuel_type)
+		var/avail_moles = connected_heater.air_contents.gases[fuel_type][MOLES]
+		. = min(amount, avail_moles)
+		connected_heater.air_contents.remove_specific(fuel_type, .)
+	else
+		var/avail_moles = connected_heater.air_contents.total_moles()
+		. = min(amount, avail_moles)
+		connected_heater.air_contents.remove(.)
 
 ///Plasma
 /obj/machinery/power/shuttle_engine/ship/fueled/plasma
