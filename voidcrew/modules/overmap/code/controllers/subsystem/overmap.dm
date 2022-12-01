@@ -75,9 +75,7 @@ SUBSYSTEM_DEF(overmap)
 
 	var/obj/structure/overmap/star/big/star_to_spawn = pick(/obj/structure/overmap/star/big, /obj/structure/overmap/star/big/binary)
 	star_to_spawn = new
-
 	star_to_spawn.forceMove(centre_tile)
-	new /obj/effect/landmark/observer_start(centre_tile)
 
 	var/list/unsorted_turfs = get_area_turfs(/area/overmap, target_z = OVERMAP_Z_LEVEL)
 	var/max_ring = 0
