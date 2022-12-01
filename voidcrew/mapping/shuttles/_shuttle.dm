@@ -23,13 +23,11 @@
 /datum/map_template/shuttle/voidcrew/proc/assemble_job_slots()
 	. = list()
 	for(var/list/job_definition as anything in job_slots)
-		var/job_name = job_definition["name"]
-		var/is_officer = !!job_definition["officer"]
 		var/initial_slots = job_definition["slots"]
 		var/job_outfit = job_definition["outfit"]
 		var/datum/job/job_slot = new /datum/job
-		job_slot.title = job_name
-		job_slot.officer = is_officer
+		job_slot.title = job_definition["name"]
+		job_slot.officer = !!job_definition["officer"]
 		job_slot.outfit = ispath(job_outfit) ? job_outfit :  text2path(job_outfit)
 		if(faction_prefix != NEUTRAL_SHIP)
 			job_slot.faction = faction_prefix
