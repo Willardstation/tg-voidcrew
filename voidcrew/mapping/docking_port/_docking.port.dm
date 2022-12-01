@@ -45,6 +45,7 @@
 	var/top_z = z + z_levels_above
 	for(var/z_level in bottom_z to top_z)
 		LAZYORASSOCLIST(SSmapping.z_trait_levels, ZTRAIT_STATION, z_level)
+		GLOB.station_levels_cache[z_level] = TRUE
 	GLOB.the_station_areas |= shuttle_areas
 
 /// Unlinks from the z level
@@ -55,6 +56,7 @@
 		if(SEND_SIGNAL(SSmapping, COMSIG_GLOB_Z_SHIP_PROBE, z_level))
 			continue
 		LAZYREMOVEASSOC(SSmapping.z_trait_levels, ZTRAIT_STATION, z_level)
+		GLOB.station_levels_cache[z_level] = FALSE
 	GLOB.the_station_areas -= shuttle_areas
 
 /// Signal Handler for checking if anyone else is linked to a z level
