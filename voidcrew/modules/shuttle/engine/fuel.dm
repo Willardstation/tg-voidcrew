@@ -67,7 +67,7 @@
 	if(fuel_type)
 		connected_heater.air_contents.assert_gas(fuel_type)
 		return connected_heater?.air_contents.gases[fuel_type][MOLES] || 0
-	else return connected_heater?.air_contents.total_moles() || 0
+	return connected_heater?.air_contents.total_moles() || 0
 
 ///Returns how much fuel we can hold
 /obj/machinery/power/shuttle_engine/ship/fueled/return_fuel_cap()
