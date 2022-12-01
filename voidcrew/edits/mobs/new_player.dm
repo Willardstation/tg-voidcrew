@@ -74,12 +74,12 @@
 		if((living_player_count() >= relevant_cap) || (src != SSticker.queued_players[1]))
 			to_chat(usr, "<span class='warning'>Server is full.</span>")
 
-	AttemptLateSpawn(selected_job, selected_ship)
+	AttemptSpawnOnShip(selected_job, selected_ship)
 
 /**
- * Latejoining
+ * Join as the given job
  */
-/mob/dead/new_player/AttemptLateSpawn(datum/job/job, obj/structure/overmap/ship/joined_ship)
+/mob/dead/new_player/proc/AttemptSpawnOnShip(datum/job/job, obj/structure/overmap/ship/joined_ship)
 	if(isnull(joined_ship) || isnull(joined_ship.shuttle))
 		stack_trace("Tried to spawn ([ckey]) into a null ship! Please report this on Github.")
 		return FALSE
