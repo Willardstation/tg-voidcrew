@@ -20,8 +20,10 @@
 	ship_to_spawn.assign_source_template(ship_template_to_spawn)
 	ship_to_spawn.shuttle = loaded
 
-	// all ships are assigned a blobstart landmark for stuff such as the NAD
-	new /obj/effect/landmark/blobstart(get_safe_random_station_turf(loaded.shuttle_areas))
+	// assign landmarks as needed
+	var/turf/safe_turf = get_safe_random_station_turf(loaded.shuttle_areas)
+	new /obj/effect/landmark/blobstart(safe_turf) // StationLoving component
+	new /obj/effect/landmark/observer_start(safe_turf) // Observer and UnitTests
 
 	return ship_to_spawn
 
