@@ -29,10 +29,19 @@
 	///holding jump timer ID
 	var/jump_timer
 
+/obj/machinery/computer/helm/viewscreen
+	name = "ship viewscreen"
+	icon = 'icons/obj/stationobjs.dmi'
+	icon_state = "telescreen"
+	icon_keyboard = null
+	layer = SIGN_LAYER
+	density = FALSE
+	viewer = TRUE
+
 /obj/machinery/computer/helm/ui_interact(mob/user, datum/tgui/ui)
 	. = ..()
-	if (!current_ship)
-		CRASH("There is no ship attached to this console. You broke something.")
+	if(!current_ship && !attempt_ship_connection(last_resort = TRUE))
+		return FALSE
 
 	ui = SStgui.try_update_ui(user, src, ui)
 	current_ship.update_screen()
@@ -87,7 +96,7 @@
 
 /obj/machinery/computer/helm/LateInitialize()
 	. = ..()
-	reload_ship()
+	attempt_ship_connection()
 
 /obj/machinery/computer/helm/proc/calibrate_jump(inline = FALSE)
 	if(jump_allowed < 0)
@@ -143,11 +152,19 @@
 /**
  * This proc manually rechecks that the helm computer is connected to a proper ship
  */
-/obj/machinery/computer/helm/proc/reload_ship()
-	var/obj/docking_port/mobile/voidcrew/port = SSshuttle.get_containing_shuttle(src)
-	if(port?.current_ship)
-		current_ship = port.current_ship
+/obj/machinery/computer/helm/proc/attempt_ship_connection(last_resort = FALSE)
+	if(current_ship && current_ship.shuttle.z == z)
 		return TRUE
+
+	var/obj/docking_port/mobile/voidcrew/port = SSshuttle.get_containing_shuttle(src)
+	if(!istype(port))
+		port = null
+	
+	if(!port && last_resort) // todo: check for helm being constructed, damn those players
+		stack_trace("Failed to connect a helm to its ship, this is almost certainly a bug!")
+		
+	current_ship = port?.current_ship
+	return !!current_ship
 
 /*
 /obj/machinery/computer/helm/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
@@ -233,14 +250,6 @@
 				say(current_ship.undock())
 				return
 */
-/obj/machinery/computer/helm/viewscreen
-	name = "ship viewscreen"
-	icon = 'icons/obj/stationobjs.dmi'
-	icon_state = "telescreen"
-	icon_keyboard = null
-	layer = SIGN_LAYER
-	density = FALSE
-	viewer = TRUE
 
 #undef JUMP_STATE_OFF
 #undef JUMP_STATE_CHARGING
