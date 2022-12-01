@@ -146,7 +146,7 @@
 	else
 		dump_air_contents()
 
-	..()
+	return ..()
 
 /obj/machinery/atmospherics/fueled_engine_heater/screwdriver_act(mob/living/user, obj/item/tool)
 	var/initial = initial(icon_state)
