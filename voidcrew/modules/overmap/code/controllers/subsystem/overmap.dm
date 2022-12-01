@@ -42,6 +42,8 @@ SUBSYSTEM_DEF(overmap)
 	setup_planets()
 	spawn_initial_ship()
 
+	return SS_INIT_SUCCESS
+
 /datum/controller/subsystem/overmap/proc/create_map()
 	// creates the overmap area and sets it up
 	var/area/overmap/overmap_area = new
