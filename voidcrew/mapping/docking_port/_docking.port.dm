@@ -122,6 +122,6 @@
 	qdel(src, force = TRUE)
 
 /obj/docking_port/mobile/voidcrew/proc/recalculate_shuttle_areas()
-	for(var/area/area in shuttle_areas)
+	for(var/area/area as anything in shuttle_areas)
 		area.area_flags |= VALID_TERRITORY
 	// TODO - UPSTREAM - RECALCULATE BOUNDS
