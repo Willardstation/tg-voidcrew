@@ -148,6 +148,16 @@
 
 	..()
 
+/obj/machinery/atmospherics/fueled_engine_heater/screwdriver_act(mob/living/user, obj/item/tool)
+	var/initial = initial(icon_state)
+	if(default_deconstruction_screwdriver(user, "[initial]_open", initial, tool))
+		return TRUE
+
+/obj/machinery/atmospherics/fueled_engine_heater/crowbar_act(mob/living/user, obj/item/tool)
+	. = ..()
+	if(default_deconstruction_crowbar(tool))
+		return TRUE
+
 /obj/machinery/atmospherics/fueled_engine_heater/multitool_act(mob/living/user, obj/item/tool)
 	if(!panel_open)
 		return FALSE
@@ -164,7 +174,16 @@
 	return TRUE
 
 /obj/machinery/atmospherics/fueled_engine_heater/add_context(atom/source, list/context, obj/item/held_item, mob/user)
-	if(!panel_open || held_item.tool_behaviour != TOOL_MULTITOOL)
-		return
-	context[SCREENTIP_CONTEXT_LMB] = "Toggle Filtering"
-	context[SCREENTIP_CONTEXT_RMB] = "Toggle Purge Mode"
+	if(panel_open)
+		switch(held_item.tool_behaviour)
+			if(TOOL_MULTITOOL)
+				context[SCREENTIP_CONTEXT_LMB] = "Toggle Filtering"
+				context[SCREENTIP_CONTEXT_RMB] = "Toggle Purge Mode"
+			if(TOOL_SCREWDRIVER)
+				context[SCREENTIP_CONTEXT_LMB] = "Close Panel"
+			if(TOOL_CROWBAR)
+				context[SCREENTIP_CONTEXT_LMB] = "Deconstruct"
+	else
+		if(held_item.tool_behaviour == TOOL_SCREWDRIVER)
+			context[SCREENTIP_CONTEXT_LMB] = "Open Panel"
+	return CONTEXTUAL_SCREENTIP_SET
