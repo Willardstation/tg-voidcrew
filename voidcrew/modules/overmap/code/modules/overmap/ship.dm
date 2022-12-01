@@ -190,7 +190,7 @@
 //	update_docked_bools() //voidcrew todo: ship functionality
 	qdel(src)
 
-/obj/structure/overmap/ship/proc/ship_announce(message, title, must_be_same_z_level=FALSE, sound=null)
+/obj/structure/overmap/ship/proc/ship_announce(message, title, must_be_same_z_level = FALSE, sound)
 	var/list/announce_targets = list()
 	for(var/datum/mind/shipmate as anything in ship_team.members)
 		var/mob/crewmate = shipmate.current
