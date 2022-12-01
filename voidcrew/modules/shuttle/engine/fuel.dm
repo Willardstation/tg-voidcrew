@@ -59,9 +59,9 @@
 	try_link_heater()
 
 /obj/machinery/power/shuttle_engine/ship/fueled/Destroy()
-	. = ..()
 	if(connected_heater)
 		on_heater_unlink()
+	return ..()
 
 /obj/machinery/power/shuttle_engine/ship/fueled/burn_engine(percentage = 100)
 	. = ..()
