@@ -36,10 +36,6 @@
 	set_density(TRUE)
 
 /obj/machinery/cryopod/close_machine(mob/living/carbon/user)
-	if(panel_open || !state_open)
-		return
-	if(isnull(user) || !istype(user))
-		return
 	. = ..()
 	to_chat(user, span_boldnotice("You begin to wake from cryosleep..."))
 	icon_state = close_state
