@@ -3,7 +3,10 @@
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
+"ac" = (
+/turf/open/floor/iron,
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "ae" = (
 /obj/machinery/light/small,
 /obj/structure/curtain/cloth/fancy,
@@ -14,7 +17,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet/royalblue,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "af" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -24,17 +27,7 @@
 	},
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/iron,
-/area/station/medical/medbay/lobby)
-"ao" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/hallway/primary/starboard)
-"ap" = (
-/obj/structure/sign/warning/vacuum/external,
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/cargo/miningoffice)
-"aw" = (
-/turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "az" = (
 /obj/machinery/computer/rdconsole{
 	dir = 4
@@ -46,7 +39,7 @@
 	dir = 10
 	},
 /turf/open/floor/iron/dark/textured,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "aB" = (
 /obj/effect/turf_decal/stripes{
 	dir = 1
@@ -54,11 +47,11 @@
 /obj/structure/cable,
 /obj/item/wirecutters,
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "aC" = (
 /obj/structure/cable/multilayer/connected,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "aE" = (
 /obj/item/radio,
 /obj/item/radio,
@@ -81,19 +74,11 @@
 /obj/item/radio,
 /obj/item/radio,
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
-"aF" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "aG" = (
 /obj/structure/sign/departments/engineering,
 /turf/closed/wall/mineral/titanium/interior,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "aJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -104,7 +89,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "aK" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -113,10 +98,10 @@
 	dir = 10
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
-"aX" = (
+/area/shuttle/voidcrew/osprey/hallway/aft)
+"aW" = (
 /turf/closed/wall/mineral/titanium,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "bf" = (
 /obj/machinery/door/airlock/external/glass,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -127,14 +112,14 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "bn" = (
 /obj/structure/table/optable,
 /obj/machinery/defibrillator_mount/loaded{
 	pixel_y = 24
 	},
 /turf/open/floor/iron,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "bs" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
@@ -142,7 +127,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "bz" = (
 /obj/machinery/door/poddoor{
 	id = "osprey_disposals";
@@ -150,7 +135,7 @@
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "bD" = (
 /obj/machinery/power/smes/engineering{
 	dir = 1
@@ -167,11 +152,11 @@
 	name = "Thruster Blast Door"
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "bI" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "bL" = (
 /obj/machinery/button/door{
 	dir = 4;
@@ -186,17 +171,14 @@
 	pixel_y = -6
 	},
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "bN" = (
 /obj/machinery/power/terminal{
 	dir = 8
 	},
 /obj/structure/cable/multilayer/connected,
 /turf/open/floor/catwalk_floor/iron_smooth,
-/area/station/engineering/main)
-"bP" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/engineering)
 "bQ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -209,15 +191,15 @@
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "bT" = (
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "cb" = (
 /obj/structure/sign/warning/electric_shock,
 /turf/closed/wall/mineral/titanium,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "cc" = (
 /obj/structure/cable,
 /obj/structure/window/reinforced/spawner/west{
@@ -228,7 +210,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "cg" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -238,7 +220,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "cj" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
@@ -251,7 +233,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "cm" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
@@ -260,24 +242,16 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/cargo/office)
-"cq" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/cargo)
 "cr" = (
 /obj/machinery/firealarm/directional/east,
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "cu" = (
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "cw" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -286,21 +260,21 @@
 	dir = 8
 	},
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "cC" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "cJ" = (
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/thinplating_new,
 /turf/open/floor/circuit/off,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "cK" = (
 /obj/structure/closet/secure_closet{
 	icon_state = "med";
@@ -332,7 +306,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "cS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -343,7 +317,11 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
+"cW" = (
+/obj/structure/sign/departments/medbay/alt,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "cY" = (
 /obj/structure/cable,
 /obj/structure/window/reinforced/plasma/spawner,
@@ -356,7 +334,15 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
+"dd" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "dj" = (
 /obj/structure/rack,
 /obj/item/pickaxe,
@@ -379,15 +365,7 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
-"dm" = (
-/obj/machinery/door/airlock/maintenance_hatch,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "dr" = (
 /obj/effect/turf_decal/stripes{
 	dir = 1
@@ -397,7 +375,7 @@
 	},
 /obj/structure/closet/emcloset/anchored,
 /turf/open/floor/plating/airless,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "dw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -410,30 +388,30 @@
 /obj/structure/window/spawner/north,
 /obj/structure/window/spawner/east,
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "dy" = (
 /obj/machinery/light,
 /obj/item/radio/intercom/directional/south,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /obj/structure/table/reinforced,
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "dC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "dI" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /turf/open/floor/carpet/royalblue,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "dJ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/stairs{
 	dir = 8
 	},
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "dK" = (
 /obj/structure/railing,
 /obj/effect/landmark/start/captain,
@@ -445,14 +423,22 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
+"dZ" = (
+/obj/structure/window/reinforced/plasma/spawner/east,
+/obj/structure/window/reinforced/plasma/spawner/north,
+/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "ea" = (
 /obj/structure/sign/poster/official/random/directional/east,
 /obj/effect/turf_decal/trimline/purple/line{
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "eb" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /obj/structure/cable,
@@ -460,57 +446,52 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "ec" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/mop_bucket/janitorialcart,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
-/area/station/service/janitor)
-"ef" = (
-/obj/structure/window/reinforced/plasma/spawner/east,
-/obj/structure/window/reinforced/plasma/spawner/north,
-/obj/machinery/atmospherics/components/unary/outlet_injector/on{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "ej" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/sign/warning/no_smoking/directional/south,
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "el" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "ep" = (
 /obj/structure/cable,
 /obj/machinery/power/port_gen/pacman/super,
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "eq" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable,
 /turf/open/floor/iron/smooth_large,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "eB" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "eM" = (
 /obj/machinery/computer/atmos_alert{
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/iron/smooth_large,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
+"eO" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "eP" = (
 /obj/machinery/atmospherics/components/tank/plasma{
 	dir = 8
@@ -520,7 +501,10 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
+"eQ" = (
+/turf/open/floor/iron/dark,
+/area/shuttle/voidcrew/osprey/engineering)
 "eY" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -529,19 +513,19 @@
 	dir = 2
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "fb" = (
 /obj/structure/cable,
 /obj/machinery/power/smes/engineering,
 /turf/open/floor/iron/smooth_large,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "ff" = (
 /obj/machinery/atmospherics/components/tank/plasma{
 	dir = 4
 	},
 /obj/structure/sign/warning/no_smoking/directional/west,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "fi" = (
 /obj/structure/table,
 /obj/item/storage/belt/janitor,
@@ -550,19 +534,19 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "fq" = (
 /obj/effect/landmark/start/shaft_miner,
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "fs" = (
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "fx" = (
 /obj/structure/frame/machine,
 /obj/effect/turf_decal/tile/purple{
@@ -573,30 +557,30 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "fD" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "fE" = (
 /obj/structure/tank_dispenser/oxygen,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "fI" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "fL" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "fR" = (
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=bridge";
@@ -605,7 +589,7 @@
 /obj/structure/chair/stool/bar,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "fS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -615,13 +599,13 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "fU" = (
 /obj/machinery/power/shuttle_engine/ship/fueled/plasma{
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "fY" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -634,7 +618,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "fZ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -646,15 +630,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
-"gb" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "gc" = (
 /obj/machinery/door/airlock/research/glass{
 	name = "Laboratory"
@@ -666,7 +642,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "gh" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -675,7 +651,7 @@
 /obj/machinery/firealarm/directional/south,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "gm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -686,25 +662,33 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
+"gq" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/cargo)
 "gr" = (
 /obj/structure/sign/poster/contraband/random{
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "gu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "gy" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "gB" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -713,7 +697,7 @@
 	dir = 9
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "gD" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -722,11 +706,11 @@
 	dir = 2
 	},
 /turf/open/floor/catwalk_floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "gF" = (
 /obj/structure/sign/warning/vacuum/external,
 /turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "gM" = (
 /obj/item/wallframe/camera,
 /obj/item/wallframe/camera,
@@ -747,7 +731,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/red/diagonal_centre,
 /turf/open/floor/iron/white/diagonal,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "gU" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 4
@@ -756,14 +740,22 @@
 	pixel_x = -32
 	},
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "gX" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
+"gZ" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "hk" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -772,17 +764,14 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "hq" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "ospreysci"
 	},
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
-/area/station/science/research)
-"hw" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/research)
 "hz" = (
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
@@ -799,10 +788,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
-"hB" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "hC" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin{
@@ -841,32 +827,26 @@
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 8
 	},
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "hM" = (
 /obj/effect/landmark/start/assistant,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
-"il" = (
-/obj/machinery/power/terminal,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/station/maintenance/port)
-"ip" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/service/dormitories)
+"id" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "iq" = (
 /obj/machinery/mineral/ore_redemption,
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "it" = (
 /obj/item/stack/pipe_cleaner_coil/cut/yellow,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "iw" = (
 /obj/item/paper_bin{
 	pixel_x = 6
@@ -890,13 +870,13 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay)
 "iy" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/junction/flip,
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "iC" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light{
@@ -929,41 +909,34 @@
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
-/area/station/command/bridge)
-"iF" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/bridge)
 "iH" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /obj/structure/sign/warning/engine_safety/directional/north,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "iO" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "iS" = (
 /obj/machinery/atmospherics/components/tank/air{
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "ja" = (
 /turf/closed/wall/mineral/titanium,
-/area/station/cargo/warehouse)
-"jf" = (
-/obj/structure/sign/warning/vacuum/external,
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/engineering)
 "jg" = (
 /obj/structure/closet/secure_closet/engineering_personal,
 /obj/item/clothing/gloves/color/yellow,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "jh" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/poddoor{
@@ -972,7 +945,7 @@
 	},
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/plating,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "jn" = (
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 4
@@ -984,7 +957,7 @@
 	dir = 1
 	},
 /turf/open/floor/circuit/off,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "js" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -992,22 +965,31 @@
 /obj/machinery/firealarm/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
+"jw" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/disposalpipe/segment{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "jy" = (
 /obj/machinery/vending/dinnerware,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "jA" = (
 /obj/machinery/firealarm/directional/north,
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "jC" = (
 /obj/structure/closet/wardrobe/grey,
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/carpet,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "jE" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 4
@@ -1017,7 +999,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "jN" = (
 /obj/structure/frame/computer{
 	anchored = 1;
@@ -1026,13 +1008,13 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/dark/diagonal_centre,
 /turf/open/floor/iron/white/diagonal,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "jP" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "jS" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/public/glass{
@@ -1042,7 +1024,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "jT" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -1052,35 +1034,33 @@
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "jU" = (
 /turf/open/floor/iron/dark/textured,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "jV" = (
 /obj/structure/chair{
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "ka" = (
 /obj/machinery/pipedispenser,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
+"kd" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
+"ke" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/bridge)
 "kf" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
-"ki" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "kj" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/status_display/shuttle{
@@ -1088,28 +1068,18 @@
 	},
 /obj/machinery/suit_storage_unit/standard_unit,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "kl" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
-"kp" = (
-/obj/machinery/atmospherics/pipe/layer_manifold/supply/hidden{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/starboard)
-"kq" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/service/dormitories)
+"kw" = (
+/obj/structure/sign/warning/vacuum/external,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "kE" = (
 /obj/machinery/light{
 	dir = 4
@@ -1119,15 +1089,19 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/science/robotics/lab)
-"kH" = (
-/obj/effect/turf_decal/tile/neutral,
-/turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "kJ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
+"kN" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/research/robotics)
 "kO" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering"
@@ -1140,21 +1114,12 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "kS" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_white,
-/area/station/science/robotics/lab)
-"kU" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/disposalpipe/segment{
-	dir = 8
-	},
-/turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "kW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -1163,25 +1128,25 @@
 /obj/item/stack/tile/iron/dark,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "lc" = (
 /obj/item/storage/bag/trash,
 /obj/item/mop,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "lf" = (
 /obj/machinery/suit_storage_unit/atmos,
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "lg" = (
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
 /turf/open/floor/iron/dark,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "lh" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/assistant,
@@ -1189,7 +1154,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "li" = (
 /obj/machinery/computer/helm,
 /obj/effect/turf_decal/tile/dark_blue/half{
@@ -1198,17 +1163,17 @@
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "lk" = (
 /obj/machinery/light,
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "ln" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/smooth,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "lq" = (
 /obj/machinery/light{
 	dir = 8
@@ -1218,7 +1183,7 @@
 	},
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "lv" = (
 /obj/effect/turf_decal/trimline/brown/line{
 	dir = 8
@@ -1230,7 +1195,13 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
+"lH" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
+"lI" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "lO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /obj/structure/cable,
@@ -1238,29 +1209,32 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "lT" = (
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "lU" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark,
 /turf/open/floor/engine/hull,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
+"lW" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "lX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable/layer3,
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "lY" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "md" = (
 /obj/machinery/door/airlock/maintenance/external,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
@@ -1268,7 +1242,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
+"mf" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/research)
 "mj" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -1284,7 +1261,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "mk" = (
 /obj/effect/decal/cleanable/oil,
 /obj/effect/turf_decal/tile/red/half/contrasted,
@@ -1295,7 +1272,7 @@
 	dir = 8
 	},
 /turf/open/floor/circuit/off,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "ml" = (
 /obj/structure/cable,
 /obj/machinery/power/port_gen/pacman/pre_loaded,
@@ -1303,14 +1280,14 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "mn" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer2{
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/thinplating_new/dark,
 /turf/open/floor/engine/hull,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "mo" = (
 /obj/structure/cable,
 /obj/machinery/light{
@@ -1320,13 +1297,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/junction/flip,
 /turf/open/floor/catwalk_floor/iron,
-/area/station/hallway/primary/aft)
-"mp" = (
-/obj/machinery/power/shuttle_engine/ship/fueled/plasma{
-	dir = 1
-	},
+/area/shuttle/voidcrew/osprey/hallway/aft)
+"mt" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "mv" = (
 /obj/machinery/door/airlock/mining/glass{
 	name = "Cargo Bay"
@@ -1341,10 +1316,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/cargo/office)
-"mE" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "mI" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -1354,7 +1326,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "mJ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1363,7 +1335,7 @@
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/bin,
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "mQ" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/light{
@@ -1371,7 +1343,7 @@
 	},
 /obj/machinery/suit_storage_unit/standard_unit,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "mR" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -1380,7 +1352,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "mV" = (
 /obj/effect/turf_decal/siding/thinplating_new/light{
 	dir = 1
@@ -1391,23 +1363,23 @@
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "na" = (
 /obj/effect/landmark/start/scientist,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "nh" = (
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "nk" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "nl" = (
 /obj/machinery/light{
 	dir = 4
@@ -1419,13 +1391,13 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "nn" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "no" = (
 /obj/structure/cable,
 /obj/structure/window/reinforced/plasma/spawner,
@@ -1438,7 +1410,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "ns" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor/shutters{
@@ -1447,21 +1419,25 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "nu" = (
 /obj/effect/spawner/random/maintenance/three,
 /obj/structure/closet/cardboard{
 	name = "forgotten IKEA box"
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
+"nG" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/engineering)
 "nI" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "nK" = (
 /obj/item/bodypart/chest/robot,
 /obj/item/bodypart/head/robot,
@@ -1481,7 +1457,7 @@
 /obj/item/bodypart/arm/right/robot,
 /obj/effect/spawner/random/maintenance,
 /turf/open/floor/iron,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "nM" = (
 /obj/structure/table,
 /obj/item/clothing/glasses/welding,
@@ -1493,7 +1469,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "nO" = (
 /obj/structure/closet/crate,
 /obj/item/stack/sheet/glass/fifty,
@@ -1501,7 +1477,7 @@
 /obj/effect/decal/cleanable/oil,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/smooth,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "nS" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -1512,32 +1488,29 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
-"nT" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "oa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay)
 "ob" = (
 /obj/structure/filingcabinet,
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/carpet,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "og" = (
 /turf/open/floor/catwalk_floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "ok" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/junction,
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "op" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable,
@@ -1545,39 +1518,35 @@
 	pixel_x = -32
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "ow" = (
 /obj/machinery/airalarm/directional/north,
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "ox" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "oy" = (
 /obj/machinery/power/terminal,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "oA" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
 /obj/machinery/door/airlock/external/glass,
-/obj/docking_port/mobile/voidcrew{
-	dir = 4;
-	launch_status = 0;
-	port_direction = 8
-	},
 /obj/effect/turf_decal/stripes{
 	dir = 8
 	},
+/obj/docking_port/mobile/voidcrew/osprey,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "oE" = (
 /obj/structure/cable,
 /obj/machinery/light{
@@ -1591,7 +1560,7 @@
 /obj/machinery/cell_charger,
 /obj/item/stock_parts/cell/high,
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "oI" = (
 /obj/machinery/light{
 	dir = 1
@@ -1605,7 +1574,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "oK" = (
 /obj/machinery/firealarm/directional/west,
 /obj/structure/cable,
@@ -1615,7 +1584,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/wood,
-/area/station/command/heads_quarters/qm)
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
 "oL" = (
 /obj/machinery/atmospherics/pipe/layer_manifold/visible{
 	dir = 4
@@ -1624,7 +1593,15 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
+"oN" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "oO" = (
 /obj/effect/decal/cleanable/oil,
 /obj/item/radio/intercom/directional/west{
@@ -1635,18 +1612,21 @@
 /obj/effect/spawner/random/maintenance,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "oP" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/crate/internals,
 /turf/open/floor/iron/smooth,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
+"oQ" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/research)
 "oR" = (
 /obj/machinery/status_display/shuttle{
 	pixel_y = 32
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/command/heads_quarters/qm)
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
 "oW" = (
 /obj/machinery/door/airlock/command{
 	name = "Quartermaster's Office"
@@ -1658,7 +1638,19 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
-/area/station/command/heads_quarters/qm)
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
+"oX" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
+"pa" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/item/stack/tile/iron/dark,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "pf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -1671,18 +1663,21 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "pi" = (
 /obj/structure/mecha_wreckage/ripley,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/recharge_floor,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
+"pk" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "pr" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/junction/flip,
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "ps" = (
 /obj/item/food/canned/beans{
 	pixel_x = -5;
@@ -1718,20 +1713,34 @@
 /obj/item/food/rationpack,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/smooth,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
+"px" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
+"pB" = (
+/obj/machinery/atmospherics/pipe/layer_manifold/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/hallway/port)
 "pC" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "pE" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "pF" = (
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 1
@@ -1739,17 +1748,11 @@
 /obj/effect/turf_decal/siding/thinplating_new,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/circuit/off,
-/area/station/science/robotics/lab)
-"pJ" = (
+/area/shuttle/voidcrew/osprey/research/robotics)
+"pI" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
-/area/station/commons/dorms)
-"pO" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/hallway/primary/aft)
-"pT" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "pU" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1758,13 +1761,14 @@
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
-"pY" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/command/heads_quarters/qm)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
+"pV" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "qa" = (
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "qc" = (
 /obj/effect/turf_decal/tile/red/half/contrasted{
 	dir = 1
@@ -1775,7 +1779,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/circuit/off,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "qe" = (
 /obj/machinery/autolathe,
 /obj/effect/turf_decal/tile/purple{
@@ -1786,10 +1790,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured,
-/area/station/science/research)
-"qf" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/research)
 "qg" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes{
@@ -1800,20 +1801,14 @@
 	dir = 2
 	},
 /turf/open/floor/iron,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "qj" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/junction/yjunction,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
-"qn" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/command/bridge)
-"qq" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "qy" = (
 /obj/structure/sink/directional/south,
 /obj/structure/mirror{
@@ -1821,16 +1816,7 @@
 	},
 /obj/effect/landmark/start/assistant,
 /turf/open/floor/iron/dark,
-/area/station/commons/dorms)
-"qA" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/item/stack/tile/iron/dark,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "qC" = (
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=med";
@@ -1839,7 +1825,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "qD" = (
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/layer2{
@@ -1847,18 +1833,18 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "qK" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 2
 	},
 /obj/machinery/disposal/bin,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "qO" = (
 /obj/structure/frame/machine,
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "qP" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -1867,21 +1853,21 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "qT" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/catwalk_floor/iron_white,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "qZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/catwalk_floor/iron_smooth,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "rb" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "rh" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1890,10 +1876,10 @@
 	dir = 2
 	},
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "rj" = (
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "rm" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/machinery/light/small{
@@ -1901,14 +1887,14 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "rn" = (
 /obj/machinery/vending/wardrobe/cargo_wardrobe,
 /obj/effect/turf_decal/siding/thinplating_new{
 	dir = 8
 	},
 /turf/open/floor/iron/smooth,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "rq" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1917,7 +1903,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "rs" = (
 /obj/structure/sign/poster/official/random/directional/west,
 /obj/structure/frame/computer{
@@ -1925,7 +1911,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "ru" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -1938,12 +1924,12 @@
 /obj/structure/bedsheetbin,
 /obj/structure/table/wood,
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "rv" = (
 /obj/effect/landmark/start/cook,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "rD" = (
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/chair/office{
@@ -1954,7 +1940,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "rF" = (
 /obj/structure/table,
 /obj/effect/turf_decal/siding/red{
@@ -1964,17 +1950,14 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
-"rM" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "rN" = (
 /obj/structure/sign/nanotrasen{
 	pixel_y = 32
 	},
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "rW" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1984,7 +1967,7 @@
 	},
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/catwalk_floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "rX" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -1992,10 +1975,7 @@
 /obj/machinery/light,
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/iron,
-/area/station/science/robotics/lab)
-"sf" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "sl" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2004,23 +1984,31 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/hallway/primary/port)
-"sn" = (
+/area/shuttle/voidcrew/osprey/hallway/port)
+"sr" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/medbay/lobby)
+"su" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor/shutters{
 	id = "ospreywindows";
 	name = "Blast Shutters"
 	},
 /turf/open/floor/plating,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
+"sv" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/engineering)
 "sw" = (
 /obj/structure/cable,
 /obj/machinery/power/port_gen/pacman/pre_loaded,
 /turf/open/floor/plating,
-/area/station/engineering/main)
-"sB" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/engineering)
 "sG" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Canteen"
@@ -2029,11 +2017,11 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "sH" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "sM" = (
 /obj/machinery/light,
 /obj/machinery/status_display/shuttle{
@@ -2047,22 +2035,22 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/smooth,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "sN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "sU" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "ospreybridge"
 	},
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "sZ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "ta" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2071,35 +2059,27 @@
 	dir = 8
 	},
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "tc" = (
 /obj/effect/turf_decal/stripes{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "td" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "ospreybridge"
 	},
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
-/area/station/command/bridge)
-"te" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/bridge)
 "tf" = (
 /obj/machinery/vending/coffee,
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "tj" = (
 /obj/structure/sign/nanotrasen{
 	pixel_y = 32
@@ -2108,21 +2088,21 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "tr" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /turf/open/floor/carpet/royalblue,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "tF" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "tH" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/janitor,
@@ -2130,33 +2110,44 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
+"tI" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/research/robotics)
+"tM" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/medbay)
 "tO" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
 /obj/structure/cable,
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "tV" = (
 /obj/structure/table_frame,
 /obj/effect/turf_decal/tile/red/diagonal_centre,
 /turf/open/floor/iron/white/diagonal,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "tW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/visible/layer4,
 /obj/effect/turf_decal/stripes{
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "tX" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
+"ue" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "uf" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2166,7 +2157,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "ug" = (
 /obj/item/radio/intercom/directional/east,
 /obj/machinery/computer/cargo/express{
@@ -2174,7 +2165,7 @@
 	},
 /obj/structure/sign/poster/official/random/directional/south,
 /turf/open/floor/wood,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "ui" = (
 /obj/machinery/door/airlock/research/glass{
 	name = "Laboratory"
@@ -2182,7 +2173,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/tile/purple/half/contrasted,
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "un" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2190,18 +2181,18 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "up" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "ut" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "uu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange,
 /obj/machinery/light/small{
@@ -2209,17 +2200,17 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
-"uD" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
+"uA" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/hallway/port)
 "uE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/extinguisher_cabinet/directional/west,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "uH" = (
 /obj/structure/filingcabinet,
 /obj/structure/extinguisher_cabinet/directional/south,
@@ -2232,7 +2223,18 @@
 /turf/open/floor/iron/dark/smooth_corner{
 	dir = 8
 	},
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
+"uK" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/medbay/lobby)
+"uL" = (
+/turf/open/floor/iron/white,
+/area/shuttle/voidcrew/osprey/research)
 "uP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -2245,7 +2247,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "uY" = (
 /obj/effect/decal/cleanable/oil/streak,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -2259,13 +2261,13 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "uZ" = (
 /obj/effect/turf_decal/siding/thinplating_new/light{
 	dir = 1
 	},
 /turf/open/floor/iron/dark,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "va" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering"
@@ -2275,7 +2277,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "vj" = (
 /obj/machinery/door/airlock/mining/glass{
 	name = "Cargo Bay"
@@ -2287,7 +2289,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "vm" = (
 /obj/structure/table,
 /obj/item/mmi/posibrain,
@@ -2295,7 +2297,7 @@
 	dir = 10
 	},
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "vo" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -2305,21 +2307,22 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
-"vp" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
-/area/station/command/bridge)
-"vv" = (
-/turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "vz" = (
 /obj/structure/chair{
 	dir = 1
 	},
 /obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
+"vA" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/hallway/central)
 "vB" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2329,14 +2332,14 @@
 	},
 /obj/structure/chair/stool/bar/directional/west,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "vD" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "vN" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
@@ -2351,14 +2354,14 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "vS" = (
 /obj/machinery/atmospherics/components/tank/plasma{
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "vT" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2371,7 +2374,7 @@
 	location = "bridge"
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "vW" = (
 /obj/structure/sign/poster/official/random/directional/west,
 /obj/effect/turf_decal/trimline/brown/line{
@@ -2384,7 +2387,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "we" = (
 /obj/machinery/modular_computer/console/preset/id,
 /obj/effect/turf_decal/tile/dark_blue/half{
@@ -2393,7 +2396,7 @@
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "wi" = (
 /obj/structure/aquarium/prefilled,
 /obj/item/fish_feed{
@@ -2401,13 +2404,13 @@
 	pixel_x = 8
 	},
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "wj" = (
 /obj/effect/turf_decal/trimline/neutral/warning,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "wl" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2418,25 +2421,22 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "wo" = (
 /obj/effect/turf_decal/stripes{
 	dir = 1
 	},
 /turf/open/floor/plating/airless,
-/area/station/cargo/miningoffice)
-"wt" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/command/heads_quarters/qm)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "wv" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "ww" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "wP" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -2447,7 +2447,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "wV" = (
 /obj/structure/cable,
 /obj/machinery/light{
@@ -2458,15 +2458,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/poster/official/random/directional/west,
 /turf/open/floor/iron/white,
-/area/station/science/research)
-"wW" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/command/heads_quarters/qm)
+/area/shuttle/voidcrew/osprey/research)
 "wY" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -2476,27 +2468,31 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "xh" = (
 /turf/closed/wall/mineral/titanium/interior,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "xi" = (
 /obj/structure/closet/emcloset,
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/carpet,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
+"xk" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "xw" = (
 /obj/machinery/atmospherics/components/binary/pump,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "xx" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "xM" = (
 /obj/structure/cable,
 /obj/machinery/navbeacon{
@@ -2504,7 +2500,7 @@
 	location = "med"
 	},
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "xS" = (
 /obj/machinery/light{
 	dir = 4
@@ -2513,18 +2509,18 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "xV" = (
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "yj" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "ym" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -2537,28 +2533,28 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
+"yx" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "yB" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
-"yG" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/cargo/warehouse)
-"yU" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/central)
+"yE" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
 "yV" = (
 /obj/effect/turf_decal/siding/thinplating_new/light,
 /turf/open/floor/iron/dark,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
+"yX" = (
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/engineering)
 "yZ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/fax{
@@ -2572,10 +2568,15 @@
 	dir = 1
 	},
 /turf/open/floor/iron/dark/smooth_corner,
-/area/station/command/bridge)
-"zb" = (
-/turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/bridge)
+"ze" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/service/janitor)
 "zh" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2584,7 +2585,7 @@
 	location = "dorms"
 	},
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "zk" = (
 /obj/structure/table,
 /obj/item/storage/box/mousetraps,
@@ -2593,7 +2594,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "zm" = (
 /obj/machinery/button/door{
 	dir = 8;
@@ -2606,13 +2607,13 @@
 	pixel_y = -9
 	},
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "zs" = (
 /obj/structure/chair/office,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/dark/diagonal_centre,
 /turf/open/floor/iron/white/diagonal,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "zv" = (
 /obj/effect/turf_decal/trimline/brown/line{
 	dir = 8
@@ -2621,7 +2622,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "zz" = (
 /obj/structure/sign/poster/contraband/random{
 	pixel_y = 32
@@ -2630,7 +2631,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "zF" = (
 /obj/structure/closet/secure_closet/quartermaster,
 /obj/structure/window/reinforced/survival_pod{
@@ -2640,14 +2641,11 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/orange,
-/area/station/command/heads_quarters/qm)
-"zI" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
 "zJ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "zL" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -2657,16 +2655,12 @@
 	pixel_x = -32
 	},
 /turf/open/floor/iron/dark,
-/area/station/hallway/primary/starboard)
-"zQ" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "zW" = (
 /obj/machinery/pdapainter,
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/carpet/blue,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "Ac" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -2675,7 +2669,7 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "Am" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/navbeacon{
@@ -2683,7 +2677,7 @@
 	location = "rnd"
 	},
 /turf/open/floor/catwalk_floor/iron_white,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "Av" = (
 /obj/structure/table,
 /obj/effect/turf_decal/siding/red,
@@ -2702,7 +2696,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "Aw" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -2710,7 +2704,7 @@
 /obj/structure/sign/warning/electric_shock/directional/east,
 /obj/structure/tank_dispenser,
 /turf/open/floor/iron/smooth_large,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "Ax" = (
 /obj/effect/landmark/start/scientist,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -2718,7 +2712,7 @@
 	},
 /obj/structure/chair/stool,
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "AD" = (
 /obj/machinery/light,
 /obj/machinery/status_display/shuttle{
@@ -2728,10 +2722,10 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "AH" = (
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "AK" = (
 /obj/effect/turf_decal/trimline/neutral/warning,
 /obj/machinery/button/door{
@@ -2747,7 +2741,7 @@
 	pixel_x = 6
 	},
 /turf/open/floor/iron/textured_large,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "AL" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2756,14 +2750,14 @@
 	},
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "AM" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/stripes{
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "AP" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -2778,13 +2772,13 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "AW" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
 /turf/open/floor/carpet/blue,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "AZ" = (
 /obj/structure/tank_dispenser/oxygen,
 /obj/structure/sign/poster/official/safety_internals{
@@ -2792,7 +2786,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "Bl" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Infirmary"
@@ -2801,7 +2795,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay)
 "Bq" = (
 /obj/machinery/status_display/shuttle{
 	pixel_y = 32
@@ -2809,11 +2803,10 @@
 /obj/structure/closet/secure_closet/miner/unlocked,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
-"Bs" = (
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
+"Bz" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/research/robotics)
 "BC" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -2827,35 +2820,33 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
+"BD" = (
+/turf/open/floor/iron,
+/area/shuttle/voidcrew/osprey/cargo)
 "BG" = (
 /obj/machinery/airalarm/directional/east,
 /obj/structure/chair/sofa/bench/right{
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "BM" = (
 /obj/structure/chair/office{
 	dir = 4
 	},
 /obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/iron/dark,
-/area/station/engineering/atmos)
-"BR" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
+"BQ" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/bridge)
 "BW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/stairs{
 	dir = 4
 	},
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "Cb" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
@@ -2864,12 +2855,12 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "Cd" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "Cf" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -2886,7 +2877,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/departments/science/alt/directional/west,
 /turf/open/floor/iron,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "Ch" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -2897,18 +2888,18 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "Ck" = (
 /obj/structure/cable,
 /obj/effect/spawner/random/maintenance,
 /obj/effect/spawner/random/maintenance,
 /obj/structure/closet/crate,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "Cm" = (
 /obj/effect/turf_decal/bot/left,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "Cn" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor/heavy,
@@ -2920,14 +2911,14 @@
 	id = "ospreycargo"
 	},
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "Cr" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/cargo)
 "Ct" = (
 /obj/structure/cable,
 /obj/structure/table,
@@ -2951,7 +2942,7 @@
 	dir = 9
 	},
 /turf/open/floor/iron/dark/textured,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "CA" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor/shutters{
@@ -2959,14 +2950,14 @@
 	name = "Blast Shutters"
 	},
 /turf/open/floor/plating,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/research)
 "CI" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/visible/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible/layer2,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "CQ" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -2983,7 +2974,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "CR" = (
 /obj/effect/turf_decal/stripes{
 	dir = 8
@@ -2992,7 +2983,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/smooth,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "CW" = (
 /obj/item/trash/cheesie,
 /obj/effect/turf_decal/tile/red/opposingcorners,
@@ -3001,17 +2992,17 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/circuit/off,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "Dc" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "Dg" = (
 /obj/machinery/vending/cigarette,
 /obj/machinery/light,
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "Di" = (
 /obj/machinery/disposal/bin,
 /obj/machinery/light,
@@ -3019,13 +3010,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
-"Do" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/medical/medbay/central)
-"Dp" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "Ds" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
@@ -3034,7 +3019,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "Dw" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 4
@@ -3043,7 +3028,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "Dz" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -3054,25 +3039,25 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "DC" = (
 /obj/machinery/atmospherics/components/binary/pump,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "DD" = (
 /obj/machinery/atmospherics/pipe/layer_manifold/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "DG" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /obj/item/analyzer,
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "DI" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3084,23 +3069,19 @@
 	pixel_y = 5
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "DP" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /obj/machinery/light/small,
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "DQ" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "DX" = (
 /obj/structure/sign/departments/medbay/alt,
 /turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/medical/medbay/lobby)
-"Ed" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay)
 "Ei" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -3116,7 +3097,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "Eo" = (
 /obj/machinery/light/small,
 /obj/structure/table,
@@ -3125,11 +3106,11 @@
 /obj/machinery/firealarm/directional/south,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "Ep" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Er" = (
 /obj/machinery/computer/operating,
 /obj/machinery/airalarm/directional/west,
@@ -3137,14 +3118,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/medical/medbay/central)
-"Eu" = (
-/obj/structure/cable,
-/obj/machinery/power/shuttle_engine/ship/electric{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/medbay)
 "Ev" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3153,7 +3127,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "EB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange,
 /obj/machinery/light/small{
@@ -3161,7 +3135,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "ED" = (
 /obj/machinery/light{
 	dir = 8
@@ -3171,20 +3145,24 @@
 	},
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
+"EE" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "EL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "EO" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "EQ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3192,12 +3170,12 @@
 	dir = 5
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "ER" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "ES" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -3209,7 +3187,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "EW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -3222,7 +3200,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "Fb" = (
 /obj/structure/bed/pod,
 /obj/item/bedsheet/qm,
@@ -3232,7 +3210,7 @@
 	dir = 8
 	},
 /turf/open/floor/carpet/orange,
-/area/station/command/heads_quarters/qm)
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
 "Fn" = (
 /obj/structure/chair/office/light{
 	dir = 4
@@ -3240,13 +3218,13 @@
 /obj/effect/landmark/start/paramedic,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "Ft" = (
 /obj/structure/chair{
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "Fu" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -3257,7 +3235,7 @@
 	},
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/iron/smooth_large,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "Fy" = (
 /obj/structure/closet/secure_closet/medical3,
 /obj/effect/turf_decal/trimline/blue/filled/corner{
@@ -3270,7 +3248,7 @@
 	dir = 5
 	},
 /turf/open/floor/iron,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "FA" = (
 /obj/machinery/computer/med_data/laptop{
 	dir = 8
@@ -3281,7 +3259,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay)
 "FC" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3294,7 +3272,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "FE" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "ospreybridge"
@@ -3303,10 +3281,10 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "FG" = (
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "FL" = (
 /obj/structure/sign/warning/no_smoking/directional/west,
 /obj/structure/closet/secure_closet/medical3,
@@ -3320,7 +3298,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "FO" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/condiment/peppermill{
@@ -3340,7 +3318,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Gb" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /obj/machinery/light/small{
@@ -3348,7 +3326,7 @@
 	},
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "Gf" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -3359,7 +3337,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "Gn" = (
 /obj/effect/decal/cleanable/oil/streak,
 /obj/effect/turf_decal/tile/red/half/contrasted{
@@ -3369,13 +3347,13 @@
 	dir = 8
 	},
 /turf/open/floor/circuit/off,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "Gp" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/machinery/airalarm/directional/west,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "Gv" = (
 /obj/machinery/door/airlock/research/glass{
 	name = "Laboratory"
@@ -3384,7 +3362,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "Gw" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Infirmary"
@@ -3396,25 +3374,22 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay)
 "Gy" = (
 /obj/effect/turf_decal/bot_white/right,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
-"GD" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "Hd" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/item/radio/intercom/directional/north,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "He" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "Hh" = (
 /obj/machinery/light,
 /obj/structure/cable/layer3,
@@ -3425,46 +3400,42 @@
 /obj/effect/decal/cleanable/oil/streak,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "Hp" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/medbay)
 "Hq" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "Hs" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Hv" = (
 /obj/structure/sign/poster/official/random{
 	pixel_x = -32
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "HB" = (
 /obj/structure/closet,
 /obj/item/stack/sheet/mineral/plasma/thirty,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
-"HD" = (
-/obj/structure/sign/departments/medbay/alt,
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/engineering)
 "HE" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/catwalk_floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "HF" = (
 /obj/machinery/computer/rdconsole,
 /obj/effect/turf_decal/tile/dark_blue/half{
@@ -3473,7 +3444,14 @@
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
+"HH" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/iron,
+/area/shuttle/voidcrew/osprey/hallway/central)
 "HM" = (
 /obj/effect/turf_decal/tile/red/half/contrasted,
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -3481,34 +3459,32 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/circuit/off,
-/area/station/science/robotics/lab)
-"HS" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "HV" = (
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "HZ" = (
 /obj/structure/closet/secure_closet/atmospherics,
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
-"Id" = (
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
+"Ig" = (
+/obj/machinery/door/airlock/maintenance/external,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/maintenance/port)
-"If" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/commons/dorms)
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/shuttle/voidcrew/osprey/hallway/port)
 "Im" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "Ir" = (
 /obj/structure/cable,
 /obj/machinery/door/airlock/public/glass{
@@ -3516,11 +3492,11 @@
 	},
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/iron,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "Is" = (
 /obj/effect/turf_decal/tile/dark_blue/diagonal_centre,
 /turf/open/floor/iron/dark,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "Ix" = (
 /obj/structure/table,
 /obj/item/folder/yellow,
@@ -3532,7 +3508,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "IA" = (
 /obj/machinery/light{
 	dir = 1
@@ -3541,32 +3517,32 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "IB" = (
 /obj/structure/table,
 /obj/item/circuitboard/aicore,
 /obj/effect/turf_decal/siding/red,
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "IM" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "IN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/dark,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "IS" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "IZ" = (
 /obj/machinery/disposal/bin,
 /obj/machinery/light/small{
@@ -3576,11 +3552,11 @@
 	dir = 4
 	},
 /turf/open/floor/iron/smooth_large,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "Ji" = (
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "Jk" = (
 /obj/structure/chair{
 	dir = 4
@@ -3589,7 +3565,7 @@
 	dir = 4
 	},
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Jn" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -3599,15 +3575,7 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/iron/dark,
-/area/station/cargo/warehouse)
-"Jt" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "Ju" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -3619,7 +3587,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "JB" = (
 /obj/structure/table/reinforced,
 /obj/item/clipboard,
@@ -3636,7 +3604,7 @@
 	id = "ospreysci"
 	},
 /turf/open/floor/iron,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "JC" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3647,14 +3615,21 @@
 /mob/living/simple_animal/hostile/lizard/wags_his_tail,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "JF" = (
 /obj/machinery/door/airlock/research/glass{
 	name = "Laboratory"
 	},
 /obj/effect/turf_decal/tile/purple/half/contrasted,
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
+"JK" = (
+/obj/structure/cable,
+/obj/machinery/power/shuttle_engine/ship/electric{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "JO" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/mechanical{
@@ -3668,7 +3643,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "JQ" = (
 /obj/structure/railing,
 /obj/machinery/holopad,
@@ -3677,7 +3652,7 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "JR" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3686,7 +3661,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "JS" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3701,11 +3676,7 @@
 	pixel_x = 7
 	},
 /turf/open/floor/iron,
-/area/station/cargo/office)
-"JU" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo)
 "JV" = (
 /obj/machinery/light{
 	dir = 1
@@ -3713,7 +3684,7 @@
 /obj/effect/turf_decal/tile/neutral,
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "Kd" = (
 /obj/structure/cable,
 /obj/structure/frame/machine,
@@ -3721,14 +3692,17 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark/textured,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "Kh" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /obj/effect/spawner/random/vending/snackvend,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
+"Ki" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Kl" = (
 /obj/structure/closet/secure_closet{
 	icon_door = "mixed";
@@ -3745,7 +3719,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "Ko" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
@@ -3754,13 +3728,13 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "Kt" = (
 /obj/effect/turf_decal/stripes{
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "Ky" = (
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/vending/wardrobe/science_wardrobe,
@@ -3768,7 +3742,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "KA" = (
 /obj/effect/turf_decal/tile/red/half/contrasted,
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -3778,7 +3752,7 @@
 	dir = 4
 	},
 /turf/open/floor/circuit/off,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "KE" = (
 /obj/structure/table,
 /obj/item/clipboard,
@@ -3791,17 +3765,31 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/station/command/heads_quarters/qm)
-"KO" = (
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
+"KI" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
+"KL" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/service/dormitories)
+"KN" = (
+/obj/structure/window/reinforced/plasma/spawner/west,
+/obj/structure/window/reinforced/plasma/spawner/north,
+/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/maintenance/port)
+"KO" = (
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "KT" = (
 /obj/structure/chair/sofa/bench/left{
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "KV" = (
 /obj/machinery/light,
 /obj/effect/turf_decal/stripes/corner{
@@ -3809,7 +3797,7 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "Ld" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -3817,7 +3805,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "Lh" = (
 /obj/item/storage/backpack,
 /obj/item/clothing/gloves/color/white,
@@ -3825,22 +3813,19 @@
 /obj/machinery/airalarm/directional/south,
 /obj/structure/closet/secure_closet/hop,
 /turf/open/floor/carpet/blue,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "Lj" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron,
-/area/station/hallway/primary/aft)
-"Lk" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "Lq" = (
 /obj/machinery/firealarm/directional/east,
 /obj/structure/ore_box,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "Lt" = (
 /obj/machinery/power/smes/engineering{
 	dir = 1
@@ -3858,7 +3843,7 @@
 	name = "Thruster Blast Door"
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "LB" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /obj/item/wrench,
@@ -3866,24 +3851,24 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "LO" = (
 /obj/structure/sign/poster/official/random/directional/north,
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
-"LP" = (
+/area/shuttle/voidcrew/osprey/hallway/aft)
+"LT" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/turf/open/floor/iron/dark,
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
+"Ma" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor/shutters{
 	id = "ospreywindows";
 	name = "Blast Shutters"
 	},
 /turf/open/floor/plating,
-/area/station/science/research)
-"LT" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "Mj" = (
 /obj/machinery/light{
 	dir = 1
@@ -3891,10 +3876,10 @@
 /obj/structure/closet/secure_closet/miner/unlocked,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "Ml" = (
-/turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/hallway/central)
 "Mm" = (
 /obj/machinery/cryopod,
 /obj/machinery/computer/cryopod{
@@ -3907,18 +3892,18 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "Mn" = (
 /obj/machinery/newscaster/directional/south,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "Mo" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/white,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "Mp" = (
 /obj/machinery/door/airlock/command,
 /obj/structure/cable,
@@ -3929,18 +3914,18 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/wood,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "Ms" = (
 /obj/structure/table/reinforced,
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Mw" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "Mx" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/station_engineer,
@@ -3950,7 +3935,7 @@
 	dir = 9
 	},
 /turf/open/floor/catwalk_floor/iron_smooth,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "My" = (
 /obj/structure/railing,
 /obj/effect/landmark/start/head_of_personnel,
@@ -3962,7 +3947,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron/white,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "MJ" = (
 /obj/effect/landmark/start/medical_doctor,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -3972,19 +3957,19 @@
 /obj/effect/turf_decal/trimline/dark_blue/warning,
 /obj/effect/turf_decal/siding/thinplating_new/light,
 /turf/open/floor/iron,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "MM" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "MO" = (
 /obj/effect/turf_decal/stripes{
 	dir = 8
 	},
 /turf/open/floor/iron/smooth,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "MQ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -3994,7 +3979,7 @@
 	},
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "MY" = (
 /obj/machinery/cryopod,
 /obj/machinery/light/small,
@@ -4002,11 +3987,11 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "Nb" = (
 /obj/structure/window/reinforced/plasma/spawner/north,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "Ng" = (
 /obj/machinery/computer/communications,
 /obj/effect/turf_decal/tile/dark_blue/half{
@@ -4015,14 +4000,20 @@
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
+"Nn" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/white,
+/area/shuttle/voidcrew/osprey/research)
 "Nr" = (
 /obj/structure/table,
 /obj/item/reagent_containers/cup/bucket,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "Nx" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Crew Quarters"
@@ -4031,7 +4022,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "Nz" = (
 /obj/structure/frame/machine,
 /obj/effect/turf_decal/siding/thinplating_new/light{
@@ -4039,21 +4030,32 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark/textured,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "NA" = (
 /obj/machinery/power/terminal{
 	dir = 8
 	},
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_smooth,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
+"ND" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
+"NL" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = "ospreywindows";
+	name = "Blast Shutters"
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/medbay)
 "NP" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "ospreycargo"
 	},
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "NU" = (
 /obj/machinery/door/airlock{
 	name = "Custodial Office"
@@ -4066,7 +4068,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "NV" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -4081,14 +4083,25 @@
 	},
 /obj/structure/window/spawner/north,
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
+"NX" = (
+/obj/effect/turf_decal/tile/neutral,
+/turf/open/floor/iron,
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "NY" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
+"NZ" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/hallway/aft)
+"Oa" = (
+/obj/structure/sign/warning/vacuum/external,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "Oe" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -4101,7 +4114,7 @@
 	pixel_y = 5
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "Of" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
@@ -4113,15 +4126,15 @@
 	dir = 5
 	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Ok" = (
 /obj/structure/cable/layer3,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "Os" = (
 /obj/effect/turf_decal/bot/right,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "Ov" = (
 /obj/structure/cable,
 /obj/machinery/light{
@@ -4130,7 +4143,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/catwalk_floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "Ow" = (
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom{
@@ -4154,11 +4167,11 @@
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 1
 	},
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "Ox" = (
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "OO" = (
 /obj/structure/sink/directional/east,
 /obj/effect/turf_decal/trimline/blue/filled/line,
@@ -4171,7 +4184,7 @@
 	},
 /obj/item/clothing/gloves/color/latex,
 /turf/open/floor/iron,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "OR" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4186,7 +4199,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "OU" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -4195,20 +4208,20 @@
 /obj/structure/cable/layer3,
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "OV" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "Ph" = (
 /obj/structure/table/wood,
 /obj/item/folder,
 /obj/item/pen,
 /obj/machinery/newscaster/directional/south,
 /turf/open/floor/carpet,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "Pm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /obj/effect/spawner/random/maintenance,
@@ -4217,15 +4230,7 @@
 	},
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
-"Po" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "PC" = (
 /obj/structure/window/reinforced/plasma/spawner/east,
 /obj/structure/window/reinforced/plasma/spawner/north,
@@ -4233,31 +4238,14 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
-"PJ" = (
-/obj/structure/window/reinforced/plasma/spawner/west,
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
+"PL" = (
 /obj/structure/window/reinforced/plasma/spawner/north,
-/obj/machinery/atmospherics/components/unary/outlet_injector/on{
-	dir = 1
-	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
-"PK" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/maintenance/starboard)
-"PN" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "PU" = (
 /turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/medbay)
 "PW" = (
 /obj/structure/table,
 /obj/item/flashlight/lamp{
@@ -4267,10 +4255,10 @@
 	pixel_x = -10
 	},
 /turf/open/floor/iron/dark,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "PY" = (
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "Qa" = (
 /obj/machinery/mass_driver{
 	dir = 8;
@@ -4281,7 +4269,12 @@
 /obj/item/trash/can/food/beans,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
+"Qp" = (
+/obj/machinery/power/terminal,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "Qq" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -4293,7 +4286,7 @@
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/iron/dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "Qu" = (
 /obj/machinery/computer/atmos_alert{
 	dir = 8
@@ -4303,7 +4296,15 @@
 	},
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron/dark,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
+"Qv" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "QA" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -4319,12 +4320,15 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "QB" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
+"QC" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/service/janitor)
 "QH" = (
 /obj/machinery/button/massdriver{
 	id = "osprey_disposals";
@@ -4340,7 +4344,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "QJ" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -4351,12 +4355,16 @@
 	},
 /obj/structure/fireaxecabinet/directional/west,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "QL" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
+"QP" = (
+/obj/effect/spawner/structure/window/reinforced/shuttle,
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/bridge)
 "QT" = (
 /obj/machinery/light{
 	dir = 1
@@ -4371,7 +4379,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "QV" = (
 /obj/structure/tank_dispenser/oxygen,
 /obj/structure/sign/poster/official/safety_internals{
@@ -4380,21 +4388,7 @@
 /obj/machinery/firealarm/directional/east,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/hallway/primary/port)
-"Rd" = (
-/obj/machinery/door/airlock/maintenance/external,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/dark,
-/area/station/hallway/primary/port)
-"Rg" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/iron/white,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "Rm" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -4402,7 +4396,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/dark,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
+"Rq" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "Rv" = (
 /obj/machinery/light{
 	dir = 8
@@ -4414,12 +4411,12 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "RC" = (
 /obj/machinery/airalarm/directional/south,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/smooth,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "RE" = (
 /obj/machinery/door/airlock{
 	name = "Head"
@@ -4428,19 +4425,16 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
-"RG" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "RZ" = (
 /obj/structure/dresser,
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "Sb" = (
 /obj/structure/sign/departments/custodian,
 /turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "Sc" = (
 /obj/structure/closet/crate{
 	name = "food crate"
@@ -4448,18 +4442,18 @@
 /obj/effect/spawner/random/maintenance/three,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/smooth,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "Sl" = (
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/iron,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "Sr" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "Ss" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4467,13 +4461,16 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
+"Sw" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "Sy" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "SF" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4483,13 +4480,13 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "SN" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/machinery/airalarm/directional/east,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "SO" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin{
@@ -4499,7 +4496,7 @@
 	dir = 1
 	},
 /turf/open/floor/carpet,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "SP" = (
 /obj/machinery/atmospherics/components/tank/air{
 	dir = 8
@@ -4508,7 +4505,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "SQ" = (
 /obj/structure/cable,
 /obj/structure/window/reinforced/plasma/spawner,
@@ -4520,7 +4517,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "SU" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8
@@ -4530,7 +4527,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
+"SV" = (
+/obj/machinery/door/airlock/public/glass,
+/turf/open/floor/iron,
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "SW" = (
 /obj/item/stack/sheet/glass/fifty,
 /obj/item/stack/sheet/iron/fifty,
@@ -4542,17 +4543,12 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
-"SX" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/cable,
-/turf/open/floor/iron/dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "SZ" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "Td" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -4562,14 +4558,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/service/janitor)
-"Ti" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "Tl" = (
 /obj/structure/table/reinforced,
 /obj/machinery/microwave{
@@ -4577,36 +4566,38 @@
 	},
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Tp" = (
 /obj/item/wrench,
 /turf/open/floor/plating,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "Tt" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/sign/warning/no_smoking/directional/west,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
-"Tu" = (
-/obj/structure/window/reinforced/plasma/spawner/north,
-/turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/engineering)
 "Tw" = (
 /obj/machinery/door/airlock/public/glass,
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "TA" = (
 /obj/machinery/atmospherics/components/tank/plasma{
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "TB" = (
 /obj/effect/turf_decal/bot_white/left,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
+"TF" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/hallway/aft)
+"TI" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "TJ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4618,7 +4609,7 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "TM" = (
 /obj/structure/chair{
 	dir = 8
@@ -4626,7 +4617,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "TQ" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 1
@@ -4637,7 +4628,7 @@
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/command/heads_quarters/qm)
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
 "TT" = (
 /obj/item/trash/can/food,
 /obj/effect/decal/cleanable/dirt,
@@ -4645,7 +4636,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "TU" = (
 /obj/structure/toilet{
 	dir = 4
@@ -4657,15 +4648,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/commons/dorms)
-"TV" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/machinery/door/poddoor/shutters{
-	id = "ospreywindows";
-	name = "Blast Shutters"
-	},
-/turf/open/floor/plating,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "TZ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4674,7 +4657,7 @@
 	dir = 5
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/hallway/central)
 "Ub" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -4689,11 +4672,7 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/station/command/bridge)
-"Ui" = (
-/obj/machinery/door/airlock/public/glass,
-/turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/bridge)
 "Uj" = (
 /obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
@@ -4701,10 +4680,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
-"Uk" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/hallway/primary/central)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "Um" = (
 /obj/structure/sink/kitchen/directional/east,
 /obj/structure/mirror{
@@ -4713,35 +4689,32 @@
 /obj/structure/closet/secure_closet/freezer/kitchen,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
-"Ur" = (
-/turf/closed/wall/mineral/titanium,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Uv" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron/grimy,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "UC" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/dark,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "UE" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/station/cargo/warehouse)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "UQ" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "US" = (
 /obj/machinery/door/airlock/external/glass,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -4751,18 +4724,12 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "UT" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
-"UU" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/hallway/primary/port)
-"UY" = (
-/turf/open/floor/iron/white,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Va" = (
 /obj/machinery/light/small,
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/layer2{
@@ -4770,25 +4737,25 @@
 	},
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "Vl" = (
 /obj/machinery/washing_machine,
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/dark,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "Vp" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/chair/stool/bar,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Vr" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
 "Vu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /obj/machinery/light/small{
@@ -4796,30 +4763,43 @@
 	},
 /obj/structure/sign/warning/no_smoking/directional/north,
 /turf/open/floor/plating,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "Vz" = (
 /obj/machinery/airalarm/directional/south,
 /obj/structure/chair/sofa/right/brown{
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "VF" = (
 /obj/structure/chair/stool/bar,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
+"VG" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/turf/open/floor/iron/dark,
+/area/shuttle/voidcrew/osprey/hallway/starboard)
+"VJ" = (
+/obj/machinery/power/shuttle_engine/ship/fueled/plasma{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "VM" = (
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "VO" = (
 /obj/machinery/light/small,
 /obj/structure/bed,
 /obj/item/bedsheet/hop,
 /obj/structure/curtain/cloth/fancy,
 /turf/open/floor/carpet/blue,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "VT" = (
 /obj/structure/disposaloutlet{
 	dir = 1
@@ -4836,7 +4816,7 @@
 	id = "osprey_conveyor"
 	},
 /turf/open/floor/plating,
-/area/station/service/janitor)
+/area/shuttle/voidcrew/osprey/service/janitor)
 "Wg" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
@@ -4845,21 +4825,18 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "Wh" = (
 /obj/structure/cable,
 /obj/machinery/power/shuttle_engine/ship/electric{
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
-"WJ" = (
-/turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "WK" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "WR" = (
 /obj/machinery/light{
 	dir = 1
@@ -4872,7 +4849,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
-/area/station/science/robotics/lab)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "WW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2
@@ -4881,18 +4858,18 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "WY" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible/layer2,
 /turf/open/floor/iron/dark,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
 "Xb" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/mining_dock)
 "Xd" = (
 /obj/machinery/door/window/right/directional/east{
 	name = "Kitchen"
@@ -4902,7 +4879,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/service/cafeteria)
+/area/shuttle/voidcrew/osprey/service/cafeteria)
 "Xi" = (
 /obj/structure/window/reinforced/plasma/spawner/west,
 /obj/structure/window/reinforced/plasma/spawner/north,
@@ -4910,7 +4887,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 "Xm" = (
 /obj/machinery/medical_kiosk,
 /obj/machinery/light{
@@ -4918,7 +4895,10 @@
 	},
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/wood,
-/area/station/medical/medbay/lobby)
+/area/shuttle/voidcrew/osprey/medbay/lobby)
+"Xo" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/shuttle/voidcrew/osprey/cargo)
 "Xp" = (
 /obj/effect/turf_decal/siding/yellow{
 	dir = 1
@@ -4928,7 +4908,7 @@
 /obj/effect/turf_decal/siding/wood/corner,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/wood,
-/area/station/command/heads_quarters/qm)
+/area/shuttle/voidcrew/osprey/cargo/quartermaster)
 "XB" = (
 /obj/structure/railing{
 	dir = 8
@@ -4939,13 +4919,13 @@
 	dir = 9
 	},
 /turf/open/floor/wood,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "XE" = (
 /obj/structure/reagent_dispensers,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "XH" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -4958,7 +4938,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "XL" = (
 /obj/structure/railing{
 	dir = 4
@@ -4971,7 +4951,7 @@
 	dir = 5
 	},
 /turf/open/floor/wood,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "XO" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -4979,11 +4959,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/door/airlock/public/glass,
 /turf/open/floor/iron,
-/area/station/hallway/primary/starboard)
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "XR" = (
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/iron/dark/textured,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "XS" = (
 /obj/structure/closet/secure_closet/captains{
 	icon_state = "cap";
@@ -4994,7 +4974,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/carpet/royalblue,
-/area/station/command/bridge)
+/area/shuttle/voidcrew/osprey/bridge)
 "XU" = (
 /turf/template_noop,
 /area/template_noop)
@@ -5002,18 +4982,18 @@
 /obj/machinery/suit_storage_unit/engine,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/smooth_large,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "Yd" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp,
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/carpet,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "Ym" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
-/area/station/cargo/miningoffice)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "Yn" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/trimline/blue/filled/line,
@@ -5021,7 +5001,7 @@
 /obj/effect/turf_decal/siding/thinplating_new/light,
 /obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/iron,
-/area/station/medical/medbay/central)
+/area/shuttle/voidcrew/osprey/medbay)
 "Yo" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
@@ -5030,11 +5010,24 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
-/area/station/engineering/atmos)
+/area/shuttle/voidcrew/osprey/engineering/atmospherics)
+"Yp" = (
+/turf/open/floor/iron,
+/area/shuttle/voidcrew/osprey/hallway/port)
+"Yt" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/turf/open/floor/iron,
+/area/shuttle/voidcrew/osprey/hallway/starboard)
 "Yx" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "YA" = (
 /obj/machinery/computer/monitor{
 	dir = 8
@@ -5042,27 +5035,23 @@
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/smooth_large,
-/area/station/engineering/main)
+/area/shuttle/voidcrew/osprey/engineering)
 "YK" = (
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/maintenance/port)
 "YS" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research/robotics)
 "YW" = (
 /obj/structure/frame/computer{
 	anchored = 1;
 	dir = 8
 	},
 /turf/open/floor/wood,
-/area/station/cargo/warehouse)
-"Za" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/orange/visible,
-/turf/open/floor/plating,
-/area/station/maintenance/port)
+/area/shuttle/voidcrew/osprey/cargo/warehouse)
 "Zl" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -5070,7 +5059,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron,
-/area/station/cargo/office)
+/area/shuttle/voidcrew/osprey/cargo)
 "Zs" = (
 /obj/machinery/shower/directional/east,
 /obj/structure/curtain,
@@ -5080,7 +5069,7 @@
 	dir = 4
 	},
 /turf/open/floor/iron/showroomfloor,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "Zt" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/structure/cable,
@@ -5093,29 +5082,29 @@
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/port)
+/area/shuttle/voidcrew/osprey/hallway/port)
 "ZD" = (
 /obj/structure/closet/firecloset/full,
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/carpet,
-/area/station/commons/dorms)
+/area/shuttle/voidcrew/osprey/service/dormitories)
 "ZF" = (
 /turf/open/floor/catwalk_floor/iron_dark,
-/area/station/science/research)
+/area/shuttle/voidcrew/osprey/research)
 "ZK" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "ZN" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "ZU" = (
 /obj/structure/cable,
 /obj/structure/extinguisher_cabinet/directional/south,
@@ -5123,12 +5112,12 @@
 	dir = 4
 	},
 /turf/open/floor/iron,
-/area/station/hallway/primary/aft)
+/area/shuttle/voidcrew/osprey/hallway/aft)
 "ZV" = (
 /obj/structure/cable,
 /obj/machinery/power/port_gen/pacman,
 /turf/open/floor/plating,
-/area/station/maintenance/starboard)
+/area/shuttle/voidcrew/osprey/maintenance/starboard)
 
 (1,1,1) = {"
 XU
@@ -5165,27 +5154,27 @@ XU
 XU
 XU
 XU
-HS
+Ki
 DQ
-cq
+oN
 DQ
-cq
+oN
 DQ
 DQ
-pT
+QC
 bz
-pT
-pT
-Po
-pT
-rM
+QC
+QC
+ze
+QC
+uA
 oA
-rM
-rM
-rM
-rM
-rM
-rM
+lW
+lW
+lW
+lW
+lW
+lW
 XU
 "}
 (2,1,1) = {"
@@ -5222,7 +5211,7 @@ XU
 XU
 XU
 XU
-HS
+Ki
 DQ
 Kh
 qK
@@ -5230,21 +5219,21 @@ NV
 cu
 Um
 Tl
-pT
+QC
 Qa
 VT
 rm
 lc
 ec
-Id
+sH
 Mw
-rM
+lW
 ff
 IM
 Gb
 gr
-Xi
-mp
+KN
+fU
 "}
 (3,1,1) = {"
 XU
@@ -5280,7 +5269,7 @@ XU
 XU
 XU
 XU
-cq
+oN
 Jk
 rj
 QL
@@ -5288,21 +5277,21 @@ dw
 cu
 rv
 dy
-pT
+QC
 QH
 Dw
 cC
 SZ
 Eo
-rM
+uA
 qD
-rM
+lW
 EB
 xw
 tX
 nh
 Nb
-mp
+fU
 "}
 (4,1,1) = {"
 XU
@@ -5338,7 +5327,7 @@ XU
 XU
 XU
 XU
-cq
+oN
 Ep
 sZ
 VF
@@ -5346,21 +5335,21 @@ aJ
 cu
 cu
 Ms
-pT
+QC
 Sl
 JC
 el
 tH
 fi
-rM
-DD
-rM
+uA
+pB
+lW
 SU
 DI
 eb
-Za
-ef
-mp
+Yx
+dZ
+fU
 "}
 (5,1,1) = {"
 XU
@@ -5396,7 +5385,7 @@ XU
 XU
 XU
 XU
-cq
+oN
 jV
 rj
 fR
@@ -5404,21 +5393,21 @@ aJ
 cu
 UT
 jy
-pT
+QC
 Kl
 SF
 Td
 Nr
 zk
-rM
+uA
 bf
-jf
-Uj
-rM
+Oa
+Qv
+lW
 YK
-il
+Qp
 cY
-Wh
+JK
 "}
 (6,1,1) = {"
 XU
@@ -5454,7 +5443,7 @@ XU
 XU
 XU
 XU
-HS
+Ki
 DQ
 Hs
 Vp
@@ -5462,21 +5451,21 @@ Of
 Xd
 FO
 DQ
-pT
-pT
+QC
+QC
 NU
 Sb
-pT
-pT
-pT
+QC
+QC
+uA
 sl
 mR
 Rm
-rM
+lW
 zz
-il
+Qp
 SQ
-Wh
+JK
 "}
 (7,1,1) = {"
 XU
@@ -5526,15 +5515,15 @@ uP
 fS
 gm
 fS
-Rd
+Ig
 Rm
 kW
-yU
-rM
+IN
+lW
 nu
-il
+Qp
 no
-Wh
+JK
 "}
 (8,1,1) = {"
 XU
@@ -5544,14 +5533,14 @@ XU
 XU
 XU
 XU
-hB
-zI
-gb
-zI
-zI
-gb
-zI
-hB
+Bz
+tI
+kN
+tI
+tI
+kN
+tI
+Bz
 XU
 XU
 XU
@@ -5583,15 +5572,15 @@ Zt
 nl
 bs
 Sy
-PY
-UU
+Yp
+uA
 QV
 wP
 SN
-jf
-rM
-rM
-rM
+Oa
+lW
+lW
+lW
 XU
 "}
 (9,1,1) = {"
@@ -5601,16 +5590,16 @@ XU
 XU
 XU
 XU
-hw
-zI
+Bz
+tI
 jN
 tV
 mV
 oO
 pi
 rs
-zI
-uD
+tI
+mf
 XU
 XU
 XU
@@ -5627,26 +5616,26 @@ XU
 XU
 XU
 XU
-bP
-sn
-pO
-pO
+NZ
+gZ
+DQ
+DQ
 sG
 OR
-zQ
-zQ
+KI
+KI
 DQ
-Ui
+Tw
 cS
 xh
 xh
 xh
 xh
 xh
-qf
-UU
-UU
-iF
+ja
+uA
+uA
+id
 XU
 XU
 XU
@@ -5657,18 +5646,18 @@ XU
 XU
 XU
 XU
-hw
-hw
-Dp
-zI
+oX
+oX
+Rq
+tI
 gM
 zs
 jn
 Gn
 CW
 lT
-zI
-RG
+tI
+oQ
 XU
 XU
 XU
@@ -5685,11 +5674,11 @@ XU
 XU
 XU
 XU
-sn
+gZ
 HV
 Hv
 Ox
-WJ
+PY
 aK
 EL
 EL
@@ -5701,7 +5690,7 @@ XE
 Tt
 IZ
 Fu
-qf
+ja
 lU
 XU
 XU
@@ -5712,22 +5701,22 @@ XU
 "}
 (11,1,1) = {"
 XU
-hw
-Dp
-Dp
-hw
+oX
+Rq
+Rq
+oX
 bL
 ej
-zI
+tI
 WR
 mk
 nM
 vm
 cJ
 nK
-zI
-RG
-uD
+tI
+oQ
+mf
 XU
 XU
 XU
@@ -5742,8 +5731,8 @@ XU
 XU
 XU
 XU
-Ur
-pO
+NZ
+TF
 ow
 UQ
 Ox
@@ -5769,47 +5758,47 @@ XU
 XU
 "}
 (12,1,1) = {"
-hw
-Dp
-Dp
-Dp
+oX
+Rq
+Rq
+Rq
 kj
 Cm
-aw
-KO
+FG
+mt
 qO
 HM
 JO
 IB
 pF
 rX
-RG
+tI
 Ky
-RG
-LP
-RG
-LP
-RG
-RG
-Uk
+oQ
 CA
-Uk
-Do
-Do
-TV
-Do
-TV
-Do
-Do
-pO
+oQ
+CA
+oQ
+oQ
+Ml
+vA
+Ml
+tM
+tM
+NL
+tM
+NL
+tM
+tM
+tM
 ZK
 UQ
-qn
-qn
-qn
-qn
-qn
-sB
+BQ
+BQ
+BQ
+BQ
+BQ
+ke
 FE
 Ei
 xh
@@ -5817,7 +5806,7 @@ iH
 IS
 YA
 eM
-qf
+ja
 lU
 XU
 XU
@@ -5830,11 +5819,11 @@ XU
 XU
 XU
 dr
-ap
+kw
 mQ
-aw
+FG
 fE
-KO
+mt
 SW
 KA
 rF
@@ -5852,32 +5841,32 @@ Cf
 Ss
 TZ
 Dg
-Do
+tM
 Er
 OO
 ED
 Fy
 FL
 cK
-pO
+tM
 LO
 Mn
-sB
+ke
 yZ
 hC
 zW
 Lh
-sB
+ke
 IA
 BC
 xh
 dC
 KV
-qf
-qf
-qf
-qf
-qf
+ja
+ja
+ja
+ja
+ja
 XU
 XU
 XU
@@ -5889,7 +5878,7 @@ XU
 XU
 wo
 jh
-aw
+FG
 LT
 zJ
 ui
@@ -5900,7 +5889,7 @@ qT
 kS
 lY
 gc
-Rg
+Nn
 EO
 Ct
 Kd
@@ -5910,22 +5899,22 @@ JB
 rb
 Ac
 tf
-Do
+tM
 bn
 MJ
-UY
+PU
 Dc
 tO
 ab
-pO
-kH
+tM
+NX
 UQ
 td
 Ng
 Is
 AW
 VO
-sB
+ke
 tj
 ym
 xh
@@ -5935,7 +5924,7 @@ ml
 ep
 Tp
 gu
-qf
+ja
 XU
 XU
 XU
@@ -5947,9 +5936,9 @@ XU
 XU
 wo
 jh
-aw
+FG
 Gy
-aw
+FG
 JF
 kE
 Ds
@@ -5958,7 +5947,7 @@ TT
 Cb
 xS
 Gv
-PU
+uL
 na
 uZ
 ZF
@@ -5966,16 +5955,16 @@ yV
 zm
 hq
 vD
-kU
+JR
 vz
-Do
+tM
 QT
 Yn
 Fn
 wv
 nk
 lk
-pO
+tM
 sN
 Wg
 td
@@ -5983,17 +5972,17 @@ we
 My
 BW
 XB
-vp
+QP
 ZN
 vo
-Hp
-FG
+nG
+eQ
 Ok
 tc
 qa
 it
 qa
-qf
+ja
 XU
 XU
 XU
@@ -6008,34 +5997,34 @@ jh
 vN
 vN
 hz
-yG
-yG
-yG
-yG
-yG
-yG
-yG
-RG
-RG
-RG
+tI
+tI
+tI
+tI
+tI
+tI
+tI
+tI
+oQ
+oQ
 qe
 Nz
 fx
-RG
-RG
+oQ
+oQ
 Hq
-kU
+JR
 Ft
 DX
 oa
-Ed
+Hp
 iw
 FA
 Gw
 Bl
-pO
+tM
 sN
-WJ
+PY
 td
 Ow
 JQ
@@ -6044,14 +6033,14 @@ Ub
 Mp
 vT
 wY
-Hp
-FG
+nG
+eQ
 aC
 aB
 qa
 qa
 qa
-qf
+ja
 XU
 XU
 XU
@@ -6063,7 +6052,7 @@ XU
 XU
 wo
 jh
-aw
+FG
 TB
 VM
 Jn
@@ -6076,9 +6065,9 @@ Rv
 vj
 ut
 fq
-zb
-zb
-zb
+BD
+BD
+BD
 AK
 NP
 Sr
@@ -6099,17 +6088,17 @@ li
 dK
 dJ
 XL
-vp
+QP
 QB
 vo
-Hp
-FG
+nG
+eQ
 Ok
 Kt
 qa
 gu
 qa
-qf
+ja
 XU
 XU
 XU
@@ -6121,11 +6110,11 @@ XU
 XU
 wo
 jh
-aw
+FG
 Xb
-Ym
+ue
 Qq
-SX
+Ym
 UE
 qC
 Cd
@@ -6140,7 +6129,7 @@ ES
 fD
 Cn
 pE
-kU
+JR
 yB
 Ir
 Ji
@@ -6157,7 +6146,7 @@ HF
 Is
 tr
 ae
-sB
+ke
 rN
 EW
 xh
@@ -6165,9 +6154,9 @@ jU
 aC
 AM
 sw
-Bs
+yX
 qa
-qf
+ja
 XU
 XU
 XU
@@ -6178,10 +6167,10 @@ XU
 XU
 XU
 dr
-ap
+kw
 Mj
-aw
-aw
+FG
+FG
 iq
 MO
 MO
@@ -6189,43 +6178,43 @@ MO
 MO
 CR
 MO
-ip
+xk
 wj
 mJ
 JS
 oE
-Ti
+Cr
 Zl
 CQ
-Cr
+HH
 gB
 Di
-sf
+sr
 BG
 KT
 Xm
 wi
 TM
 jT
-HD
+cW
 wl
 ZU
-sB
+ke
 uH
 iC
 dI
 XS
-sB
+ke
 JV
 EW
 xh
 ER
 Hh
 cb
-qf
-qf
-qf
-qf
+ja
+ja
+ja
+ja
 XU
 XU
 XU
@@ -6233,47 +6222,47 @@ XU
 XU
 "}
 (20,1,1) = {"
-hw
-Dp
-Dp
-Dp
+oX
+Rq
+Rq
+Rq
 Bq
 Os
-aw
-JU
+FG
+xk
 ps
 Sc
 nO
 oP
 ln
 RC
-Lk
+eO
 rn
-Lk
-BR
-Lk
-BR
-Lk
-Lk
-Uk
-CA
-Uk
-sf
-sf
-aF
-sf
-aF
-sf
-sf
-pO
+Xo
+gq
+Xo
+gq
+Xo
+Xo
+Ml
+vA
+Ml
+sr
+sr
+uK
+sr
+uK
+sr
+sr
+sr
 oI
 gX
-qn
-qn
-qn
-qn
-qn
-sB
+BQ
+BQ
+BQ
+BQ
+BQ
+ke
 sU
 mj
 xh
@@ -6281,7 +6270,7 @@ js
 OU
 fb
 eq
-qf
+ja
 lU
 XU
 XU
@@ -6292,22 +6281,22 @@ XU
 "}
 (21,1,1) = {"
 XU
-hw
-Dp
-Dp
-hw
+oX
+Rq
+Rq
+oX
 dj
 Lq
-wt
+ND
 oR
-wt
-wt
-wt
+ND
+ND
+ND
 ln
 sM
-yG
-Lk
-aX
+eO
+Xo
+aW
 XU
 XU
 XU
@@ -6322,8 +6311,8 @@ XU
 XU
 XU
 XU
-GD
-pO
+NZ
+TF
 cj
 fZ
 eY
@@ -6339,7 +6328,7 @@ gy
 lX
 bN
 NA
-kq
+sv
 lU
 XU
 XU
@@ -6353,18 +6342,18 @@ XU
 XU
 XU
 XU
-hw
-hw
-Dp
-wt
+oX
+oX
+Rq
+ND
 zF
 Xp
 oK
 oW
 qP
 rD
-yG
-Lk
+eO
+Xo
 XU
 XU
 XU
@@ -6381,23 +6370,23 @@ XU
 XU
 XU
 XU
-sn
+gZ
 fs
-WJ
-WJ
-WJ
-JR
-WJ
-WJ
+PY
+PY
+PY
+jw
+PY
+PY
 cr
-WJ
-PN
+PY
+cg
 aG
 HB
 jg
 Aw
 XX
-qf
+ja
 lU
 XU
 XU
@@ -6413,16 +6402,16 @@ XU
 XU
 XU
 XU
-hw
-wt
+oX
+ND
 Fb
 TQ
 KE
-wt
+ND
 YW
 ug
-yG
-aX
+eO
+aW
 XU
 XU
 XU
@@ -6439,26 +6428,26 @@ XU
 XU
 XU
 XU
-bP
-sn
-mE
-mE
+NZ
+gZ
+KL
+KL
 Nx
 AP
-pJ
-pJ
-mE
-Tw
+pI
+pI
+KL
+SV
 XO
 xh
 xh
 xh
 xh
-qf
-qf
-ao
-ao
-nT
+ja
+ja
+TI
+TI
+Sw
 XU
 XU
 XU
@@ -6472,14 +6461,14 @@ XU
 XU
 XU
 XU
-pY
-wt
-wW
-wt
-wt
-ki
-yG
-ja
+yE
+ND
+su
+ND
+ND
+px
+eO
+kd
 XU
 XU
 XU
@@ -6499,27 +6488,27 @@ XU
 XU
 XU
 XU
-mE
+KL
 RZ
 AH
 ta
 SO
 Yd
-If
+lI
 kf
 Ld
 lq
 nn
 bT
-Ml
-ao
+ac
+TI
 AZ
 zL
 Gp
-PK
-PK
-PK
-PK
+lH
+lH
+lH
+lH
 XU
 "}
 (25,1,1) = {"
@@ -6557,28 +6546,28 @@ XU
 XU
 XU
 XU
-mE
+KL
 ru
 zh
 cw
 lh
 Ph
-If
+lI
 WK
 Gf
-cg
-cg
+Yt
+Yt
 Ch
-cg
+Yt
 md
-IN
-qA
+VG
+pa
 gh
-PK
+lH
 ZV
 op
 Lt
-Eu
+Wh
 "}
 (26,1,1) = {"
 XU
@@ -6614,29 +6603,29 @@ XU
 XU
 XU
 XU
-If
-mE
+lI
+KL
 Uv
 kl
 nS
 fY
 ob
-If
-qq
-qq
+pk
+yx
+yx
 bQ
-qq
-qq
-qq
-qq
+yx
+yx
+yx
+TI
 Hd
 mI
 nI
-PK
+lH
 cc
 oy
 bD
-Eu
+Wh
 "}
 (27,1,1) = {"
 XU
@@ -6672,29 +6661,29 @@ XU
 XU
 XU
 XU
-te
+dd
 jC
 hM
 aE
-mE
-If
-If
-mE
+KL
+lI
+lI
+yx
 gU
 ka
 CI
 QJ
 tW
 lf
-PK
+TI
 Dz
 gF
-dm
-PK
+Uj
+lH
 Ck
 oy
 bD
-Eu
+Wh
 "}
 (28,1,1) = {"
 XU
@@ -6730,29 +6719,29 @@ XU
 XU
 XU
 XU
-te
+dd
 xi
 hM
 AH
-mE
+KL
 TU
 Zs
-If
+pk
 jP
 pC
 WY
 Yo
 oL
 HZ
-PK
-kp
-PK
+TI
+DD
+lH
 jE
 Oe
 lO
-Yx
-PJ
-fU
+EE
+Xi
+VJ
 "}
 (29,1,1) = {"
 XU
@@ -6788,29 +6777,29 @@ XU
 XU
 XU
 XU
-te
+dd
 ZD
 ww
 ww
 RE
 UC
 lg
-If
+pk
 Vu
 DG
 Ix
 BM
 LB
 DP
-PK
+TI
 Va
-sH
+pV
 uu
 DC
 tF
-vv
-Tu
-fU
+KO
+PL
+VJ
 "}
 (30,1,1) = {"
 XU
@@ -6846,29 +6835,29 @@ XU
 XU
 XU
 XU
-If
-mE
+lI
+KL
 Mm
 MY
-mE
+KL
 qy
 Vl
-If
+pk
 TA
 vS
 PW
 Qu
 SP
 iS
-PK
+TI
 kJ
-sH
+pV
 eP
 He
 Pm
-Yx
+EE
 PC
-fU
+VJ
 "}
 (31,1,1) = {"
 XU
@@ -6905,26 +6894,26 @@ XU
 XU
 XU
 XU
-If
-mE
-te
-mE
-te
-mE
-mE
-qq
-Jt
-qq
-qq
-Jt
-qq
-PK
+lI
+KL
+dd
+KL
+dd
+KL
+yx
+yx
+Ma
+yx
+yx
+Ma
+yx
+TI
 US
-PK
-PK
-PK
-PK
-PK
-PK
+lH
+lH
+lH
+lH
+lH
+lH
 XU
 "}
