@@ -15,12 +15,7 @@ export const CryoStorageConsole = (props, context) => {
 
 export const CryoStorageConsoleContent = (props, context) => {
   const { act, data } = useBackend(context);
-  const {
-    jobs = [],
-    memo,
-    awakening,
-    cooldown = 1,
-  } = data;
+  const { jobs = [], memo, awakening, cooldown = 1 } = data;
   return (
     <Section title={'Cryo Management'}>
       <LabeledList>
