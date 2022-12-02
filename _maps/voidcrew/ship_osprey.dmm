@@ -108,7 +108,7 @@
 /area/station/hallway/primary/aft)
 "aX" = (
 /turf/closed/wall/mineral/titanium,
-/area/station/external)
+/area/station/cargo/office)
 "bf" = (
 /obj/machinery/door/airlock/external/glass,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -395,8 +395,8 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port)
 "ec" = (
-/obj/structure/janitorialcart,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/mop_bucket/janitorialcart,
 /turf/open/floor/iron,
 /area/station/service/janitor)
 "ef" = (
@@ -543,7 +543,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "fU" = (
-/obj/machinery/power/shuttle_engine/fueled/plasma{
+/obj/machinery/power/shuttle_engine/ship/fueled/plasma{
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -1197,7 +1197,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
 "mp" = (
-/obj/machinery/power/shuttle_engine/fueled/plasma{
+/obj/machinery/power/shuttle_engine/ship/fueled/plasma{
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -1501,10 +1501,10 @@
 /obj/item/pickaxe,
 /obj/item/storage/bag/ore,
 /obj/item/storage/bag/ore,
-/obj/item/clothing/head/hardhat/orange,
-/obj/item/clothing/head/hardhat/orange,
 /obj/item/mining_scanner,
 /obj/item/mining_scanner,
+/obj/item/clothing/head/utility/hardhat/orange,
+/obj/item/clothing/head/utility/hardhat/orange,
 /turf/open/floor/iron,
 /area/station/cargo/warehouse)
 "oL" = (
@@ -1793,10 +1793,6 @@
 /area/station/hallway/primary/aft)
 "rX" = (
 /obj/item/bodypart/chest/robot,
-/obj/item/bodypart/r_leg/robot,
-/obj/item/bodypart/l_leg/robot,
-/obj/item/bodypart/r_arm/robot,
-/obj/item/bodypart/l_arm/robot,
 /obj/item/bodypart/head/robot,
 /obj/item/assembly/flash/handheld,
 /obj/item/assembly/flash/handheld,
@@ -1808,6 +1804,10 @@
 /obj/effect/decal/cleanable/oil,
 /obj/structure/cable,
 /obj/item/robot_suit,
+/obj/item/bodypart/leg/left/robot,
+/obj/item/bodypart/leg/right/robot,
+/obj/item/bodypart/arm/left/robot,
+/obj/item/bodypart/arm/right/robot,
 /turf/open/floor/iron/dark,
 /area/station/science/robotics/lab)
 "sf" = (
@@ -2126,6 +2126,9 @@
 /obj/structure/grille,
 /turf/open/floor/plating,
 /area/station/command/bridge)
+"vv" = (
+/turf/open/floor/plating,
+/area/station/maintenance/starboard)
 "vz" = (
 /obj/structure/chair{
 	dir = 1
@@ -2892,10 +2895,10 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "Eu" = (
-/obj/machinery/power/shuttle_engine/electric{
+/obj/structure/cable,
+/obj/machinery/power/shuttle_engine/ship/electric{
 	dir = 1
 	},
-/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "Ev" = (
@@ -3869,9 +3872,22 @@
 	},
 /turf/open/floor/plating,
 /area/station/service/janitor)
+"PC" = (
+/obj/structure/window/reinforced/plasma/spawner/east,
+/obj/structure/window/reinforced/plasma/spawner/north,
+/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/starboard)
 "PJ" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/station/external)
+/obj/structure/window/reinforced/plasma/spawner/west,
+/obj/structure/window/reinforced/plasma/spawner/north,
+/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/starboard)
 "PK" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/station/maintenance/starboard)
@@ -4161,17 +4177,7 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/main)
 "Tu" = (
-/obj/machinery/space_heater,
-/obj/structure/window/reinforced/plasma/spawner,
-/obj/machinery/door/window/left/directional/east{
-	dir = 1;
-	name = "Engine Access"
-	},
-/obj/structure/window/reinforced/plasma/spawner/east,
-/obj/machinery/door/poddoor{
-	id = "osprey_thruster_starboard";
-	name = "Thruster Blast Door"
-	},
+/obj/structure/window/reinforced/plasma/spawner/north,
 /turf/open/floor/plating,
 /area/station/maintenance/starboard)
 "Tw" = (
@@ -4411,10 +4417,10 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/aft)
 "Wh" = (
-/obj/machinery/power/shuttle_engine/electric{
+/obj/structure/cable,
+/obj/machinery/power/shuttle_engine/ship/electric{
 	dir = 1
 	},
-/obj/structure/cable,
 /turf/open/floor/plating,
 /area/station/maintenance/port)
 "WJ" = (
@@ -5845,7 +5851,7 @@ wt
 ln
 sM
 yG
-PJ
+Lk
 aX
 XU
 XU
@@ -5903,7 +5909,7 @@ oW
 qP
 rD
 yG
-PJ
+Lk
 XU
 XU
 XU
@@ -6290,7 +6296,7 @@ jE
 Oe
 lO
 Yx
-Tu
+PJ
 fU
 "}
 (29,1,1) = {"
@@ -6347,7 +6353,7 @@ sH
 uu
 DC
 tF
-Yx
+vv
 Tu
 fU
 "}
@@ -6406,7 +6412,7 @@ eP
 He
 Pm
 Yx
-Tu
+PC
 fU
 "}
 (31,1,1) = {"
