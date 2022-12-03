@@ -65,6 +65,7 @@
 	id = "bubbledoors";
 	name = "Cargo Bay Blast Door"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/bead/cargo)
 "fx" = (
