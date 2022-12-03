@@ -3098,13 +3098,6 @@
 "DI" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/button/door{
-	dir = 8;
-	id = "osprey_thruster_port";
-	name = "Blast Door Control";
-	pixel_x = 24;
-	pixel_y = 5
-	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/osprey/maintenance/port)
 "DP" = (
@@ -4151,13 +4144,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/spawner/random/maintenance,
-/obj/machinery/button/door{
-	dir = 4;
-	id = "osprey_thruster_starboard";
-	name = "Blast Door Control";
-	pixel_x = -24;
-	pixel_y = 5
-	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/osprey/maintenance/starboard)
 "Of" = (
