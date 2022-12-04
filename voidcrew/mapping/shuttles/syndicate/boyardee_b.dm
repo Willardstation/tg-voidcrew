@@ -1,6 +1,6 @@
 /datum/map_template/shuttle/voidcrew/bogardee_b
 	name = "Boyardee-Class Type B Entertainement Vessel"
-	suffix = "boyardee_b"
+	suffix = "syndicate_boyardee_b"
 	short_name = "Boyardee-class (B)"
 	part_cost = 1
 

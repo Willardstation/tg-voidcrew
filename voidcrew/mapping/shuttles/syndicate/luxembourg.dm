@@ -1,6 +1,6 @@
 /datum/map_template/shuttle/voidcrew/luxembourg
 	name = "Luxembourg-class Delivery Vessel"
-	suffix = "luxembourg"
+	suffix = "syndicate_luxembourg"
 	short_name = "Luxembourg-Class"
 	part_cost = 3
 
