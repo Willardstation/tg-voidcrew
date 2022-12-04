@@ -17,3 +17,20 @@
 			slots = 2,
 		),
 	)
+
+/// DOCKING PORT ///
+
+/obj/docking_port/mobile/voidcrew/pill_black
+	name = "Pill-class-B(lack) Suicide Device"
+	area_type = /area/shuttle/voidcrew/pill_black
+	callTime = 25 SECONDS
+	dir = 8
+	port_direction = 1
+	preferred_direction = 8
+
+
+/// AREAS ///
+
+/area/shuttle/voidcrew/pill_black
+	name = "The Fringe"
+	icon_state = "station"
