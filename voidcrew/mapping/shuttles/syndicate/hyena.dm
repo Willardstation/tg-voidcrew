@@ -106,4 +106,4 @@
 
 /area/shuttle/voidcrew/hyena/maintenance/fore
 	name = "Fore Maintenance"
-	icon_state = "foremaintenance"
+	icon_state = "foremaint"
