@@ -904,7 +904,6 @@
 /area/shuttle/voidcrew/hyena/hallway)
 "uq" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer4,
-/obj/docking_port/mobile/voidcrew/hightide,
 /turf/open/floor/catwalk_floor,
 /area/shuttle/voidcrew/hyena/maintenance/port)
 "uO" = (
