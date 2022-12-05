@@ -85,7 +85,7 @@
 	},
 /obj/machinery/vending/autodrobe,
 /obj/machinery/airalarm/directional/east,
-/turf/open/space/basic,
+/turf/open/floor/mineral/plastitanium/red,
 /area/shuttle/voidcrew/bogardee_b/service/quarters)
 "cY" = (
 /obj/machinery/door/window/right/directional/east,
