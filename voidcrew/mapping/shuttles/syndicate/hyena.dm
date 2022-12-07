@@ -44,7 +44,6 @@
 /obj/docking_port/mobile/voidcrew/hyena
 	name = "Hyena-class Wrecking Tug"
 	area_type = /area/shuttle/voidcrew/hyena
-	callTime = 25 SECONDS
 	dir = 2
 	port_direction = 8
 	preferred_direction = 4

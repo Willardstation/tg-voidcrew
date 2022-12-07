@@ -43,7 +43,6 @@
 /obj/docking_port/mobile/voidcrew/spitfire
 	name = "Spitfire-class Search and Rescue Vessel"
 	area_type = /area/shuttle/voidcrew/spitfire
-	callTime = 25 SECONDS
 	dir = 2
 	port_direction = 8
 	preferred_direction = 4

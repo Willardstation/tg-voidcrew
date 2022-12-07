@@ -44,7 +44,6 @@
 /obj/docking_port/mobile/voidcrew/thunderbird
 	name = "Thunderbird-class Emergency military vessel"
 	area_type = /area/shuttle/voidcrew/thunderbird
-	callTime = 25 SECONDS
 	dir = 2
 	port_direction = 8
 	preferred_direction = 4

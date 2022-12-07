@@ -38,7 +38,6 @@
 /obj/docking_port/mobile/voidcrew/metis
 	name = "Metis-class Experimental Extrasolar Pathfinder"
 	area_type = /area/shuttle/voidcrew/metis
-	callTime = 25 SECONDS
 	dir = 1
 	port_direction = 8
 	preferred_direction = 1

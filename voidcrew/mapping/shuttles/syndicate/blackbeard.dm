@@ -29,7 +29,6 @@
 /obj/docking_port/mobile/voidcrew/blackbeard
 	name = "Blackbeard-class Heavy Boarder"
 	area_type = /area/shuttle/voidcrew/blackbeard
-	callTime = 25 SECONDS
 	dir = 2
 	port_direction = 8
 	preferred_direction = 4

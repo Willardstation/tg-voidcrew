@@ -38,7 +38,6 @@
 /obj/docking_port/mobile/voidcrew/energia
 	name = "Energia-class Experimental Vessel"
 	area_type = /area/shuttle/voidcrew/energia
-	callTime = 25 SECONDS
 	dir = 2
 	port_direction = 8
 	preferred_direction = 4

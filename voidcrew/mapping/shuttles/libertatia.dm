@@ -43,7 +43,6 @@
 /obj/docking_port/mobile/voidcrew/libertatia
 	name = "Libertatia-class Hauler"
 	area_type = /area/shuttle/voidcrew/libertatia
-	callTime = 25 SECONDS
 	dir = 1
 	port_direction = 2
 	preferred_direction = 4

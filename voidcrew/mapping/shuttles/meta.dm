@@ -48,7 +48,6 @@
 /obj/docking_port/mobile/voidcrew/meta
 	name = "Meta-class Freighter"
 	area_type = /area/shuttle/voidcrew/meta
-	callTime = 25 SECONDS
 	dir = 2
 	port_direction = 8
 	preferred_direction = 2

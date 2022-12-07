@@ -43,7 +43,6 @@
 /obj/docking_port/mobile/voidcrew/bogatyr
 	name = "Bogatyr-Class Explorator"
 	area_type = /area/shuttle/voidcrew/bogatyr
-	callTime = 25 SECONDS
 	dir = 4
 	port_direction = 8
 	preferred_direction = 4

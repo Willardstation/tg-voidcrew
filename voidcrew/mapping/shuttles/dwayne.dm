@@ -43,7 +43,6 @@
 /obj/docking_port/mobile/voidcrew/dwayne
 	name = "Dwayne-Class Long Range Mining Transport"
 	area_type = /area/shuttle/voidcrew/dwayne
-	callTime = 25 SECONDS
 	dir = 2
 	port_direction = 8
 	preferred_direction = 4
