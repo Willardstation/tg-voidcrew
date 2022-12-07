@@ -1,6 +1,6 @@
 /datum/map_template/shuttle/voidcrew/spitfire
 	name = "Spitfire-class Search and Rescue Vessel"
-	suffix = "syndicate_spitfire"
+	suffix = "spitfire"
 	short_name = "Spitfire-class"
 	part_cost = 2
 
