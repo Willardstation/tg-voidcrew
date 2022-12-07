@@ -280,7 +280,9 @@
 "mX" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/grille,
-/obj/docking_port/mobile/voidcrew/spitfire,
+/obj/docking_port/mobile/voidcrew/spitfire{
+	dir = 2
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/spitfire/bridge)
 "nu" = (

@@ -48,7 +48,6 @@
 /obj/docking_port/mobile/voidcrew/luxembourg
 	name = "Luxembourg-class Delivery Vessel"
 	area_type = /area/shuttle/voidcrew/luxembourg
-	dir = 2
 
 
 /// AREAS ///

@@ -23,7 +23,6 @@
 /obj/docking_port/mobile/voidcrew/pill_black
 	name = "Pill-class-B(lack) Suicide Device"
 	area_type = /area/shuttle/voidcrew/pill_black
-	dir = 8
 	port_direction = 1
 	preferred_direction = 8
 

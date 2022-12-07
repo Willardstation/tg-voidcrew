@@ -27,7 +27,9 @@
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/firedoor,
-/obj/docking_port/mobile/voidcrew/delta,
+/obj/docking_port/mobile/voidcrew/delta{
+	dir = 2
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/delta/airlock/port)
 "ag" = (

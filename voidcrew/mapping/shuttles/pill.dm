@@ -23,7 +23,6 @@
 /obj/docking_port/mobile/voidcrew/pill
 	name = "Pill-class Torture Device"
 	area_type = /area/shuttle/voidcrew/pill
-	dir = 8
 	port_direction = 1
 	preferred_direction = 8
 

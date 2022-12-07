@@ -23,7 +23,6 @@
 /obj/docking_port/mobile/voidcrew/honk
 	name = "Honk-class Boe Nah Nah"
 	area_type = /area/shuttle/voidcrew/honk
-	dir = 2
 
 
 /// AREAS ///

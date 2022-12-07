@@ -1405,7 +1405,9 @@
 /obj/machinery/atmospherics/pipe/layer_manifold,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/hatch,
-/obj/docking_port/mobile/voidcrew/hyena,
+/obj/docking_port/mobile/voidcrew/hyena{
+	dir = 2
+	},
 /turf/open/floor/iron/white,
 /area/shuttle/voidcrew/hyena/hallway)
 "Gw" = (

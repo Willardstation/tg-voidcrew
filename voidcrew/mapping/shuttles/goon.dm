@@ -43,7 +43,6 @@
 /obj/docking_port/mobile/voidcrew/goon // Brewing up something awful here
 	name = "Goon-class Repurposed Emergency Shuttle"
 	area_type = /area/shuttle/voidcrew/goon
-	dir = 8
 
 
 /// AREAS ///

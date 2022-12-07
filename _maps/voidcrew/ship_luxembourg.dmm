@@ -421,7 +421,9 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "externalshutters"
 	},
-/obj/docking_port/mobile/voidcrew/luxembourg,
+/obj/docking_port/mobile/voidcrew/luxembourg{
+	dir = 2
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/luxembourg/bridge)
 "iW" = (

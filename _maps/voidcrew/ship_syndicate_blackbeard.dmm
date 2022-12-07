@@ -663,7 +663,9 @@
 "Id" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/docking_port/mobile/voidcrew/blackbeard,
+/obj/docking_port/mobile/voidcrew/blackbeard{
+	dir = 2
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/voidcrew/blackbeard/hallway/aft)
 "Jb" = (

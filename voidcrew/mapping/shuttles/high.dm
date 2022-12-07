@@ -38,7 +38,6 @@
 /obj/docking_port/mobile/voidcrew/high
 	name = "High-class Corporate Luxury Ship"
 	area_type = /area/shuttle/voidcrew/high
-	dir = 8
 	port_direction = 4
 
 

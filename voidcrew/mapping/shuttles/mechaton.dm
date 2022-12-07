@@ -38,7 +38,6 @@
 /obj/docking_port/mobile/voidcrew/mechaton
 	name = "Mechaton-class Robotics Production Facility"
 	area_type = /area/shuttle/voidcrew/mechaton
-	dir = 2
 	port_direction = 8
 	preferred_direction = 4
 

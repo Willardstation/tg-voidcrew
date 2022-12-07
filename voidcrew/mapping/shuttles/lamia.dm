@@ -48,7 +48,6 @@
 /obj/docking_port/mobile/voidcrew/lamia
 	name = "Lamia-class Magery Ship"
 	area_type = /area/shuttle/voidcrew/lamia
-	dir = 4
 	port_direction = 8
 	preferred_direction = 4
 

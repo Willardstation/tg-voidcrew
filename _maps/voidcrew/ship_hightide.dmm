@@ -367,7 +367,9 @@
 /area/shuttle/voidcrew/hightide/maintenance/starboard)
 "oY" = (
 /obj/machinery/door/airlock/maintenance_hatch,
-/obj/docking_port/mobile/voidcrew/hightide,
+/obj/docking_port/mobile/voidcrew/hightide{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/hightide/maintenance/cargo)
 "pb" = (

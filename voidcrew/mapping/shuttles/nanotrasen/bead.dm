@@ -34,7 +34,6 @@
 /obj/docking_port/mobile/voidcrew/bead
 	name = "Bead-Class Corporate Frigate"
 	area_type = /area/shuttle/voidcrew/bead
-	dir = 1
 	port_direction = 4
 	preferred_direction = 4
 

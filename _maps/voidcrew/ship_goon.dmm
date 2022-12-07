@@ -478,7 +478,9 @@
 /area/template_noop)
 "Jc" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
-/obj/docking_port/mobile/voidcrew/goon,
+/obj/docking_port/mobile/voidcrew/goon{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/goon/bridge)
 "Jy" = (

@@ -363,7 +363,9 @@
 /area/shuttle/voidcrew/bogardee/service/entrance)
 "jh" = (
 /obj/machinery/door/airlock/external,
-/obj/docking_port/mobile/voidcrew/bogardee,
+/obj/docking_port/mobile/voidcrew/bogardee{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/bogardee/service/entrance)
 "ji" = (

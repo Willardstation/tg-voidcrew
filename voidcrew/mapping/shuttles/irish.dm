@@ -23,7 +23,6 @@
 /obj/docking_port/mobile/voidcrew/resistance
 	name = "Resistance-Class IRA Safehouse"
 	area_type = /area/shuttle/voidcrew/resistance
-	dir = 2
 	port_direction = 8
 	preferred_direction = 4
 

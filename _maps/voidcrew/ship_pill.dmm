@@ -83,7 +83,9 @@
 /obj/item/storage/box/stockparts/basic,
 /obj/item/circuitboard/machine/autolathe,
 /obj/item/clothing/head/utility/welding,
-/obj/docking_port/mobile/voidcrew/pill,
+/obj/docking_port/mobile/voidcrew/pill{
+	dir = 2
+	},
 /turf/open/floor/carpet/neon/simple/red,
 /area/shuttle/voidcrew/pill)
 

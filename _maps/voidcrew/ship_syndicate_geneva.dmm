@@ -432,7 +432,9 @@
 	id = "spitfireshutters"
 	},
 /obj/effect/spawner/structure/window/reinforced,
-/obj/docking_port/mobile/voidcrew/geneva,
+/obj/docking_port/mobile/voidcrew/geneva{
+	dir = 2
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/geneva/bridge)
 "nc" = (

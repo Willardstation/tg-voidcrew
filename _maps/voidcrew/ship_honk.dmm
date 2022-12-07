@@ -16,7 +16,9 @@
 /area/shuttle/voidcrew/honk)
 "dr" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/docking_port/mobile/voidcrew/honk,
+/obj/docking_port/mobile/voidcrew/honk{
+	dir = 2
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/honk/bridge)
 "dW" = (

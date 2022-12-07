@@ -1868,7 +1868,9 @@
 	dir = 1
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/docking_port/mobile/voidcrew/kilo,
+/obj/docking_port/mobile/voidcrew/kilo{
+	dir = 2
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/voidcrew/kilo/cargo)
 "Zt" = (

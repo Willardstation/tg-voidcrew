@@ -43,7 +43,6 @@
 /obj/docking_port/mobile/voidcrew/pubby
 	name = "Pubby-class Light Carrier"
 	area_type = /area/shuttle/voidcrew/pubby
-	dir = 2
 	port_direction = 8
 	preferred_direction = 4
 

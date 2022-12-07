@@ -45,7 +45,6 @@
 /obj/docking_port/mobile/voidcrew/geneva
 	name = "Geneva-class Search and Rescue Vessel"
 	area_type = /area/shuttle/voidcrew/geneva
-	dir = 2
 	port_direction = 8
 	preferred_direction = 4
 

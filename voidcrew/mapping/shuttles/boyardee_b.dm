@@ -39,7 +39,6 @@
 /obj/docking_port/mobile/voidcrew/bogardee_b
 	name = "Boyardee-Class Type B Entertainement Vessel"
 	area_type = /area/shuttle/voidcrew/bogardee_b
-	dir = 4
 	port_direction = 2
 	preferred_direction = 4
 

@@ -779,7 +779,9 @@
 	id = "factoryblasts";
 	name = "Cargo Bay Blast Door"
 	},
-/obj/docking_port/mobile/voidcrew/mechaton,
+/obj/docking_port/mobile/voidcrew/mechaton{
+	dir = 2
+	},
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/mechaton/mining)
 "Hr" = (

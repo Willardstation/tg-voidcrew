@@ -983,7 +983,9 @@
 "DC" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/fans/tiny,
-/obj/docking_port/mobile/voidcrew/dwayne,
+/obj/docking_port/mobile/voidcrew/dwayne{
+	dir = 2
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/dwayne/cargo_bay)
 "DJ" = (

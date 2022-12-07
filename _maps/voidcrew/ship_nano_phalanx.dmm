@@ -221,7 +221,9 @@
 /obj/machinery/door/poddoor{
 	id = "phcargooneblastdoor"
 	},
-/obj/docking_port/mobile/voidcrew/phalanx,
+/obj/docking_port/mobile/voidcrew/phalanx{
+	dir = 2
+	},
 /turf/open/floor/iron{
 	icon_state = "steel_ridged"
 	},

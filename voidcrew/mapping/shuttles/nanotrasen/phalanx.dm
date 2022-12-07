@@ -54,7 +54,6 @@
 /obj/docking_port/mobile/voidcrew/phalanx
 	name = "Phalanx-Class Super Battlecruiser"
 	area_type = /area/shuttle/voidcrew/phalanx
-	dir = 2
 	port_direction = 8
 	preferred_direction = 4
 

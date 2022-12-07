@@ -38,7 +38,6 @@
 /obj/docking_port/mobile/voidcrew/bogardee // I'm not correcting this, it's funny.
 	name = "Boyardee-Class Type Entertainement Vessel"
 	area_type = /area/shuttle/voidcrew/bogardee
-	dir = 4
 	port_direction = 2
 	preferred_direction = 4
 

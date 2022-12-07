@@ -1757,7 +1757,9 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
 	},
-/obj/docking_port/mobile/voidcrew/high,
+/obj/docking_port/mobile/voidcrew/high{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/high/hallway)
 "JP" = (

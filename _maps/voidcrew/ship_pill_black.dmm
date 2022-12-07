@@ -87,7 +87,9 @@
 /obj/machinery/power/port_gen/pacman/pre_loaded{
 	density = 0
 	},
-/obj/docking_port/mobile/voidcrew/pill_black,
+/obj/docking_port/mobile/voidcrew/pill_black{
+	dir = 2
+	},
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/pill_black)
 

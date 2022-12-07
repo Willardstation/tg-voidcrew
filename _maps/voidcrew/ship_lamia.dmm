@@ -888,7 +888,9 @@
 	color = "#008000"
 	},
 /obj/structure/curtain/cloth/fancy,
-/obj/docking_port/mobile/voidcrew/lamia,
+/obj/docking_port/mobile/voidcrew/lamia{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/lamia/study)
 "qT" = (

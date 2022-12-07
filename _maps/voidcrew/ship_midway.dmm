@@ -54,7 +54,9 @@
 "bB" = (
 /obj/machinery/door/airlock/external,
 /obj/structure/fans/tiny,
-/obj/docking_port/mobile/voidcrew/midway,
+/obj/docking_port/mobile/voidcrew/midway{
+	dir = 2
+	},
 /turf/open/floor/iron,
 /area/shuttle/voidcrew/midway/cargo/mining)
 "bF" = (

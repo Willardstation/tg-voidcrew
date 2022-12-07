@@ -22,7 +22,6 @@
 /obj/docking_port/mobile/voidcrew/hightide
 	name = "HighTide-Class Entrepreneur Ship"
 	area_type = /area/shuttle/voidcrew/hightide
-	dir = 8
 	port_direction = 4
 
 

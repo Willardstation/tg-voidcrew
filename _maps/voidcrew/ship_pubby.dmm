@@ -155,7 +155,9 @@
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
-/obj/docking_port/mobile/voidcrew/pubby,
+/obj/docking_port/mobile/voidcrew/pubby{
+	dir = 2
+	},
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/pubby/cargo)
 "hw" = (

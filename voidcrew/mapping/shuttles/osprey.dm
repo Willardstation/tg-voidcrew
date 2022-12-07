@@ -78,7 +78,6 @@
 /obj/docking_port/mobile/voidcrew/osprey
 	name = "Osprey-Class Exploration Ship"
 	area_type = /area/shuttle/voidcrew/osprey
-	dir = 4
 	port_direction = 8
 	preferred_direction = 4
 

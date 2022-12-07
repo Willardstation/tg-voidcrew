@@ -43,7 +43,6 @@
 /obj/docking_port/mobile/voidcrew/kilo
 	name = "Kilo-class Mining Ship"
 	area_type = /area/shuttle/voidcrew/kilo
-	dir = 2
 	port_direction = 8
 	preferred_direction = 4
 

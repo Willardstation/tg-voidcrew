@@ -43,7 +43,6 @@
 /obj/docking_port/mobile/voidcrew/midway
 	name = "Midway-class Atmospherics Mining Vessel"
 	area_type = /area/shuttle/voidcrew/midway
-	dir = 2
 	port_direction = 8
 	preferred_direction = 2
 

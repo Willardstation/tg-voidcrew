@@ -580,7 +580,9 @@
 /obj/machinery/door/poddoor{
 	id = "blastdoors"
 	},
-/obj/docking_port/mobile/voidcrew/bogatyr,
+/obj/docking_port/mobile/voidcrew/bogatyr{
+	dir = 4
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/voidcrew/bogatyr/cargo)
 "AQ" = (
