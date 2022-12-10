@@ -5003,6 +5003,7 @@
 #include "voidcrew\modules\research\edits\_experiments.dm"
 #include "voidcrew\modules\research\edits\_rd_consoles.dm"
 #include "voidcrew\modules\research\edits\_techweb.dm"
+#include "voidcrew\modules\research\edits\autolathe_designs.dm"
 #include "voidcrew\modules\research\edits\dna_console.dm"
 #include "voidcrew\modules\research\edits\medbot.dm"
 #include "voidcrew\modules\research\edits\operating.dm"
