@@ -1,25 +1,11 @@
-/**
- * Hard disabled
- */
-//No random events, we don't have any custom ones anyway.
-/datum/controller/subsystem/events
-	flags = SS_NO_INIT
-
-//No night shifts, planets have timezones and such, whatever.
-/datum/controller/subsystem/nightshift
-	flags = SS_NO_INIT
-
-//We do not want security levels, everyone is on individual ships.
-/datum/controller/subsystem/security_level
-	flags = SS_NO_INIT
-
-//We do not want station traits.
 /datum/controller/subsystem/processing/station
-	flags = SS_NO_INIT
+	can_fire = FALSE
 
-/**
- * Soft disabled
- */
+/datum/controller/subsystem/processing/station/Initialize()
+	//Initialize the station's announcer datum and nothing else
+	announcer = new announcer()
+	return SS_INIT_SUCCESS
+
 // We do not want paychecks, we want people to make money themselves legitimately
 /datum/controller/subsystem/economy
 	can_fire = FALSE
