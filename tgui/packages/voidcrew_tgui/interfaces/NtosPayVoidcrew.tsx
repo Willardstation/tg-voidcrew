@@ -1,7 +1,7 @@
 import { NtosPay } from '../../tgui/interfaces/NtosPay';
 import { useBackend, useSharedState } from '../../tgui/backend';
 import { NtosWindow } from '../../tgui/layouts';
-import { Stack, Tabs, Table, Button } from '../../tgui/components';
+import { Stack, Tabs, Table } from '../../tgui/components';
 
 export const NtosPayVoidcrew = (props, context) => {
   const { data } = useBackend(context);
