@@ -55,9 +55,7 @@ const AllAccounts = (props, context) => {
     <Table>
       {all_accounts.map((account) => (
         <Table.Row key={account} className="candystripe">
-          <Table.Cell width="100px">
-            {account}
-          </Table.Cell>
+          <Table.Cell width="100px">{account}</Table.Cell>
         </Table.Row>
       ))}
     </Table>
