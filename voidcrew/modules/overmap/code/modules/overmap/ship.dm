@@ -65,6 +65,8 @@
 
 /obj/structure/overmap/ship/Initialize(mapload, datum/map_template/shuttle/voidcrew/template)
 	. = ..()
+	if(!template)
+		CRASH("[src] spawned with no template at [mapload].")
 	src.source_template = template
 
 	ship_team = new()
