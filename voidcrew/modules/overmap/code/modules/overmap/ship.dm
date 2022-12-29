@@ -70,7 +70,11 @@
 	ship_team = new()
 	ship_team.name = template.name
 
-	ship_account = new(newname = ship_team.name, job = null, player_account = FALSE)
+	//now build the job slots.
+	job_slots = source_template.assemble_job_slots()
+
+	//then the account, which relies on there having a job, as we set it to the captain's.
+	ship_account = new(newname = ship_team.name, job = job_slots[1], player_account = FALSE)
 
 	display_name = "[source_template.faction_prefix] [name]"
 
@@ -85,9 +89,6 @@
 	cam_background.assigned_map = map_name
 
 	SSovermap.simulated_ships += src
-
-	//now build the job slots.
-	job_slots = source_template.assemble_job_slots()
 
 /obj/structure/overmap/ship/Destroy()
 	source_template = null
@@ -184,6 +185,7 @@
 	if(account && (account.account_id == crewmate.account_id))
 		qdel(account) //delete the individual account.
 		card.registered_account = ship_account
+		ship_account.bank_cards += card
 
 	crewmate.mind.wipe_memory() //clears ALL memories, but currently all they have is their old bank account.
 
