@@ -97,7 +97,7 @@
 		var/can_scratch = !host_mob.incapacitated() && get_location_accessible(host_mob, picked_bodypart)
 
 		host_mob.visible_message(
-			[can_scratch ? span_warning("[host_mob] scratches [host_mob.p_their()] [bodypart.name].") : ""],
+			"[can_scratch ? span_warning("[host_mob] scratches [host_mob.p_their()] [bodypart.name].") : ""]",
 			span_warning("Your [bodypart.name] itches. [can_scratch ? " You scratch it." : ""]"),
 		)
 
