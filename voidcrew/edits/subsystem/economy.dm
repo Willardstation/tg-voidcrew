@@ -3,5 +3,5 @@
 	roundstart_paychecks = 0
 	//remove all free money
 	budget_pool = 0
-	//remove non existent budgets, we will fill this list with Ship budgets.
-	department_accounts = list()
+	//we only keep cargo's budget for runtimes (sadly), this is filled with ship budgets.
+	department_accounts = list(ACCOUNT_CAR = ACCOUNT_CAR_NAME)
