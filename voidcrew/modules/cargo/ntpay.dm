@@ -39,7 +39,11 @@
 			inserted_id.registered_account.bank_cards += src
 		if("remove_account")
 			var/obj/item/card/id/card = locate(params["removed_account"]) in computer.computer_id_slot.registered_account.bank_cards
-			if(!card || (card == computer.computer_id_slot)) //don't remove yourself
+			//don't remove yourself
+			if(!card || (card == computer.computer_id_slot))
 				return
-			card.clear_account()
+			//only the captain can edit
+			if(computer.computer_id_slot.assignment != computer.computer_id_slot.registered_account.account_job.title)
+				return
 			card.registered_account.bank_cards -= src
+			card.clear_account()
