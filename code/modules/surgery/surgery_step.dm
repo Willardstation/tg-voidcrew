@@ -90,8 +90,12 @@
 	speed_mod /= (get_location_modifier(target) * (1 + surgery.speed_modifier) * implement_speed_mod) * target.mob_surgery_speed_mod
 	var/modded_time = time * speed_mod
 
+	var/selfsurgery_mod = 0
+	if(target == user)
+		selfsurgery_mod += 35//add a reduction to this based on medical skill if it's ever implemented
 
-	fail_prob = min(max(0, modded_time - (time * SURGERY_SLOWDOWN_CAP_MULTIPLIER)),99)//if modded_time > time * modifier, then fail_prob = modded_time - time*modifier. starts at 0, caps at 99
+	fail_prob = (selfsurgery_mod + min(max(0, modded_time - (time * SURGERY_SLOWDOWN_CAP_MULTIPLIER)),99))//if modded_time > time * modifier, then fail_prob = modded_time - time*modifier. starts at 0, caps at 99
+
 	modded_time = min(modded_time, time * SURGERY_SLOWDOWN_CAP_MULTIPLIER)//also if that, then cap modded_time at time*modifier
 
 	if(iscyborg(user))//any immunities to surgery slowdown should go in this check.
