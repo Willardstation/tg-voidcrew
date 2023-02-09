@@ -3,7 +3,6 @@
 	icon = 'voidcrew/modules/nanites/icons/device.dmi'
 	icon_state = "nanite_scanner"
 	inhand_icon_state = "nanite_hypo"
-	worn_icon_state = "nanite_hypo"
 	lefthand_file = 'voidcrew/modules/nanites/icons/nanite_lefthand.dmi'
 	righthand_file = 'voidcrew/modules/nanites/icons/nanite_righthand.dmi'
 	desc = "A hand-held body scanner able to detect nanites and their programming."
