@@ -6,6 +6,7 @@
 	//clear the account immediately
 	synced_bank_account = null
 	register_context()
+	connect_to_shuttle(mapload, SSshuttle.get_containing_shuttle(src))
 
 /obj/machinery/computer/bank_machine/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
