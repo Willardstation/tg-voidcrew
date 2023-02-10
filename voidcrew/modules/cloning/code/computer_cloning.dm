@@ -107,8 +107,8 @@
 		UnregisterSignal(scanner, COMSIG_MACHINE_CLOSE)
 
 	if(new_scanner)
-		RegisterSignal(new_scanner, COMSIG_MACHINE_OPEN, .proc/scanner_ui_update)
-		RegisterSignal(new_scanner, COMSIG_MACHINE_CLOSE, .proc/scanner_ui_update)
+		RegisterSignal(new_scanner, COMSIG_MACHINE_OPEN, PROC_REF(scanner_ui_update))
+		RegisterSignal(new_scanner, COMSIG_MACHINE_CLOSE, PROC_REF(scanner_ui_update))
 
 	scanner = new_scanner
 
@@ -166,7 +166,7 @@
 			if (!user.transferItemToLoc(W,src))
 				return
 			diskette = W
-			to_chat(user, "<span class='notice'>You insert [W].</span>")
+			to_chat(user, span_notice("You insert [W].</span>"))
 			playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
 	else if(W.tool_behaviour == TOOL_MULTITOOL)
 		if(!multitool_check_buffer(user, W))
@@ -270,7 +270,7 @@
 	playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
 	return TRUE
 
-/obj/machinery/computer/cloning/proc/Clone(mob/user, target)
+/obj/machinery/computer/cloning/proc/clone_mob(mob/user, target)
 	var/datum/data/record/C = find_record("id", target, records)
 	//Look for that player! They better be dead!
 	if(C)
@@ -346,16 +346,16 @@
 		temp = "Failed to clone: Data corrupted."
 		playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
 
-/obj/machinery/computer/cloning/proc/Toggle_lock(mob/user)
+/obj/machinery/computer/cloning/proc/toggle_lock(mob/user)
 	if(!scanner.is_operational)
 		return
 	if(!scanner.locked && !scanner.occupant) //I figured out that if you're fast enough, you can lock an open pod
 		return
 	scanner.locked = !scanner.locked
 	playsound(src, scanner.locked ? 'sound/machines/terminal_prompt_deny.ogg' : 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
-	. = TRUE
+	return TRUE
 
-/obj/machinery/computer/cloning/proc/Scan(mob/user, body_only = FALSE)
+/obj/machinery/computer/cloning/proc/scan_mob(mob/user, body_only = FALSE)
 	if(!scanner.is_operational || !scanner.occupant)
 		return
 	scantemp = "[scantemp_name] => Scanning..."
@@ -364,10 +364,10 @@
 	say("Initiating scan...")
 	var/prev_locked = scanner.locked
 	scanner.locked = TRUE
-	addtimer(CALLBACK(src, .proc/finish_scan, scanner.occupant, user, prev_locked, body_only), 2 SECONDS)
-	. = TRUE
+	addtimer(CALLBACK(src, PROC_REF(finish_scan), scanner.occupant, user, prev_locked, body_only), 2 SECONDS)
+	return TRUE
 
-/obj/machinery/computer/cloning/proc/Toggle_autoprocess(mob/user)
+/obj/machinery/computer/cloning/proc/toggle_autoprocess(mob/user)
 	if(!scanner || !HasEfficientPod() || scanner.scan_level < AUTOCLONING_MINIMAL_LEVEL)
 		return FALSE
 	autoprocess = !autoprocess
@@ -377,7 +377,7 @@
 	else
 		STOP_PROCESSING(SSmachines, src)
 		playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
-	. = TRUE
+	return TRUE
 
 /obj/machinery/computer/cloning/ui_data(mob/user)
 	var/list/data = list()
@@ -448,17 +448,17 @@
 
 	switch(action)
 		if("toggle_autoprocess")
-			. = Toggle_autoprocess(usr)
+			. = toggle_autoprocess(usr)
 		if("scan")
-			Scan(usr, FALSE)
+			scan_mob(usr, FALSE)
 			. = TRUE
 		if("scan_body_only")
-			Scan(usr, TRUE)
+			scan_mob(usr, TRUE)
 			. = TRUE
 		if("toggle_lock")
-			. = Toggle_lock(usr)
+			. = toggle_lock(usr)
 		if("clone")
-			Clone(usr, params["target"])
+			clone_mob(usr, params["target"])
 			. = TRUE
 		if("delrecord")
 			DeleteRecord(usr, params["target"])
@@ -608,15 +608,6 @@
 	R.fields["factions"] = mob_occupant.faction
 	R.fields["quirks"] = list()
 	R.fields["traumas"] = list()
-	if(!body_only || experimental) //Body only will not copy quirks.
-		for(var/V in mob_occupant.quirks)
-			var/datum/quirk/T = V
-			R.fields["quirks"][T.type] = T.clone_data()
-			/*
-			Quirks 'should be' personal features from a brain, not a body. but quirks actually come from a body.
-			This will not transfer your quirks if your brain is transfered to the body_only cloned body, because someone's brain in your clone is not a musician/smoker/brain-tumored or something else.
-			This is likely a bug from the structure of quirks. We need to fix the quirk code.
-			*/
 
 	if(isbrain(mob_occupant)) //We'll detect the brain first because trauma is from the brain, not from the body.
 		R.fields["traumas"] = B.get_traumas()
