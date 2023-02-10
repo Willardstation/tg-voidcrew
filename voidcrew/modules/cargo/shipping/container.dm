@@ -108,11 +108,10 @@
 			if(!account)
 				return FALSE
 			if(account.adjust_money(-BEACON_COST))
-				cooldown = 10//a ~ten second cooldown for printing beacons to prevent spam
 				var/obj/item/supply_beacon/new_beacon = new /obj/item/supply_beacon(drop_location())
+				new_beacon.cargo_console = src
+				new_beacon.name = "Supply Pod Beacon ([linked_port.current_ship.name])"
 				beacon = new_beacon
-				beacon.cargo_console = src
-				beacon.name = "Supply Pod Beacon ([linked_port.current_ship.name])"
 			return TRUE
 
 		/**
@@ -154,7 +153,7 @@
 			for(var/datum/supply_order/cancelled_order as anything in checkout_list)
 				if(!cancelled_order.can_be_cancelled)
 					continue //don't cancel other department's orders or orders that can't be cancelled
-				if(remove_item(list("id" = "[cancelled_order.id]"))) //remove & properly refund any coupons attached with this order
+				if(remove_item(list("id" = "[cancelled_order.id]")))
 					return TRUE
 			return TRUE
 
@@ -225,22 +224,13 @@
 
 	var/amount = params["amount"]
 	for(var/count in 1 to amount)
-		var/obj/item/coupon/applied_coupon
-		for(var/obj/item/coupon/coupon_check in loaded_coupons)
-			if(pack.type == coupon_check.discounted_pack)
-				say("Coupon found! [round(coupon_check.discount_pct_off * 100)]% off applied!")
-				coupon_check.moveToNullspace()
-				applied_coupon = coupon_check
-				break
 
 		var/datum/supply_order/new_order = new(
 			pack = pack,
 			orderer = name,
 			orderer_rank = rank,
 			orderer_ckey = usr.ckey,
-			reason = reason,
 			paying_account = linked_port.current_ship.ship_account,
-			coupon = applied_coupon,
 		)
 		checkout_list += new_order
 
@@ -254,9 +244,6 @@
 	for(var/datum/supply_order/order as anything in checkout_list)
 		if(order.id != id)
 			continue
-		if(order.applied_coupon)
-			say("Coupon refunded.")
-			order.applied_coupon.forceMove(get_turf(src))
 		checkout_list -= order
 		. = TRUE
 		break

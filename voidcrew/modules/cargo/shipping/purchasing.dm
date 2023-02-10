@@ -9,7 +9,7 @@
 		return FALSE
 
 	var/obj/structure/closet/supplypod/podspawn/pod = podspawn(list(
-		"target" = get_turf(user),
+		"target" = pod_location,
 		"style" = STYLE_STANDARD,
 		"spawn" = /obj/structure/shipping_container,
 	))
@@ -18,13 +18,12 @@
 
 	var/value = 0
 	var/purchases = 0
+	var/datum/bank_account/paying_for_this = linked_port.current_ship.ship_account
 
 	for(var/datum/supply_order/spawning_order as anything in checkout_list)
 		var/price = spawning_order.pack.get_cost()
 		if(spawning_order.applied_coupon)
 			price *= (1 - spawning_order.applied_coupon.discount_pct_off)
-
-		var/datum/bank_account/paying_for_this = linked_port.current_ship.ship_account
 
 		if(spawning_order.paying_account)
 			SSeconomy.track_purchase(paying_for_this, price, spawning_order.pack.name)
@@ -59,7 +58,7 @@
 				continue
 			if(AM.anchored)
 				continue
-			export_item_and_contents(AM, export_categories, dry_run = FALSE, external_report = ex)
+			export_item_and_contents(AM, (EXPORT_CARGO | EXPORT_CONTRABAND), dry_run = FALSE, external_report = ex)
 		linked_port.shipping_containers += containers
 		qdel(containers)
 
