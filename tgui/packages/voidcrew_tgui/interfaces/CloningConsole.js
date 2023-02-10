@@ -131,7 +131,7 @@ export const CloningConsole = (_props, context) => {
                               icon="upload"
                               disabled={diskData.length === 0}
                               onClick={() =>
-                                act('save', {
+                                act('save_record', {
                                   target: record['id'],
                                 })
                               }
@@ -202,7 +202,7 @@ export const CloningConsole = (_props, context) => {
                       content="Load"
                       icon="download"
                       disabled={!diskData['name']}
-                      onClick={() => act('load')}
+                      onClick={() => act('load_record')}
                     />
                     <Button
                       content="Eject Disk"
