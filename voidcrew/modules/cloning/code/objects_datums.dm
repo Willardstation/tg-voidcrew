@@ -52,7 +52,3 @@
 
 /datum/gas_mixture/immutable/cloner/heat_capacity()
 	return (MOLES_O2STANDARD + MOLES_N2STANDARD)*20 //specific heat of nitrogen is 20
-
-//Called when something resists while this atom is its loc
-/atom/movable/proc/container_resist(mob/living/user)
-	return
