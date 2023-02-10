@@ -3,7 +3,8 @@
 
 //Potential replacement for genetics revives or something I dunno (?)
 
-#define CLONE_INITIAL_DAMAGE     150    //Clones in clonepods start with 150 cloneloss damage and 150 brainloss damage, thats just logical
+///Clones in clonepods start with 150 cloneloss damage and 150 brainloss damage
+#define CLONE_INITIAL_DAMAGE 150
 #define MINIMUM_HEAL_LEVEL 40
 
 #define SPEAK(message) radio.talk_into(src, message, radio_channel)
@@ -12,18 +13,23 @@
 	name = "cloning pod"
 	desc = "An electronically-lockable pod for growing organic tissue."
 	density = TRUE
-	icon = 'modular_skyrat/modules/cloning/icons/obj/machines/cloning_pod.dmi'
+	icon = 'voidcrew/modules/cloning/icons/cloning.dmi'
 	icon_state = "pod_0"
-	req_access = list(ACCESS_CLONING) //FOR PREMATURE UNLOCKING.
+	req_access = list(ACCESS_GENETICS) //FOR PREMATURE UNLOCKING.
 	verb_say = "states"
 	circuit = /obj/item/circuitboard/machine/clonepod
 
+	var/datum/bank_account/current_insurance
+	fair_market_price = 5 // He nodded, because he knew I was right. Then he swiped his credit card to pay me for arresting him.
+	payment_department = ACCOUNT_MED
 	var/heal_level //The clone is released once its health reaches this level.
 	var/obj/machinery/computer/cloning/connected //So we remember the connected clone machine.
 	var/mess = FALSE //Need to clean out it if it's full of exploded clone.
 	var/attempting = FALSE //One clone attempt at a time thanks
 	var/speed_coeff
 	var/efficiency
+
+	var/fleshamnt = 1 //Amount of synthflesh needed per cloning cycle, is divided by efficiency
 
 	var/datum/mind/clonemind
 	var/grab_ghost_when = CLONER_MATURE_CLONE
@@ -37,40 +43,44 @@
 
 	var/list/unattached_flesh
 	var/flesh_number = 0
-	var/datum/bank_account/current_insurance
-	fair_market_price = 5 // He nodded, because he knew I was right. Then he swiped his credit card to pay me for arresting him.
-	payment_department = ACCOUNT_MED
+	var/experimental_pod = FALSE //experimental cloner will have true. TRUE allows you to clone a weird brain after scanning it.
 
-/obj/machinery/clonepod/Initialize()
+/obj/machinery/clonepod/Initialize(mapload)
 	. = ..()
-
+	create_reagents(100, OPENCONTAINER)
 	countdown = new(src)
-
 	if(internal_radio)
 		radio = new(src)
 		radio.keyslot = new radio_key
 		radio.subspace_transmission = TRUE
 		radio.canhear_range = 0
 		radio.recalculateChannels()
-	update_icon()
 
 /obj/machinery/clonepod/Destroy()
 	var/mob/living/mob_occupant = occupant
 	go_out()
 	if(mob_occupant)
+		// Random comment: this is a bad situation since breaking the pod ejects the occupant
 		log_combat("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to Destroy().")
 	QDEL_NULL(radio)
 	QDEL_NULL(countdown)
 	if(connected)
 		connected.DetachCloner(src)
 	QDEL_LIST(unattached_flesh)
-	. = ..()
+	return ..()
 
 /obj/machinery/clonepod/RefreshParts()
+	. = ..()
 	speed_coeff = 0
 	efficiency = 0
+	reagents.maximum_volume = 0
+	fleshamnt = 1
+	for(var/obj/item/reagent_containers/G in component_parts)
+		reagents.maximum_volume += G.volume
+		G.reagents.trans_to(src, G.reagents.total_volume)
 	for(var/obj/item/stock_parts/scanning_module/S in component_parts)
 		efficiency += S.rating
+		fleshamnt = 1/max(efficiency-1, 1)
 	for(var/obj/item/stock_parts/manipulator/P in component_parts)
 		speed_coeff += P.rating
 	heal_level = (efficiency * 15) + 10
@@ -85,38 +95,24 @@
 		return
 	user.examinate(src)
 
+/obj/machinery/clonepod/AltClick(mob/user)
+	if (tgui_alert(user, "Are you sure you want to empty the cloning pod?", "Empty Reagent Storage:", "Yes", "No") != "Yes")
+		return
+	to_chat(user, "<span class='notice'>You empty \the [src]'s release valve onto the floor.</span>")
+	src.reagents.clear_reagents()
+
 /obj/machinery/clonepod/attack_ai(mob/user)
 	return attack_hand(user)
 
 /obj/machinery/clonepod/examine(mob/user)
 	. = ..()
-	. += "<span class='notice'>The <i>linking</i> device can be <i>scanned<i> with a multitool.</span>"
+	. += "<span class='notice'>The <i>linking</i> device can be <i>scanned<i> with a multitool. It can be emptied by Alt-Clicking it.</span>"
 	if(in_range(user, src) || isobserver(user))
-		. += "<span class='notice'>The status display reads: Cloning speed at <b>[speed_coeff*50]%</b>.<br>Predicted amount of cellular damage: <b>[100-heal_level]%</b>.</span>"
+		. += "<span class='notice'>The status display reads: Cloning speed at <b>[speed_coeff*50]%</b>.<br>Predicted amount of cellular damage: <b>[100-heal_level]%</b><br> Storing up to <b>[reagents.maximum_volume]cm<sup>3</sup></b> of synthflesh.<br>"
+		. += "Synthflesh consumption at <b>[round(fleshamnt*90, 1)]cm<sup>3</sup></b> per clone.</span><br>"
+		. += "<span class='notice'>The reagent display reads: [round(reagents.total_volume, 1)] / [reagents.maximum_volume] cm<sup>3</sup></span>"
 		if(efficiency > 5)
 			. += "<span class='notice'>Pod has been upgraded to support autoprocessing and apply beneficial mutations.</span>"
-
-//The return of data disks?? Just for transferring between genetics machine/cloning machine.
-//TO-DO: Make the genetics machine accept them.
-/obj/item/disk/data/cloning
-	name = "cloning data disk"
-	icon_state = "datadisk0" //Gosh I hope syndies don't mistake them for the nuke disk.
-	var/list/fields = list()
-
-//Disk stuff.
-/obj/item/disk/data/Initialize()
-	. = ..()
-	icon_state = "datadisk[rand(0,6)]"
-	add_overlay("datadisk_gene")
-
-/obj/item/disk/data/attack_self(mob/user)
-	read_only = !read_only
-	to_chat(user, "<span class='notice'>You flip the write-protect tab to [read_only ? "protected" : "unprotected"].</span>")
-
-/obj/item/disk/data/examine(mob/user)
-	. = ..()
-	. += "The write-protect tab is set to [read_only ? "protected" : "unprotected"]."
-
 
 //Clonepod
 
@@ -139,71 +135,70 @@
 	return GM
 
 /obj/machinery/clonepod/proc/get_completion()
-	. = FALSE
 	var/mob/living/mob_occupant = occupant
-	if(mob_occupant)
-		. = (100 * ((mob_occupant.health + 100) / (heal_level + 100)))
+	if(!mob_occupant)
+		return FALSE
+	return (100 * ((mob_occupant.health + 100) / (heal_level + 100)))
 
 /obj/machinery/clonepod/attack_ai(mob/user)
 	return examine(user)
 
 //Start growing a human clone in the pod!
-/obj/machinery/clonepod/proc/growclone(clonename, ui, mutation_index, mindref, last_death, blood_type, datum/species/mrace, list/features, list/mutantparts, list/markings, factions, list/quirks, datum/bank_account/insurance, list/traumas, empty)
+/obj/machinery/clonepod/proc/growclone(clonename, ui, mutation_index, mindref, last_death, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance, list/traumas, body_only, experimental)
+	var/result = CLONING_SUCCESS
+	if(!reagents.has_reagent(/datum/reagent/medicine/c2/synthflesh, fleshamnt))
+		connected_message("Cannot start cloning: Not enough synthflesh.")
+		return ERROR_NO_SYNTHFLESH
 	if(panel_open)
-		return NONE
+		return ERROR_PANEL_OPENED
 	if(mess || attempting)
-		return NONE
+		return ERROR_MESS_OR_ATTEMPTING
+	if(experimental && !experimental_pod)
+		return ERROR_MISSING_EXPERIMENTAL_POD
 
-	if(!empty) //Doesn't matter if we're just making a copy
+	if(!body_only && !(experimental && experimental_pod))
 		clonemind = locate(mindref) in SSticker.minds
 		if(!istype(clonemind))	//not a mind
-			return NONE
-		if(clonemind.last_death != last_death) //The soul has advanced, the record has not.
-			return NONE
+			return ERROR_NOT_MIND
+		if(last_death<0) //presaved clone is not clonable
+			return ERROR_PRESAVED_CLONE
+		if(abs(clonemind.last_death - last_death) > 5) //You can't clone old ones. 5 seconds grace because a sync-failure can happen.
+			return ERROR_OUTDATED_CLONE
 		if(!QDELETED(clonemind.current))
 			if(clonemind.current.stat != DEAD)	//mind is associated with a non-dead body
-				return NONE
+				return ERROR_ALREADY_ALIVE
 			if(clonemind.current.suiciding) // Mind is associated with a body that is suiciding.
-				return NONE
+				return ERROR_COMMITED_SUICIDE
 		if(!clonemind.active)
 			// get_ghost() will fail if they're unable to reenter their body
 			var/mob/dead/observer/G = clonemind.get_ghost()
 			if(!G)
-				return NONE
+				return ERROR_SOUL_DEPARTED
 			if(G.suiciding) // The ghost came from a body that is suiciding.
-				return NONE
-		if(clonemind.damnation_type) //Can't clone the damned.
-			INVOKE_ASYNC(src, .proc/horrifyingsound)
-			mess = TRUE
-			update_icon()
-			return NONE
-		current_insurance = insurance
+				return ERROR_SUICIDED_BODY
 	attempting = TRUE //One at a time!!
 	countdown.start()
 
 	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src)
 
-	if(!clonename)	//to prevent null names
-		clonename = "clone ([rand(1,999)])"
-	H.real_name = clonename
-
-	H.hardset_dna(ui, mutation_index, H.dna.default_mutation_genes, H.real_name, blood_type, mrace, features, H.dna.mutations, FALSE)
-	H.set_species(mrace, TRUE, null, features.Copy(), mutantparts.Copy(), markings.Copy())
+	H.hardset_dna(ui, mutation_index, H.real_name, null, mrace, features)
 
 	if(!HAS_TRAIT(H, TRAIT_RADIMMUNE))//dont apply mutations if the species is Mutation proof.
 		if(efficiency > 2)
 			var/list/unclean_mutations = (GLOB.not_good_mutations|GLOB.bad_mutations)
 			H.dna.remove_mutation_group(unclean_mutations)
-		if(efficiency > 5 && prob(20))
-			H.easy_randmut(POSITIVE)
 		if(efficiency < 3 && prob(50))
-			var/mob/M = H.easy_randmut(NEGATIVE+MINOR_NEGATIVE)
+			var/mob/M = H.easy_random_mutate(NEGATIVE+MINOR_NEGATIVE)
 			if(ismob(M))
 				H = M
 
-	H.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
 	occupant = H
 
+	if(!clonename)	//to prevent null names
+		clonename = "clone ([rand(1,999)])"
+	H.real_name = clonename
+
+	icon_state = "pod_1"
 	//Get the clone body ready
 	maim_clone(H)
 	ADD_TRAIT(H, TRAIT_STABLEHEART, CLONING_POD_TRAIT)
@@ -214,12 +209,16 @@
 	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, CLONING_POD_TRAIT)
 	H.Unconscious(80)
 
-	if(!empty)
+	if(!experimental && !experimental_pod && !body_only) //everything should be perfect to none
 		clonemind.transfer_to(H)
+	else if(!(!experimental && body_only))
+		current_insurance = insurance
+		offer_to_ghost(H)
+		result = CLONING_SUCCESS_EXPERIMENTAL
 
+	if(H.mind)
 		if(grab_ghost_when == CLONER_FRESH_CLONE)
 			H.grab_ghost()
-			to_chat(H, "<span class='userdanger'>[CONFIG_GET(string/blackoutpolicy)]</span>")
 			to_chat(H, "<span class='notice'><b>Consciousness slowly creeps over you as your body regenerates.</b><br><i>So this is what cloning feels like?</i></span>")
 
 		if(grab_ghost_when == CLONER_MATURE_CLONE)
@@ -233,8 +232,7 @@
 			var/datum/quirk/Q = new V(H)
 			Q.on_clone(quirks[V])
 
-		for(var/t in traumas)
-			var/datum/brain_trauma/BT = t
+		for(var/datum/brain_trauma/BT as anything in traumas)
 			var/datum/brain_trauma/cloned_trauma = BT.on_clone()
 			if(cloned_trauma)
 				H.gain_trauma(cloned_trauma, BT.resilience)
@@ -242,15 +240,26 @@
 		H.set_cloned_appearance()
 
 		H.set_suicide(FALSE)
+
+
 	attempting = FALSE
-	update_icon()
-	return CLONING_SUCCESS
+	return result
+
+/obj/machinery/clonepod/proc/offer_to_ghost(mob/living/carbon/H)
+	set waitfor = FALSE
+	var/list/mob/dead/observer/candidates = poll_candidates_for_mob("Do you want to play as [H.real_name]'s experimental clone?", ROLE_EXPERIMENTAL_CLONE, null, null, 300, H, POLL_IGNORE_IMAGINARYFRIEND)
+	if(length(candidates))
+		var/mob/dead/observer/C = pick(candidates)
+		H.key = C.key
+		log_game("[key_name(C)] became [H.real_name]'s experimental clone.")
+		message_admins("[key_name_admin(C)] became [H.real_name]'s experimental clone.")
+		to_chat(H, "<span class='warning'>You will instantly die if you do 'ghost'. Please stand by until the cloning is done.</span>")
 
 //Grow clones to maturity then kick them out.  FREELOADERS
 /obj/machinery/clonepod/process()
 	var/mob/living/mob_occupant = occupant
 
-	if(!is_operational) //Autoeject if power is lost
+	if(!is_operational) //Autoeject if power is lost (or the pod is dysfunctional due to whatever reason)
 		if(mob_occupant)
 			go_out()
 			log_combat("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to power loss.")
@@ -258,7 +267,13 @@
 			connected_message("Clone Ejected: Loss of power.")
 
 	else if(mob_occupant && (mob_occupant.loc == src))
-		if(SSeconomy.full_ancap)
+		if(!reagents.has_reagent(/datum/reagent/medicine/c2/synthflesh, fleshamnt))
+			go_out()
+			log_combat("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to insufficient material.")
+			connected_message("Clone Ejected: Not enough material.")
+			if(internal_radio)
+				SPEAK("The cloning of [mob_occupant.real_name] has been ended prematurely due to insufficient material.")
+		else if(SSeconomy.full_ancap)
 			if(!current_insurance)
 				go_out()
 				log_combat("[key_name(mob_occupant)] ejected from [src] at [AREACOORD(src)] due to invalid bank account.")
@@ -287,7 +302,11 @@
 			mob_occupant.Unconscious(80)
 			var/dmg_mult = CONFIG_GET(number/damage_multiplier)
 			 //Slowly get that clone healed and finished.
-			mob_occupant.adjustCloneLoss(-((speed_coeff / 2) * dmg_mult))
+			mob_occupant.adjustCloneLoss(-((speed_coeff / 2) * dmg_mult), TRUE, TRUE)
+			if(reagents.has_reagent(/datum/reagent/medicine/c2/synthflesh, fleshamnt))
+				reagents.remove_reagent(/datum/reagent/medicine/c2/synthflesh, fleshamnt)
+			else if(reagents.has_reagent(/datum/reagent/blood, fleshamnt*3))
+				reagents.remove_reagent(/datum/reagent/blood, fleshamnt*3)
 			var/progress = CLONE_INITIAL_DAMAGE - mob_occupant.getCloneLoss()
 			// To avoid the default cloner making incomplete clones
 			progress += (100 - MINIMUM_HEAL_LEVEL)
@@ -303,9 +322,9 @@
 					O.Insert(mob_occupant)
 				else if(isbodypart(I))
 					var/obj/item/bodypart/BP = I
-					BP.attach_limb(mob_occupant)
+					BP.try_attach_limb(mob_occupant)
 
-			use_power(7500) //This might need tweaking.
+			use_power(5000 * speed_coeff) //This might need tweaking.
 
 		else if(mob_occupant && (mob_occupant.cloneloss <= (100 - heal_level)))
 			connected_message("Cloning Process Complete.")
@@ -321,7 +340,7 @@
 					O.Insert(mob_occupant)
 				else if(isbodypart(i))
 					var/obj/item/bodypart/BP = i
-					BP.attach_limb(mob_occupant)
+					BP.try_attach_limb(mob_occupant)
 
 			go_out()
 			log_combat("[key_name(mob_occupant)] completed cloning cycle in [src] at [AREACOORD(src)].")
@@ -329,10 +348,8 @@
 	else if (!mob_occupant || mob_occupant.loc != src)
 		occupant = null
 		if (!mess && !panel_open)
-			update_icon()
+			icon_state = "pod_0"
 		use_power(200)
-
-	update_icon()
 
 //Let's unlock this early I guess.  Might be too early, needs tweaking.
 /obj/machinery/clonepod/attackby(obj/item/W, mob/user, params)
@@ -389,8 +406,7 @@
 	malfunction()
 	add_fingerprint(user)
 	log_combat("[key_name(user)] emagged [src] at [AREACOORD(src)], causing it to malfunction.")
-	if(user)
-		log_combat(user, src, "emagged", null, occupant ? "[occupant] inside, killing them via malfunction." : null)
+	log_combat(user, src, "emagged", null, occupant ? "[occupant] inside, killing them via malfunction." : null)
 
 //Put messages in the connected computer's temp var for display.
 /obj/machinery/clonepod/proc/connected_message(message)
@@ -403,7 +419,7 @@
 	connected.updateUsrDialog()
 	return TRUE
 
-/obj/machinery/clonepod/proc/go_out()
+/obj/machinery/clonepod/proc/go_out(move = TRUE)
 	countdown.stop()
 	var/mob/living/mob_occupant = occupant
 	var/turf/T = get_turf(src)
@@ -417,12 +433,18 @@
 		unattached_flesh.Cut()
 		mess = FALSE
 		new /obj/effect/gibspawner/generic(get_turf(src), mob_occupant)
-		audible_message("<span class='hear'>You hear a splat.</span>")
-		update_icon()
+		audible_message("<span class='italics'>You hear a splat.</span>")
+		icon_state = "pod_0"
 		return
 
 	if(!mob_occupant)
 		return
+
+	if(HAS_TRAIT(mob_occupant, TRAIT_NOCLONELOSS))
+		var/cl_loss = mob_occupant.getCloneLoss()
+		mob_occupant.adjustBruteLoss(cl_loss, FALSE)
+		mob_occupant.setCloneLoss(0, FALSE, TRUE)
+
 	current_insurance = null
 	REMOVE_TRAIT(mob_occupant, TRAIT_STABLEHEART, CLONING_POD_TRAIT)
 	REMOVE_TRAIT(mob_occupant, TRAIT_STABLELIVER, CLONING_POD_TRAIT)
@@ -436,8 +458,9 @@
 		to_chat(occupant, "<span class='notice'><b>There is a bright flash!</b><br><i>You feel like a new being.</i></span>")
 		mob_occupant.flash_act()
 
-	occupant.forceMove(T)
-	update_icon()
+	if(move)
+		occupant.forceMove(T)
+	icon_state = "pod_0"
 	mob_occupant.domutcheck(1) //Waiting until they're out before possible monkeyizing. The 1 argument forces powers to manifest.
 	for(var/fl in unattached_flesh)
 		qdel(fl)
@@ -445,6 +468,13 @@
 
 	occupant = null
 	clonemind = null
+
+// Guess they moved out on their own, remove any clone status effects
+// If the occupant var is null, welp what can we do
+/obj/machinery/clonepod/Exited(atom/movable/AM, atom/newloc)
+	if(AM == occupant)
+		go_out(FALSE)
+	. = ..()
 
 /obj/machinery/clonepod/proc/malfunction()
 	var/mob/living/mob_occupant = occupant
@@ -454,7 +484,7 @@
 			technician, as your warranty may be affected.")
 		mess = TRUE
 		maim_clone(mob_occupant)	//Remove every bit that's grown back so far to drop later, also destroys bits that haven't grown yet
-		update_icon()
+		icon_state = "pod_g"
 		if(clonemind && mob_occupant.mind != clonemind)
 			clonemind.transfer_to(mob_occupant)
 		mob_occupant.grab_ghost() // We really just want to make you suffer.
@@ -465,12 +495,12 @@
 		log_combat("[key_name(mob_occupant)] destroyed within [src] at [AREACOORD(src)] due to malfunction.")
 		QDEL_IN(mob_occupant, 40)
 
-/obj/machinery/clonepod/container_resist_act(mob/living/user)
+/obj/machinery/clonepod/relaymove(mob/user)
+	container_resist(user)
+
+/obj/machinery/clonepod/container_resist(mob/living/user)
 	if(user.stat == CONSCIOUS)
 		go_out()
-
-/obj/machinery/clonepod/relaymove(mob/user)
-	container_resist_act(user)
 
 /obj/machinery/clonepod/emp_act(severity)
 	. = ..()
@@ -496,12 +526,14 @@
 
 /obj/machinery/clonepod/proc/horrifyingsound()
 	for(var/i in 1 to 5)
-		playsound(src,pick('sound/hallucinations/growl1.ogg','sound/hallucinations/growl2.ogg','sound/hallucinations/growl3.ogg'), 100, (rand(95,105) * 0.01))
+		playsound(src,pick('sound/hallucinations/growl1.ogg','sound/hallucinations/growl2.ogg','sound/hallucinations/growl3.ogg'), 100, rand(0.95,1.05))
 		sleep(1)
 	sleep(10)
 	playsound(src,'sound/hallucinations/wail.ogg', 100, TRUE)
 
 /obj/machinery/clonepod/deconstruct(disassembled = TRUE)
+	for(var/obj/item/reagent_containers/cup/glass/G in component_parts)
+		reagents.trans_to(G, G.reagents.maximum_volume)
 	if(occupant)
 		var/mob/living/mob_occupant = occupant
 		go_out()
@@ -516,7 +548,7 @@
 			qdel(fl)
 		unattached_flesh.Cut()
 
-	H.setCloneLoss(CLONE_INITIAL_DAMAGE)     //Yeah, clones start with very low health, not with random, because why would they start with random health
+	H.setCloneLoss(CLONE_INITIAL_DAMAGE, TRUE, TRUE)     //Yeah, clones start with very low health, not with random, because why would they start with random health
 	// In addition to being cellularly damaged, they also have no limbs or internal organs.
 	// Applying brainloss is done when the clone leaves the pod, so application of traumas can happen
 	// based on the level of damage sustained.
@@ -541,48 +573,22 @@
 
 	flesh_number = unattached_flesh.len
 
-/obj/machinery/clonepod/update_icon_state()
-	. = ..()
-	if(mess)
-		icon_state = "pod_g"
-	else if(occupant)
-		icon_state = "pod_1"
-	else
-		icon_state = "pod_0"
-	if(panel_open)
-		icon_state = "pod_0_maintenance"
+/obj/machinery/clonepod/prefilled
 
-/obj/machinery/clonepod/update_overlays()
+/obj/machinery/clonepod/prefilled/Initialize(mapload)
 	. = ..()
-	if(mess)
-		var/mutable_appearance/gib1 = mutable_appearance('modular_skyrat/modules/cloning/icons/obj/machines/cryo_mobs.dmi', "gibup")
-		var/mutable_appearance/gib2 = mutable_appearance('modular_skyrat/modules/cloning/icons/obj/machines/cryo_mobs.dmi', "gibdown")
-		gib1.pixel_y = 27 + round(sin(world.time) * 3)
-		gib1.pixel_x = round(sin(world.time * 3))
-		gib2.pixel_y = 27 + round(cos(world.time) * 3)
-		gib2.pixel_x = round(cos(world.time * 3))
-		. += gib2
-		. += gib1
-	else if(occupant)
-		var/mutable_appearance/occupant_overlay
-		var/unattached_fl_number = length(unattached_flesh) ? unattached_flesh.len : 0
-		var/completion = (flesh_number - unattached_fl_number) / flesh_number
-		if(completion > 0.7)
-			occupant_overlay = mutable_appearance(occupant.icon, occupant.icon_state)
-			occupant_overlay.copy_overlays(occupant)
-		else
-			occupant_overlay = mutable_appearance('modular_skyrat/modules/cloning/icons/obj/machines/cryo_mobs.dmi', "clone_meat")
-			var/matrix/tform = matrix()
-			tform.Scale(completion)
-			tform.Turn(cos(world.time * 2) * 3)
-			occupant_overlay.transform = tform
-			occupant_overlay.appearance_flags = NONE
-		occupant_overlay.dir = SOUTH
-		occupant_overlay.pixel_y = 27 + round(sin(world.time) * 3)
-		occupant_overlay.pixel_x = round(sin(world.time * 3))
-		. += occupant_overlay
-		. += "cover-on"
-	. += "panel"
+	reagents.add_reagent(/datum/reagent/medicine/c2/synthflesh, 100)
+
+//Experimental cloner; clones a body regardless of the owner's status.
+/obj/machinery/clonepod/experimental
+	name = "experimental cloning pod"
+	desc = "An ancient cloning pod. It seems to be an early prototype of the experimental cloners used in Nanotrasen Stations."
+	icon = 'voidcrew/modules/cloning/icons/cloning.dmi'
+	icon_state = "pod_0"
+	req_access = null
+	circuit = /obj/item/circuitboard/machine/clonepod/experimental
+	internal_radio = FALSE
+	experimental_pod = TRUE
 
 #undef CLONE_INITIAL_DAMAGE
 #undef SPEAK

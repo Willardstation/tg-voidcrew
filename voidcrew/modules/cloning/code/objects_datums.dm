@@ -6,12 +6,17 @@
 	text_size = 1
 
 /obj/effect/countdown/clonepod/get_value()
-	var/obj/machinery/clonepod/C = attached_to
-	if(!istype(C))
+	var/obj/machinery/clonepod/attacked_clone_pod = attached_to
+	if(!istype(attacked_clone_pod))
 		return
-	else if(C.occupant)
-		var/completion = round(C.get_completion())
+	if(attacked_clone_pod.occupant)
+		var/completion = round(attacked_clone_pod.get_completion())
 		return completion
+
+//The return of data disks?? Just for transferring between genetics machine/cloning machine.
+//TO-DO: Make the genetics machine accept them.
+/obj/item/disk/data
+	var/list/fields = list()
 
 //datums
 
@@ -36,8 +41,7 @@
 	description = "<span class='boldwarning'>I recently saw my own corpse...</span>\n"
 	mood_change = -6
 
-/datum/quirk/proc/clone_data() //return additional data that should be remembered by cloning
-/datum/quirk/proc/on_clone(data) //create the quirk from clone data
+/datum/config_entry/flag/revival_cloning
 
 //techweb
 /datum/techweb_node/cloning
@@ -59,3 +63,10 @@
 
 /datum/gas_mixture/immutable/cloner/heat_capacity()
 	return (MOLES_O2STANDARD + MOLES_N2STANDARD)*20 //specific heat of nitrogen is 20
+
+/datum/quirk/proc/clone_data() //return additional data that should be remembered by cloning
+/datum/quirk/proc/on_clone(data) //create the quirk from clone data
+
+//Called when something resists while this atom is its loc
+/atom/movable/proc/container_resist(mob/living/user)
+	return

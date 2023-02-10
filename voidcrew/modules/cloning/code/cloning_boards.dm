@@ -3,12 +3,13 @@
 /obj/item/circuitboard/computer/prototype_cloning
 	name = "Prototype Cloning"
 	greyscale_colors = CIRCUIT_COLOR_MEDICAL
-	build_path = /obj/machinery/computer/prototype_cloning
+	build_path = /obj/machinery/computer/cloning/prototype
 
 /obj/item/circuitboard/computer/cloning
 	name = "Cloning"
 	greyscale_colors = CIRCUIT_COLOR_MEDICAL
 	build_path = /obj/machinery/computer/cloning
+	var/list/records = list()
 
 //Machinery
 
@@ -35,7 +36,7 @@
 	id = "clonecontrol"
 	build_path = /obj/item/circuitboard/computer/cloning
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
-	category = RND_CATEGORY_MEDICAL_DESIGNS
+	category = RND_CATEGORY_MACHINE
 
 /datum/design/board/clonepod
 	name = "Machine Design (Clone Pod)"
@@ -43,4 +44,4 @@
 	id = "clonepod"
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
 	build_path = /obj/item/circuitboard/machine/clonepod
-	category = RND_CATEGORY_MEDICAL_DESIGNS
+	category = RND_CATEGORY_MACHINE
