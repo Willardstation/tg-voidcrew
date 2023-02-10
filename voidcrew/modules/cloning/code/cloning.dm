@@ -125,7 +125,7 @@
 		. += span_notice("Synthflesh consumption at <b>[round(fleshamnt*90, 1)]cm<sup>3</sup></b> per clone.")
 		. += span_notice("The reagent display reads: [round(reagents.total_volume, 1)] / [reagents.maximum_volume] cm<sup>3</sup>")
 		if(efficiency > 5)
-			. += span_notice("Pod has been upgraded to support autoprocessing and apply beneficial mutations.")
+			. += span_notice("Pod has been upgraded to support autoprocessing.")
 
 /obj/machinery/clonepod/examine(mob/user)
 	. = ..()
@@ -348,15 +348,6 @@
 	var/mob/living/carbon/human/cloned_human = new /mob/living/carbon/human(src)
 
 	cloned_human.hardset_dna(ui, mutation_index, cloned_human.real_name, null, mrace, features)
-
-	if(!HAS_TRAIT(cloned_human, TRAIT_RADIMMUNE))//dont apply mutations if the species is Mutation proof.
-		if(efficiency > 2)
-			var/list/unclean_mutations = (GLOB.not_good_mutations|GLOB.bad_mutations)
-			cloned_human.dna.remove_mutation_group(unclean_mutations)
-		if(efficiency < 3 && prob(50))
-			var/mob/M = cloned_human.easy_random_mutate(NEGATIVE+MINOR_NEGATIVE)
-			if(ismob(M))
-				cloned_human = M
 
 	occupant = cloned_human
 
