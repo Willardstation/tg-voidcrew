@@ -73,7 +73,8 @@
 	. = ..()
 	speed_coeff = 0
 	efficiency = 0
-	reagents.maximum_volume = 0
+	if(reagents)
+		reagents.maximum_volume = 0
 	fleshamnt = 1
 	for(var/obj/item/reagent_containers/G in component_parts)
 		reagents.maximum_volume += G.volume
