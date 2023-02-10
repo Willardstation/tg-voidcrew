@@ -16,37 +16,33 @@
 	circuit = /obj/item/circuitboard/computer/voidcrew_cargo
 	light_color = COLOR_BRIGHT_ORANGE
 
-	///The linked supplypod beacon
+	///The linked supplypod beacon that will drop/send the cargo container.
 	var/obj/item/supplypod_beacon/beacon
-	///The ship object representing the ship that the container was called to
-	var/obj/docking_port/mobile/voidcrew/linked_port
+	///Bank account we're connected to.
+	var/datum/bank_account/ship/bank_account
 
 	///List of everything we're attempting to purchase.
 	var/list/datum/supply_order/checkout_list = list()
 
-
-	// linked_port.current_ship.ship_account TO GET ACCOUNT!!
-	// linked_port.shipping_containers
-
-/obj/machinery/computer/voidcrew_cargo/Initialize(mapload)
-	. = ..()
-	connect_to_shuttle(mapload, SSshuttle.get_containing_shuttle(src))
-
 /obj/machinery/computer/voidcrew_cargo/Destroy()
-	linked_port = null
+	bank_account = null
 	if(beacon)
 		QDEL_NULL(beacon)
 	QDEL_LIST(checkout_list)
 	return ..()
 
-/obj/machinery/computer/voidcrew_cargo/connect_to_shuttle(mapload, obj/docking_port/mobile/voidcrew/port, obj/docking_port/stationary/dock)
-	. = ..()
-	linked_port = port
+/obj/machinery/computer/voidcrew_cargo/multitool_act(mob/living/user, obj/item/multitool/tool)
+	if(QDELETED(tool.buffer) || !istype(tool.buffer, /obj/machinery/computer/bank_machine))
+		return
+	var/obj/machinery/computer/bank_machine/machine = tool.buffer
+	bank_account = machine.synced_bank_account
+	playsound(user, 'sound/machines/ding.ogg', 40, TRUE)
+	balloon_alert_to_viewers("new account synced")
+	return TRUE
 
 /obj/machinery/computer/voidcrew_cargo/ui_data(mob/user)
 	var/list/data = list()
 
-	var/datum/bank_account/bank_account = linked_port.current_ship.ship_account
 	data["has_bank_account"] = !!bank_account
 	if(!bank_account)
 		return data
@@ -104,13 +100,12 @@
 		if("print_beacon")
 			if(beacon)
 				return TRUE
-			var/datum/bank_account/account = linked_port.current_ship.ship_account
-			if(!account)
+			if(!bank_account)
 				return FALSE
-			if(account.adjust_money(-BEACON_COST))
+			if(bank_account.adjust_money(-BEACON_COST))
 				var/obj/item/supply_beacon/new_beacon = new /obj/item/supply_beacon(drop_location())
 				new_beacon.cargo_console = src
-				new_beacon.name = "Supply Pod Beacon ([linked_port.current_ship.name])"
+				new_beacon.name = "Supply Pod Beacon ([bank_account.account_holder])"
 				beacon = new_beacon
 			return TRUE
 
@@ -173,13 +168,13 @@
 					"amount" = 1,
 				)
 
-			if(linked_port.shipping_containers.len)
+			if(bank_account.shipping_containers.len)
 				say("The freight container is departing.")
-				usr.investigate_log("sent the [linked_port.current_ship.name] cargo pod away.", INVESTIGATE_CARGO)
+				usr.investigate_log("sent the [bank_account.account_holder] cargo pod away.", INVESTIGATE_CARGO)
 				sell()
 			else
 				say("The freight container has been called and will arrive soon.")
-				usr.investigate_log("called the [linked_port.current_ship.name] cargo pod.", INVESTIGATE_CARGO)
+				usr.investigate_log("called the [bank_account.account_holder] cargo pod.", INVESTIGATE_CARGO)
 				buy()
 			if(!length(cart_list))
 				return TRUE
@@ -196,8 +191,7 @@
 				requisition_text += "Access Restrictions: [SSid_access.get_access_desc(order.pack.access)])</br>"
 			requisition_paper.add_raw_text(requisition_text)
 			requisition_paper.update_appearance()
-
-			. = TRUE
+			return TRUE
 
 /**
  * Adds an item to the grocery list
@@ -230,7 +224,7 @@
 			orderer = name,
 			orderer_rank = rank,
 			orderer_ckey = usr.ckey,
-			paying_account = linked_port.current_ship.ship_account,
+			paying_account = bank_account,
 		)
 		checkout_list += new_order
 

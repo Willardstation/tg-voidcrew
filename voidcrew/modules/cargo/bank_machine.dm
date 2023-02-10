@@ -21,6 +21,11 @@
 	else
 		. += span_notice("It is not connected to an account. Use an ID to connect it")
 
+/obj/machinery/computer/bank_machine/multitool_act(mob/living/user, obj/item/multitool/tool)
+	user.balloon_alert(user, "buffer saved in storage")
+	tool.buffer = src
+	return TRUE
+
 /obj/machinery/computer/bank_machine/ui_data(mob/user)
 	var/list/data = ..()
 

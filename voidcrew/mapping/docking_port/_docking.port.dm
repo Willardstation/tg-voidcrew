@@ -15,8 +15,6 @@
 
 	///List of spawn points on the ship.
 	var/list/obj/machinery/cryopod/spawn_points = list()
-	///List of all shipping containers we have connected to us.
-	var/list/obj/structure/shipping_container/shipping_containers = list()
 
 /obj/docking_port/mobile/voidcrew/Destroy(force)
 	current_ship.shuttle = null
