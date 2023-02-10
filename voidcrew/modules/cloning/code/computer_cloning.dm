@@ -100,25 +100,7 @@
 			records -= R
 			update_static_data()
 
-
-/obj/machinery/computer/cloning/proc/connect_scanner(obj/machinery/dna_scannernew/new_scanner)
-	if(scanner)
-		UnregisterSignal(scanner, COMSIG_MACHINE_OPEN)
-		UnregisterSignal(scanner, COMSIG_MACHINE_CLOSE)
-
-	if(new_scanner)
-		RegisterSignal(new_scanner, COMSIG_MACHINE_OPEN, PROC_REF(scanner_ui_update))
-		RegisterSignal(new_scanner, COMSIG_MACHINE_CLOSE, PROC_REF(scanner_ui_update))
-
-	scanner = new_scanner
-
-/obj/machinery/computer/cloning/proc/scanner_ui_update()
-	SIGNAL_HANDLER
-	update_static_data()
-
 /obj/machinery/computer/cloning/proc/updatemodules(findfirstcloner)
-	if(QDELETED(scanner))
-		connect_scanner(findscanner())
 	if(findfirstcloner && !LAZYLEN(pods))
 		findcloner()
 	if(!autoprocess)
@@ -333,8 +315,6 @@
 				if(ERROR_SUICIDED_BODY)
 					temp = "Error [ERROR_SUICIDED_BODY]: Failed to capture [C.fields["name"]]'s mind from a suicided body."
 					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
-				if(ERROR_SOUL_DAMNED)
-					temp = "Err#^ [ERROR_SOUL_DAMNED]: #$%SGFG$#their@soul&is$mine@#%# => 1(i*i@%i$(t!0n $A!l^r#."
 				if(ERROR_UNCLONABLE)
 					temp = "Error [ERROR_UNCLONABLE]: [C.fields["name"]] is not clonable."
 					playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)

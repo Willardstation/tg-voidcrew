@@ -326,7 +326,7 @@
 		clonemind = locate(mindref) in GLOB.player_list
 		if(!istype(clonemind)) //not a mind
 			return ERROR_NOT_MIND
-		if(last_death<0) //presaved clone is not clonable
+		if(last_death < 0) //presaved clone is not clonable
 			return ERROR_PRESAVED_CLONE
 		if(abs(clonemind.last_death - last_death) > 5) //You can't clone old ones. 5 seconds grace because a sync-failure can happen.
 			return ERROR_OUTDATED_CLONE
