@@ -51,7 +51,7 @@
 	updatemodules(TRUE)
 
 /obj/machinery/computer/cloning/Destroy()
-	if(pods.len)
+	if(pods)
 		for(var/P in pods)
 			DetachCloner(P)
 		pods = null
@@ -110,7 +110,7 @@
 	return TRUE
 
 /obj/machinery/computer/cloning/proc/GetAvailablePod(mind, efficient_required = FALSE)
-	if(!pods.len)
+	if(!length(pods))
 		return null
 	for(var/obj/machinery/clonepod/pod as anything in pods)
 		if(pod.occupant && pod.clonemind == mind)
@@ -127,7 +127,7 @@
 	return null
 
 /obj/machinery/computer/cloning/proc/HasEfficientPod()
-	if(!pods.len)
+	if(!length(pods))
 		return FALSE
 	for(var/obj/machinery/clonepod/pod as anything in pods)
 		if(pod.is_operational && pod.efficiency > 5)
