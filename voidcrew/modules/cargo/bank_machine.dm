@@ -34,7 +34,7 @@
 		var/obj/item/card/id/id_weapon = weapon
 		synced_bank_account = id_weapon.registered_account
 		playsound(user, 'sound/machines/ding.ogg', 50, TRUE)
-		balloon_alert(user, "account updated")
+		balloon_alert_to_viewers(user, "account updated")
 
 	if(!synced_bank_account && (istype(weapon, /obj/item/stack/spacecash) || istype(weapon, /obj/item/holochip)))
 		return //don't let them continue the attack chain because they'll waste money on a machine with no account
