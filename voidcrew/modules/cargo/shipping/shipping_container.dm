@@ -35,5 +35,5 @@
 
 	switch(action)
 		if("remove")
-			crate.forceMove(user.loc) //drop it at the user because otherwise the container will hide it
+			crate.forceMove(usr.loc) //drop it at the user because otherwise the container will hide it
 			return TRUE
