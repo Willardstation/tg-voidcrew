@@ -1,5 +1,6 @@
 //objects
 
+
 /obj/effect/countdown/clonepod
 	name = "cloning pod countdown"
 	color = "#18d100"
@@ -52,3 +53,14 @@
 
 /datum/gas_mixture/immutable/cloner/heat_capacity()
 	return (MOLES_O2STANDARD + MOLES_N2STANDARD)*20 //specific heat of nitrogen is 20
+
+/datum/data/record
+	name = "record"
+	var/list/fields = list()
+
+/datum/quirk/proc/clone_data() //return additional data that should be remembered by cloning
+
+/datum/quirk/proc/on_clone(data) //create the quirk from clone data
+
+/atom/movable/proc/container_resist(mob/living/user)
+	return

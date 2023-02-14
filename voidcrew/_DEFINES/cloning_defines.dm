@@ -3,7 +3,9 @@
 #define CLONING_DELETE_RECORD (1<<1)
 #define CLONING_SUCCESS_EXPERIMENTAL (1<<2)
 
-//This define FIXES ALOT OF ERRORS took a long time to find
+//This defines for cloning
+#define CLONER_FRESH_CLONE "fresh"
+#define CLONER_MATURE_CLONE "mature"
 #define CLONING_POD_TRAIT "cloning_pod_trait"
 
 #define ERROR_NO_SYNTHFLESH 101
@@ -22,3 +24,5 @@
 #define rustg_hash_string(algorithm, text) call(RUST_G, "hash_string")(algorithm, text)
 #define RUSTG_HASH_MD5 "md5"
 #define ROLE_EXPERIMENTAL_CLONE "Experimental Clone"
+#define COMSIG_MACHINE_CLOSE "machine_close"
+#define COMSIG_MACHINE_OPEN "machine_open"
