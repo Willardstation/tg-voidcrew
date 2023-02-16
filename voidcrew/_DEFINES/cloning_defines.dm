@@ -21,8 +21,6 @@
 #define ERROR_SUICIDED_BODY 207
 #define ERROR_UNCLONABLE 901
 
-#define rustg_hash_string(algorithm, text) call(RUST_G, "hash_string")(algorithm, text)
-#define RUSTG_HASH_MD5 "md5"
 #define ROLE_EXPERIMENTAL_CLONE "Experimental Clone"
 #define COMSIG_MACHINE_CLOSE "machine_close"
 #define COMSIG_MACHINE_OPEN "machine_open"
