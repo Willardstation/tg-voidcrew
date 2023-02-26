@@ -222,6 +222,12 @@
 		"cargorequest",
 	)
 
+/datum/techweb_node/comp_recordkeeping/New()
+	. = ..()
+	design_ids -= list(
+		"account_console",
+	)
+
 /datum/techweb_node/bluespace_travel/New()
 	. = ..()
 	design_ids -= list(
