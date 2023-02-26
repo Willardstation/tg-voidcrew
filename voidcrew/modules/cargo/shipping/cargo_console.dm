@@ -1,12 +1,4 @@
 /**
- * Circuit board
- */
-/obj/item/circuitboard/computer/voidcrew_cargo
-	name = "Supply Console"
-	greyscale_colors = CIRCUIT_COLOR_SUPPLY
-	build_path = /obj/machinery/computer/voidcrew_cargo
-
-/**
  * Computer
  */
 /obj/machinery/computer/voidcrew_cargo
@@ -18,8 +10,8 @@
 
 	///The linked supplypod beacon that will drop/send the cargo container.
 	var/obj/item/supply_beacon/beacon
-	///Bank account we're connected to.
-	var/datum/bank_account/ship/bank_account
+	///The machine we're connected to that holds our bank account.
+	var/obj/machinery/computer/bank_machine/bank_account_holder
 
 	///List of everything we're attempting to purchase.
 	var/list/datum/supply_order/checkout_list = list()
@@ -28,7 +20,8 @@
 	COOLDOWN_DECLARE(calling_cooldown)
 
 /obj/machinery/computer/voidcrew_cargo/Destroy()
-	bank_account = null
+	if(bank_account_holder)
+		on_bank_deletion(bank_account_holder)
 	if(beacon)
 		QDEL_NULL(beacon)
 	QDEL_LIST(checkout_list)
@@ -43,11 +36,16 @@
 /obj/machinery/computer/voidcrew_cargo/multitool_act(mob/living/user, obj/item/multitool/tool)
 	if(QDELETED(tool.buffer) || !istype(tool.buffer, /obj/machinery/computer/bank_machine))
 		return
-	var/obj/machinery/computer/bank_machine/machine = tool.buffer
-	bank_account = machine.synced_bank_account
+	bank_account_holder = tool.buffer
+	RegisterSignal(tool.buffer, COMSIG_PARENT_QDELETING, PROC_REF(on_bank_deletion))
 	playsound(user, 'sound/machines/ding.ogg', 40, TRUE)
 	balloon_alert_to_viewers("new account synced")
 	return TRUE
+
+/obj/machinery/computer/voidcrew_cargo/proc/on_bank_deletion(atom/source)
+	SIGNAL_HANDLER
+	UnregisterSignal(source, COMSIG_PARENT_QDELETING)
+	bank_account_holder = null
 
 /obj/machinery/computer/voidcrew_cargo/ui_interact(mob/user, datum/tgui/ui)
 	. = ..()
@@ -58,6 +56,7 @@
 
 /obj/machinery/computer/voidcrew_cargo/ui_static_data(mob/user)
 	var/list/data = list()
+	data["beacon_cost_message"] = "Print a beacon for [BEACON_COST] credits"
 	data["supplies"] = list()
 	for(var/pack in SSshuttle.supply_packs)
 		var/datum/supply_pack/P = SSshuttle.supply_packs[pack]
@@ -81,21 +80,23 @@
 /obj/machinery/computer/voidcrew_cargo/ui_data(mob/user)
 	var/list/data = list()
 
-	data["has_bank_account"] = !!bank_account
-	if(!bank_account)
+	data["has_bank_account"] = !!bank_account_holder
+	if(!bank_account_holder.synced_bank_account)
 		data["beacon_error_message"] += "Potential Errors: NO BANK ACCOUNT CONNECTED"//beacon was destroyed
 		return data
 
 	data["on_cargo_cooldown"] = !COOLDOWN_FINISHED(src, calling_cooldown)
-	data["cargo_ordered"] = !!bank_account.shipping_containers.len
-	data["points"] = bank_account.account_balance
+	data["cargo_ordered"] = !!bank_account_holder.synced_bank_account.shipping_containers.len
+	data["points"] = bank_account_holder.synced_bank_account.account_balance
 
 	data["has_beacon"] = !!beacon
-	data["can_buy_beacon"] = !beacon && bank_account.account_balance >= BEACON_COST
+	data["can_buy_beacon"] = !beacon && bank_account_holder.synced_bank_account.account_balance >= BEACON_COST
 	if(!beacon)
-		data["beacon_error_message"] += "Potential Errors: BEACON MISSING"//beacon was destroyed
+		data["beacon_error_message"] = "Potential Errors: BEACON MISSING"//beacon was destroyed
 	else if(!isturf(beacon.loc))
-		data["beacon_error_message"] += "Potential Errors: BEACON MUST BE EXPOSED"//beacon's loc/user's loc must be a turf
+		data["beacon_error_message"] = "Potential Errors: BEACON MUST BE EXPOSED"//beacon's loc/user's loc must be a turf
+	else
+		data["beacon_error_message"] = null
 
 	data["beaconzone"] = beacon ? get_area(beacon) : "No beacon"
 	data["beaconName"] = beacon ? beacon.name : "No Beacon Found"
@@ -132,7 +133,7 @@
 	. = ..()
 	if(.)
 		return
-	if(!bank_account)
+	if(!bank_account_holder.synced_bank_account)
 		balloon_alert(usr, "no bank account connected.")
 		usr.playsound_local(src, 'sound/machines/buzz-sigh.ogg', 50, TRUE, -1)
 		return
@@ -144,12 +145,12 @@
 		if("print_beacon")
 			if(beacon)
 				return TRUE
-			if(!bank_account)
+			if(!bank_account_holder.synced_bank_account)
 				return FALSE
-			if(bank_account.adjust_money(-BEACON_COST))
+			if(bank_account_holder.synced_bank_account.adjust_money(-BEACON_COST))
 				var/obj/item/supply_beacon/new_beacon = new /obj/item/supply_beacon(drop_location())
 				new_beacon.cargo_console = src
-				new_beacon.name = "Supply Pod Beacon ([bank_account.account_holder])"
+				new_beacon.name = "Supply Pod Beacon ([bank_account_holder.synced_bank_account.account_holder])"
 				beacon = new_beacon
 			return TRUE
 
@@ -213,13 +214,13 @@
 					"amount" = 1,
 				)
 
-			if(bank_account.shipping_containers.len)
+			if(bank_account_holder.synced_bank_account.shipping_containers.len)
 				say("The freight container is departing.")
-				usr.investigate_log("sent the [bank_account.account_holder] cargo pod away.", INVESTIGATE_CARGO)
+				usr.investigate_log("sent the [bank_account_holder.synced_bank_account.account_holder] cargo pod away.", INVESTIGATE_CARGO)
 				sell()
 			else
 				say("The freight container has been called and will arrive soon.")
-				usr.investigate_log("called the [bank_account.account_holder] cargo pod.", INVESTIGATE_CARGO)
+				usr.investigate_log("called the [bank_account_holder.synced_bank_account.account_holder] cargo pod.", INVESTIGATE_CARGO)
 				buy()
 			if(!length(cart_list))
 				return TRUE
@@ -269,7 +270,7 @@
 			orderer = name,
 			orderer_rank = rank,
 			orderer_ckey = usr.ckey,
-			paying_account = bank_account,
+			paying_account = bank_account_holder.synced_bank_account,
 		)
 		checkout_list += new_order
 
@@ -296,3 +297,11 @@
 		if(order_name == supply.name)
 			return pack
 	return null
+
+/**
+ * Circuit board
+ */
+/obj/item/circuitboard/computer/voidcrew_cargo
+	name = "Supply Console"
+	greyscale_colors = CIRCUIT_COLOR_SUPPLY
+	build_path = /obj/machinery/computer/voidcrew_cargo

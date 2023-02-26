@@ -48,6 +48,7 @@ export const VoidcrewCargoContent = (props, context) => {
 const VoidcrewCargoStatus = (props, context) => {
   const { act, data } = useBackend(context);
   const {
+    beacon_cost_message,
     has_beacon,
     can_buy_beacon,
     on_cargo_cooldown,
@@ -70,7 +71,7 @@ const VoidcrewCargoStatus = (props, context) => {
       </Box>
       {!has_beacon && (
         <Button
-          content={'Print a beacon for 500 credits'}
+          content={beacon_cost_message}
           disabled={!can_buy_beacon}
           onClick={() => act('print_beacon')}
         />
