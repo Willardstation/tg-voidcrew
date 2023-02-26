@@ -57,7 +57,7 @@
 			if(AM.anchored)
 				continue
 			export_item_and_contents(AM, (EXPORT_CARGO | EXPORT_CONTRABAND), dry_run = FALSE, external_report = ex)
-		bank_account.shipping_containers += containers
+		bank_account.shipping_containers -= containers
 		qdel(containers)
 
 	if(ex.exported_atoms)

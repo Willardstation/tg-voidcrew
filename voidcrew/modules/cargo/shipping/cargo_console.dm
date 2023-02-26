@@ -17,12 +17,15 @@
 	light_color = COLOR_BRIGHT_ORANGE
 
 	///The linked supplypod beacon that will drop/send the cargo container.
-	var/obj/item/supplypod_beacon/beacon
+	var/obj/item/supply_beacon/beacon
 	///Bank account we're connected to.
 	var/datum/bank_account/ship/bank_account
 
 	///List of everything we're attempting to purchase.
 	var/list/datum/supply_order/checkout_list = list()
+
+	/// Cooldown between calling so you don't repeatedly spawn and delete crates.
+	COOLDOWN_DECLARE(calling_cooldown)
 
 /obj/machinery/computer/voidcrew_cargo/Destroy()
 	bank_account = null
@@ -30,6 +33,12 @@
 		QDEL_NULL(beacon)
 	QDEL_LIST(checkout_list)
 	return ..()
+
+/obj/machinery/computer/voidcrew_cargo/attackby(obj/item/weapon, mob/user, params)
+	. = ..()
+	if(istype(weapon, /obj/item/supply_beacon))
+		beacon = weapon
+		balloon_alert_to_viewers("beacon updated")
 
 /obj/machinery/computer/voidcrew_cargo/multitool_act(mob/living/user, obj/item/multitool/tool)
 	if(QDELETED(tool.buffer) || !istype(tool.buffer, /obj/machinery/computer/bank_machine))
@@ -40,22 +49,53 @@
 	balloon_alert_to_viewers("new account synced")
 	return TRUE
 
+/obj/machinery/computer/voidcrew_cargo/ui_interact(mob/user, datum/tgui/ui)
+	. = ..()
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "VoidcrewCargo", name)
+		ui.open()
+
+/obj/machinery/computer/voidcrew_cargo/ui_static_data(mob/user)
+	var/list/data = list()
+	data["supplies"] = list()
+	for(var/pack in SSshuttle.supply_packs)
+		var/datum/supply_pack/P = SSshuttle.supply_packs[pack]
+		if(!data["supplies"][P.group])
+			data["supplies"][P.group] = list(
+				"name" = P.group,
+				"packs" = list()
+			)
+		if((P.hidden && !(obj_flags & EMAGGED)) || (P.special && !P.special_enabled) || P.drop_pod_only)
+			continue
+		data["supplies"][P.group]["packs"] += list(list(
+			"name" = P.name,
+			"cost" = P.get_cost(),
+			"id" = pack,
+			"desc" = P.desc || P.name, // If there is a description, use it. Otherwise use the pack's name.
+			"goody" = P.goody,
+			"access" = P.access
+		))
+	return data
+
 /obj/machinery/computer/voidcrew_cargo/ui_data(mob/user)
 	var/list/data = list()
 
 	data["has_bank_account"] = !!bank_account
 	if(!bank_account)
+		data["beacon_error_message"] += "Potential Errors: NO BANK ACCOUNT CONNECTED"//beacon was destroyed
 		return data
 
+	data["on_cargo_cooldown"] = !COOLDOWN_FINISHED(src, calling_cooldown)
+	data["cargo_ordered"] = !!bank_account.shipping_containers.len
 	data["points"] = bank_account.account_balance
 
 	data["has_beacon"] = !!beacon
 	data["can_buy_beacon"] = !beacon && bank_account.account_balance >= BEACON_COST
-	data["beacon_error_message"] = "Potential Beacon Errors:"
 	if(!beacon)
-		data["beacon_error_message"] += "BEACON MISSING"//beacon was destroyed
+		data["beacon_error_message"] += "Potential Errors: BEACON MISSING"//beacon was destroyed
 	else if(!isturf(beacon.loc))
-		data["beacon_error_message"] += "MUST BE EXPOSED"//beacon's loc/user's loc must be a turf
+		data["beacon_error_message"] += "Potential Errors: BEACON MUST BE EXPOSED"//beacon's loc/user's loc must be a turf
 
 	data["beaconzone"] = beacon ? get_area(beacon) : "No beacon"
 	data["beaconName"] = beacon ? beacon.name : "No Beacon Found"
@@ -82,15 +122,19 @@
 			"dep_order" = order.department_destination ? 1 : 0, //number of orders purchased by a department
 			"can_be_cancelled" = order.can_be_cancelled,
 		))
-	data["supplies"] = list()
+	data["cart"] = list()
 	for(var/item_id in cart_list)
-		data["supplies"] += cart_list[item_id]
+		data["cart"] += cart_list[item_id]
 
 	return data
 
 /obj/machinery/computer/voidcrew_cargo/ui_act(action, params, datum/tgui/ui)
 	. = ..()
 	if(.)
+		return
+	if(!bank_account)
+		balloon_alert(usr, "no bank account connected.")
+		usr.playsound_local(src, 'sound/machines/buzz-sigh.ogg', 50, TRUE, -1)
 		return
 
 	switch(action)
@@ -157,6 +201,7 @@
 		 * DROP POD HANDLING
 		 */
 		if("send")
+			COOLDOWN_START(src, calling_cooldown, 30 SECONDS)
 			//make an copy of the cart before its cleared by the shuttle
 			var/list/cart_list = list()
 			for(var/datum/supply_order/order as anything in checkout_list)
@@ -246,7 +291,7 @@
  * Finds an item in the grocery list using their name
  */
 /obj/machinery/computer/voidcrew_cargo/proc/name_to_id(order_name)
-	for(var/pack in checkout_list)
+	for(var/pack in SSshuttle.supply_packs)
 		var/datum/supply_pack/supply = SSshuttle.supply_packs[pack]
 		if(order_name == supply.name)
 			return pack
