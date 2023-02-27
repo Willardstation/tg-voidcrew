@@ -76,14 +76,16 @@ SUBSYSTEM_DEF(overmap)
 	var/list/unsorted_turfs = get_area_turfs(/area/overmap, target_z = OVERMAP_Z_LEVEL)
 	var/max_ring = 0
 	for (var/turf/turf as anything in unsorted_turfs)
+		if (istype(turf, /turf/closed/overmap_edge))
+			continue
 		// the overmap is a square, so we can just use the x and y values to determine the actual ring
 		// 2 2 2 2 2
 		// 2 1 1 1 2
 		// 2 1 X 1 2
 		// 2 1 1 1 2
 		// 2 2 2 2 2
-		var/ring_x = turf.x - overmap_centre.x
-		var/ring_y = turf.y - overmap_centre.y
+		var/ring_x = turf.x - (overmap_centre.x + 1)
+		var/ring_y = turf.y - (overmap_centre.y + 1)
 		var/ring = max(abs(ring_x), abs(ring_y))
 		if (!ring)
 			continue
@@ -147,7 +149,7 @@ SUBSYSTEM_DEF(overmap)
 
 /datum/controller/subsystem/overmap/proc/setup_planets()
 	var/list/orbits = list()
-	for (var/i in 2 to (LAZYLEN(radius_tiles) - 1))
+	for (var/i in 2 to LAZYLEN(radius_tiles))
 		orbits += "[i]"
 
 	for (var/_ in 1 to MAX_OVERMAP_PLANETS_TO_SPAWN)
@@ -199,9 +201,10 @@ SUBSYSTEM_DEF(overmap)
 		var/list/remaining_templates = subtypesof(/datum/map_template/shuttle/voidcrew)
 		while(!initial_ship_template && LAZYLEN(remaining_templates))
 			var/datum/map_template/shuttle/voidcrew/random_template = pick_n_take(remaining_templates)
-			if(initial(length(random_template.job_slots)) < OVERMAP_INITIAL_SHIP_JOB_SLOT_MINIMUM)
-				continue
 			if(initial(random_template.abstract) == random_template)
+				continue
+			// the first ship will always be an NT or Syndicate one.
+			if(initial(random_template.faction_prefix) == NEUTRAL_SHIP)
 				continue
 			initial_ship_template = random_template
 
