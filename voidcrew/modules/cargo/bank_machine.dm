@@ -6,12 +6,15 @@
 	//clear the account immediately
 	synced_bank_account = null
 	register_context()
-	return INITIALIZE_HINT_LATELOAD
+	if(mapload)
+		return INITIALIZE_HINT_LATELOAD
+	else
+		connect_to_shuttle(TRUE, SSshuttle.get_containing_shuttle(src))
 
 /obj/machinery/computer/bank_machine/LateInitialize()
 	. = ..()
 	//we do it in LateInit because we need 'port.current_ship' set
-	connect_to_shuttle(mapload, SSshuttle.get_containing_shuttle(src))
+	connect_to_shuttle(TRUE, SSshuttle.get_containing_shuttle(src))
 
 /obj/machinery/computer/bank_machine/add_context(atom/source, list/context, obj/item/held_item, mob/user)
 	. = ..()
