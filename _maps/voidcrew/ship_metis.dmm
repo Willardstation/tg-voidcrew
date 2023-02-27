@@ -50,10 +50,6 @@
 /obj/effect/decal/cleanable/insectguts,
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/voidcrew/metis/dorms)
-"aW" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/mineral/titanium/tiled,
-/area/shuttle/voidcrew/metis/hallway/fore)
 "aX" = (
 /obj/structure/sign/poster/official/science,
 /turf/closed/wall/mineral/titanium,
@@ -131,7 +127,7 @@
 /area/shuttle/voidcrew/metis/hallway/aft)
 "cC" = (
 /turf/closed/wall/mineral/titanium,
-/area/shuttle/voidcrew/metis/science/robotics)
+/area/shuttle/voidcrew/metis/hallway/fore)
 "cG" = (
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/mineral/titanium/tiled,
@@ -423,6 +419,9 @@
 /obj/structure/sign/poster/random,
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/xenobiology)
+"hp" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/metis/science/robotics)
 "hr" = (
 /obj/structure/filingcabinet/chestdrawer/wheeled,
 /turf/open/floor/carpet/purple,
@@ -586,7 +585,6 @@
 "kj" = (
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/light/broken,
-/obj/structure/cable,
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/voidcrew/metis/hallway/fore)
 "kn" = (
@@ -609,6 +607,9 @@
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/voidcrew/metis/hallway/fore)
+"kD" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/metis/maintenance)
 "kK" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -779,7 +780,6 @@
 /area/shuttle/voidcrew/metis/science/nanites)
 "nM" = (
 /obj/item/cigbutt,
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/mineral/titanium/tiled,
@@ -956,7 +956,6 @@
 /obj/structure/barricade/wooden/crude,
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/voidcrew/metis/hallway/fore)
@@ -1289,9 +1288,6 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/metis/hallway/aft)
-"yg" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/voidcrew/metis/hallway/fore)
 "yh" = (
 /obj/structure/closet/crate,
 /obj/item/radio,
@@ -1322,9 +1318,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/shuttle/voidcrew/metis/science/xenobiology)
-"yB" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/voidcrew/metis/science/nanites)
 "yD" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -1706,8 +1699,6 @@
 /area/shuttle/voidcrew/metis/ai_core)
 "EN" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable,
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/voidcrew/metis/hallway/fore)
 "ET" = (
@@ -2020,6 +2011,9 @@
 	},
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/voidcrew/metis/dorms)
+"Jz" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/metis/science/nanites)
 "JD" = (
 /obj/machinery/computer/cryopod{
 	pixel_y = 26
@@ -2389,6 +2383,9 @@
 "Qu" = (
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/shuttle/voidcrew/metis/hallway/fore)
+"Qy" = (
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/metis/hallway/aft)
 "QB" = (
 /obj/structure/sign/poster/random,
 /turf/closed/wall/mineral/titanium,
@@ -2693,9 +2690,6 @@
 /obj/machinery/pipedispenser/disposal,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/metis/engineering)
-"Vw" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/voidcrew/metis/hallway/aft)
 "Vx" = (
 /obj/machinery/door/airlock/science,
 /obj/machinery/door/firedoor,
@@ -2832,9 +2826,6 @@
 /obj/item/clothing/mask/gas/welding,
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/voidcrew/metis/science/robotics)
-"Xe" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/voidcrew/metis/maintenance)
 "Xl" = (
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/dorms)
@@ -3074,7 +3065,7 @@ vo
 vo
 vo
 vo
-yg
+cC
 VI
 VI
 VI
@@ -3101,7 +3092,7 @@ vo
 vo
 vo
 vo
-yg
+cC
 HI
 fH
 HQ
@@ -3128,7 +3119,7 @@ vo
 vo
 vo
 vo
-yg
+cC
 HI
 qe
 VI
@@ -3155,7 +3146,7 @@ vo
 (4,1,1) = {"
 vo
 vo
-yg
+cC
 Bg
 mD
 lS
@@ -3182,7 +3173,7 @@ vo
 "}
 (5,1,1) = {"
 vo
-yg
+cC
 HI
 gZ
 IB
@@ -3210,10 +3201,10 @@ vo
 "}
 (6,1,1) = {"
 vo
-yg
+cC
 cG
 oV
-aW
+EN
 qu
 yM
 LH
@@ -3268,7 +3259,7 @@ LX
 vo
 px
 yk
-aW
+EN
 mN
 wR
 VI
@@ -3295,7 +3286,7 @@ LX
 (9,1,1) = {"
 vo
 px
-aW
+EN
 hP
 Rx
 Hz
@@ -3324,7 +3315,7 @@ LX
 vo
 px
 di
-aW
+EN
 gW
 HI
 zJ
@@ -3355,7 +3346,7 @@ dm
 dt
 nM
 rh
-to
+Tg
 Al
 Qu
 Jq
@@ -3378,11 +3369,11 @@ LX
 "}
 (12,1,1) = {"
 vo
-yg
+cC
 ET
 kj
 BD
-yg
+cC
 rv
 to
 to
@@ -3406,10 +3397,10 @@ vh
 "}
 (13,1,1) = {"
 vo
-yg
+cC
 EN
 kC
-yg
+cC
 rT
 zY
 Tg
@@ -3566,10 +3557,10 @@ eE
 rt
 IS
 qR
-Vw
+Qy
 jI
 jI
-Vw
+Qy
 vo
 "}
 (19,1,1) = {"
@@ -3594,10 +3585,10 @@ eE
 lk
 IY
 jH
-Vw
+Qy
 Zq
 Zq
-Vw
+Qy
 vo
 "}
 (20,1,1) = {"
@@ -3622,11 +3613,11 @@ fo
 lk
 Cm
 QM
-Vw
+Qy
 om
 CP
 Nm
-Vw
+Qy
 "}
 (21,1,1) = {"
 vo
@@ -3678,11 +3669,11 @@ bH
 av
 eT
 uI
-Vw
+Qy
 hu
 tw
 cv
-Vw
+Qy
 "}
 (23,1,1) = {"
 vo
@@ -3706,10 +3697,10 @@ CR
 uI
 fQ
 Ag
-Vw
-Vw
-Vw
-Vw
+Qy
+Qy
+Qy
+Qy
 vo
 "}
 (24,1,1) = {"
@@ -3730,8 +3721,8 @@ iQ
 Le
 hD
 tt
-cC
-cC
+hp
+hp
 Kj
 VJ
 iQ
@@ -3754,7 +3745,7 @@ LK
 NZ
 Ut
 XY
-cC
+hp
 dQ
 YB
 pZ
@@ -3762,7 +3753,7 @@ Xc
 sp
 Co
 hX
-cC
+hp
 vo
 vo
 vo
@@ -3782,7 +3773,7 @@ eI
 XF
 CK
 sG
-cC
+hp
 sk
 ut
 NP
@@ -3790,7 +3781,7 @@ Xn
 es
 Yk
 Sv
-cC
+hp
 vo
 vo
 vo
@@ -3818,7 +3809,7 @@ Hg
 Xr
 Qg
 Sp
-cC
+hp
 vo
 vo
 vo
@@ -3846,7 +3837,7 @@ Rj
 oU
 jS
 Gx
-cC
+hp
 vo
 vo
 vo
@@ -3866,7 +3857,7 @@ ME
 xL
 vK
 XZ
-cC
+hp
 AD
 Vz
 Wo
@@ -3874,7 +3865,7 @@ Ic
 sQ
 so
 gY
-cC
+hp
 vo
 vo
 vo
@@ -3895,14 +3886,14 @@ uE
 Vx
 eB
 uE
-yB
-yB
+Jz
+Jz
 zG
-Xe
+kD
 Oo
 yH
 Pk
-cC
+hp
 vo
 vo
 vo
@@ -3918,14 +3909,14 @@ vo
 vo
 vo
 vo
-yB
+Jz
 uE
 In
 Fo
 sb
 TQ
 dg
-Xe
+kD
 ZT
 Td
 VU
@@ -3947,17 +3938,17 @@ vo
 vo
 vo
 vo
-yB
+Jz
 uE
 Ye
 qL
 Kv
 nF
-Xe
+kD
 AI
 yh
 sy
-Xe
+kD
 vo
 vo
 vo
@@ -3976,16 +3967,16 @@ vo
 vo
 vo
 vo
-yB
+Jz
 Af
 wa
 nI
 gP
-Xe
+kD
 Yi
 ab
 ew
-Xe
+kD
 vo
 vo
 vo
@@ -4005,15 +3996,15 @@ vo
 vo
 vo
 vo
-yB
+Jz
 uE
 VE
 XW
-Xe
+kD
 rp
 Gh
 jc
-Xe
+kD
 vo
 vo
 vo
@@ -4034,14 +4025,14 @@ vo
 vo
 vo
 vo
-yB
+Jz
 uE
 ll
-Xe
+kD
 Ce
 sn
 hH
-Xe
+kD
 vo
 vo
 vo
@@ -4063,13 +4054,13 @@ vo
 vo
 vo
 vo
-yB
-yB
-Xe
-Xe
-Xe
-Xe
-Xe
+Jz
+Jz
+kD
+kD
+kD
+kD
+kD
 vo
 vo
 vo
