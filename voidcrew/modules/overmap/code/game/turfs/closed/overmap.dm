@@ -16,8 +16,7 @@
 		numbers += list("[round(x/10)]","[round(x%10)]")
 
 	for(var/i = 1 to numbers.len)
-		var/mutable_appearance/I = mutable_appearance('voidcrew/modules/overmap/icons/effects/numbers.dmi', numbers[i])
-		I.layer = LIGHTING_PRIMARY_LAYER
+		var/mutable_appearance/I = mutable_appearance('voidcrew/modules/overmap/icons/effects/numbers.dmi', numbers[i], layer = LIGHTING_PRIMARY_LAYER)
 
 		I.pixel_x = 5*i - 2
 		I.pixel_y = world.icon_size/2 - 3
