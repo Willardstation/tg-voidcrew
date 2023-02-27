@@ -410,20 +410,8 @@
 /obj/structure/closet/crate/miningcar{
 	name = "mining car"
 	},
-/obj/item/pickaxe/emergency{
-	attack_verb = list("hit","spelled","cantripped","ensorceled");
-	desc = "Forged by the greatest smiths of the academy, enchanted by the archmagus council, this is a TRUE boulder eradicator.";
-	icon = 'icons/obj/guns/magic.dmi';
-	icon_state = "staffofflight";
-	name = "staff of rock removal"
-	},
-/obj/item/pickaxe/emergency{
-	attack_verb = list("hit","spelled","cantripped","ensorceled");
-	desc = "Forged by the greatest smiths of the academy, enchanted by the archmagus council, this is a TRUE boulder eradicator.";
-	icon = 'icons/obj/guns/magic.dmi';
-	icon_state = "staffofflight";
-	name = "staff of rock removal"
-	},
+/obj/item/pickaxe/emergency,
+/obj/item/pickaxe/emergency,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/bag/ore,
 /obj/item/storage/bag/ore,
