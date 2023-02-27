@@ -528,7 +528,7 @@
 "Cn" = (
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north,
-/obj/item/clothing/gloves/color/latex/nitrile,
+/obj/item/clothing/gloves/latex/nitrile,
 /obj/item/defibrillator/compact/combat/loaded,
 /obj/item/storage/medkit/tactical,
 /obj/item/storage/medkit/o2,

@@ -617,10 +617,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/computer/cargo/express,
 /obj/item/radio/intercom{
 	pixel_y = 28
 	},
+/obj/machinery/computer/voidcrew_cargo,
 /turf/open/floor/mineral/plastitanium,
 /area/shuttle/voidcrew/luxembourg/bridge)
 "py" = (
@@ -924,9 +924,7 @@
 "xm" = (
 /obj/structure/bed/pod,
 /obj/item/bedsheet/syndie,
-/obj/machinery/firealarm/directional/north{
-	dir = 1
-	},
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/carpet/donk,
 /area/shuttle/voidcrew/luxembourg/dormitories)
 "xx" = (
