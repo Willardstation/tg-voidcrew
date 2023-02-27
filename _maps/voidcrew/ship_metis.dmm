@@ -51,9 +51,7 @@
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/voidcrew/metis/dorms)
 "aW" = (
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/ai_core)
 "aX" = (
 /obj/structure/sign/poster/official/science,
@@ -131,9 +129,7 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/voidcrew/metis/hallway/aft)
 "cC" = (
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/robotics)
 "cG" = (
 /obj/effect/spawner/random/vending/colavend,
@@ -204,9 +200,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "dX" = (
 /turf/open/floor/mineral/titanium/tiled,
@@ -278,9 +272,7 @@
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "eO" = (
 /obj/structure/sign/warning/deathsposal,
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "eT" = (
 /obj/effect/decal/cleanable/xenoblood,
@@ -379,9 +371,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1
 	},
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "gj" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/hidden/layer2,
@@ -430,9 +420,7 @@
 /area/shuttle/voidcrew/metis/engineering)
 "hl" = (
 /obj/structure/sign/poster/random,
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "hp" = (
 /turf/closed/wall/mineral/titanium,
@@ -835,9 +823,7 @@
 /area/shuttle/voidcrew/metis/dorms)
 "ow" = (
 /obj/structure/sign/poster/contraband/lusty_xenomorph,
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "oB" = (
 /obj/machinery/camera/autoname/directional/south,
@@ -1030,9 +1016,7 @@
 /area/shuttle/voidcrew/metis/science/nanites)
 "sd" = (
 /obj/structure/sign/poster/random,
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/ai_core)
 "sj" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
@@ -1146,9 +1130,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 2
 	},
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "uY" = (
 /obj/structure/cable,
@@ -1348,9 +1330,7 @@
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "yB" = (
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/nanites)
 "yD" = (
 /obj/structure/cable,
@@ -1370,9 +1350,7 @@
 /area/shuttle/voidcrew/metis/maintenance)
 "yM" = (
 /obj/structure/sign/warning/biohazard,
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "zb" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2006,9 +1984,7 @@
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/shuttle/voidcrew/metis/hallway/aft)
 "IT" = (
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/dorms)
 "IY" = (
 /obj/item/clothing/mask/gas/welding,
@@ -2190,9 +2166,7 @@
 /turf/open/floor/mineral/titanium/tiled/purple,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "LX" = (
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/engineering)
 "Mc" = (
 /obj/machinery/light{
@@ -2310,9 +2284,7 @@
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "Oo" = (
 /obj/structure/sign/poster/official/ion_rifle,
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/maintenance)
 "Ou" = (
 /obj/effect/decal/cleanable/blood,
@@ -2434,9 +2406,7 @@
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/shuttle/voidcrew/metis/hallway/fore)
 "Qy" = (
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/hallway/aft)
 "QB" = (
 /obj/structure/sign/poster/random,
@@ -2768,9 +2738,7 @@
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/voidcrew/metis/science/nanites)
 "VI" = (
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "VJ" = (
 /obj/structure/sign/warning/no_smoking,
@@ -2874,9 +2842,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/science/xenobiology)
 "Xc" = (
 /obj/structure/table/reinforced,
@@ -2888,9 +2854,7 @@
 /turf/open/floor/mineral/titanium/tiled,
 /area/shuttle/voidcrew/metis/science/robotics)
 "Xe" = (
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/maintenance)
 "Xl" = (
 /turf/closed/wall/mineral/titanium,
@@ -2954,9 +2918,7 @@
 /area/shuttle/voidcrew/metis/ai_core)
 "XI" = (
 /obj/structure/sign/poster/official/no_erp,
-/turf/closed/wall/mineral/titanium{
-	baseturfs = /turf/open/floor/mineral/titanium/tiled/white
-	},
+/turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/metis/ai_core)
 "XN" = (
 /obj/item/aicard,

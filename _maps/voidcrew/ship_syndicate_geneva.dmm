@@ -297,9 +297,7 @@
 /turf/open/floor/carpet/neon/simple/red,
 /area/shuttle/voidcrew/geneva/dorms)
 "iQ" = (
-/obj/machinery/vending/hydronutrients{
-	all_items_free = 1
-	},
+/obj/machinery/vending/hydronutrients,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -495,9 +493,7 @@
 /turf/open/floor/iron/white,
 /area/shuttle/voidcrew/geneva/medbay)
 "ow" = (
-/obj/machinery/vending/hydroseeds{
-	all_items_free = 1
-	},
+/obj/machinery/vending/hydroseeds,
 /turf/open/floor/grass,
 /area/shuttle/voidcrew/geneva/hydroponics)
 "oA" = (
@@ -675,9 +671,7 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/geneva/breakroom)
 "sG" = (
-/obj/machinery/vending/boozeomat{
-	all_items_free = 1
-	},
+/obj/machinery/vending/boozeomat,
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/geneva/breakroom)
 "sI" = (
@@ -1234,9 +1228,7 @@
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/geneva/medbay/paramedic)
 "Gn" = (
-/obj/machinery/vending/medical{
-	all_items_free = 1
-	},
+/obj/machinery/vending/medical,
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/white,
 /area/shuttle/voidcrew/geneva/medbay/operating)

@@ -260,9 +260,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/vending/security{
-	all_items_free = 1
-	},
+/obj/machinery/vending/security,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/hyena/armory)
@@ -1799,9 +1797,7 @@
 /area/shuttle/voidcrew/hyena/maintenance/port)
 "OX" = (
 /obj/effect/turf_decal/bot_white,
-/obj/machinery/vending/security{
-	all_items_free = 1
-	},
+/obj/machinery/vending/security,
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/hyena/armory)
 "Pw" = (
