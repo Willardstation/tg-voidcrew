@@ -106,8 +106,7 @@
 /obj/machinery/light/small/built{
 	dir = 8
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/layer2,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/atmospherics/components/unary/vent_pump/layer4,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/dorms)
 "au" = (
@@ -873,10 +872,10 @@
 /obj/machinery/light/small/built{
 	dir = 1
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/layer2{
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/atmospherics/components/unary/vent_pump/layer4{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "cj" = (
@@ -1274,11 +1273,9 @@
 /turf/open/floor/iron/white,
 /area/shuttle/voidcrew/meta/cargo)
 "cS" = (
-/obj/machinery/firealarm/directional/west{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/directional/east,
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/meta/cargo)
 "cT" = (
@@ -1328,20 +1325,20 @@
 /area/shuttle/voidcrew/meta/engineering)
 "cY" = (
 /obj/structure/cable,
-/obj/machinery/firealarm/directional/south,
 /obj/effect/turf_decal/bot,
 /obj/structure/table,
 /obj/machinery/cell_charger,
 /obj/item/stack/cable_coil,
 /obj/item/stock_parts/cell/high,
 /obj/item/multitool,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "cZ" = (
 /obj/machinery/autolathe,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/small/directional/north,
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "da" = (
@@ -1438,7 +1435,7 @@
 	dir = 4
 	},
 /turf/closed/wall/mineral/titanium,
-/area/shuttle/voidcrew/meta/bridge)
+/area/shuttle/voidcrew/meta/engineering)
 "dp" = (
 /obj/effect/turf_decal/stripes{
 	dir = 8
@@ -1561,26 +1558,20 @@
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "dI" = (
-/obj/structure/cable,
-/obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "dJ" = (
 /obj/structure/cable,
-/obj/structure/closet/crate,
-/obj/item/stack/sheet/iron/twenty,
-/obj/item/stack/sheet/glass{
-	amount = 10
-	},
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 10
-	},
 /obj/effect/turf_decal/bot,
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/computer/monitor{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "dK" = (
@@ -1663,12 +1654,15 @@
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "dX" = (
-/obj/effect/turf_decal/bot,
-/obj/structure/cable,
-/obj/machinery/computer/monitor{
-	dir = 1
-	},
 /obj/machinery/light/small,
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/glass{
+	amount = 10
+	},
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 10
+	},
+/obj/item/stack/sheet/iron/twenty,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
@@ -1769,7 +1763,6 @@
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/cargo)
 "el" = (
-/obj/structure/cable,
 /obj/effect/decal/cleanable/oil,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1857,10 +1850,10 @@
 /obj/machinery/light/small/built{
 	dir = 8
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/layer2{
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/atmospherics/components/unary/vent_pump/layer4{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/kitchen)
 "pQ" = (
@@ -1999,6 +1992,12 @@
 "CK" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/shuttle/voidcrew/meta/cargo)
+"CQ" = (
+/obj/machinery/porta_turret/centcom_shuttle/weak{
+	dir = 4
+	},
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/meta/kitchen)
 "EA" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
@@ -2070,6 +2069,12 @@
 	},
 /turf/open/floor/plating/airless,
 /area/shuttle/voidcrew/meta/engineering)
+"Vi" = (
+/obj/machinery/porta_turret/centcom_shuttle/weak{
+	dir = 4
+	},
+/turf/closed/wall/mineral/titanium,
+/area/shuttle/voidcrew/meta/dorms)
 "YR" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /obj/machinery/door/poddoor{
@@ -2555,10 +2560,10 @@ ca
 "}
 (26,1,1) = {"
 aa
-do
+Vi
 ai
 ai
-do
+Vi
 aa
 aa
 aa
@@ -2566,9 +2571,9 @@ aa
 aa
 aa
 aa
-do
+CQ
 st
 st
-do
+CQ
 aa
 "}
