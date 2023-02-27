@@ -47,6 +47,7 @@
 	for(var/z_level in bottom_z to top_z)
 		LAZYORASSOCLIST(SSmapping.z_trait_levels, ZTRAIT_STATION, z_level)
 		GLOB.station_levels_cache[z_level] = TRUE
+		z_level[ZTRAIT_STATION] = TRUE
 	GLOB.the_station_areas |= shuttle_areas
 
 /// Unlinks from the z level
@@ -58,6 +59,7 @@
 			continue
 		LAZYREMOVEASSOC(SSmapping.z_trait_levels, ZTRAIT_STATION, z_level)
 		GLOB.station_levels_cache[z_level] = FALSE
+		z_level[ZTRAIT_STATION] = FALSE
 	GLOB.the_station_areas -= shuttle_areas
 	UnregisterSignal(src, COMSIG_GLOB_Z_SHIP_PROBE)
 
