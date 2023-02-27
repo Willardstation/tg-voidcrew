@@ -57,9 +57,8 @@
 /obj/structure/closet/crate/critter{
 	name = "DANGER: DO NOT OPEN"
 	},
-/mob/living/simple_animal/bot/secbot{
-	desc = "A little security robot.  He looks downright furious!";
-	emagged = 2;
+/mob/living/simple_animal/bot/secbot/genesky{
+	desc = "A little security robot. He looks downright furious!";
 	name = "\improper Officer Berzerksky"
 	},
 /obj/effect/decal/cleanable/oil/streak,

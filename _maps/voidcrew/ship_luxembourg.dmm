@@ -1254,7 +1254,7 @@
 /obj/structure/cable,
 /obj/machinery/suit_storage_unit{
 	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/blue;
-	suit_type = /obj/item/clothing/suit/space/syndicate/surplus
+	suit_type = /obj/item/clothing/suit/space/syndicate/blue
 	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 6
@@ -1264,7 +1264,7 @@
 "LP" = (
 /obj/machinery/suit_storage_unit{
 	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/blue;
-	suit_type = /obj/item/clothing/suit/space/syndicate/surplus
+	suit_type = /obj/item/clothing/suit/space/syndicate/blue
 	},
 /obj/effect/turf_decal/tile/brown/anticorner,
 /turf/open/floor/iron/dark,
@@ -1282,7 +1282,7 @@
 "Mi" = (
 /obj/machinery/suit_storage_unit{
 	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/blue;
-	suit_type = /obj/item/clothing/suit/space/syndicate/surplus
+	suit_type = /obj/item/clothing/suit/space/syndicate/blue
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/brown{
