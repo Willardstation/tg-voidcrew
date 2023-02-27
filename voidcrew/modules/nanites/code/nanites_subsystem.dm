@@ -25,7 +25,7 @@ PROCESSING_SUBSYSTEM_DEF(nanites)
  * forced - Whether we should check for hardware or not.
  */
 /datum/controller/subsystem/processing/nanites/proc/get_cloud_backup(cloud_id, force = FALSE)
-	for(var/datum/nanite_cloud_backup/backup/backup as anything in cloud_backups)
+	for(var/datum/nanite_cloud_backup/backup as anything in cloud_backups)
 		if(!force && !check_hardware(backup))
 			return
 		if(backup.cloud_id == cloud_id)

@@ -289,7 +289,8 @@
 			if(can_trigger)
 				trigger()
 		if(5) //Program is scrambled and does something different
-			var/datum/nanite_program/rogue = new pick(rogue_types)
+			var/rogue_type = pick(rogue_types)
+			var/datum/nanite_program/rogue = new rogue_type
 			nanites.add_program(null, rogue, src)
 			qdel(src)
 
