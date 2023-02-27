@@ -413,6 +413,9 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
 /turf/open/floor/iron,
 /area/shuttle/voidcrew/meta/dorms)
 "bf" = (
@@ -1332,7 +1335,6 @@
 /area/shuttle/voidcrew/meta/engineering)
 "cY" = (
 /obj/structure/cable,
-/obj/machinery/firealarm/directional/south,
 /obj/effect/turf_decal/bot,
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -1340,6 +1342,7 @@
 /obj/item/stock_parts/cell/high,
 /obj/item/multitool,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "cZ" = (
@@ -1837,9 +1840,6 @@
 /obj/structure/bedsheetbin,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/white,
 /area/shuttle/voidcrew/meta/dorms)
