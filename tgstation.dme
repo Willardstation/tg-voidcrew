@@ -5116,7 +5116,7 @@
 #include "voidcrew\edits\subsystem\economy.dm"
 #include "voidcrew\mapping\_mapping.dm"
 #include "voidcrew\mapping\areas.dm"
-#include "voidcrew\mapping\docking_port\_docking.port.dm"
+#include "voidcrew\mapping\docking_port\_docking_port.dm"
 #include "voidcrew\mapping\shuttles\_shuttle.dm"
 #include "voidcrew\mapping\shuttles\bogatyr.dm"
 #include "voidcrew\mapping\shuttles\box.dm"
