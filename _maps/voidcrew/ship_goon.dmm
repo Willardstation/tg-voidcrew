@@ -105,9 +105,11 @@
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/goon/engineering)
 "fZ" = (
-/obj/machinery/atmospherics/components/tank/air{
-	dir = 4;
-	piping_layer = 4
+/obj/structure/table,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/electrical{
+	pixel_x = -10;
+	pixel_y = -10
 	},
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/voidcrew/goon/engineering)
@@ -202,6 +204,7 @@
 /obj/machinery/atmospherics/components/binary/volume_pump{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/voidcrew/goon/engineering)
 "po" = (
@@ -512,8 +515,6 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/engineering_personal,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/voidcrew/goon/engineering)
@@ -540,10 +541,8 @@
 /area/shuttle/voidcrew/goon/bridge)
 "Ng" = (
 /obj/structure/cable,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/purple/visible,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/voidcrew/goon/engineering)
 "OQ" = (
@@ -590,6 +589,13 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/goon/medbay)
+"Sc" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/mineral/titanium/yellow,
+/area/shuttle/voidcrew/goon/engineering)
 "SH" = (
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/voidcrew/goon/medbay)
@@ -671,18 +677,15 @@
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/goon/engineering)
 "YI" = (
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/voidcrew/goon/engineering)
 "Zr" = (
-/obj/structure/table,
-/obj/item/storage/toolbox/electrical{
-	pixel_x = -10;
-	pixel_y = -10
-	},
-/obj/item/storage/toolbox/mechanical,
 /obj/machinery/firealarm/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/purple/visible,
+/obj/machinery/atmospherics/components/tank/air{
+	piping_layer = 4
+	},
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/voidcrew/goon/engineering)
 "Zs" = (
@@ -771,7 +774,7 @@ ka
 TR
 Lr
 ro
-or
+Sc
 UT
 TR
 "}
