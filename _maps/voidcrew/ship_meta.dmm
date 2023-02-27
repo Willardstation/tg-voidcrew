@@ -179,9 +179,6 @@
 	name = "engine fuel pump"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/atmospherics/pipe/bridge_pipe/supply/visible/layer4{
-	dir = 4
-	},
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "aB" = (
@@ -189,7 +186,6 @@
 	anchored = 1
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
@@ -197,8 +193,6 @@
 /obj/structure/closet/emcloset/anchored,
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "aD" = (
@@ -305,6 +299,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "aO" = (
@@ -411,6 +406,12 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
+	dir = 8
+	},
+/obj/machinery/computer/cryopod{
+	pixel_y = 32
+	},
 /turf/open/floor/iron,
 /area/shuttle/voidcrew/meta/dorms)
 "bf" = (
@@ -420,9 +421,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/cryopod{
 	dir = 8
-	},
-/obj/machinery/computer/cryopod{
-	pixel_y = 32
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron,
@@ -851,10 +849,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/frame/computer{
-	anchored = 1;
-	dir = 8
-	},
+/obj/machinery/rnd/server/ship,
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/meta/bridge)
 "ch" = (
@@ -1137,14 +1132,13 @@
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/meta/bridge)
 "cG" = (
-/obj/structure/frame/computer{
-	anchored = 1;
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/blue/anticorner{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/computer/bank_machine{
+	dir = 8
+	},
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/meta/bridge)
 "cH" = (
@@ -1407,6 +1401,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange/hidden,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/engineering)
 "dl" = (
@@ -1825,9 +1820,6 @@
 /obj/structure/bedsheetbin,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/white,
 /area/shuttle/voidcrew/meta/dorms)
