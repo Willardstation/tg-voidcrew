@@ -9,6 +9,7 @@
 /obj/machinery/computer/helm
 	name = "helm control console"
 	desc = "Used to view or control the ship."
+	icon = 'voidcrew/modules/shuttle/icons/computer.dmi'
 	icon_screen = "navigation"
 	icon_keyboard = "tech_key"
 	circuit = /obj/item/circuitboard/computer/shuttle/helm
