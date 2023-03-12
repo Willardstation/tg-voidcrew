@@ -467,6 +467,38 @@
 /turf/closed/wall,
 /area/shuttle/voidcrew/dwayne/engineering)
 "nf" = (
+/obj/structure/closet/secure_closet/miner/unlocked,
+/obj/item/clothing/head/utility/hardhat/welding/orange,
+/obj/item/clothing/head/utility/hardhat/welding/orange,
+/obj/item/clothing/head/utility/hardhat/welding/orange,
+/obj/item/storage/bag/ore,
+/obj/item/storage/bag/ore,
+/obj/item/storage/bag/ore,
+/obj/item/gun/energy/recharge/kinetic_accelerator,
+/obj/item/pickaxe/silver,
+/obj/item/pickaxe/silver,
+/obj/item/t_scanner/adv_mining_scanner/lesser,
+/obj/item/clothing/glasses/meson,
+/obj/item/clothing/glasses/meson,
+/obj/item/gps/mining,
+/obj/item/gps/mining,
+/obj/item/gps/mining,
+/obj/item/clothing/suit/hazardvest{
+	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
+	name = "emergency lifejacket";
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/clothing/suit/hazardvest{
+	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
+	name = "emergency lifejacket"
+	},
+/obj/item/clothing/suit/hazardvest{
+	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
+	name = "emergency lifejacket";
+	pixel_x = 4;
+	pixel_y = 4
+	},
 /obj/effect/turf_decal/tile/yellow/half,
 /turf/open/floor/iron,
 /area/shuttle/voidcrew/dwayne/cargo_bay)
@@ -666,39 +698,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/shuttle/voidcrew/dwayne/medbay)
-"tG" = (
-/obj/item/clothing/suit/hazardvest{
-	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
-	name = "emergency lifejacket";
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/clothing/suit/hazardvest{
-	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
-	name = "emergency lifejacket"
-	},
-/obj/item/clothing/suit/hazardvest{
-	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
-	name = "emergency lifejacket";
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/gps/mining,
-/obj/item/gps/mining,
-/obj/item/gps/mining,
-/obj/item/clothing/glasses/meson,
-/obj/item/clothing/glasses/meson,
-/obj/item/t_scanner/adv_mining_scanner/lesser,
-/obj/item/gun/energy/recharge/kinetic_accelerator,
-/obj/item/pickaxe/silver,
-/obj/item/pickaxe/silver,
-/obj/item/storage/bag/ore,
-/obj/item/storage/bag/ore,
-/obj/item/clothing/head/utility/hardhat/welding/orange,
-/obj/item/clothing/head/utility/hardhat/welding/orange,
-/obj/item/clothing/head/utility/hardhat/welding/orange,
-/turf/closed/wall/r_wall,
-/area/shuttle/voidcrew/dwayne/cargo_bay)
 "tH" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -1808,7 +1807,7 @@ FP
 nL
 jh
 YJ
-tG
+YJ
 IZ
 bv
 xz
