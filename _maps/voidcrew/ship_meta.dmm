@@ -103,10 +103,8 @@
 /area/shuttle/voidcrew/meta/cargo)
 "at" = (
 /obj/structure/sign/warning/vacuum/external/directional/west,
-/obj/machinery/light/small/built{
-	dir = 8
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/dorms)
 "au" = (
@@ -696,9 +694,6 @@
 /turf/open/floor/iron,
 /area/shuttle/voidcrew/meta/cafeteria)
 "bP" = (
-/obj/machinery/light/small/built{
-	dir = 4
-	},
 /obj/machinery/vending/coffee,
 /obj/structure/sign/poster/contraband/random{
 	pixel_x = 32
@@ -714,6 +709,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/meta/cafeteria)
 "bS" = (
@@ -783,9 +779,6 @@
 /area/shuttle/voidcrew/meta/cafeteria)
 "cd" = (
 /obj/structure/table,
-/obj/machinery/light/small/built{
-	dir = 8
-	},
 /obj/item/paper_bin{
 	pixel_x = -4
 	},
@@ -802,6 +795,7 @@
 	},
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/meta/bridge)
 "ce" = (
@@ -1041,9 +1035,6 @@
 /area/shuttle/voidcrew/meta/cafeteria)
 "cD" = (
 /obj/structure/table,
-/obj/machinery/light/small/built{
-	dir = 8
-	},
 /obj/item/gps{
 	gpstag = "NTREC1";
 	pixel_x = -9;
@@ -1061,6 +1052,7 @@
 	pixel_y = -29
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/directional/west,
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/meta/bridge)
 "cE" = (
@@ -1210,9 +1202,6 @@
 /turf/open/floor/iron,
 /area/shuttle/voidcrew/meta/cafeteria)
 "cO" = (
-/obj/machinery/light/small/built{
-	dir = 4
-	},
 /obj/machinery/vending/cigarette,
 /obj/structure/sign/poster/contraband/random{
 	pixel_x = 32
@@ -1228,6 +1217,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/meta/cafeteria)
 "cP" = (
@@ -1825,13 +1815,11 @@
 /area/shuttle/voidcrew/meta/cargo)
 "pI" = (
 /obj/structure/sign/warning/vacuum/external/directional/west,
-/obj/machinery/light/small/built{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
 	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/meta/kitchen)
 "pQ" = (
