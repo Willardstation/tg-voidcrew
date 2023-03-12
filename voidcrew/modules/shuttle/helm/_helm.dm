@@ -35,6 +35,7 @@
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "telescreen"
 	icon_keyboard = null
+	icon_screen = null
 	layer = SIGN_LAYER
 	density = FALSE
 	viewer = TRUE
