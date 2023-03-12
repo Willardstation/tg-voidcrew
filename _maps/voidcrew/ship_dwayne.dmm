@@ -26,11 +26,11 @@
 /turf/open/floor/iron,
 /area/shuttle/voidcrew/dwayne/cargo_bay)
 "aS" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/layer2{
-	dir = 1
-	},
 /obj/effect/turf_decal/stripes{
 	dir = 10
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/layer2{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/shuttle/voidcrew/dwayne/engineering)
@@ -1071,7 +1071,6 @@
 /area/shuttle/voidcrew/dwayne/crew)
 "HI" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/stripes{
 	dir = 8
 	},
