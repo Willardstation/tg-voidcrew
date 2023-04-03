@@ -579,10 +579,10 @@
 /turf/open/floor/engine,
 /area/shuttle/voidcrew/phalanx/security/armory)
 "hs" = (
-/obj/machinery/firealarm/directional/south,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/wood,
 /area/shuttle/voidcrew/phalanx/dorms)
 "hA" = (
@@ -1049,10 +1049,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/carpet/black,
-/area/shuttle/voidcrew/phalanx/chapel/office)
-"nY" = (
-/obj/structure/fluff/divine/nexus,
-/turf/open/floor/mineral/silver,
 /area/shuttle/voidcrew/phalanx/chapel/office)
 "oa" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -2319,6 +2315,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
+/obj/structure/fluff/divine/nexus,
 /turf/open/floor/carpet/black,
 /area/shuttle/voidcrew/phalanx/chapel/office)
 "Gj" = (
@@ -4573,7 +4570,7 @@ pr
 vM
 yZ
 At
-nY
+TN
 oZ
 oZ
 oZ

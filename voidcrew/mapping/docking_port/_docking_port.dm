@@ -18,6 +18,7 @@
 
 /obj/docking_port/mobile/voidcrew/Initialize(mapload)
 	. = ..()
+	connect_to_shuttle(mapload, SSshuttle.get_containing_shuttle(src))
 	RegisterSignal(src, COMSIG_GLOB_Z_SHIP_PROBE, PROC_REF(respond_to_z_port_probe))
 
 /obj/docking_port/mobile/voidcrew/Destroy(force)
