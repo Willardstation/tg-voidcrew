@@ -29,19 +29,3 @@
 			SSjob.overflow_role = type
 		return TRUE
 	return FALSE
-
-/**
- * We override roundstart spawn point to send the player to the starting ship instead, if possible.
- * Returns FALSE if no spawn point can be found.
- */
-/datum/job/get_roundstart_spawn_point()
-	//get the first ship.
-	var/obj/structure/overmap/ship/roundstart_ship = SSovermap.simulated_ships[1]
-	if(!roundstart_ship)
-		CRASH("There's no roundstart ship for jobs to spawn on!")
-	for(var/datum/job/job as anything in roundstart_ship.job_slots)
-		if(type != job.type)
-			continue
-		return pick(roundstart_ship.shuttle.spawn_points)
-
-	return FALSE
