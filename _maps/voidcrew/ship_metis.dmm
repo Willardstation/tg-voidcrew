@@ -1935,7 +1935,7 @@
 /obj/structure/window/reinforced/spawner/north,
 /obj/structure/lattice/catwalk,
 /turf/template_noop,
-/area/shuttle/voidcrew/metis/engineering)
+/area/template_noop)
 "LG" = (
 /obj/machinery/holopad,
 /turf/open/floor/mineral/titanium/tiled/white,
