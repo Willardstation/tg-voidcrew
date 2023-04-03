@@ -7,7 +7,7 @@
  * Excludes non-player job jobs (such as unassigned)
  * Will run as normal if there's no ship assigned.
  * Sets the Captain as the 'overflow' job (This does nothing in practice, as we don't expand the job slots).
- * returns TRUE if the job is available, FALSE if it isn't (this will remove it from prefs menu)
+ * If a job is not meant to show up in prefs menu, we remove their new player joinable flag before sending it through.
  */
 /datum/job/map_check()
 	//let non-player jobs function properly.
