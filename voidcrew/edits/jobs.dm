@@ -28,4 +28,5 @@
 		if(job.officer)
 			SSjob.overflow_role = type
 		return TRUE
-	return FALSE
+	job_flags ^= JOB_NEW_PLAYER_JOINABLE
+	return TRUE
