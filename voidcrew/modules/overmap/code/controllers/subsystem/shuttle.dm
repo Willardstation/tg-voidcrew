@@ -27,8 +27,8 @@
 
 	// assign landmarks as needed
 	var/turf/safe_turf = get_safe_random_station_turf(loaded.shuttle_areas)
-	new /obj/effect/landmark/blobstart(safe_turf) // StationLoving component
-	new /obj/effect/landmark/observer_start(safe_turf) // Observer and UnitTests
+	new /obj/effect/landmark/blobstart(safe_turf) // Stationloving component
+	new /obj/effect/landmark/observer_start(safe_turf) // Observer and Unit tests
 
 	return ship_to_spawn
 

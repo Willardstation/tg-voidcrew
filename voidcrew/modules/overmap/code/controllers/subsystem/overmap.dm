@@ -192,9 +192,10 @@ SUBSYSTEM_DEF(overmap)
 	var/list/remaining_templates = subtypesof(/datum/map_template/shuttle/voidcrew)
 	for(var/templates in remaining_templates)
 		var/datum/map_template/shuttle/voidcrew/loaded_template = SSshuttle.create_ship(templates)
+		if(!initial_ship_template)
+			initial_ship_template = loaded_template
 		if(!loaded_template)
 			log_mapping("[src] failed to load ship [templates].")
-		initial_ship_template = loaded_template //this will constantly be overwritten but it's fine, it's just for any future testing if needed.
 #else
 	if(!set_initial_ship())
 		return
