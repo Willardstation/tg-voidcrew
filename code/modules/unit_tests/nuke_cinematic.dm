@@ -24,7 +24,7 @@
 	TEST_ASSERT_NOTNULL(observer_point, "Nuke cinematic test couldn't find observer spawn to place the nuke.")
 
 	var/turf/turf_on_station = get_turf(observer_point)
-	TEST_ASSERT(is_station_level(turf_on_station.z), "Nuke cinematic test didn't get a turf which was located on the station [observer_point.x] [observer_point.y] [observer_point.z] at [get_area(observer_point)].")
+	TEST_ASSERT(is_station_level(turf_on_station.z), "Nuke cinematic test didn't get a turf which was located on the station.")
 
 	nuke.forceMove(turf_on_station)
 	nuked.forceMove(turf_on_station)
