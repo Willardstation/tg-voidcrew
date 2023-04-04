@@ -13,6 +13,6 @@
 			for(var/datum/job/job as anything in roundstart_ship.job_slots)
 				if(player.mind.assigned_role.type != job.type)
 					continue
-				return player.AttemptSpawnOnShip(job, roundstart_ship)
+				player.AttemptSpawnOnShip(job, roundstart_ship)
 		CHECK_TICK
 
