@@ -54,6 +54,8 @@
 	var/bottom_z = z - z_levels_below
 	var/top_z = z + z_levels_above
 	for(var/z_level in bottom_z to top_z)
+		if(is_station_level(z_level))
+			continue
 		SSmapping.z_trait_levels[ZTRAIT_STATION] += list(z_level)
 		GLOB.station_levels_cache[z_level] = TRUE
 
@@ -76,15 +78,26 @@
 	old_z_level = null
 
 	for(var/z_level in bottom_z to top_z)
-		if(SEND_GLOBAL_SIGNAL(src, COMSIG_GLOB_Z_SHIP_PROBE, z_level))
+		var/active_ships = SEND_GLOBAL_SIGNAL(COMSIG_GLOB_Z_SHIP_PROBE, src, z_level)
+		if(active_ships)
 			continue
 		SSmapping.z_trait_levels[ZTRAIT_STATION] -= list(z_level)
 		GLOB.station_levels_cache[z_level] = FALSE
 
-/// Signal Handler for checking if anyone else is linked to a z level
-/obj/docking_port/mobile/voidcrew/proc/respond_to_z_port_probe(obj/docking_port/mobile/voidcrew/source, z_level)
+/**
+ * ##respond_to_z_port_probe
+ *
+ * Sent by another docking port
+ * This is our response, to prevent a level being removed from the list of station areas, if we're still here.
+ * Args:
+ * source - The docking port that's leaving
+ * z_level - the z level that source is leaving from.
+ */
+/obj/docking_port/mobile/voidcrew/proc/respond_to_z_port_probe(atom/source, obj/docking_port/mobile/voidcrew/leaving, z_level)
 	SIGNAL_HANDLER
-	return (z_level == cached_z_level)
+	if(src == leaving)
+		return FALSE
+	return !!(z_level == z)
 
 /**
  * ##get_all_humans
