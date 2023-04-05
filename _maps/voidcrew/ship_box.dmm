@@ -114,7 +114,7 @@
 "aF" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/turf_decal/bot,
-/obj/machinery/atmospherics/pipe/layer_manifold/supply,
+/obj/machinery/atmospherics/components/unary/portables_connector/layer2,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/box/engine)
 "aG" = (
@@ -1032,13 +1032,7 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
-/obj/machinery/meter/layer2{
-	name = "supply guage"
-	},
-/obj/machinery/meter/layer4{
-	name = "waste guage"
-	},
+/obj/machinery/meter/layer2,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/box/engine)
 "gh" = (
@@ -1336,17 +1330,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/orange,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer2,
-/obj/machinery/meter,
 /turf/open/floor/plating,
 /area/shuttle/voidcrew/box/engine)
 "Jq" = (
 /obj/effect/turf_decal/tile/blue/anticorner,
 /turf/open/floor/iron/white,
 /area/shuttle/voidcrew/box/medbay)
-"Ks" = (
-/obj/machinery/atmospherics/pipe/layer_manifold/supply/hidden,
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/voidcrew/box/engine)
 "Lt" = (
 /obj/machinery/light/small/built{
 	dir = 4
@@ -1638,7 +1627,7 @@ aa
 aa
 aa
 aS
-Ks
+aS
 MO
 aS
 BE

@@ -34,7 +34,7 @@
 	. = ..()
 
 	if(!HAS_TRAIT(arrived, TRAIT_HYPERSPACED) && !HAS_TRAIT(arrived, TRAIT_FREE_HYPERSPACE_MOVEMENT))
-		arrived.AddComponent(/datum/component/shuttle_cling, arrived, turn(dir, 180), old_loc)
+		arrived.AddComponent(/datum/component/shuttle_cling, turn(dir, 180), old_loc)
 
 /turf/open/space/transit/Exited(atom/movable/gone, direction)
 	. = ..()

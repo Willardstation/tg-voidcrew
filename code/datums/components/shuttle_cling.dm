@@ -27,7 +27,7 @@
 	///If we can't hold onto anything, how fast do we get pulled away?
 	var/not_clinging_move_delay = 0.2 SECONDS
 
-/datum/component/shuttle_cling/Initialize(atom/source, direction)
+/datum/component/shuttle_cling/Initialize(direction)
 	. = ..()
 
 	if(!ismovable(parent))
