@@ -5314,4 +5314,5 @@
 #include "voidcrew\modules\shuttle\ship_parts\user_client.dm"
 #include "voidcrew\modules\shuttle\ship_parts\user_prefs.dm"
 #include "voidcrew\modules\teams\_team.dm"
+#include "voidcrew\unit_tests\atmospherics_sanity.dm"
 // END_INCLUDE
