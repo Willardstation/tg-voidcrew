@@ -937,9 +937,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/syndi_cakes,
 /obj/item/organ/internal/stomach,
-/obj/machinery/firealarm/directional/west{
-	dir = 4
-	},
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_y = 23
@@ -952,6 +949,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/stripes/corner,
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/white,
 /area/shuttle/voidcrew/kilo/cafe)
 "qp" = (
