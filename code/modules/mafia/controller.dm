@@ -771,14 +771,14 @@ GLOBAL_LIST_INIT(mafia_roles_by_name, setup_mafia_roles())
 			var/datum/mafia_role/target = locate(params["target"]) in all_roles
 			if(!istype(target))
 				return
-			switch(params["atype"])
-				if("Vote")
-					if(phase != MAFIA_PHASE_VOTING)
-						return
-					vote_for(user_role, target, vote_type="Day")
+			if(params["atype"] == "Vote")
+				if(phase != MAFIA_PHASE_VOTING)
+					return
+				vote_for(user_role, target, vote_type="Day")
+			else
 				var/datum/mafia_ability/used_action = user_role.role_unique_actions.Find(params["atype"])
 				if(!used_action)
-					return
+					return FALSE
 				used_action.set_target(src, target)
 			return TRUE
 	if(user_role != on_trial)
