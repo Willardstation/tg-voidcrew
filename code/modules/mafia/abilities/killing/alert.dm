@@ -6,6 +6,7 @@
 /datum/mafia_ability/attack_visitors
 	name = "Alert"
 	ability_action = "will kill all visitors"
+	use_flags = CAN_USE_ON_SELF
 
 /datum/mafia_ability/attack_visitors/set_target(datum/mafia_controller/game, datum/mafia_role/new_target)
 	using_ability = !using_ability
@@ -16,11 +17,13 @@
 		UnregisterSignal(host_role, COMSIG_MAFIA_ON_VISIT)
 		to_chat(host_role.body, span_warning("You will now kill visitors."))
 
-/datum/mafia_ability/attack_visitors/perform_action(datum/mafia_controller/game)
-	. = ..()
+/datum/mafia_ability/attack_visitors/perform_action(datum/mafia_controller/game, datum/mafia_role/day_target)
+	if(!using_ability)
+		return
 	if(!validate_action_target(game))
-		host_role.add_note("N[game.turn] - [target_role.body.real_name] - Unable to go on alert.")
+		host_role.add_note("N[game.turn] - Unable to go on alert.")
 		return ..()
+	. = ..()
 	host_role.role_unique_actions -= src
 	qdel(src)
 

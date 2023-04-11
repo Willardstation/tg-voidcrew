@@ -1,3 +1,6 @@
+///The amount of vests that you get by default to use, lowers as you use them.
+#define STARTING_VEST_AMOUNT 2
+
 /**
  * Vest
  *
@@ -6,8 +9,9 @@
 /datum/mafia_ability/vest
 	name = "Vest"
 	ability_action = "vest"
+	use_flags = CAN_USE_ON_SELF
 	///Amount of vests that can be used until the power deletes itself.
-	var/charges = 2
+	var/charges = STARTING_VEST_AMOUNT
 
 /datum/mafia_ability/vest/set_target(datum/mafia_controller/game, datum/mafia_role/new_target)
 	using_ability = !using_ability
@@ -18,7 +22,9 @@
 		UnregisterSignal(host_role, COMSIG_MAFIA_ON_KILL)
 		to_chat(host_role.body, span_warning("You are no longer using a vest tonight."))
 
-/datum/mafia_ability/vest/perform_action(datum/mafia_controller/game)
+/datum/mafia_ability/vest/perform_action(datum/mafia_controller/game, datum/mafia_role/day_target)
+	if(!using_ability)
+		return
 	if(!validate_action_target(game))
 		host_role.add_note("N[game.turn] - Unable to vest")
 		return ..()
@@ -42,3 +48,5 @@
 	SIGNAL_HANDLER
 
 	UnregisterSignal(host_role, COMSIG_MAFIA_ON_KILL)
+
+#undef STARTING_VEST_AMOUNT

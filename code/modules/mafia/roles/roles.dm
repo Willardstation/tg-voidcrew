@@ -36,8 +36,9 @@
 
 /datum/mafia_role/New(datum/mafia_controller/game)
 	. = ..()
-	for(var/datum/mafia_ability/abilities as anything in role_unique_actions)
-		new abilities(game, src)
+	for(var/datum/mafia_ability/abilities as anything in role_unique_actions + /datum/mafia_ability/voting)
+		role_unique_actions += new abilities(game, src)
+		role_unique_actions -= abilities
 
 /datum/mafia_role/Destroy(force, ...)
 	QDEL_NULL(body)
@@ -50,13 +51,13 @@
  * Does not count as visiting, see visit proc.
  */
 /datum/mafia_role/proc/kill(datum/mafia_controller/game, datum/mafia_role/attacker, lynch=FALSE)
+	if(attacker && (attacker.role_flags & ROLE_ROLEBLOCKED))
+		return FALSE
 	if(SEND_SIGNAL(src, COMSIG_MAFIA_ON_KILL, game, attacker, lynch) & MAFIA_PREVENT_KILL)
 		return FALSE
-	if(game_status == MAFIA_DEAD)
-		to_chat(attacker, span_notice("Your target was already dead when you got there!"))
-		return FALSE
-	game_status = MAFIA_DEAD
-	body.death()
+	if(game_status != MAFIA_DEAD)
+		game_status = MAFIA_DEAD
+		body.death()
 	if(lynch)
 		reveal_role(game, verbose = TRUE)
 	if(!(player_key in game.mafia_spectators)) //people who played will want to see the end of the game more often than not
@@ -90,11 +91,6 @@
 
 /datum/mafia_role/proc/special_reveal_equip(datum/mafia_controller/game)
 	return
-
-/datum/mafia_role/proc/validate_action_target(datum/mafia_controller/game,action,datum/mafia_role/target)
-	if((role_flags & ROLE_ROLEBLOCKED))
-		return FALSE
-	return TRUE
 
 /datum/mafia_role/proc/add_note(note)
 	role_notes += note

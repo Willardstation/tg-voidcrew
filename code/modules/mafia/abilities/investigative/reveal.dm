@@ -8,7 +8,9 @@
 	name = "Reveal"
 	ability_action = "psychologically evaluate"
 
-/datum/mafia_ability/reaveal_role/perform_action(datum/mafia_controller/game)
+/datum/mafia_ability/reaveal_role/perform_action(datum/mafia_controller/game, datum/mafia_role/day_target)
+	if(!using_ability)
+		return
 	if(!validate_action_target(game))
 		host_role.add_note("N[game.turn] - [target_role.body.real_name] - Unable to reveal")
 		return ..()

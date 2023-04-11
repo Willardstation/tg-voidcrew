@@ -9,7 +9,9 @@
 	ability_action = "give legal counsel"
 	action_priority = COMSIG_MAFIA_NIGHT_PRE_ACTION_PHASE
 
-/datum/mafia_ability/roleblock/perform_action(datum/mafia_controller/game)
+/datum/mafia_ability/roleblock/perform_action(datum/mafia_controller/game, datum/mafia_role/day_target)
+	if(!using_ability)
+		return
 	if(!validate_action_target(game))
 		return ..()
 	target_role.role_flags |= ROLE_ROLEBLOCKED

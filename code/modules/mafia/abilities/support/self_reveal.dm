@@ -1,7 +1,8 @@
 /**
- * Roleblock
+ * Self reveal
  *
- * During the night, prevents a player from using their role abilities.
+ * During the day, reveals your role to everyone and gives you a voting power boost,
+ * however it will additionally make you unable to be protected.
  */
 /datum/mafia_ability/self_reveal
 	name = "Reveal"
@@ -9,10 +10,12 @@
 	action_priority = null
 	valid_use_period = MAFIA_PHASE_DAY
 
-/datum/mafia_ability/self_reveal/perform_action(datum/mafia_controller/game)
-	. = ..()
+/datum/mafia_ability/self_reveal/perform_action(datum/mafia_controller/game, datum/mafia_role/day_target)
+	if(!using_ability)
+		return
 	if(!validate_action_target(game))
 		return ..()
+	. = ..()
 	host_role.reveal_role(game, TRUE)
 	host_role.role_flags |= ROLE_VULNERABLE
 	host_role.vote_power *= 3
