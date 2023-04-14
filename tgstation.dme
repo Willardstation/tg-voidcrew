@@ -5227,6 +5227,7 @@
 #include "voidcrew\edits\antagonist\_locate_weakpoint.dm"
 #include "voidcrew\edits\mobs\new_player.dm"
 #include "voidcrew\edits\subsystem\economy.dm"
+#include "voidcrew\edits\subsystem\events.dm"
 #include "voidcrew\mapping\_mapping.dm"
 #include "voidcrew\mapping\areas.dm"
 #include "voidcrew\mapping\docking_port\_docking_port.dm"
