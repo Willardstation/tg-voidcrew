@@ -19,13 +19,16 @@
 /datum/mafia_ability/changeling_kill/perform_action_target(datum/mafia_controller/game, datum/mafia_role/day_target)
 	var/datum/mafia_role/victim = game.get_vote_winner("Mafia")
 	if(!victim)
+		game.send_message(span_danger("No one was voted to be attacked!"), MAFIA_TEAM_MAFIA)
 		return
 	target_role = victim
 
 	. = ..()
 	if(!.)
+		game.send_message(span_danger("[host_role.body.real_name] was unable to attack [target_role.body]"), MAFIA_TEAM_MAFIA)
 		return
 	if(ling_sent)
+		game.send_message(span_danger("Tried to attack [target_role.body] but failed."), MAFIA_TEAM_MAFIA)
 		return
 
 	ling_sent = TRUE
