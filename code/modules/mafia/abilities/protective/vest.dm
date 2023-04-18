@@ -16,19 +16,20 @@
 /datum/mafia_ability/vest/set_target(datum/mafia_controller/game, datum/mafia_role/new_target)
 	. = ..()
 	if(!.)
-		return .
+		return FALSE
 	if(using_ability)
 		RegisterSignal(host_role, COMSIG_MAFIA_ON_KILL, PROC_REF(self_defense))
 	else
 		UnregisterSignal(host_role, COMSIG_MAFIA_ON_KILL)
+	return TRUE
 
 /datum/mafia_ability/vest/perform_action_target(datum/mafia_controller/game, datum/mafia_role/day_target)
 	. = ..()
 	if(!.)
-		return .
+		return FALSE
 
-	host_role.add_note("N[game.turn] - Vested")
 	charges--
+	return TRUE
 
 /datum/mafia_ability/vest/proc/self_defense(datum/source, datum/mafia_controller/game, datum/mafia_role/attacker, lynch)
 	SIGNAL_HANDLER
