@@ -1065,7 +1065,7 @@ GLOBAL_LIST_INIT(mafia_role_by_alignment, setup_mafia_role_by_alignment())
 	maptext = MAPTEXT("<b style='color: [COLOR_RED]; text-align: center; font-size: 32px'> [text]</b>")
 	maptext_width = view_to_pixels(owner?.view_size.getView())[1]
 	owner?.screen += src
-	addtimer(CALLBACK(src, PROC_REF(null_text)), 10 SECONDS, TIMER_OVERRIDE|TIMER_STOPPABLE)
+	addtimer(CALLBACK(src, PROC_REF(null_text)), 10 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
 
 /atom/movable/screen/mafia_popup/proc/null_text()
 	maptext = null
