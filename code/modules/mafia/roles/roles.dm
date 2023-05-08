@@ -19,6 +19,11 @@
 	var/mob/living/carbon/human/body
 	var/obj/effect/landmark/mafia/assigned_landmark
 
+	///The old mind we will be put back into when the game is over.
+	var/datum/mind/old_mind
+	///The old body we will be put back into when the game is over.
+	var/mob/living/old_body
+
 	///how many votes submitted when you vote. used in voting and deciding victory.
 	var/vote_power = 1
 	///what they get equipped with when they are revealed
@@ -46,10 +51,42 @@
 		role_unique_actions -= abilities
 
 /datum/mafia_role/Destroy(force, ...)
+	send_back_to_body()
 	QDEL_NULL(mafia_alert)
 	QDEL_NULL(body)
-	QDEL_NULL(role_unique_actions)
+	QDEL_LIST(role_unique_actions)
 	return ..()
+
+/**
+ * Puts the player in their body and keeps track of their previous one to put them back in later.
+ * Adds the playing_mafia trait so people examining them will know why they're currently lacking a soul.
+ */
+/datum/mafia_role/proc/put_player_in_body(client/player)
+	if(player.mob.mind && player.mob.mind.current)
+		old_body = player.mob.mind.current
+		old_mind = player.mob.mind
+		ADD_TRAIT(old_body, TRAIT_PLAYING_MAFIA, MAFIA_TRAIT)
+	body.key = player.key
+
+/**
+ * Sends the player back into their body
+ * Ghostize the body to get the observer. If you get nothing, they died in-game and is a ghost,
+ * so get the body's ghost instead.
+ * Once we have the ghost, we set their mind to their old mind, then set the current
+ * If the player is alive again, we'll shove them back in.
+ */
+/datum/mafia_role/proc/send_back_to_body()
+	if(old_mind && !QDELETED(old_mind) && old_body && !QDELETED(old_body))
+		REMOVE_TRAIT(old_body, TRAIT_PLAYING_MAFIA, MAFIA_TRAIT)
+		var/mob/dead/observer/ghost = body.ghostize()
+		if(!ghost)
+			ghost = body.get_ghost()
+		ghost.mind = old_mind
+		old_mind.set_current(old_body)
+		if(old_body.stat != DEAD)
+			old_body.key = old_mind.key
+		old_mind = null
+		old_body = null
 
 /**
  * Tests kill immunities, if nothing prevents the kill, kills this role.
@@ -66,13 +103,11 @@
 		body.death()
 	if(lynch)
 		reveal_role(game, verbose = TRUE)
-	if(!(player_key in game.mafia_spectators)) //people who played will want to see the end of the game more often than not
-		game.mafia_spectators += player_key
 	game.living_roles -= src
 	return TRUE
 
 /datum/mafia_role/proc/greet()
-	mafia_alert = new(src, src)
+	mafia_alert = new(body, src)
 	SEND_SOUND(body, 'sound/ambience/ambifailure.ogg')
 	to_chat(body, span_danger("You are the [name]."))
 	to_chat(body, span_danger("[desc]"))
