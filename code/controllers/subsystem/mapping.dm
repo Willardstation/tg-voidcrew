@@ -19,16 +19,6 @@ SUBSYSTEM_DEF(mapping)
 	var/list/map_templates = list()
 
 	var/list/ruins_templates = list()
-	// VOID EDITS [
-	var/list/space_ruins_templates = list()
-	var/list/lava_ruins_templates = list()
-	var/list/ice_ruins_templates = list()
-	var/list/jungle_ruins_templates = list()
-	var/list/beach_ruins_templates = list()
-	var/list/wasteland_ruins_templates = list()
-	var/list/yellow_ruins_templates = list()
-	// ] VOID EDITS
-
 
 	///List of ruins, separated by their theme
 	var/list/themed_ruins = list()
@@ -593,24 +583,6 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 
 		map_templates[R.name] = R
 		ruins_templates[R.name] = R
-
-		// VOID EDITS [
-		if(istype(R, /datum/map_template/ruin/lavaland))
-			lava_ruins_templates[R.name] = R
-		else if(istype(R, /datum/map_template/ruin/jungle))
-			jungle_ruins_templates[R.name] = R
-		else if(istype(R, /datum/map_template/ruin/beach))
-			beach_ruins_templates[R.name] = R
-		else if(istype(R, /datum/map_template/ruin/wasteland))
-			wasteland_ruins_templates[R.name] = R
-
-		else if(istype(R, /datum/map_template/ruin/icemoon))
-			ice_ruins_templates[R.name] = R
-		else if(istype(R, /datum/map_template/ruin/space))
-			space_ruins_templates[R.name] = R
-		else if(istype(R, /datum/map_template/ruin/reebe))
-			yellow_ruins_templates[R.name] = R
-		// ] VOID EDITS
 
 		if (!(R.ruin_type in themed_ruins))
 			themed_ruins[R.ruin_type] = list()

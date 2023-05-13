@@ -34,7 +34,7 @@
 			if(prob(35))
 				new /mob/living/simple_animal/hostile/retaliate/clown/clownhulk/chlown(loc)
 			if(prob(25))
-				//new /mob/living/simple_animal/hostile/retaliate/clown/mutant/blob(loc)//oh god oh fuck
+				new /mob/living/simple_animal/hostile/retaliate/clown/mutant(loc)//oh god oh fuck
 			if(prob(25))
 				new /obj/item/veilrender/honkrender/honkhulkrender(loc)
 			else

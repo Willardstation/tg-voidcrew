@@ -135,11 +135,3 @@
 	name = "\improper Yellow Space"
 	sound_environment = SOUND_ENVIRONMENT_MOUNTAINS
 	ambientsounds = REEBE
-
-/area/overmap_encounter/planetoid/reebe/Entered(atom/movable/atom)
-	. = ..()
-	if(!ismob(atom))
-		return
-	var/mob/mob = atom
-	if(mob.client)
-		addtimer(CALLBACK(mob.client, /client/proc/play_reebe_ambience), 900)
