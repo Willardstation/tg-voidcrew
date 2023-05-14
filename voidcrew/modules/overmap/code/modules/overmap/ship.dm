@@ -115,30 +115,23 @@
 	//then the account, which relies on there having a job, as we set it to the captain's.
 	ship_account = new(newname = ship_team.name, job = job_slots[1], player_account = FALSE)
 
-	display_name = "[source_template.faction_prefix] [name]"
+	display_name = template.name
 	update_ship_color()
-	/*
-	map_name = "overmap_[REF(src)]_map"
 
-	cam_screen = new
-	cam_screen.del_on_map_removal = FALSE
-	cam_screen.generate_view(map_name)
-
-	cam_background = new
-	cam_background.del_on_map_removal = FALSE
-	cam_background.assigned_map = map_name
-	*/
 	if(render_map)	// Initialize map objects
 		map_name = "overmap_[REF(src)]_map"
+
 		cam_screen = new
 		cam_screen.name = "screen"
 		cam_screen.assigned_map = map_name
 		cam_screen.del_on_map_removal = FALSE
 		cam_screen.screen_loc = "[map_name]:1,1"
+
 		cam_background = new
 		cam_background.assigned_map = map_name
 		cam_background.del_on_map_removal = FALSE
 		update_screen()
+
 	SSovermap.simulated_ships += src
 
 /obj/structure/overmap/ship/Destroy()
@@ -495,7 +488,7 @@
 	if(!ignore_cooldown)
 		COOLDOWN_START(src, rename_cooldown, 5 MINUTES)
 	for(var/area/shuttle_area as anything in shuttle.shuttle_areas)
-		//shuttle_area.rename_area("[display_name] [initial(shuttle_area.name)]")
+//		shuttle_area.rename_area("[display_name] [initial(shuttle_area.name)]")
 	return TRUE
 
 /obj/structure/overmap/ship/proc/adjust_speed(n_x, n_y)
