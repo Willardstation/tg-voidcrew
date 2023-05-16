@@ -192,8 +192,6 @@
 			color = "#F10303"
 		if(NANOTRASEN_SHIP)
 			color = "#115188"
-		if(HOSTILE_SHIP)
-			color = "#6E0202"
 		if(NEUTRAL_SHIP)
 			color = "#DDDDDD"
 	add_atom_colour(color, FIXED_COLOUR_PRIORITY)
