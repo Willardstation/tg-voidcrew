@@ -98,9 +98,9 @@
 		modded_time = time
 
 	var/was_sleeping = (target.stat != DEAD && target.IsSleeping())
-	//VOID EDIT [
-	if(do_after(user, modded_time, target = target, interaction_key = target)) //One surgery on each target
-	//]
+
+	if(do_after(user, modded_time, target = target, interaction_key = user.has_status_effect(/datum/status_effect/hippocratic_oath) ? target : DOAFTER_SOURCE_SURGERY)) //If we have the hippocratic oath, we can perform one surgery on each target, otherwise we can only do one surgery in total.
+
 		var/chem_check_result = chem_check(target)
 		if((prob(100-fail_prob) || (iscyborg(user) && !silicons_obey_prob)) && chem_check_result && !try_to_fail)
 
