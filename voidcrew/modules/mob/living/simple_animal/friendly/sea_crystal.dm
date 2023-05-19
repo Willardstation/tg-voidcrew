@@ -8,7 +8,7 @@
 	health = 450
 	pixel_x = -18
 	pixel_y = -10
-	faction = list("crystal")
+	faction = list(FACTION_CRYSTAL)
 	friendly_verb_continuous = "bumps"
 	friendly_verb_simple = "bump"
 	speed = 3

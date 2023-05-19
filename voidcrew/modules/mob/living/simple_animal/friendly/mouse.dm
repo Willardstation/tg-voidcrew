@@ -1,2 +1,2 @@
 /mob/living/basic/mouse/beach
-	faction = list("beach")
+	faction = list(FACTION_BEACH)

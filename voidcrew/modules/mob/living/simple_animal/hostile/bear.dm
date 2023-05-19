@@ -7,4 +7,4 @@
 	icon_gib = "brownbear_gib"
 	maxHealth = 70
 	health = 70
-	faction = list("wasteland", "beach")
+	faction = list(FACTION_WASTELAND, FACTION_BEACH)

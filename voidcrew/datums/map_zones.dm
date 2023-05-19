@@ -1,12 +1,10 @@
 /datum/map_zone
 	var/name = "Map Zone"
 	var/id
-	var/list/traits
+	/// Is the mapzone currently used by a overmap encounter?
 	var/taken = FALSE
 	/// List of all z levels this map zone contains
 	var/list/z_levels = list()
-
-
 
 /datum/map_zone/New(passed_name)
 	if(!isnull(passed_name))
@@ -15,6 +13,10 @@
 	id = SSovermap.map_zones.len
 	. = ..()
 
+/datum/map_zone/Destroy()
+	SSovermap.map_zones -= src
+	return ..()
+
 /// Clears all of what's inside the z levels managed by the mapzone.
 /datum/map_zone/proc/clear_reservation()
 	for(var/datum/space_level/zlevel as anything in z_levels)
@@ -22,9 +24,6 @@
 
 /datum/map_zone/proc/add_space_level(datum/space_level/level)
 	z_levels += level
-
-/datum/map_zone/proc/remove_virtual_level(datum/space_level/level)
-	z_levels -= level
 
 /datum/map_zone/proc/get_mind_mobs()
 	. = list()
@@ -53,7 +52,7 @@
 	return block(locate(low_x,low_y,z_value), locate(high_x,high_y,z_value))
 
 /datum/space_level/proc/clear_reservation()
-	var/area/space_area = GLOB.areas_by_type[/area/space]
+	var/area/space_area = GLOB.areas_by_type[world.area]
 
 	var/list/turf/block_turfs = get_block()
 

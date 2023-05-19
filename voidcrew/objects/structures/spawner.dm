@@ -7,7 +7,7 @@
 	max_mobs = 2
 	max_integrity = 650
 	spawn_time = 300
-	faction = list("wasteland")
+	faction = list(FACTION_WASTELAND)
 	var/uses = 6
 	var/bite_chance = 15
 	var/success_chance = 80
@@ -105,7 +105,7 @@
 	max_mobs = 2
 	max_integrity = 250
 	bite_chance = 0
-	faction = list("beach")
+	faction = list(FACTION_BEACH)
 	caveloot = list(
 		/obj/item/storage/bag/money/vault = 10,
 		/obj/item/research_notes/loot/big = 8,

@@ -1,12 +1,12 @@
 /obj/structure/spawner/ice_moon/demonic_portal/blobspore
 	mob_types = list(/mob/living/simple_animal/hostile/blob/blobspore/wasteland)
 	spawn_time = 300
-	faction = list("wasteland")
+	faction = list(FACTION_WASTELAND)
 
 /obj/structure/spawner/ice_moon/demonic_portal/hivebot
 	mob_types = list(/mob/living/simple_animal/hostile/hivebot/rapid/wasteland)
 	spawn_time = 300
-	faction = list("wasteland")
+	faction = list(FACTION_WASTELAND)
 
 /**
  * Drops loot from the portal. Uses variable difficulty based on drops- more valulable rewards will also add additional enemies to the attack wave.

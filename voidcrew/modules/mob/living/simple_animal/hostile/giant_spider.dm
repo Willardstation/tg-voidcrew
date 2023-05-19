@@ -1,7 +1,7 @@
 /mob/living/basic/giant_spider/tarantula/wasteland
-	faction = list("wasteland")
+	faction = list(FACTION_WASTELAND)
 /mob/living/basic/giant_spider/wasteland
-	faction = list("wasteland")
+	faction = list(FACTION_WASTELAND)
 
 /mob/living/basic/giant_spider/wasteland/Initialize(mapload)
 	. = ..()

@@ -3,7 +3,7 @@
  */
 /obj/docking_port/mobile/voidcrew
 	launch_status = UNLAUNCHED
-	callTime = 0 SECONDS
+	callTime = 0
 
 	/// Makes sure we dont run linking logic more than once
 	VAR_PRIVATE/cached_z_level

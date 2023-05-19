@@ -59,10 +59,10 @@
 		return INITIALIZE_HINT_QDEL
 
 /mob/living/simple_animal/hostile/asteroid/wolf/wasteland
-	faction = list("wasteland")
+	faction = list(FACTION_WASTELAND)
 
 /mob/living/simple_animal/hostile/asteroid/wolf/alpha/wasteland
-	faction = list("wasteland")
+	faction = list(FACTION_WASTELAND)
 
 /mob/living/simple_animal/hostile/asteroid/wolf/wasteland/random/Initialize()
 	. = ..()

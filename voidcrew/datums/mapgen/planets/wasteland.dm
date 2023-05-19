@@ -1,75 +1,75 @@
 /datum/planet/wasteland
 	biomes = list(
 		//NORMAL BIOMES
-		"coldest" = list(
-			"biome_lowest_humidity" = /datum/biome/ruins,
-			"biome_low_humidity" = /datum/biome/wasteland/plains,
-			"biome_medium_humidity" = /datum/biome/wasteland,
-			"biome_high_humidity" = /datum/biome/wasteland,
-			"biome_highest_humidity" = /datum/biome/wasteland/plains
+		BIOME_COLDEST = list(
+			BIOME_LOWEST_HUMIDITY = /datum/biome/ruins,
+			BIOME_LOW_HUMIDITY = /datum/biome/wasteland/plains,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/wasteland,
+			BIOME_HIGH_HUMIDITY = /datum/biome/wasteland,
+			BIOME_HIGHEST_HUMIDITY = /datum/biome/wasteland/plains
 		),
-		"cold" = list(
-			"biome_lowest_humidity" = /datum/biome/wasteland,
-			"biome_low_humidity" = /datum/biome/wasteland,
-			"biome_medium_humidity" = /datum/biome/wasteland/forest,
-			"biome_high_humidity" = /datum/biome/ruins,
-			"biome_highest_humidity" = /datum/biome/wasteland/plains
+		BIOME_COLD = list(
+			BIOME_LOWEST_HUMIDITY = /datum/biome/wasteland,
+			BIOME_LOW_HUMIDITY = /datum/biome/wasteland,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/wasteland/forest,
+			BIOME_HIGH_HUMIDITY = /datum/biome/ruins,
+			BIOME_HIGHEST_HUMIDITY = /datum/biome/wasteland/plains
 		),
-		"warm" = list(
-			"biome_lowest_humidity" = /datum/biome/wasteland,
-			"biome_low_humidity" = /datum/biome/wasteland,
-			"biome_medium_humidity" = /datum/biome/wasteland/forest,
-			"biome_high_humidity" = /datum/biome/wasteland/plains,
-			"biome_highest_humidity" = /datum/biome/nuclear
+		BIOME_WARM = list(
+			BIOME_LOWEST_HUMIDITY = /datum/biome/wasteland,
+			BIOME_LOW_HUMIDITY = /datum/biome/wasteland,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/wasteland/forest,
+			BIOME_HIGH_HUMIDITY = /datum/biome/wasteland/plains,
+			BIOME_HIGHEST_HUMIDITY = /datum/biome/nuclear
 		),
-		"perfect" = list(
-			"biome_lowest_humidity" = /datum/biome/nuclear,
-			"biome_low_humidity" = /datum/biome/wasteland/forest,
-			"biome_medium_humidity" = /datum/biome/wasteland/forest,
-			"biome_high_humidity" = /datum/biome/wasteland/plains,
-			"biome_highest_humidity" = /datum/biome/wasteland
+		BIOME_TEMPERATE = list(
+			BIOME_LOWEST_HUMIDITY = /datum/biome/nuclear,
+			BIOME_LOW_HUMIDITY = /datum/biome/wasteland/forest,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/wasteland/forest,
+			BIOME_HIGH_HUMIDITY = /datum/biome/wasteland/plains,
+			BIOME_HIGHEST_HUMIDITY = /datum/biome/wasteland
 		),
-		"hot" = list(
-			"biome_lowest_humidity" = /datum/biome/wasteland,
-			"biome_low_humidity" = /datum/biome/wasteland/forest,
-			"biome_medium_humidity" = /datum/biome/wasteland,
-			"biome_high_humidity" = /datum/biome/nuclear,
-			"biome_highest_humidity" = /datum/biome/wasteland
+		BIOME_HOT = list(
+			BIOME_LOWEST_HUMIDITY = /datum/biome/wasteland,
+			BIOME_LOW_HUMIDITY = /datum/biome/wasteland/forest,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/wasteland,
+			BIOME_HIGH_HUMIDITY = /datum/biome/nuclear,
+			BIOME_HIGHEST_HUMIDITY = /datum/biome/wasteland
 		),
-		"hottest" = list(
-			"biome_lowest_humidity" = /datum/biome/wasteland,
-			"biome_low_humidity" = /datum/biome/wasteland/forest,
-			"biome_medium_humidity" = /datum/biome/wasteland,
-			"biome_high_humidity" = /datum/biome/nuclear,
-			"biome_highest_humidity" = /datum/biome/nuclear
+		BIOME_HOTTEST = list(
+			BIOME_LOWEST_HUMIDITY = /datum/biome/wasteland,
+			BIOME_LOW_HUMIDITY = /datum/biome/wasteland/forest,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/wasteland,
+			BIOME_HIGH_HUMIDITY = /datum/biome/nuclear,
+			BIOME_HIGHEST_HUMIDITY = /datum/biome/nuclear
 		),
 		//CAVE BIOMES
-		"coldest_cave" = list(
-			"biome_lowest_humidity" = /datum/biome/cave/wasteland,
-			"biome_low_humidity" = /datum/biome/cave/wasteland,
-			"biome_medium_humidity" = /datum/biome/cave/mossy_stone,
-			"biome_high_humidity" = /datum/biome/cave/rubble,
-			"biome_highest_humidity" = /datum/biome/cave/rubble
+		BIOME_COLDEST_CAVE = list(
+			BIOME_LOWEST_HUMIDITY = /datum/biome/cave/wasteland,
+			BIOME_LOW_HUMIDITY = /datum/biome/cave/wasteland,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/cave/mossy_stone,
+			BIOME_HIGH_HUMIDITY = /datum/biome/cave/rubble,
+			BIOME_HIGHEST_HUMIDITY = /datum/biome/cave/rubble
 		),
-		"cold_cave" = list(
-			"biome_lowest_humidity" = /datum/biome/cave/wasteland,
-			"biome_low_humidity" = /datum/biome/cave/wasteland,
-			"biome_medium_humidity" = /datum/biome/cave/rubble,
-			"biome_high_humidity" = /datum/biome/cave/rubble,
-			"biome_highest_humidity" = /datum/biome/cave/rubble
+		BIOME_COLD_CAVE = list(
+			BIOME_LOWEST_HUMIDITY = /datum/biome/cave/wasteland,
+			BIOME_LOW_HUMIDITY = /datum/biome/cave/wasteland,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/cave/rubble,
+			BIOME_HIGH_HUMIDITY = /datum/biome/cave/rubble,
+			BIOME_HIGHEST_HUMIDITY = /datum/biome/cave/rubble
 		),
-		"warm_cave" = list(
-			"biome_lowest_humidity" = /datum/biome/cave/rubble,
-			"biome_low_humidity" = /datum/biome/cave/wasteland,
-			"biome_medium_humidity" = /datum/biome/cave/wasteland,
-			"biome_high_humidity" = /datum/biome/cave/rubble,
-			"biome_highest_humidity" = /datum/biome/cave/mossy_stone
+		BIOME_WARM_CAVE = list(
+			BIOME_LOWEST_HUMIDITY = /datum/biome/cave/rubble,
+			BIOME_LOW_HUMIDITY = /datum/biome/cave/wasteland,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/cave/wasteland,
+			BIOME_HIGH_HUMIDITY = /datum/biome/cave/rubble,
+			BIOME_HIGHEST_HUMIDITY = /datum/biome/cave/mossy_stone
 		),
-		"hot_cave" = list(
-			"biome_lowest_humidity" = /datum/biome/cave/wasteland,
-			"biome_low_humidity" = /datum/biome/cave/wasteland,
-			"biome_medium_humidity" = /datum/biome/cave/rubble,
-			"biome_high_humidity" = /datum/biome/cave/mossy_stone,
-			"biome_highest_humidity" = /datum/biome/cave/rubble
+		BIOME_HOT_CAVE = list(
+			BIOME_LOWEST_HUMIDITY = /datum/biome/cave/wasteland,
+			BIOME_LOW_HUMIDITY = /datum/biome/cave/wasteland,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/cave/rubble,
+			BIOME_HIGH_HUMIDITY = /datum/biome/cave/mossy_stone,
+			BIOME_HIGHEST_HUMIDITY = /datum/biome/cave/rubble
 		)
 	)

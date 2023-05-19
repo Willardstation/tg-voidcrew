@@ -1,2 +1,2 @@
 /mob/living/simple_animal/hostile/mushroom/beach
-	faction = list("beach")
+	faction = list(FACTION_BEACH)

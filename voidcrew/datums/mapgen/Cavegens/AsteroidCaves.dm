@@ -39,7 +39,7 @@
 	var/radius = min(maxx - minx, maxy - miny) / 2
 
 	var/list/turfs_to_gen = list()
-	var/area/asteroid/asteroid_area = GLOB.areas_by_type[/area/asteroid] || new
+	var/area/centcom/asteroid/voidcrew/asteroid_area = GLOB.areas_by_type[/area/centcom/asteroid/voidcrew] || new
 	for(var/turf/T as anything in turfs)
 		var/randradius = rand(radius - 2, radius + 2) * rand(radius - 2, radius + 2)
 		if((T.y - midy) ** 2 + (T.x - midx) ** 2 >= randradius)
