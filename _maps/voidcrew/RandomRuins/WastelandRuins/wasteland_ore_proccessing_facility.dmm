@@ -107,9 +107,7 @@
 /obj/structure/railing{
 	dir = 10
 	},
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null
@@ -162,9 +160,7 @@
 /obj/structure/railing/corner{
 	dir = 1
 	},
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null
@@ -300,9 +296,7 @@
 /obj/structure/railing{
 	dir = 6
 	},
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null
@@ -389,9 +383,7 @@
 /area/ruin/powered)
 "xz" = (
 /obj/structure/railing,
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null
@@ -518,9 +510,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null
@@ -537,9 +527,7 @@
 	dir = 9
 	},
 /obj/structure/railing/corner,
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null
@@ -549,9 +537,7 @@
 /obj/structure/railing{
 	dir = 9
 	},
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null
@@ -574,9 +560,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null
@@ -603,9 +587,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null
@@ -689,9 +671,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null
@@ -765,9 +745,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/structure/lattice/lava{
-	icon = 'whitesands/icons/obj/smooth_structures/catwalk.dmi'
-	},
+/obj/structure/lattice/lava,
 /turf/open/lava/smooth{
 	smoothing_flags = 0;
 	smoothing_groups = null

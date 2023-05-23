@@ -5499,7 +5499,6 @@
 #include "voidcrew\turfs\open\planet.dm"
 #include "voidcrew\turfs\open\water.dm"
 #include "voidcrew\turfs\open\floor\fancy_floor.dm"
-#include "voidcrew\turfs\open\floor\whitesands.dm"
 #include "voidcrew\turfs\open\floor\plating\asteroid.dm"
 #include "voidcrew\turfs\open\floor\plating\misc_plating.dm"
 #include "voidcrew\turfs\open\floor\plating\planet.dm"
