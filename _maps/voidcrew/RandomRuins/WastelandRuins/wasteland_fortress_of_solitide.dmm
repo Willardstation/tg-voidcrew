@@ -3219,7 +3219,7 @@
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Es" = (
-/obj/effect/mob_spawn/human/corpse/whitesands/survivor,
+/obj/effect/mob_spawn/corpse/human/hermit/survivor,
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/light{
 	dir = 1

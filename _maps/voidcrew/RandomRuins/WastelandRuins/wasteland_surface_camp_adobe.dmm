@@ -22,7 +22,7 @@
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "f" = (
-/mob/living/simple_animal/hostile/asteroid/whitesands/ranged/hunter{
+/mob/living/simple_animal/hostile/asteroid/hermit/ranged/hunter{
 	faction = list("adobe")
 	},
 /turf/open/floor/plating/rust,
@@ -97,7 +97,7 @@
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "w" = (
-/mob/living/simple_animal/hostile/asteroid/whitesands/ranged/hunter{
+/mob/living/simple_animal/hostile/asteroid/hermit/ranged/hunter{
 	dir = 4;
 	faction = list("adobe")
 	},
@@ -105,7 +105,7 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "x" = (
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	dir = 4;
 	faction = list("adobe")
 	},
@@ -136,21 +136,21 @@
 /area/ruin/unpowered)
 "C" = (
 /obj/structure/chair/plastic,
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	faction = list("adobe")
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "D" = (
-/mob/living/simple_animal/hostile/asteroid/whitesands/ranged/gunslinger{
+/mob/living/simple_animal/hostile/asteroid/hermit/ranged/gunslinger{
 	dir = 4;
 	faction = list("adobe")
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "E" = (
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	dir = 1;
 	faction = list("adobe")
 	},
@@ -202,7 +202,7 @@
 /obj/structure/chair/plastic{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	dir = 4;
 	faction = list("adobe")
 	},

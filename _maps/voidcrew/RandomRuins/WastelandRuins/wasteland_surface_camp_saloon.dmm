@@ -69,7 +69,7 @@
 "hL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/old,
-/mob/living/simple_animal/hostile/asteroid/whitesands/ranged/hunter{
+/mob/living/simple_animal/hostile/asteroid/hermit/ranged/hunter{
 	faction = list("saloon");
 	name = "Whitesands Bartender"
 	},
@@ -139,7 +139,7 @@
 /area/ruin/unpowered)
 "mr" = (
 /obj/structure/chair/stool/bar,
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	dir = 8;
 	faction = list("saloon")
 	},
@@ -153,7 +153,7 @@
 /area/ruin/unpowered)
 "nE" = (
 /obj/structure/chair/stool/bar,
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	dir = 1;
 	faction = list("saloon")
 	},
@@ -432,7 +432,7 @@
 "Ov" = (
 /obj/structure/chair/stool/bar,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	dir = 8;
 	faction = list("saloon")
 	},
@@ -537,7 +537,7 @@
 /area/ruin/unpowered)
 "Xb" = (
 /obj/item/chair/stool/bar,
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	dir = 1;
 	faction = list("saloon")
 	},

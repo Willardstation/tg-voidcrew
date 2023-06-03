@@ -66,7 +66,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "n" = (
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	dir = 4
 	},
 /turf/open/floor/wood{

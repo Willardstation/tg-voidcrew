@@ -160,7 +160,7 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "hm" = (
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	faction = list("saloon")
 	},
 /turf/open/floor/plating,
@@ -269,7 +269,7 @@
 /turf/open/floor/carpet/nanoweave,
 /area/ruin/unpowered)
 "oV" = (
-/mob/living/simple_animal/hostile/asteroid/whitesands/ranged/gunslinger{
+/mob/living/simple_animal/hostile/asteroid/hermit/ranged/gunslinger{
 	desc = "One of the few survivors on the planet with working weaponry. Doesn't seem as friendly as the bartenders you're used to.";
 	faction = list("saloon")
 	},
@@ -411,7 +411,7 @@
 	},
 /area/ruin/unpowered)
 "vR" = (
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	faction = list("saloon")
 	},
 /turf/open/floor/iron/dark,
@@ -424,7 +424,7 @@
 /area/ruin/unpowered)
 "wL" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	faction = list("saloon")
 	},
 /turf/open/floor/plating,
@@ -611,7 +611,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 10
 	},
-/mob/living/simple_animal/hostile/asteroid/whitesands/ranged/gunslinger{
+/mob/living/simple_animal/hostile/asteroid/hermit/ranged/gunslinger{
 	faction = list("saloon")
 	},
 /turf/open/floor/plating{
@@ -1103,7 +1103,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "ZU" = (
-/mob/living/simple_animal/hostile/asteroid/whitesands/survivor{
+/mob/living/simple_animal/hostile/asteroid/hermit/survivor{
 	faction = list("saloon")
 	},
 /turf/open/floor/plating{

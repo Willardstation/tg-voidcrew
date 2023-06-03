@@ -75,7 +75,7 @@
 /area/overmap_encounter/planetoid/wasteland)
 "K" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/asteroid/whitesands/ranged/hunter,
+/mob/living/simple_animal/hostile/asteroid/hermit/ranged/hunter,
 /turf/open/floor/pod/dark,
 /area/overmap_encounter/planetoid/wasteland)
 "M" = (
@@ -96,7 +96,7 @@
 /area/overmap_encounter/planetoid/wasteland)
 "Y" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/asteroid/whitesands/ranged/gunslinger,
+/mob/living/simple_animal/hostile/asteroid/hermit/ranged/gunslinger,
 /turf/open/floor/pod/dark,
 /area/overmap_encounter/planetoid/wasteland)
 "Z" = (

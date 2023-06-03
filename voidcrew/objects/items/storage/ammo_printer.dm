@@ -1,7 +1,7 @@
 /obj/structure/ammo_printer
 	name = "rusting ammo printer"
 	desc = "An ammunition printer covered in rust. It looks like it has enough juice for one more run.."
-	icon = 'icons/obj/storage.dmi'
+	icon = 'icons/obj/storage/storage.dmi'
 	icon_state = "brassbox"
 	anchored = TRUE
 	density = TRUE
@@ -83,10 +83,7 @@
 	else
 		ammo_type = inserted_gun.mag_type
 		total_ammo = pick(1,2)
-
-	playsound(src, 'sound/machines/button1.ogg', 25, FALSE)
 	if(do_after(user, 40, target = src))
-		playsound(src, 'sound/machines/whirr_beep.ogg', 25, FALSE)
 		while(total_ammo != 0)
 			new ammo_type(src.loc)
 			total_ammo -= 1
