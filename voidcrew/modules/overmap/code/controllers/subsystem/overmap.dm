@@ -336,7 +336,6 @@ SUBSYSTEM_DEF(overmap)
 	var/list/ruin_list
 	var/datum/map_generator/mapgen
 	var/area/target_area
-	var/turf/surface = /turf/open/space/basic
 	var/datum/weather/weather_controller_type
 	var/datum/planet/planet_template
 	if(!isnull(planet_type))
@@ -345,7 +344,6 @@ SUBSYSTEM_DEF(overmap)
 		if(!isnull(planet_type.mapgen))
 			mapgen = new planet_type.mapgen
 		target_area = planet_type.target_area
-		surface = planet_type.surface
 		weather_controller_type = planet_type.weather_controller_type
 		if(!(isnull(planet_type.planet_template)))
 			planet_template = new planet_type.planet_template
@@ -355,9 +353,6 @@ SUBSYSTEM_DEF(overmap)
 		ruin_type = ruin_list[pick(ruin_list)]
 		if(ispath(ruin_type))
 			ruin_type = new ruin_type
-
-	var/height = QUADRANT_MAP_SIZE
-	var/width = QUADRANT_MAP_SIZE
 
 	var/encounter_name = "Dynamic Overmap Encounter"
 	var/datum/map_zone/mapzone = find_free_mapzone()
@@ -375,13 +370,6 @@ SUBSYSTEM_DEF(overmap)
 
 	mapzone.taken = TRUE
 
-
-	//var/datum/virtual_level/vlevel = SSmapping.create_virtual_level(encounter_name, list(ZTRAIT_MINING = TRUE), mapzone, width, height, ALLOCATION_QUADRANT, QUADRANT_MAP_SIZE)
-
-	//vlevel.reserve_margin(QUADRANT_SIZE_BORDER)
-
-	if(mapgen) /// If we have a map generator, don't ChangeTurf's in fill_in. Just to ChangeTurf them once again.
-		surface = null
 	zlevel.fill_in(area_override = target_area)
 
 	if(ruin_type)
@@ -399,7 +387,7 @@ SUBSYSTEM_DEF(overmap)
 		if (!isnull(mapgen))
 			mapgen.generate_terrain(zlevel.get_block())
 	if(weather_controller_type)
-		//new weather_controller_type(mapzone)
+		new weather_controller_type(mapzone)
 
 
 	// locates the first dock in the bottom left, accounting for padding and the border

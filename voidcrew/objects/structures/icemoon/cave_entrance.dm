@@ -372,7 +372,7 @@
 			new /obj/effect/gibspawner/human(loc)
 			new /obj/effect/gibspawner/human(loc)
 			new /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/doom(loc)
-			if(prob(50))
+			//if(prob(50))
 				//new /obj/item/gem/bloodstone(loc)
 			if(prob(25))
 				new /obj/item/seeds/tomato/blood(loc)

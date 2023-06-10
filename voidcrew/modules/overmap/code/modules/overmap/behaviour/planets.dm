@@ -57,7 +57,6 @@
 	mapgen = /datum/map_generator/planet_generator/beach
 	target_area = /area/overmap_encounter/planetoid/beach
 	surface = /turf/open/misc/asteroid/sand/beach/lit
-	weather_controller_type = /datum/weather/
 	planet_template = /datum/planet/beach
 
 /datum/overmap/planet/jungle
@@ -69,7 +68,6 @@
 	mapgen = /datum/map_generator/planet_generator
 	target_area = /area/overmap_encounter/planetoid/jungle
 	surface = /turf/open/misc/dirt/jungle
-	weather_controller_type = /datum/weather/
 	planet_template = /datum/planet/jungle
 
 /datum/overmap/planet/wasteland
@@ -81,7 +79,6 @@
 	mapgen = /datum/map_generator/planet_generator/lava
 	target_area = /area/overmap_encounter/planetoid/wasteland
 	surface = /turf/open/misc/wasteland/lit
-	weather_controller_type = /datum/weather/
 	planet_template = /datum/planet/wasteland
 
 /datum/overmap/planet/reebe

@@ -285,13 +285,13 @@
 	ADD_TRAIT(M, TRAIT_NEVER_WOUNDED, TRAIT_GENERIC)
 	if(isplasmaman(M))
 		var/mob/living/carbon/human/H = M
-		H.physiology.armor.melee += plasma_armor
-		H.physiology.armor.bullet += plasma_armor
+		H.physiology.armor = H.physiology.armor.generate_new_with_modifiers(list(MELEE = plasma_armor))
+		H.physiology.armor = H.physiology.armor.generate_new_with_modifiers(list(BULLET = plasma_armor))
 		added_armor = plasma_armor
 	if(isskeleton(M))
 		var/mob/living/carbon/human/H = M
-		H.physiology.armor.melee += skele_armor
-		H.physiology.armor.bullet += skele_armor
+		H.physiology.armor = H.physiology.armor.generate_new_with_modifiers(list(MELEE = skele_armor))
+		H.physiology.armor = H.physiology.armor.generate_new_with_modifiers(list(BULLET = skele_armor))
 		added_armor = skele_armor
 	..()
 
@@ -300,8 +300,8 @@
 	REMOVE_TRAIT(M, TRAIT_EASILY_WOUNDED, TRAIT_GENERIC)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		H.physiology.armor.melee -= added_armor
-		H.physiology.armor.bullet -= added_armor		// No, you can't change species to get a permanant brute resist
+		H.physiology.armor = H.physiology.armor.generate_new_with_modifiers(list(MELEE = -added_armor))
+		H.physiology.armor = H.physiology.armor.generate_new_with_modifiers(list(BULLET = -added_armor))		// No, you can't change species to get a permanant brute resist
 	..()
 
 /datum/reagent/medicine/skeletons_boon/overdose_process(mob/living/M)

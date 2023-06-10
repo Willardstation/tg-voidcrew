@@ -63,6 +63,8 @@
 	//Overwrite turf areas with cave areas to combat weather
 	var/area/overmap_encounter/planetoid/cave/new_area = GLOB.areas_by_type[/area/overmap_encounter/planetoid/cave] || new
 	var/area/old_area = get_area(new_turf)
+	new_area.contents += new_turf
+	new_turf.change_area(old_area, new_area)
 	CHECK_TICK
 
 	if(!closed)
