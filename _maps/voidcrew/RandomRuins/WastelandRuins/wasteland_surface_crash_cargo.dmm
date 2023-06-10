@@ -32,9 +32,7 @@
 /area/ruin/unpowered)
 "dy" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/corner/neutral{
 	dir = 1
 	},
@@ -64,9 +62,7 @@
 /obj/machinery/power/smes/shuttle/precharged{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
+/obj/structure/cable,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -82,9 +78,7 @@
 /area/overmap_encounter/planetoid/wasteland)
 "hD" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering"
 	},
@@ -102,12 +96,7 @@
 /area/ruin/unpowered)
 "kw" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/oil,
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 4
@@ -126,9 +115,7 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
@@ -145,9 +132,7 @@
 /area/ruin/unpowered)
 "mz" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/orange/hidden,
@@ -156,9 +141,7 @@
 "nD" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
@@ -166,9 +149,7 @@
 /area/ruin/unpowered)
 "nF" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/industrial/outline/yellow,
@@ -206,12 +187,7 @@
 /area/ruin/unpowered)
 "pJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 8
 	},
@@ -256,9 +232,7 @@
 /area/ruin/unpowered)
 "qK" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
@@ -333,9 +307,7 @@
 /area/overmap_encounter/planetoid/wasteland)
 "yS" = (
 /obj/machinery/door/airlock/external,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "Az" = (
@@ -351,9 +323,7 @@
 /turf/open/floor/iron/dark,
 /area/ruin/unpowered)
 "Bb" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered)
 "BN" = (
@@ -366,9 +336,7 @@
 /area/ruin/unpowered)
 "BY" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/firealarm{
 	dir = 8;
@@ -450,9 +418,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /obj/machinery/power/terminal{
 	dir = 1
 	},
@@ -466,15 +432,11 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/power/terminal{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
+/obj/structure/cable,
 /mob/living/simple_animal/hostile/pirate/ranged,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
@@ -487,9 +449,7 @@
 /obj/structure/sign/warning/vacuum/external{
 	pixel_y = 32
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/light/small/built{
 	dir = 1
 	},
@@ -521,12 +481,7 @@
 /area/ruin/unpowered)
 "Lp" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
 	},
@@ -545,12 +500,7 @@
 /area/ruin/unpowered)
 "MB" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /obj/item/wallframe/apc,
 /obj/item/electronics/apc,
 /turf/open/floor/plating,
@@ -576,9 +526,7 @@
 "Np" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/corner/neutral{
 	dir = 1
 	},
@@ -716,9 +664,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/unpowered)
 "SV" = (
@@ -737,19 +683,12 @@
 /area/ruin/unpowered)
 "TB" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/unpowered)
 "Uc" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 4
@@ -773,9 +712,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/unpowered)
 "Xl" = (

@@ -33,9 +33,7 @@
 /area/ruin/unpowered)
 "bC" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/medical/glass,
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/cult,
@@ -178,9 +176,7 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "hm" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/cult/friendly,
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
@@ -225,9 +221,7 @@
 /turf/open/floor/cult,
 /area/ruin/unpowered)
 "in" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/corner/blue{
 	dir = 8
 	},
@@ -250,9 +244,7 @@
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "kj" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/cult/friendly,
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/crude,
@@ -270,16 +262,12 @@
 	name = "Crew Quarters"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/cult,
 /area/ruin/unpowered)
 "kF" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/corner/blue{
 	dir = 1
 	},
@@ -325,9 +313,7 @@
 /area/ruin/unpowered)
 "lZ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/cult/friendly,
 /obj/structure/barricade/wooden/crude,
 /turf/open/floor/cult,
@@ -389,9 +375,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/cult,
 /area/ruin/unpowered)
 "ou" = (
@@ -415,9 +399,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/cult/friendly,
 /turf/open/floor/cult,
 /area/ruin/unpowered)
@@ -638,9 +620,7 @@
 /area/ruin/unpowered)
 "wt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/cult/friendly,
 /turf/open/floor/cult,
 /area/ruin/unpowered)
@@ -692,9 +672,7 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "xt" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/corner/green{
 	dir = 4
 	},
@@ -790,9 +768,7 @@
 /turf/open/floor/cult,
 /area/ruin/unpowered)
 "Aw" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/corner/brown{
 	dir = 8
@@ -801,9 +777,7 @@
 /turf/open/floor/cult,
 /area/ruin/unpowered)
 "Ax" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/structure/fans/tiny,
 /obj/machinery/door/airlock/cult/friendly,
 /turf/open/floor/cult,
@@ -847,9 +821,7 @@
 /area/ruin/unpowered)
 "BW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/corner/brown,
 /obj/effect/turf_decal/corner/brown{
 	dir = 8
@@ -888,9 +860,7 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "Cm" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/corner/blue{
 	dir = 1
 	},
@@ -1127,9 +1097,7 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "Ka" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/yellow/hidden{
 	dir = 4
 	},
@@ -1247,9 +1215,7 @@
 /area/ruin/unpowered)
 "Rc" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /obj/effect/turf_decal/corner/green{
 	dir = 4
 	},

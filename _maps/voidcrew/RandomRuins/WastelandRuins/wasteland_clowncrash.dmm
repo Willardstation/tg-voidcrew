@@ -12,19 +12,12 @@
 /area/ruin/unpowered)
 "c" = (
 /obj/machinery/power/floodlight,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
+/obj/structure/cable,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "d" = (
 /obj/item/grown/bananapeel,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "e" = (
@@ -35,9 +28,7 @@
 "f" = (
 /obj/effect/decal/cleanable/oil/slippery,
 /obj/item/grown/bananapeel,
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "g" = (
@@ -145,9 +136,7 @@
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "G" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "H" = (
@@ -155,9 +144,7 @@
 /area/overmap_encounter/planetoid/wasteland)
 "J" = (
 /obj/machinery/power/floodlight,
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
+/obj/structure/cable,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "K" = (
@@ -190,15 +177,11 @@
 /area/template_noop)
 "R" = (
 /obj/machinery/power/port_gen/pacman,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "S" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "T" = (
@@ -226,9 +209,7 @@
 /area/overmap_encounter/planetoid/wasteland)
 "X" = (
 /obj/effect/decal/cleanable/oil/slippery,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "Y" = (

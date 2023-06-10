@@ -7,9 +7,7 @@
 /turf/open/misc/dust/lit,
 /area/ruin/unpowered)
 "bC" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "cm" = (
@@ -40,9 +38,7 @@
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "iP" = (
-/obj/structure/cable{
-	icon_state = "2-5"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "jY" = (
@@ -114,9 +110,7 @@
 "sr" = (
 /obj/effect/decal/cleanable/wrapping,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "4-10"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "sV" = (
@@ -204,9 +198,7 @@
 /turf/closed/wall/rust,
 /area/ruin/unpowered)
 "CT" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "Dj" = (
@@ -265,9 +257,7 @@
 /area/ruin/unpowered)
 "OR" = (
 /obj/machinery/vending/sovietsoda,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "Pg" = (
@@ -286,9 +276,7 @@
 /turf/open/misc/wasteland/lit,
 /area/ruin/unpowered)
 "QX" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "VO" = (

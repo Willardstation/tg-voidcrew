@@ -39,9 +39,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/unpowered)
 "cB" = (
@@ -368,9 +366,7 @@
 /obj/effect/turf_decal/corner/neutral{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/unpowered)
 "ja" = (
@@ -444,9 +440,7 @@
 /area/ruin/unpowered)
 "kS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating{
 	icon_state = "platingdmg1"
 	},
@@ -546,9 +540,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "oG" = (
@@ -597,9 +589,7 @@
 /obj/effect/turf_decal/corner/neutral{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 8
 	},
@@ -681,9 +671,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/iron,
 /area/ruin/unpowered)
@@ -699,9 +687,7 @@
 /turf/open/floor/iron/dark,
 /area/ruin/unpowered)
 "sG" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "sO" = (
@@ -720,9 +706,7 @@
 /area/ruin/unpowered)
 "sT" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 8
 	},
@@ -824,9 +808,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/unpowered)
 "ws" = (
@@ -840,9 +822,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/corner/neutral,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 8
 	},
@@ -869,12 +849,7 @@
 /turf/closed/wall,
 /area/ruin/unpowered)
 "xP" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
 	},
@@ -909,9 +884,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/corner/neutral,
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/unpowered)
 "zk" = (
@@ -932,9 +905,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
 	},
@@ -1078,9 +1049,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/science/glass,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/iron/dark,
 /area/ruin/unpowered)
@@ -1207,9 +1176,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
 	},
@@ -1230,9 +1197,7 @@
 	pixel_x = 3;
 	pixel_y = -3
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 8
 	},
@@ -1251,12 +1216,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/unpowered)
 "Mb" = (
@@ -1269,9 +1229,7 @@
 	},
 /area/ruin/unpowered)
 "MB" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
@@ -1351,9 +1309,7 @@
 /obj/machinery/computer/vaultcontroller{
 	dir = 8
 	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/unpowered)
 "Ps" = (
@@ -1412,9 +1368,7 @@
 /area/ruin/unpowered)
 "Qr" = (
 /obj/machinery/light,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 8
 	},
@@ -1430,9 +1384,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
@@ -1481,16 +1433,12 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ruin/unpowered)
 "SL" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/iron/dark,
@@ -1516,9 +1464,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/corner/neutral,
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 8
 	},
@@ -1636,9 +1582,7 @@
 /area/ruin/unpowered)
 "XG" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/ruin/unpowered)
 "XJ" = (

@@ -8,9 +8,7 @@
 "c" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/effect/decal/cleanable/cobweb,
-/obj/structure/cable{
-	icon_state = "0-6"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "e" = (
@@ -43,15 +41,11 @@
 /area/ruin/powered)
 "k" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "l" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "m" = (
@@ -89,17 +83,13 @@
 "t" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/porta_turret/syndicate/pod,
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "u" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/porta_turret/syndicate/pod,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "v" = (
@@ -119,9 +109,7 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "y" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "A" = (
@@ -187,12 +175,7 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "S" = (
-/obj/structure/cable{
-	icon_state = "5-8"
-	},
-/obj/structure/cable{
-	icon_state = "5-9"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "T" = (
@@ -216,12 +199,7 @@
 /area/ruin/unpowered)
 "X" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "1-10"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "Y" = (
@@ -229,9 +207,7 @@
 /turf/closed/wall,
 /area/ruin/powered)
 "Z" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered)
 

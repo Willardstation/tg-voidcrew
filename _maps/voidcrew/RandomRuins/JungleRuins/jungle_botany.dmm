@@ -47,15 +47,11 @@
 "gb" = (
 /obj/structure/table,
 /obj/item/plant_analyzer,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/hallway)
 "hl" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock,
 /turf/open/floor/iron,
 /area/ship/bridge)
@@ -95,9 +91,7 @@
 /turf/open/floor/iron,
 /area/ship/crew/hydroponics)
 "js" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/iron,
 /area/ship/bridge)
@@ -106,12 +100,7 @@
 /turf/open/floor/iron,
 /area/ship/hallway)
 "ke" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/crew/canteen)
 "kj" = (
@@ -130,22 +119,16 @@
 /turf/open/floor/iron,
 /area/ship/crew/hydroponics)
 "lO" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/engineering)
 "mg" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/public/glass,
 /turf/open/floor/iron,
 /area/ship/crew/canteen)
 "mL" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/hallway)
 "mN" = (
@@ -153,9 +136,7 @@
 /turf/open/floor/iron,
 /area/ship/crew/hydroponics)
 "nl" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/xenoblood/xgibs,
 /turf/open/floor/iron,
 /area/ship/crew/canteen)
@@ -172,9 +153,7 @@
 /turf/closed/wall/r_wall,
 /area/ship/engineering)
 "nS" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/iron,
 /area/ship/bridge)
@@ -197,9 +176,7 @@
 /turf/open/floor/iron,
 /area/ship/crew/dorm)
 "pt" = (
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/bridge)
 "pM" = (
@@ -210,18 +187,11 @@
 /turf/closed/wall/r_wall,
 /area/ship/crew/hydroponics)
 "ru" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/crew/hydroponics)
 "sU" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/bridge)
 "tb" = (
@@ -229,9 +199,7 @@
 /turf/open/floor/plating,
 /area/ship/bridge)
 "uC" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/crew/dorm)
 "uK" = (
@@ -240,18 +208,11 @@
 /turf/open/floor/grass,
 /area/ruin/jungle)
 "uM" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/bridge)
 "vo" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/engineering)
 "wl" = (
@@ -271,9 +232,7 @@
 /turf/open/floor/iron,
 /area/ship/crew/canteen)
 "yt" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/public/glass,
 /turf/open/floor/iron,
 /area/ship/crew/dorm)
@@ -289,9 +248,7 @@
 /turf/open/floor/iron,
 /area/ship/hallway)
 "zm" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/mob_spawn/human/corpse/pirate,
 /turf/open/floor/iron,
 /area/ship/crew/canteen)
@@ -317,9 +274,7 @@
 /turf/open/floor/iron,
 /area/ship/bridge)
 "Cj" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/hallway)
 "CO" = (
@@ -332,9 +287,7 @@
 /area/ship/crew/hydroponics)
 "DL" = (
 /obj/machinery/power/port_gen/pacman,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/engineering)
 "DS" = (
@@ -342,9 +295,7 @@
 /turf/open/floor/iron,
 /area/ship/crew/canteen)
 "EJ" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
+/obj/structure/cable,
 /obj/effect/gibspawner/xeno,
 /turf/open/floor/iron,
 /area/ship/crew/dorm)
@@ -357,15 +308,11 @@
 /turf/open/floor/iron,
 /area/ship/crew/dorm)
 "FN" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/crew/hydroponics)
 "FZ" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/crew/hydroponics)
 "Gq" = (
@@ -374,9 +321,7 @@
 /turf/open/floor/iron,
 /area/ship/hallway)
 "Gx" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 8
 	},
@@ -422,15 +367,11 @@
 /turf/open/floor/iron,
 /area/ship/crew/dorm)
 "JU" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/hallway)
 "Ke" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/effect/gibspawner/xeno,
 /turf/open/floor/iron,
 /area/ship/hallway)
@@ -481,9 +422,7 @@
 /turf/open/floor/iron,
 /area/ship/bridge)
 "Qg" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/crew/hydroponics)
 "Qu" = (
@@ -491,9 +430,7 @@
 /turf/open/floor/iron,
 /area/ship/bridge)
 "QJ" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/door/airlock/engineering{
 	locked = 1
 	},
@@ -518,34 +455,23 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
+/obj/structure/cable,
 /obj/effect/gibspawner/xeno,
 /turf/open/floor/iron,
 /area/ship/engineering)
 "SB" = (
 /obj/machinery/vending/hydronutrients,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/crew/hydroponics)
 "SQ" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/closed/wall/r_wall,
 /area/ship/bridge)
 "Uo" = (
 /obj/structure/table,
 /obj/machinery/microwave,
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/crew/canteen)
 "Vn" = (
@@ -557,9 +483,7 @@
 /turf/closed/wall/r_wall,
 /area/ship/crew/dorm)
 "VH" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/crew/canteen)
 "Wo" = (
@@ -571,9 +495,7 @@
 /turf/closed/wall/r_wall,
 /area/ship/hallway)
 "WE" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/ship/crew/canteen)
 "Xq" = (

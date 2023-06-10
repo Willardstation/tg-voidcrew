@@ -15,9 +15,7 @@
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "cL" = (
-/obj/structure/cable{
-	icon_state = "2-5"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "em" = (
@@ -180,15 +178,11 @@
 /area/overmap_encounter/planetoid/wasteland)
 "yd" = (
 /obj/structure/statue/sandstone/assistant,
-/obj/structure/cable{
-	icon_state = "4-9"
-	},
+/obj/structure/cable,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "ze" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "zq" = (
@@ -214,16 +208,12 @@
 /area/overmap_encounter/planetoid/wasteland)
 "Ba" = (
 /obj/structure/door_assembly/door_assembly_highsecurity,
-/obj/structure/cable{
-	icon_state = "6-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "BE" = (
 /obj/structure/door_assembly/door_assembly_hatch,
-/obj/structure/cable{
-	icon_state = "1-6"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "Cf" = (
@@ -272,9 +262,7 @@
 /area/ruin/unpowered)
 "IU" = (
 /obj/machinery/power/floodlight,
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
+/obj/structure/cable,
 /turf/open/misc/wasteland/lit,
 /area/overmap_encounter/planetoid/wasteland)
 "IZ" = (
@@ -317,9 +305,7 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "OZ" = (
-/obj/structure/cable{
-	icon_state = "4-10"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating/rust,
 /area/ruin/unpowered)
 "Pa" = (
@@ -357,9 +343,7 @@
 /area/ruin/unpowered)
 "RE" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/cable{
-	icon_state = "2-9"
-	},
+/obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/unpowered)
 "Sn" = (

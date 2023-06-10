@@ -1,25 +1,16 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aj" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/cable,
 /obj/item/cigbutt/roach,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "aW" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/machinery/power/port_gen/pacman,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "aY" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/item/rollingpaper,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
@@ -31,9 +22,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "cR" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /mob/living/simple_animal/hostile/cockroach,
 /obj/item/cigbutt/roach,
 /turf/open/floor/wood,
@@ -60,9 +49,7 @@
 	},
 /area/ruin/unpowered)
 "fP" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/item/reagent_containers/food/snacks/grown/cannabis,
 /obj/item/cigbutt/roach,
 /turf/open/floor/wood,
@@ -80,22 +67,16 @@
 /turf/template_noop,
 /area/template_noop)
 "il" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "iw" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
+/obj/structure/cable,
 /obj/machinery/power/floodlight{
 	setting = 15
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "kD" = (
@@ -130,12 +111,7 @@
 	},
 /area/ruin/unpowered)
 "lJ" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/power/floodlight{
 	setting = 15
 	},
@@ -143,9 +119,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "mx" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/item/trash/boritos,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
@@ -157,9 +131,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "nI" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/item/trash/cheesie,
 /turf/open/floor/wood{
 	icon_state = "wood-broken3"
@@ -172,9 +144,7 @@
 	},
 /area/ruin/unpowered)
 "ov" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/unpowered)
 "oE" = (
@@ -230,9 +200,7 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /obj/item/cigbutt/roach,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
@@ -275,9 +243,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "Cw" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
+/obj/structure/cable,
 /obj/structure/table/wood,
 /obj/item/storage/fancy/rollingpapers,
 /turf/open/floor/wood,
@@ -288,9 +254,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "DN" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/cable,
 /obj/item/cigbutt/roach,
 /obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/wood{
@@ -308,16 +272,12 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "EM" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /mob/living/simple_animal/hostile/cockroach,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "FK" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
@@ -346,9 +306,7 @@
 	},
 /area/template_noop)
 "Hl" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /obj/structure/sink/kitchen{
 	dir = 8;
 	pixel_x = 11
@@ -357,9 +315,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "Hp" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/wood,
@@ -386,9 +342,7 @@
 /turf/open/misc/dirt/jungle,
 /area/template_noop)
 "Kg" = (
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
+/obj/structure/cable,
 /obj/machinery/power/terminal{
 	dir = 1
 	},
@@ -398,9 +352,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "Kq" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/item/seeds/cannabis,
 /turf/open/floor/wood{
 	icon_state = "wood-broken"
@@ -413,12 +365,7 @@
 	},
 /area/ruin/unpowered)
 "Ma" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/power/floodlight{
 	setting = 15
 	},
@@ -442,9 +389,7 @@
 /area/ruin/unpowered)
 "Pv" = (
 /obj/structure/mineral_door/wood,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "PS" = (
@@ -464,18 +409,11 @@
 /area/ruin/unpowered)
 "Qt" = (
 /obj/structure/mineral_door/wood,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "QQ" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/power/floodlight{
 	setting = 15
 	},
@@ -489,12 +427,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "RW" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/machinery/power/floodlight{
 	setting = 15
 	},
@@ -505,9 +438,7 @@
 	},
 /area/ruin/unpowered)
 "Tx" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "TK" = (
@@ -552,9 +483,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "Wo" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/cigbutt/roach,
 /turf/open/floor/wood,
@@ -573,9 +502,7 @@
 	},
 /area/ruin/unpowered)
 "XJ" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
@@ -598,9 +525,7 @@
 /turf/closed/wall/mineral/wood/nonmetal,
 /area/ruin/unpowered)
 "YB" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
+/obj/structure/cable,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "YL" = (

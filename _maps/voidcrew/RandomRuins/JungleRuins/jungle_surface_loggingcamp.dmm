@@ -583,7 +583,7 @@
 /area/ruin/powered)
 "Ta" = (
 /obj/machinery/door/poddoor/shutters{
-	id = onceler
+	id = "onceler"
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
