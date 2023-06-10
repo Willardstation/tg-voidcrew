@@ -775,7 +775,6 @@
 /area/ruin/unpowered)
 "Np" = (
 /obj/structure/lattice,
-/obj/structure/lattice,
 /turf/open/misc/wasteland/lit,
 /area/ruin/unpowered)
 "Nr" = (
