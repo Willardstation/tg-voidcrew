@@ -206,7 +206,6 @@
 /obj/item/grenade/discogrenade,
 /turf/open/floor/light{
 	base_icon_state = "light_on-cycle_all";
-	can_modify_colour = TRUE;
 	icon_plating = "light_on-cycle_all";
 	icon_state = "light_on-cycle_all"
 	},
@@ -222,7 +221,6 @@
 	},
 /turf/open/floor/light{
 	base_icon_state = "light_on-cycle_all";
-	can_modify_colour = TRUE;
 	icon_plating = "light_on-cycle_all";
 	icon_state = "light_on-cycle_all"
 	},
@@ -426,7 +424,6 @@
 /obj/effect/decal/cleanable/food/salt,
 /turf/open/floor/light{
 	base_icon_state = "light_on-cycle_all";
-	can_modify_colour = TRUE;
 	icon_plating = "light_on-cycle_all";
 	icon_state = "light_on-cycle_all"
 	},
@@ -443,7 +440,6 @@
 /obj/item/cigbutt/roach,
 /turf/open/floor/light{
 	base_icon_state = "light_on-cycle_all";
-	can_modify_colour = TRUE;
 	icon_plating = "light_on-cycle_all";
 	icon_state = "light_on-cycle_all"
 	},
@@ -461,7 +457,6 @@
 /obj/item/multitool/old,
 /turf/open/floor/light{
 	base_icon_state = "light_on-cycle_all";
-	can_modify_colour = TRUE;
 	icon_plating = "light_on-cycle_all";
 	icon_state = "light_on-cycle_all"
 	},
@@ -632,7 +627,6 @@
 "Xb" = (
 /turf/open/floor/light{
 	base_icon_state = "light_on-cycle_all";
-	can_modify_colour = TRUE;
 	icon_plating = "light_on-cycle_all";
 	icon_state = "light_on-cycle_all"
 	},
@@ -656,7 +650,6 @@
 /obj/machinery/jukebox/disco/indestructible,
 /turf/open/floor/light{
 	base_icon_state = "light_on-cycle_all";
-	can_modify_colour = TRUE;
 	icon_plating = "light_on-cycle_all";
 	icon_state = "light_on-cycle_all"
 	},

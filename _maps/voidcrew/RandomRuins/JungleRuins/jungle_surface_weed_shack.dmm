@@ -76,7 +76,6 @@
 /obj/machinery/power/floodlight{
 	setting = 15
 	},
-/obj/structure/cable,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "kD" = (
