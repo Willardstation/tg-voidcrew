@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;machinery&#x2F;power&#x2F;shuttle_engine&#x2F;ship&#x2F;fueled - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/machinery/power/shuttle_engine/ship/fueled.html#var">Var Details</a> - <a href="obj/machinery/power/shuttle_engine/ship/fueled.html#proc">Proc Details</a></header>
+<main>
+<h1>fueled <aside>/<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/power.html">power</a>/<a href="obj/machinery/power/shuttle_engine.html">shuttle_engine</a>/<a href="obj/machinery/power/shuttle_engine/ship.html">ship</a>/<a href="obj/machinery/power/shuttle_engine/ship/fueled.html">fueled</a></aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fuel.dm#L5">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fuel.dm 5"/></a></h1>
+
+<hh3 id="fueled-engines">Fueled engines</hh3>
+<p>Shuttle engines that require a gas or gases to burn.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/machinery/power/shuttle_engine/ship/fueled.html#var/fuel_type">fuel_type</a></th><td>The specific gas to burn out of the engine heater.</td></tr>
+            <tr><th><a href="obj/machinery/power/shuttle_engine/ship/fueled.html#var/fuel_use">fuel_use</a></th><td>How much fuel (in mols) of the specified gas should be used in a full burn.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/machinery/power/shuttle_engine/ship/fueled.html#proc/consume_fuel">consume_fuel</a></th><td>Consumes the needed fuel</td></tr>
+            <tr><th><a href="obj/machinery/power/shuttle_engine/ship/fueled.html#proc/on_heater_link">on_heater_link</a></th><td>Called when the engine is linked to a heater; must call parent first.</td></tr>
+            <tr><th><a href="obj/machinery/power/shuttle_engine/ship/fueled.html#proc/on_heater_unlink">on_heater_unlink</a></th><td>Called when the engine is unlinked from a heater; must call parent first.</td></tr>
+            <tr><th><a href="obj/machinery/power/shuttle_engine/ship/fueled.html#proc/return_fuel">return_fuel</a></th><td>Returns how much fuel we have left</td></tr>
+            <tr><th><a href="obj/machinery/power/shuttle_engine/ship/fueled.html#proc/return_fuel_cap">return_fuel_cap</a></th><td>Returns how much fuel we can hold</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/fuel_type"><aside class="declaration">var </aside>fuel_type
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/gas.html">gas</a></aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fuel.dm#L14">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fuel.dm 14"/></a></h3>
+        <p>The specific gas to burn out of the engine heater.</p><h3 id="var/fuel_use"><aside class="declaration">var </aside>fuel_use
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fuel.dm#L16">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fuel.dm 16"/></a></h3>
+        <p>How much fuel (in mols) of the specified gas should be used in a full burn.</p><h2 id="proc">Proc Details</h2><h3 id="proc/consume_fuel"><aside class="declaration">proc </aside>consume_fuel<aside>(amount) 
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fuel.dm#L83">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fuel.dm 83"/></a></aside>
+        </h3>
+        <p>Consumes the needed fuel</p><h3 id="proc/on_heater_link"><aside class="declaration">proc </aside>on_heater_link<aside>(/<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/atmospherics.html">atmospherics</a>/<a href="obj/machinery/atmospherics/fueled_engine_heater.html">fueled_engine_heater</a>/connecting) 
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fuel.dm#L32">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fuel.dm 32"/></a></aside>
+        </h3>
+        <p>Called when the engine is linked to a heater; must call parent first.</p><h3 id="proc/on_heater_unlink"><aside class="declaration">proc </aside>on_heater_unlink<aside>() 
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fuel.dm#L43">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fuel.dm 43"/></a></aside>
+        </h3>
+        <p>Called when the engine is unlinked from a heater; must call parent first.</p><h3 id="proc/return_fuel"><aside class="parent"><a title="/obj/machinery/power/shuttle_engine/ship" href="obj/machinery/power/shuttle_engine/ship.html#proc/return_fuel">&uarr;</a></aside>return_fuel<aside>() 
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fuel.dm#L66">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fuel.dm 66"/></a></aside>
+        </h3>
+        <p>Returns how much fuel we have left</p><h3 id="proc/return_fuel_cap"><aside class="parent"><a title="/obj/machinery/power/shuttle_engine/ship" href="obj/machinery/power/shuttle_engine/ship.html#proc/return_fuel_cap">&uarr;</a></aside>return_fuel_cap<aside>() 
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fuel.dm#L76">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fuel.dm 76"/></a></aside>
+        </h3>
+        <p>Returns how much fuel we can hold</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/willardstation/tg-voidcrew/tree/6366cba8472efb8dfb3329caff2866a5f835834d">6366cba</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.7.3</a></footer>
+</body>
+</html>

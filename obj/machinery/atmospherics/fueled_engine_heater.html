@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;obj&#x2F;machinery&#x2F;atmospherics&#x2F;fueled_engine_heater - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="obj/machinery/atmospherics/fueled_engine_heater.html#var">Var Details</a> - <a href="obj/machinery/atmospherics/fueled_engine_heater.html#proc">Proc Details</a></header>
+<main>
+<h1>fueled_engine_heater <aside>/<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/atmospherics.html">atmospherics</a>/<a href="obj/machinery/atmospherics/fueled_engine_heater.html">fueled_engine_heater</a></aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L1">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="obj/machinery/atmospherics/fueled_engine_heater.html#var/connected_engine">connected_engine</a></th><td>The engine that this heater is connected to</td></tr>
+            <tr><th><a href="obj/machinery/atmospherics/fueled_engine_heater.html#var/filter_enabled">filter_enabled</a></th><td>Whether this heater will filter out incompatible gases from the internal tank</td></tr>
+            <tr><th><a href="obj/machinery/atmospherics/fueled_engine_heater.html#var/filter_rate">filter_rate</a></th><td>The rate at which incompatible fuels will be filtered out, in percentage of total mole count of the incompatible gas</td></tr>
+            <tr><th><a href="obj/machinery/atmospherics/fueled_engine_heater.html#var/input_enabled">input_enabled</a></th><td>Whether this heater will draw in air from the connected pipe</td></tr>
+            <tr><th><a href="obj/machinery/atmospherics/fueled_engine_heater.html#var/internal_volume">internal_volume</a></th><td>The volume of the internal tank for this heater</td></tr>
+            <tr><th><a href="obj/machinery/atmospherics/fueled_engine_heater.html#var/maximum_moles">maximum_moles</a></th><td>The absolute maximum number of moles this heater can hold</td></tr>
+            <tr><th><a href="obj/machinery/atmospherics/fueled_engine_heater.html#var/purge_mode">purge_mode</a></th><td>If purge mode is active the heater will purge the internal tank instead of filtering it</td></tr>
+            <tr><th><a href="obj/machinery/atmospherics/fueled_engine_heater.html#var/recharge_speed">recharge_speed</a></th><td>The rate the internal tank will be refilled, in percentage of maximum moles</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="obj/machinery/atmospherics/fueled_engine_heater.html#proc/on_engine_link">on_engine_link</a></th><td>Called when the engine is linked to a heater; must call parent first.</td></tr>
+            <tr><th><a href="obj/machinery/atmospherics/fueled_engine_heater.html#proc/on_engine_unlink">on_engine_unlink</a></th><td>Called when the engine is unlinked from a heater; must call parent first.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/connected_engine"><aside class="declaration">var </aside>connected_engine
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/power.html">power</a>/<a href="obj/machinery/power/shuttle_engine.html">shuttle_engine</a>/<a href="obj/machinery/power/shuttle_engine/ship.html">ship</a>/<a href="obj/machinery/power/shuttle_engine/ship/fueled.html">fueled</a></aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L10">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 10"/></a></h3>
+        <p>The engine that this heater is connected to</p><h3 id="var/filter_enabled"><aside class="declaration">var </aside>filter_enabled
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L33">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 33"/></a></h3>
+        <p>Whether this heater will filter out incompatible gases from the internal tank</p><h3 id="var/filter_rate"><aside class="declaration">var </aside>filter_rate
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L24">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 24"/></a></h3>
+        <p>The rate at which incompatible fuels will be filtered out, in percentage of total mole count of the incompatible gas</p><h3 id="var/input_enabled"><aside class="declaration">var </aside>input_enabled
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L30">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 30"/></a></h3>
+        <p>Whether this heater will draw in air from the connected pipe</p><h3 id="var/internal_volume"><aside class="declaration">var </aside>internal_volume
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L15">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 15"/></a></h3>
+        <p>The volume of the internal tank for this heater</p><h3 id="var/maximum_moles"><aside class="declaration">var </aside>maximum_moles
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L18">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 18"/></a></h3>
+        <p>The absolute maximum number of moles this heater can hold</p><h3 id="var/purge_mode"><aside class="declaration">var </aside>purge_mode
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L27">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 27"/></a></h3>
+        <p>If purge mode is active the heater will purge the internal tank instead of filtering it</p><h3 id="var/recharge_speed"><aside class="declaration">var </aside>recharge_speed
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L21">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 21"/></a></h3>
+        <p>The rate the internal tank will be refilled, in percentage of maximum moles</p><h2 id="proc">Proc Details</h2><h3 id="proc/on_engine_link"><aside class="declaration">proc </aside>on_engine_link<aside>(/<a href="obj.html">obj</a>/<a href="obj/machinery.html">machinery</a>/<a href="obj/machinery/power.html">power</a>/<a href="obj/machinery/power/shuttle_engine.html">shuttle_engine</a>/<a href="obj/machinery/power/shuttle_engine/ship.html">ship</a>/<a href="obj/machinery/power/shuttle_engine/ship/fueled.html">fueled</a>/connecting) 
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L56">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 56"/></a></aside>
+        </h3>
+        <p>Called when the engine is linked to a heater; must call parent first.</p><h3 id="proc/on_engine_unlink"><aside class="declaration">proc </aside>on_engine_unlink<aside>() 
+        
+    
+            <a href="https://github.com/willardstation/tg-voidcrew/blob/6366cba8472efb8dfb3329caff2866a5f835834d/voidcrew/modules/shuttle/engine/fueled_heater.dm#L69">
+        <img src="git.png" width="16" height="16" title="voidcrew&#x2F;modules&#x2F;shuttle&#x2F;engine&#x2F;fueled_heater.dm 69"/></a></aside>
+        </h3>
+        <p>Called when the engine is unlinked from a heater; must call parent first.</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/willardstation/tg-voidcrew/tree/6366cba8472efb8dfb3329caff2866a5f835834d">6366cba</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.7.3</a></footer>
+</body>
+</html>
